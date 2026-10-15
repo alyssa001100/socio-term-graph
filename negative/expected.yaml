@@ -33,7 +33,7 @@
 - {id: N22b, file: cases.yaml, where: "CASE-9003", level: 错误, contains: 少于下限, desc: 归属数低于下限}
 - {id: N23, file: cases.yaml, where: "CASE-9002", level: 错误, contains: case_id 重复, desc: 案例 ID 重复}
 - {id: N24, file: cases.yaml, where: "CASE-9004.status", level: 错误, contains: 非法取值, desc: 案例状态枚举非法}
-- {id: N25, file: cases.yaml, where: "CASE-9005.attributions[1].rationale", level: 错误, contains: 必填字段缺失或为空, desc: 归属块缺理由}
+- {id: N25, file: cases.yaml, where: "CASE-9005.attributions[1].match", level: 错误, contains: 必填字段缺失或为空, desc: 归属块缺理由}
 - {id: N26a, file: cases.yaml, where: "CASE-9006.attributions[1].mismatch", level: 错误, contains: 必填字段缺失或为空, desc: 不符之处为空（必填）}
 - {id: N26b, file: cases.yaml, where: "CASE-9006.attributions[1].mismatch", level: 错误, contains: 不符之处」为空, desc: 不符之处为空（防牵强闸门）}
 - {id: N27, file: cases.yaml, where: "CASE-9007.attributions[1].confidence", level: 错误, contains: 非法取值, desc: 归属确信度枚举非法}
@@ -60,3 +60,13 @@
 - {id: N44b, file: terms.yaml, where: TERM-9003.cluster, level: 错误, contains: 非法取值, desc: 术语缺概念群（枚举检查连带报出 None）}
 - {id: N45, file: relations.yaml, where: REL-9200, level: 错误, contains: 不得断言「等同」, desc: 跨群等同断言}
 - {id: N46, file: relations.yaml, where: "社会不平等 ↔ 社会秩序与越轨", level: 警告, contains: 超过每对概念群上限, desc: 跨群桥接超过上限}
+
+# v6 新增字段（关系的 explain/boundary、热点的 analysis、归属块的 match）
+- {id: N47, file: relations.yaml, where: REL-9301.explain, level: 错误, contains: 少于下限, desc: 关系解释过短}
+- {id: N48, file: relations.yaml, where: REL-9302.explain, level: 错误, contains: 必填字段缺失或为空, desc: 关系缺解释}
+- {id: N49, file: relations.yaml, where: REL-9303.boundary, level: 错误, contains: 少于下限, desc: 边界说明过短}
+- {id: N50, file: hotspots.yaml, where: "HOT-9008.attributions[1].match", level: 错误, contains: 少于下限, desc: 相符之处过短}
+- {id: N51, file: hotspots.yaml, where: HOT-9009.analysis, level: 错误, contains: 必填字段缺失或为空, desc: 热点缺解析}
+- {id: N52, file: hotspots.yaml, where: HOT-9010.analysis, level: 错误, contains: 少于下限, desc: 热点解析过短}
+- {id: N53, file: cases.yaml, where: "CASE-9012.attributions[1]", level: 错误, contains: 未在 schema.fields 中定义, desc: 归属块沿用旧字段名 rationale}
+- {id: N53b, file: cases.yaml, where: "CASE-9012.attributions[1].match", level: 错误, contains: 必填字段缺失或为空, desc: 旧字段名连带缺 match}

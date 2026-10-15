@@ -2,7 +2,7 @@
 # 规范即配置：改标注规范只需要改这个文件
 # validate.py 按这里定义的枚举和必填规则校验数据
 # ============================================================
-version: v5
+version: v6
 updated: 2026-10-15
 
 # 概念群 —— 每个群围绕一个核心问题，群内关系密集，群间只允许少量桥接
@@ -67,12 +67,12 @@ enums:
 required:
   terms:      [term_id, cluster, name_zh, name_en, proponent, first_year, first_source,
                school, application, definition, definition_source, entry_type, status, confidence]
-  relations:  [rel_id, from_term, to_term, type, evidence, source, status]
+  relations:  [rel_id, from_term, to_term, type, evidence, explain, source, status]
   cases:      [case_id, title, description, origin, source, attributions, status]
   hotspots:   [hot_id, title, description, date, source_url, review_after,
-               attributions, status]
-  # 归属块是防牵强的核心：mismatch（不符之处）必填且不许空
-  attribution_required: [term_id, rationale, mismatch, confidence]
+               analysis, attributions, status]
+  # 归属块是防牵强的核心：相符与不符都必须写，只写「像」就是牵强
+  attribution_required: [term_id, match, mismatch, confidence]
 
 # 字段白名单 —— 每张表允许出现的字段全集
 # 用途：拦截拼写错误、多余列、以及 YAML 行内映射里被逗号/换行意外截断的值
@@ -81,15 +81,20 @@ fields:
               school, application, definition, definition_source, polysemy,
               entry_type, status, confidence, reviewer, last_reviewed]
   polysemy:  [author, school, definition, differs_from, note, source]
-  relations: [rel_id, from_term, to_term, type, evidence, source, status]
+  relations: [rel_id, from_term, to_term, type, evidence, explain, boundary, source, status]
   cases:     [case_id, title, description, origin, source, attributions, status]
   hotspots:  [hot_id, title, description, date, source_url, review_after,
-              attributions, status]
-  attribution: [term_id, rationale, mismatch, confidence, dissent]
+              analysis, attributions, status]
+  attribution: [term_id, match, mismatch, confidence, dissent]
 
 # 数量约束
 constraints:
   attribution_min: 1           # 每条案例/热点至少挂 1 个术语
   hotspot_review_months: 12    # 热点默认复审周期（月）
   relations_per_term_max: 12   # 单个术语关系数上限，防止过度连接
+  # 长度下限：挡住「两者有关」这类写了等于没写的值
+  explain_min_chars: 20        # 关系的 explain（这条边具体在说什么）
+  boundary_min_chars: 10       # 关系的 boundary（这条边不意味着什么，选填但填了就要够长）
+  match_min_chars: 20          # 归属块的 match（相符之处）
+  analysis_min_chars: 60       # 热点的 analysis（逐层解析）
   bridge_per_cluster_pair_max: 5   # 每对概念群之间的桥接关系上限，防止跨群滥连

@@ -5,63 +5,89 @@
 # 合规基座
 - {rel_id: REL-9000, from_term: TERM-9005, to_term: TERM-9006, type: 借用, status: 已定稿,
    evidence: 负例占位证据句。,
+   explain: 负例占位解释：长度足够，但不含真实论断。,
    source: 负例占位}
 
 # N13 rel_id 重复：与下一条 ID 相同，其余字段合规
 - {rel_id: REL-9001, from_term: TERM-9002, to_term: TERM-9003, type: 借用, status: 草稿,
    evidence: 负例占位证据句。,
+   explain: 负例占位解释：长度足够，但不含真实论断。,
    source: 负例占位}
 - {rel_id: REL-9001, from_term: TERM-9002, to_term: TERM-9003, type: 借用, status: 草稿,
    evidence: 负例占位证据句。,
+   explain: 负例占位解释：长度足够，但不含真实论断。,
    source: 负例占位}
 
 # N14 关系类型不在封闭枚举内 · N19 未知字段
 - {rel_id: REL-9002, from_term: TERM-9003, to_term: TERM-9004, type: 因果, status: 草稿,
    evidence: 负例占位证据句。,
+   explain: 负例占位解释：长度足够，但不含真实论断。,
    source: 负例占位,
    note: 负例占位}
 
 # N15 起点引用不存在的术语 · N16 终点引用不存在的术语
 - {rel_id: REL-9003, from_term: TERM-9999, to_term: TERM-9998, type: 借用, status: 草稿,
    evidence: 负例占位证据句。,
+   explain: 负例占位解释：长度足够，但不含真实论断。,
    source: 负例占位}
 
 # N17 关系两端指向同一术语
 - {rel_id: REL-9004, from_term: TERM-9001, to_term: TERM-9001, type: 包含, status: 草稿,
    evidence: 负例占位证据句。,
+   explain: 负例占位解释：长度足够，但不含真实论断。,
    source: 负例占位}
 
 # N20 必填字段缺失：不写 evidence
 - {rel_id: REL-9005, from_term: TERM-9006, to_term: TERM-9001, type: 机制, status: 草稿,
+   explain: 负例占位解释：长度足够，但不含真实论断。,
    source: 负例占位}
 
 # N18 单个术语关系数超过上限：以下 13 条全部从 TERM-9001 出发
 #     端点分散到其余术语，避免连带把别的条目也推过上限
-- {rel_id: REL-9101, from_term: TERM-9001, to_term: TERM-9002, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
-- {rel_id: REL-9102, from_term: TERM-9001, to_term: TERM-9002, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
-- {rel_id: REL-9103, from_term: TERM-9001, to_term: TERM-9002, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
-- {rel_id: REL-9104, from_term: TERM-9001, to_term: TERM-9003, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
-- {rel_id: REL-9105, from_term: TERM-9001, to_term: TERM-9003, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
-- {rel_id: REL-9106, from_term: TERM-9001, to_term: TERM-9003, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
-- {rel_id: REL-9107, from_term: TERM-9001, to_term: TERM-9004, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
-- {rel_id: REL-9108, from_term: TERM-9001, to_term: TERM-9004, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
-- {rel_id: REL-9109, from_term: TERM-9001, to_term: TERM-9004, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
-- {rel_id: REL-9110, from_term: TERM-9001, to_term: TERM-9005, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
-- {rel_id: REL-9111, from_term: TERM-9001, to_term: TERM-9005, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
-- {rel_id: REL-9112, from_term: TERM-9001, to_term: TERM-9006, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
-- {rel_id: REL-9113, from_term: TERM-9001, to_term: TERM-9006, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
+- {rel_id: REL-9101, from_term: TERM-9001, to_term: TERM-9002, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9102, from_term: TERM-9001, to_term: TERM-9002, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9103, from_term: TERM-9001, to_term: TERM-9002, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9104, from_term: TERM-9001, to_term: TERM-9003, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9105, from_term: TERM-9001, to_term: TERM-9003, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9106, from_term: TERM-9001, to_term: TERM-9003, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9107, from_term: TERM-9001, to_term: TERM-9004, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9108, from_term: TERM-9001, to_term: TERM-9004, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9109, from_term: TERM-9001, to_term: TERM-9004, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9110, from_term: TERM-9001, to_term: TERM-9005, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9111, from_term: TERM-9001, to_term: TERM-9005, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9112, from_term: TERM-9001, to_term: TERM-9006, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9113, from_term: TERM-9001, to_term: TERM-9006, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
 
 # N45 跨概念群断言「等同」
 - {rel_id: REL-9200, from_term: TERM-9008, to_term: TERM-9001, type: 等同, status: 草稿,
    evidence: 负例：跨群等同断言。,
+   explain: 负例占位解释：长度足够，但不含真实论断。,
    source: 负例占位}
 
 # N46 每对概念群桥接超过上限：以下 6 条全部跨 TERM-9001（社会不平等）与
 #     TERM-9008（社会秩序与越轨），连同 REL-9200 共 7 条，超过上限 5
-- {rel_id: REL-9201, from_term: TERM-9001, to_term: TERM-9008, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位}
-- {rel_id: REL-9202, from_term: TERM-9001, to_term: TERM-9008, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位}
-- {rel_id: REL-9203, from_term: TERM-9001, to_term: TERM-9008, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位}
-- {rel_id: REL-9204, from_term: TERM-9001, to_term: TERM-9008, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位}
-- {rel_id: REL-9205, from_term: TERM-9001, to_term: TERM-9008, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位}
-- {rel_id: REL-9206, from_term: TERM-9001, to_term: TERM-9008, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位}
+- {rel_id: REL-9201, from_term: TERM-9001, to_term: TERM-9008, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9202, from_term: TERM-9001, to_term: TERM-9008, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9203, from_term: TERM-9001, to_term: TERM-9008, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9204, from_term: TERM-9001, to_term: TERM-9008, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9205, from_term: TERM-9001, to_term: TERM-9008, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9206, from_term: TERM-9001, to_term: TERM-9008, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
 
+
+# N47 关系解释过短：写了但等于没写
+- {rel_id: REL-9301, from_term: TERM-9002, to_term: TERM-9003, type: 借用, status: 草稿,
+   evidence: 负例占位证据句。,
+   explain: 有关。,
+   source: 负例占位}
+
+# N48 关系缺解释：必填字段为空
+- {rel_id: REL-9302, from_term: TERM-9002, to_term: TERM-9004, type: 借用, status: 草稿,
+   evidence: 负例占位证据句。,
+   source: 负例占位}
+
+# N49 边界说明过短：填了但低于下限
+- {rel_id: REL-9303, from_term: TERM-9002, to_term: TERM-9005, type: 借用, status: 草稿,
+   evidence: 负例占位证据句。,
+   explain: 负例占位解释：长度足够，但不含真实论断。,
+   boundary: 无关。,
+   source: 负例占位}

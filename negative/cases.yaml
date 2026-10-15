@@ -8,7 +8,7 @@
   origin: 负例
   attributions:
     - term_id: TERM-9001
-      rationale: 负例占位理由。
+      match: 负例占位的相符之处说明，长度足够但不含真实论断。
       mismatch: 负例占位的不符之处。
       confidence: 部分符合
       weight: 1                 # N39 归属块里的未知字段
@@ -22,7 +22,7 @@
   source: 负例占位【页码待核】
   attributions:
     - term_id: TERM-9001
-      rationale: 负例占位理由。
+      match: 负例占位的相符之处说明，长度足够但不含真实论断。
       mismatch: 负例占位的不符之处。
       confidence: 部分符合
   status: 草稿
@@ -35,7 +35,7 @@
   source: 负例占位【页码待核】
   attributions:
     - term_id: TERM-9001
-      rationale: 负例占位理由。
+      match: 负例占位的相符之处说明，长度足够但不含真实论断。
       mismatch: 负例占位的不符之处。
       confidence: 部分符合
   status: 草稿
@@ -57,7 +57,7 @@
   source: 负例占位【页码待核】
   attributions:
     - term_id: TERM-9001
-      rationale: 负例占位理由。
+      match: 负例占位的相符之处说明，长度足够但不含真实论断。
       mismatch: 负例占位的不符之处。
       confidence: 部分符合
   status: 未知
@@ -82,7 +82,7 @@
   source: 负例占位【页码待核】
   attributions:
     - term_id: TERM-9001
-      rationale: 负例占位理由。
+      match: 负例占位的相符之处说明，长度足够但不含真实论断。
       mismatch: ''
       confidence: 部分符合
   status: 草稿
@@ -95,7 +95,7 @@
   source: 负例占位【页码待核】
   attributions:
     - term_id: TERM-9001
-      rationale: 负例占位理由。
+      match: 负例占位的相符之处说明，长度足够但不含真实论断。
       mismatch: 负例占位的不符之处。
       confidence: 很确定
   status: 草稿
@@ -108,7 +108,7 @@
   source: 负例占位【页码待核】
   attributions:
     - term_id: TERM-9999
-      rationale: 负例占位理由。
+      match: 负例占位的相符之处说明，长度足够但不含真实论断。
       mismatch: 负例占位的不符之处。
       confidence: 部分符合
   status: 草稿
@@ -121,7 +121,7 @@
   source: 负例占位【页码待核】
   attributions:
     - term_id: TERM-9007
-      rationale: 负例占位理由。
+      match: 负例占位的相符之处说明，长度足够但不含真实论断。
       mismatch: 负例占位的不符之处。
       confidence: 部分符合
   status: 草稿
@@ -134,7 +134,7 @@
   source: 负例占位【页码待核】
   attributions:
     - term_id: TERM-9001
-      rationale: 负例占位理由。
+      match: 负例占位的相符之处说明，长度足够但不含真实论断。
       mismatch: 负例占位的不符之处。
       confidence: 有争议
   status: 草稿
@@ -148,7 +148,22 @@
   source_url: https://example.com/负例
   attributions:
     - term_id: TERM-9001
+      match: 负例占位的相符之处说明，长度足够但不含真实论断。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 草稿
+
+# N53 沿用改名前的旧字段名 rationale（白名单应拦下）
+# N53b 同一处连带：match 必填字段缺失
+- case_id: CASE-9012
+  title: 负例：归属块沿用旧字段名
+  description: 负例占位描述。
+  origin: 负例占位出处
+  source: 负例占位来源
+  attributions:
+    - term_id: TERM-9001
       rationale: 负例占位理由。
       mismatch: 负例占位的不符之处。
       confidence: 部分符合
+      dissent: ''
   status: 草稿

@@ -64,6 +64,17 @@ details li{margin-bottom:7px;font-size:14px}
 .reltype{background:#eef1f5;color:#3c4a5c;border-radius:5px;padding:0 6px;font-size:12px;margin:0 3px}
 a.t{color:var(--acc);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--acc)}
 .case{color:var(--mut);font-size:13px}
+.relblock{margin-bottom:9px}
+.relhead{font-size:14px}
+.note{display:block;font-size:13.5px;color:#3f3a33;margin-top:3px}
+.bd{display:block;font-size:13px;color:#7a6a55;margin-top:2px}
+.src{display:block;font-size:12.5px;color:var(--mut);margin-top:3px}
+.src i{font-style:normal;opacity:.75}
+.tagline{display:inline-block;font-size:11px;padding:0 6px;border-radius:7px;
+  background:#eef1f5;color:#3c4a5c;margin-right:5px}
+.tagline.me{background:#efe2d2;color:#8c5a2b}
+.ok{display:block;color:#2f5d46;font-size:13px;margin-top:2px}
+.hotbox{border-left:2px solid var(--line);padding-left:10px;margin-bottom:10px}
 .mism{display:block;color:#8a4a3a;font-size:13px;margin-top:2px}
 .empty{color:var(--mut);padding:36px 0;text-align:center}
 footer{color:var(--mut);font-size:12px;padding:0 28px 40px}
@@ -151,11 +162,19 @@ const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'
 
 function relRow(t){
   const out = [];
-  t.rel_out.forEach(r => out.push(
-    `本条目<span class="reltype">${r.type}</span>→ <a class="t" data-j="${r.other_id}">${r.other}</a>`));
-  t.rel_in.forEach(r => out.push(
-    `<a class="t" data-j="${r.other_id}">${r.other}</a><span class="reltype">${r.type}</span>→ 本条目`));
-  return out.length ? out.map(x=>`<li>${x}</li>`).join('') : '<li class="case">暂无</li>';
+  const block = (r, dir) => {
+    const head = dir === 'out'
+      ? `本条目<span class="reltype">${esc(r.type)}</span>→ <a class="t" data-j="${r.other_id}">${esc(r.other)}</a>`
+      : `<a class="t" data-j="${r.other_id}">${esc(r.other)}</a><span class="reltype">${esc(r.type)}</span>→ 本条目`;
+    return `<div class="relblock"><div class="relhead">${head}</div>` +
+      `<span class="note"><span class="tagline me">编者解读</span>${esc(r.explain || '')}</span>` +
+      (r.boundary ? `<span class="bd"><span class="tagline">边界</span>${esc(r.boundary)}</span>` : '') +
+      `<span class="src"><i>证据</i>　${esc(r.evidence || '')}<br><i>出处</i>　${esc(r.source || '')}</span>` +
+      `</div>`;
+  };
+  t.rel_out.forEach(r => out.push(block(r, 'out')));
+  t.rel_in.forEach(r => out.push(block(r, 'in')));
+  return out.length ? out.join('') : '<li class="case">暂无</li>';
 }
 
 function card(t){
@@ -164,12 +183,17 @@ function card(t){
       ${p.differs_from?`<span class="case">（与 ${esc(p.differs_from)} 不同：${esc(p.note||'')}）</span>`:''}
     </li>`).join('') : '<li class="case">本条无多义性记录</li>';
   const cases = t.cases.length ? t.cases.map(c => `
-    <li>${esc(c.title)}<span class="case">　${esc(c.origin)}</span>
+    <li><span class="who">${esc(c.title)}</span><span class="case">　${esc(c.origin)}</span>
+      ${c.match?`<span class="ok">相符之处：${esc(c.match)}</span>`:''}
       ${c.mismatch?`<span class="mism">不符之处：${esc(c.mismatch)}</span>`:''}</li>`).join('')
     : '<li class="case">暂无</li>';
   const hots = t.hotspots.length ? t.hotspots.map(h => `
-    <li>${esc(h.title)}<span class="case">　${h.date} · ${h.confidence}</span>
-      <span class="mism">不符之处：${esc(h.mismatch)}</span></li>`).join('')
+    <li class="hotbox"><span class="who">${esc(h.title)}</span>
+      <span class="case">　${h.date} · ${h.confidence}</span>
+      <span class="ok">相符之处：${esc(h.match || '')}</span>
+      <span class="mism">不符之处：${esc(h.mismatch)}</span>
+      ${h.analysis?`<span class="note"><span class="tagline me">解析</span>${esc(h.analysis)}</span>`:''}
+      ${h.dissent?`<span class="case">分歧：${esc(h.dissent)}</span>`:''}</li>`).join('')
     : '<li class="case">暂无</li>';
   return `<div class="card" id="t-${t.term_id}">
     <div class="ttl"><span class="zh">${esc(t.name_zh)}</span>
@@ -505,26 +529,32 @@ def main():
         t["rel_out"], t["rel_in"], t["cases"], t["hotspots"] = [], [], [], []
 
     for r in rels:
+        edge = {"type": r["type"], "evidence": r.get("evidence"),
+                "explain": r.get("explain"), "boundary": r.get("boundary"),
+                "source": r.get("source")}
         if r["from_term"] in by_id:
             by_id[r["from_term"]]["rel_out"].append(
-                {"type": r["type"], "other": name.get(r["to_term"], r["to_term"]),
-                 "other_id": r["to_term"]})
+                dict(edge, other=name.get(r["to_term"], r["to_term"]),
+                     other_id=r["to_term"]))
         if r["to_term"] in by_id:
             by_id[r["to_term"]]["rel_in"].append(
-                {"type": r["type"], "other": name.get(r["from_term"], r["from_term"]),
-                 "other_id": r["from_term"]})
+                dict(edge, other=name.get(r["from_term"], r["from_term"]),
+                     other_id=r["from_term"]))
 
     for c in cases:
         for a in c["attributions"]:
             if a["term_id"] in by_id:
                 by_id[a["term_id"]]["cases"].append(
-                    {"title": c["title"], "origin": c["origin"], "mismatch": a["mismatch"]})
+                    {"title": c["title"], "origin": c["origin"],
+                     "match": a.get("match"), "mismatch": a["mismatch"]})
     for h in hots:
         for a in h["attributions"]:
             if a["term_id"] in by_id:
                 by_id[a["term_id"]]["hotspots"].append(
                     {"title": h["title"], "date": h["date"],
-                     "confidence": a["confidence"], "mismatch": a["mismatch"]})
+                     "confidence": a["confidence"], "match": a.get("match"),
+                     "mismatch": a["mismatch"], "analysis": h.get("analysis"),
+                     "dissent": a.get("dissent")})
 
     cluster_names = list(schema.get("clusters", {}))
     lay = layout(terms, rels, cluster_names)

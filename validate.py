@@ -51,6 +51,22 @@ def check_fields(issues, fname, where, record, allowed, label="字段"):
                            f"或上一行取值含英文逗号/换行导致被截断"))
 
 
+def check_min_len(issues, fname, where, record, field, minimum, label=""):
+    """长度下限：不是审美要求，是拦「写了等于没写」的值。
+
+    「两者有关」「该说法与概念相符」这类值长度够了也仍然空，所以这条规则只
+    负责挡住最短的那批；真正的门槛在规范细则里。
+    """
+    v = record.get(field)
+    if v in (None, ""):
+        return
+    n = len(str(v).strip())
+    if n < minimum:
+        issues.append(("错误", fname, f"{where}.{field}",
+                       f"{label or field}只有 {n} 字，少于下限 {minimum} 字"
+                       f"—— 缺的是具体说明，不是字数"))
+
+
 def check_all(d, schema):
     """校验目录 d 下的四张表，返回 (issues, counts)。供命令行与 selftest.py 共用。"""
     enums, req, cons = schema["enums"], schema["required"], schema["constraints"]
@@ -102,6 +118,10 @@ def check_all(d, schema):
         rel_ids.add(r.get("rel_id"))
         check_enum(issues, "relations.yaml", where, "type", r.get("type"), enums["relation_type"])
         check_enum(issues, "relations.yaml", where, "status", r.get("status"), enums["status"])
+        check_min_len(issues, "relations.yaml", where, r, "explain",
+                      cons["explain_min_chars"], "关系解释")
+        check_min_len(issues, "relations.yaml", where, r, "boundary",
+                      cons["boundary_min_chars"], "边界说明")
         for side in ("from_term", "to_term"):
             if r.get(side) not in term_ids:
                 issues.append(("错误", "relations.yaml", f"{where}.{side}",
@@ -164,12 +184,14 @@ def check_all(d, schema):
                 if a.get("term_id") not in term_ids:
                     issues.append(("错误", fname, f"{w}.term_id",
                                    f"引用了不存在的术语 {a.get('term_id')}"))
+                check_min_len(issues, fname, w, a, "match", cons["match_min_chars"], "相符之处")
                 # 防牵强的核心规则
                 if not str(a.get("mismatch", "")).strip():
                     issues.append(("错误", fname, f"{w}.mismatch",
                                    "「不符之处」为空 —— 归属缺少反面说明，视为牵强附会"))
                 if a.get("confidence") == "有争议" and not a.get("dissent"):
                     issues.append(("警告", fname, w, "确信度为「有争议」但未记录 dissent 意见"))
+            check_min_len(issues, fname, where, c, "analysis", cons["analysis_min_chars"], "热点解析")
             if key == "hotspots":
                 dt, ra = str(c.get("date", "")), str(c.get("review_after", ""))
                 for f, v in (("date", dt), ("review_after", ra)):
