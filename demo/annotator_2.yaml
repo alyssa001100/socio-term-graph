@@ -1,0 +1,52 @@
+annotator: 乙
+labels:
+- item_id: ITEM-001
+  term_ids:
+  - TERM-0001
+  - TERM-0002
+  - TERM-0004
+- item_id: ITEM-002
+  term_ids:
+  - TERM-0001
+  - TERM-0003
+  - TERM-0005
+- item_id: ITEM-003
+  term_ids:
+  - TERM-0001
+  - TERM-0002
+  - TERM-0006
+- item_id: ITEM-004
+  term_ids:
+  - TERM-0002
+- item_id: ITEM-005
+  term_ids:
+  - TERM-0001
+  - TERM-0005
+- item_id: ITEM-006
+  term_ids:
+  - TERM-0001
+  - TERM-0006
+- item_id: ITEM-007
+  term_ids:
+  - TERM-0001
+  - TERM-0004
+  - TERM-0005
+- item_id: ITEM-008
+  term_ids:
+  - TERM-0002
+  - TERM-0003
+  - TERM-0007
+- item_id: ITEM-009
+  term_ids:
+  - TERM-0001
+  - TERM-0003
+  - TERM-0005
+- item_id: ITEM-010
+  term_ids:
+  - TERM-0001
+- item_id: ITEM-011
+  term_ids:
+  - TERM-0003
+- item_id: ITEM-012
+  term_ids:
+  - TERM-0005
