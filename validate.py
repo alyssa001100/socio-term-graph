@@ -72,6 +72,7 @@ def check_all(d, schema):
         if not DATE.match(str(t.get("first_year", ""))) and not re.match(r"^\d{4}$", str(t.get("first_year", ""))):
             issues.append(("错误", "terms.yaml", f"{where}.first_year", "年份格式应为 YYYY"))
         check_enum(issues, "terms.yaml", where, "school", t.get("school", []), enums["school"])
+        check_enum(issues, "terms.yaml", where, "cluster", t.get("cluster"), enums["cluster"])
         check_enum(issues, "terms.yaml", where, "application", t.get("application", []), enums["application"])
         check_enum(issues, "terms.yaml", where, "status", t.get("status"), enums["status"])
         check_enum(issues, "terms.yaml", where, "confidence", t.get("confidence"), enums["confidence"])
@@ -113,6 +114,25 @@ def check_all(d, schema):
             issues.append(("警告", "relations.yaml", tid,
                            f"关系数 {n} 超过上限 {cons['relations_per_term_max']}，检查是否过度连接"))
     counts["relations"] = len(data["relations"])
+
+    # 跨群桥接：跨概念群的关系最容易牵强，单独设约束
+    cluster_of = {t["term_id"]: t.get("cluster") for t in data["terms"]}
+    pair_bridges, bridges = Counter(), 0
+    for r in data["relations"]:
+        ca, cb = cluster_of.get(r.get("from_term")), cluster_of.get(r.get("to_term"))
+        if not ca or not cb or ca == cb:
+            continue
+        bridges += 1
+        pair_bridges[tuple(sorted((ca, cb)))] += 1
+        if r.get("type") == "等同":
+            issues.append(("错误", "relations.yaml", r.get("rel_id"),
+                           "跨概念群不得断言「等同」—— 若两个术语确实同一，说明两个群本应合并"))
+    for (ca, cb), n in pair_bridges.items():
+        if n > cons["bridge_per_cluster_pair_max"]:
+            issues.append(("警告", "relations.yaml", f"{ca} ↔ {cb}",
+                           f"桥接 {n} 条，超过每对概念群上限 "
+                           f"{cons['bridge_per_cluster_pair_max']}，检查是否有为了连通而连的边"))
+    counts["bridges"] = bridges
 
     # 分析范畴是划分维度，不应被具体现象归属
     categories = {t["term_id"] for t in data["terms"] if t.get("entry_type") == "分析范畴"}
@@ -182,7 +202,10 @@ def main():
     # ---------- 输出 ----------
     print(f"校验目录：{os.path.relpath(d, root)}")
     for k, v in counts.items():
+        if k == "bridges":
+            continue
         print(f"  {FILES[k]:<16} {v} 条")
+    print(f"  {'跨群桥接':<16} {counts['bridges']} 条")
     print()
     if not issues:
         print("全部通过，未发现问题。")

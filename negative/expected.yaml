@@ -54,3 +54,9 @@
 - {id: N40, file: relations.yaml, where: REL-9000.status, level: 错误, contains: 非法取值, desc: 关系状态枚举非法}
 - {id: N41, file: hotspots.yaml, where: HOT-9001, level: 错误, contains: hot_id 重复, desc: 热点 ID 重复}
 - {id: N42, file: hotspots.yaml, where: HOT-9007.review_after, level: 错误, contains: 日期格式, desc: 复审日期格式非法}
+
+- {id: N43, file: terms.yaml, where: TERM-9004.cluster, level: 错误, contains: 非法取值, desc: 概念群枚举非法}
+- {id: N44, file: terms.yaml, where: TERM-9003.cluster, level: 错误, contains: 必填字段缺失或为空, desc: 术语缺概念群}
+- {id: N44b, file: terms.yaml, where: TERM-9003.cluster, level: 错误, contains: 非法取值, desc: 术语缺概念群（枚举检查连带报出 None）}
+- {id: N45, file: relations.yaml, where: REL-9200, level: 错误, contains: 不得断言「等同」, desc: 跨群等同断言}
+- {id: N46, file: relations.yaml, where: "社会不平等 ↔ 社会秩序与越轨", level: 警告, contains: 超过每对概念群上限, desc: 跨群桥接超过上限}

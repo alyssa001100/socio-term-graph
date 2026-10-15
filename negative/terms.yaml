@@ -5,6 +5,7 @@
 
 # ---- 合规基座：供关系与归属引用，本身不注入错误 ----
 - term_id: TERM-9001
+  cluster: 社会不平等
   name_zh: 负例术语甲
   name_en: negative term alpha
   proponent: 负例
@@ -22,6 +23,7 @@
   last_reviewed: ''
 
 - term_id: TERM-9002
+  cluster: 社会不平等
   name_zh: 负例术语乙
   name_en: negative term beta
   proponent: 负例
@@ -40,6 +42,7 @@
 
 # N02 term_id 重复：与上一条 ID 相同，其余字段合规
 - term_id: TERM-9002
+  cluster: 社会不平等
   name_zh: 负例术语乙（重复 ID）
   name_en: negative term beta duplicate
   proponent: 负例
@@ -75,6 +78,7 @@
 
 # N03–N09：年份格式、四个枚举、条目类型、未知字段，全部集中在这一条
 - term_id: TERM-9004
+  cluster: 社会学理论            # N43 概念群不在封闭枚举内
   name_zh: 负例术语丁
   name_en: negative term delta
   proponent: 负例
@@ -94,6 +98,7 @@
 
 # N10 多义性条目必填缺失：第 1 条不写 source
 - term_id: TERM-9005
+  cluster: 社会不平等
   name_zh: 负例术语戊
   name_en: negative term epsilon
   proponent: 负例
@@ -117,6 +122,7 @@
 
 # N11 多义性同一作者重复 · N12 多义性 school 枚举非法
 - term_id: TERM-9006
+  cluster: 社会不平等
   name_zh: 负例术语己
   name_en: negative term zeta
   proponent: 负例
@@ -143,6 +149,7 @@
 
 # 合规基座：分析范畴，供 N29 使用（分析范畴不应被具体现象归属）
 - term_id: TERM-9007
+  cluster: 社会不平等
   name_zh: 负例分析范畴
   name_en: negative category
   proponent: 负例
@@ -154,6 +161,25 @@
   definition_source: 负例占位【页码待核】
   polysemy: []
   entry_type: 分析范畴
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+
+# 合规基座：属于另一个概念群，供 N45 / N46 的跨群规则测试
+- term_id: TERM-9008
+  cluster: 社会秩序与越轨
+  name_zh: 负例跨群术语
+  name_en: negative cross-cluster term
+  proponent: 负例
+  first_year: 1907
+  first_source: 负例占位
+  school: [古典社会学]
+  application: [越轨与犯罪]
+  definition: 仅用于负例测试的占位定义。
+  definition_source: 负例占位【页码待核】
+  polysemy: []
+  entry_type: 概念
   status: 草稿
   confidence: 明确实例
   reviewer: ''

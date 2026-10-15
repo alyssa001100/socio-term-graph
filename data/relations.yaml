@@ -122,3 +122,84 @@
 - {rel_id: REL-0040, from_term: TERM-0027, to_term: TERM-0014, type: 机制, status: 草稿,
    evidence: 把技艺转移到管理层降低了单位劳动成本，成为资本积累的机制。,
    source: "Braverman 1974, Labor and Monopoly Capital【页码待核】"}
+
+# ==== 概念群：社会秩序与越轨 · 群内关系 ====
+- {rel_id: REL-0041, from_term: TERM-0031, to_term: TERM-0030, type: 机制, status: 草稿,
+   evidence: 多数成员共有的信念与情感构成社会凝聚的道德基础，是社会团结得以形成的机制。,
+   source: 迪尔凯姆《社会分工论》1893【页码待核】}
+- {rel_id: REL-0042, from_term: TERM-0029, to_term: TERM-0030, type: 对立, status: 草稿,
+   evidence: 规范约束的松弛使成员间的联结失去依据，失范状态与社会团结此消彼长。,
+   source: 迪尔凯姆《社会分工论》1893【页码待核】}
+- {rel_id: REL-0043, from_term: TERM-0033, to_term: TERM-0032, type: 对立, status: 草稿,
+   evidence: 社区共同规范瓦解之后，非正式社会控制随之失效。,
+   source: "Shaw & McKay 1942, Juvenile Delinquency and Urban Areas【页码待核】"}
+- {rel_id: REL-0044, from_term: TERM-0034, to_term: TERM-0035, type: 机制, status: 草稿,
+   evidence: 公开的标签改变了自我认同，成为越轨生涯得以延续的机制。,
+   source: "Lemert 1951, Social Pathology【页码待核】"}
+- {rel_id: REL-0045, from_term: TERM-0036, to_term: TERM-0034, type: 借用, status: 草稿,
+   evidence: 戈夫曼关于污名的讨论借用了标签理论「越轨由社会反应界定」的基本主张。,
+   source: "Goffman 1963, Stigma【页码待核】"}
+- {rel_id: REL-0046, from_term: TERM-0032, to_term: TERM-0029, type: 对立, status: 草稿,
+   evidence: 社会控制的诸机制正是针对规范约束失效的状态作出的回应。,
+   source: "Ross 1901, Social Control【页码待核】"}
+
+# ==== 概念群：社会行动与理性化 · 群内关系 ====
+- {rel_id: REL-0047, from_term: TERM-0038, to_term: TERM-0040, type: 机制, status: 草稿,
+   evidence: 目的理性的计算需要可预测的规则体系，科层制是理性化在组织层面的实现形式。,
+   source: 韦伯《经济与社会》1922【页码待核】}
+- {rel_id: REL-0048, from_term: TERM-0038, to_term: TERM-0039, type: 机制, status: 草稿,
+   evidence: 理性化的秩序一经确立便难以退出，个体由此被束缚其中。,
+   source: 韦伯《新教伦理与资本主义精神》1905【页码待核】}
+- {rel_id: REL-0049, from_term: TERM-0041, to_term: TERM-0040, type: 包含, status: 草稿,
+   evidence: 科层制是法理型支配的典型形态，属于三种纯粹支配类型之一的具体化。,
+   source: 韦伯《经济与社会》1922【页码待核】}
+- {rel_id: REL-0050, from_term: TERM-0040, to_term: TERM-0042, type: 机制, status: 草稿,
+   evidence: 科层制对规则与程序的强调训练出仪式化倾向，使手段取代目标本身。,
+   source: "Merton 1940, Bureaucratic Structure and Personality【页码待核】"}
+- {rel_id: REL-0051, from_term: TERM-0043, to_term: TERM-0040, type: 对立, status: 草稿,
+   evidence: 非正式关系结构按实际互动而非成文规则运行，与科层制的正式结构相互抵消。,
+   source: "Mayo 1933, The Human Problems of an Industrial Civilization【页码待核】"}
+- {rel_id: REL-0052, from_term: TERM-0044, to_term: TERM-0038, type: 继承, status: 草稿,
+   evidence: 里itzer 明确把麦当劳化界定为韦伯理性化命题在当代社会的延伸。,
+   source: "Ritzer 1993, The McDonaldization of Society【页码待核】"}
+- {rel_id: REL-0053, from_term: TERM-0037, to_term: TERM-0041, type: 包含, status: 草稿,
+   evidence: 支配是行动者以意义指向他人并寻求服从的一类社会行动。,
+   source: 韦伯《经济与社会》1922【页码待核】}
+- {rel_id: REL-0054, from_term: TERM-0044, to_term: TERM-0042, type: 机制, status: 草稿,
+   evidence: 效率原则被推到极致时，程序本身取代了原本的服务目标。,
+   source: "Ritzer 1993, The McDonaldization of Society【页码待核】"}
+
+# ==== 跨群桥接：社会不平等 ↔ 社会秩序与越轨 ====
+# 每对概念群的桥接上限由 schema.constraints.bridge_per_cluster_pair_max 控制
+- {rel_id: REL-0055, from_term: TERM-0022, to_term: TERM-0029, type: 继承, status: 草稿,
+   evidence: 默顿的紧张理论直接继承了失范概念，把它从规范缺失改写为文化目标与制度手段之间的脱节。,
+   source: "Merton 1938, Social Structure and Anomie【页码待核】"}
+- {rel_id: REL-0056, from_term: TERM-0036, to_term: TERM-0018, type: 机制, status: 草稿,
+   evidence: 污名通过分类与贬低，使持有者被排除在主流社会关系与制度之外。,
+   source: "Goffman 1963, Stigma【页码待核】"}
+- {rel_id: REL-0057, from_term: TERM-0035, to_term: TERM-0018, type: 机制, status: 草稿,
+   evidence: 被标签者进入越轨生涯后，逐渐被排除在常规就业与社交之外。,
+   source: "Lemert 1951, Social Pathology【页码待核】"}
+- {rel_id: REL-0058, from_term: TERM-0033, to_term: TERM-0001, type: 对立, status: 草稿,
+   evidence: 社会解组描述的正是社区层面社会资本缺失、非正式控制失效的状态，两者互为反面。,
+   source: "Shaw & McKay 1942, Juvenile Delinquency and Urban Areas【页码待核】"}
+- {rel_id: REL-0059, from_term: TERM-0024, to_term: TERM-0032, type: 机制, status: 草稿,
+   evidence: 规训是现代社会控制不再依赖公开强制、转而生产自我约束主体的机制。,
+   source: 福柯《规训与惩罚》1975【页码待核】}
+
+# ==== 跨群桥接：社会不平等 ↔ 社会行动与理性化 ====
+- {rel_id: REL-0060, from_term: TERM-0024, to_term: TERM-0040, type: 借用, status: 草稿,
+   evidence: 福柯的规训分析借用了科层组织中的纪律与层级监视，把它扩展为普遍的身体技术。,
+   source: 福柯《规训与惩罚》1975【页码待核】}
+- {rel_id: REL-0061, from_term: TERM-0040, to_term: TERM-0001, type: 对立, status: 草稿,
+   evidence: 科层制以非人格化的规则取代人格化的关系网络，两者在协调机制上相互替代。,
+   source: 韦伯《经济与社会》1922【页码待核】}
+- {rel_id: REL-0062, from_term: TERM-0042, to_term: TERM-0017, type: 机制, status: 草稿,
+   evidence: 教育原本是获得职业地位的手段，在文凭竞争中逐渐变成被追求的目的本身。,
+   source: "Merton 1940；Collins 1979【页码待核】"}
+- {rel_id: REL-0063, from_term: TERM-0006, to_term: TERM-0037, type: 继承, status: 草稿,
+   evidence: 科尔曼的理性选择理论以韦伯的目的理性行动为源头之一，把效用最大化确立为基本假设。,
+   source: "Coleman 1990, Foundations of Social Theory【页码待核】"}
+- {rel_id: REL-0064, from_term: TERM-0040, to_term: TERM-0027, type: 机制, status: 草稿,
+   evidence: 科层制的分工体系把劳动拆解为可替换的环节，为技艺向管理层的转移提供组织条件。,
+   source: "Braverman 1974, Labor and Monopoly Capital【页码待核】"}

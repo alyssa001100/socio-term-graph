@@ -2,11 +2,21 @@
 # 规范即配置：改标注规范只需要改这个文件
 # validate.py 按这里定义的枚举和必填规则校验数据
 # ============================================================
-version: v4
+version: v5
 updated: 2026-10-15
+
+# 概念群 —— 每个群围绕一个核心问题，群内关系密集，群间只允许少量桥接
+clusters:
+  社会不平等: 社会不平等是如何被生产、维持与再生产的？
+  社会秩序与越轨: 社会秩序如何可能？越轨又是如何被定义与控制的？
+  社会行动与理性化: 现代社会的行动是如何被理性化地组织起来的？
 
 # 封闭枚举 —— 自由填写会让标签体系立刻烂掉，这是数据运营的核心教训
 enums:
+  cluster:                     # 所属概念群（v5 新增）
+    - 社会不平等
+    - 社会秩序与越轨
+    - 社会行动与理性化
   school:                      # 所属流派
     - 古典社会学
     - 结构功能主义
@@ -55,7 +65,7 @@ enums:
 
 # 必填字段 —— 空值或缺失都会被校验拦下
 required:
-  terms:      [term_id, name_zh, name_en, proponent, first_year, first_source,
+  terms:      [term_id, cluster, name_zh, name_en, proponent, first_year, first_source,
                school, application, definition, definition_source, entry_type, status, confidence]
   relations:  [rel_id, from_term, to_term, type, evidence, source, status]
   cases:      [case_id, title, description, origin, source, attributions, status]
@@ -67,7 +77,7 @@ required:
 # 字段白名单 —— 每张表允许出现的字段全集
 # 用途：拦截拼写错误、多余列、以及 YAML 行内映射里被逗号/换行意外截断的值
 fields:
-  terms:     [term_id, name_zh, name_en, aliases, proponent, first_year, first_source,
+  terms:     [term_id, cluster, name_zh, name_en, aliases, proponent, first_year, first_source,
               school, application, definition, definition_source, polysemy,
               entry_type, status, confidence, reviewer, last_reviewed]
   polysemy:  [author, school, definition, differs_from, note, source]
@@ -82,3 +92,4 @@ constraints:
   attribution_min: 1           # 每条案例/热点至少挂 1 个术语
   hotspot_review_months: 12    # 热点默认复审周期（月）
   relations_per_term_max: 12   # 单个术语关系数上限，防止过度连接
+  bridge_per_cluster_pair_max: 5   # 每对概念群之间的桥接关系上限，防止跨群滥连

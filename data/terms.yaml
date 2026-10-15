@@ -2,6 +2,7 @@
 # 统一约定：所有页码与具体表述均待核，status 保持「草稿」直至人工核对原文
 # 概念群：社会不平等是如何被生产、维持与再生产的？
 - term_id: TERM-0001
+  cluster: 社会不平等
   name_zh: 社会资本
   name_en: social capital
   aliases: [社会资本]
@@ -37,6 +38,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0002
+  cluster: 社会不平等
   name_zh: 场域
   name_en: field
   aliases: [场, 社会空间]
@@ -54,6 +56,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0003
+  cluster: 社会不平等
   name_zh: 惯习
   name_en: habitus
   aliases: [习性]
@@ -71,6 +74,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0004
+  cluster: 社会不平等
   name_zh: 弱关系
   name_en: weak ties
   aliases: [弱连带]
@@ -88,6 +92,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0005
+  cluster: 社会不平等
   name_zh: 内卷化
   name_en: involution
   aliases: [过密化]
@@ -111,6 +116,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0006
+  cluster: 社会不平等
   name_zh: 理性选择理论
   name_en: rational choice theory
   aliases: [理性选择]
@@ -128,6 +134,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0007
+  cluster: 社会不平等
   name_zh: 社会分层
   name_en: social stratification
   aliases: [分层]
@@ -145,6 +152,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0008
+  cluster: 社会不平等
   name_zh: 阶级
   name_en: class
   aliases: [阶级]
@@ -174,6 +182,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0009
+  cluster: 社会不平等
   name_zh: 阶层
   name_en: social stratum
   aliases: [社会阶层]
@@ -191,6 +200,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0010
+  cluster: 社会不平等
   name_zh: 地位
   name_en: status
   aliases: [身份, 社会地位]
@@ -214,6 +224,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0011
+  cluster: 社会不平等
   name_zh: 社会流动
   name_en: social mobility
   aliases: [社会流动, 流动]
@@ -231,6 +242,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0012
+  cluster: 社会不平等
   name_zh: 社会封闭
   name_en: social closure
   aliases: [封闭]
@@ -254,6 +266,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0013
+  cluster: 社会不平等
   name_zh: 文化资本
   name_en: cultural capital
   aliases: [文化资本]
@@ -271,6 +284,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0014
+  cluster: 社会不平等
   name_zh: 经济资本
   name_en: economic capital
   aliases: [经济资本]
@@ -288,6 +302,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0015
+  cluster: 社会不平等
   name_zh: 符号资本
   name_en: symbolic capital
   aliases: [象征资本]
@@ -305,6 +320,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0016
+  cluster: 社会不平等
   name_zh: 再生产
   name_en: reproduction
   aliases: [社会再生产, 文化再生产]
@@ -322,6 +338,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0017
+  cluster: 社会不平等
   name_zh: 文凭通胀
   name_en: credential inflation
   aliases: [学历贬值, 文凭膨胀]
@@ -339,6 +356,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0018
+  cluster: 社会不平等
   name_zh: 社会排斥
   name_en: social exclusion
   aliases: [排斥, 社会排挤]
@@ -356,6 +374,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0019
+  cluster: 社会不平等
   name_zh: 区隔
   name_en: distinction
   aliases: [区分]
@@ -373,6 +392,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0020
+  cluster: 社会不平等
   name_zh: 误识
   name_en: misrecognition
   aliases: [误认, 不识]
@@ -390,6 +410,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0021
+  cluster: 社会不平等
   name_zh: 剥削
   name_en: exploitation
   aliases: [榨取]
@@ -412,6 +433,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0022
+  cluster: 社会不平等
   name_zh: 紧张理论
   name_en: strain theory
   aliases: [失范理论, 结构紧张理论]
@@ -434,6 +456,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0023
+  cluster: 社会不平等
   name_zh: 做性别
   name_en: doing gender
   aliases: [性别实践]
@@ -456,6 +479,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0024
+  cluster: 社会不平等
   name_zh: 规训
   name_en: discipline
   aliases: [纪律, 规训权力]
@@ -479,6 +503,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0025
+  cluster: 社会不平等
   name_zh: 居住隔离
   name_en: residential segregation
   aliases: [居住分异]
@@ -502,6 +527,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0026
+  cluster: 社会不平等
   name_zh: 第二班
   name_en: the second shift
   aliases: [第二轮班]
@@ -519,6 +545,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0027
+  cluster: 社会不平等
   name_zh: 去技能化
   name_en: deskilling
   aliases: [技能退化]
@@ -541,6 +568,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0028
+  cluster: 社会不平等
   name_zh: 象征性边界
   name_en: symbolic boundaries
   aliases: [符号边界]
@@ -551,6 +579,316 @@
   application: [文化与消费, 移民与族群, 社会分层与流动]
   definition: 行动者用来区分人群与事物的分类概念；当它被广泛接受并转化为资源分配的依据时，就转变为社会边界。
   definition_source: Lamont & Fournier 1992, Cultivating Differences【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0029
+  cluster: 社会秩序与越轨
+  name_zh: 失范
+  name_en: anomie
+  aliases: [迷乱, 失序]
+  proponent: 埃米尔·迪尔凯姆
+  first_year: 1893
+  first_source: De la division du travail social
+  school: [古典社会学, 结构功能主义]
+  application: [越轨与犯罪, 社会分层与流动]
+  definition: 社会用以约束个体欲望与期待的规范出现松弛或缺失的状态，使欲求失去限度。
+  definition_source: 迪尔凯姆《社会分工论》1893【页码待核】
+  polysemy:
+    - author: 罗伯特·默顿
+      school: [结构功能主义]
+      definition: 失范不是规范缺失，而是社会结构所提倡的文化目标与它实际提供的合法手段之间出现脱节。
+      differs_from: 埃米尔·迪尔凯姆
+      note: 迪尔凯姆把失范理解为规范对欲望的约束失效，默顿则把失范的来源从个体欲求转向社会结构的分配不均
+      source: Merton 1938, Social Structure and Anomie【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0030
+  cluster: 社会秩序与越轨
+  name_zh: 社会团结
+  name_en: social solidarity
+  aliases: [社会凝聚]
+  proponent: 埃米尔·迪尔凯姆
+  first_year: 1893
+  first_source: De la division du travail social
+  school: [古典社会学, 结构功能主义]
+  application: [劳动与职业, 越轨与犯罪]
+  definition: 社会成员之间因共同意识或分工形成的相互依赖而产生的联结，使社会得以保持凝聚。
+  definition_source: 迪尔凯姆《社会分工论》1893【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0031
+  cluster: 社会秩序与越轨
+  name_zh: 集体意识
+  name_en: collective consciousness
+  aliases: [共同意识]
+  proponent: 埃米尔·迪尔凯姆
+  first_year: 1893
+  first_source: De la division du travail social
+  school: [古典社会学, 结构功能主义]
+  application: [文化与消费, 越轨与犯罪]
+  definition: 一个社会中多数成员共有的信念与情感的总和，构成社会凝聚的道德基础。
+  definition_source: 迪尔凯姆《社会分工论》1893【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0032
+  cluster: 社会秩序与越轨
+  name_zh: 社会控制
+  name_en: social control
+  aliases: [社会约制]
+  proponent: 爱德华·罗斯
+  first_year: 1901
+  first_source: Social Control
+  school: [古典社会学, 结构功能主义]
+  application: [越轨与犯罪, 组织与科层制]
+  definition: 社会通过规范、舆论、制度与制裁使成员服从既定秩序的各种机制的总和。
+  definition_source: Ross 1901, Social Control【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0033
+  cluster: 社会秩序与越轨
+  name_zh: 社会解组
+  name_en: social disorganization
+  aliases: [社会解体]
+  proponent: 克利福德·肖; 亨利·麦凯
+  first_year: 1942
+  first_source: Juvenile Delinquency and Urban Areas
+  school: [古典社会学]
+  application: [越轨与犯罪, 城市与空间]
+  definition: 社区因缺乏共同规范与非正式控制能力，无法有效约束成员行为的状态。
+  definition_source: Shaw & McKay 1942, Juvenile Delinquency and Urban Areas【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0034
+  cluster: 社会秩序与越轨
+  name_zh: 标签理论
+  name_en: labeling theory
+  aliases: [标定理论]
+  proponent: 霍华德·贝克尔
+  first_year: 1963
+  first_source: Outsiders
+  school: [符号互动论, 冲突论]
+  application: [越轨与犯罪]
+  definition: 越轨不是行为本身的固有属性，而是社会对行为施加标签的结果；被成功贴上标签的人由此进入越轨生涯。
+  definition_source: Becker 1963, Outsiders【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0035
+  cluster: 社会秩序与越轨
+  name_zh: 次级越轨
+  name_en: secondary deviance
+  aliases: [二次越轨]
+  proponent: 埃德温·莱默特
+  first_year: 1951
+  first_source: Social Pathology
+  school: [符号互动论]
+  application: [越轨与犯罪]
+  definition: 个体在被公开标签之后，把越轨身份纳入自我认同并据此重新组织行为的结果。
+  definition_source: Lemert 1951, Social Pathology【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0036
+  cluster: 社会秩序与越轨
+  name_zh: 污名
+  name_en: stigma
+  aliases: [污名化, 耻辱标记]
+  proponent: 欧文·戈夫曼
+  first_year: 1963
+  first_source: Stigma
+  school: [符号互动论]
+  application: [越轨与犯罪, 健康与医疗]
+  definition: 一种被社会视为贬损的属性，使持有者在日常互动中失去完整的成员资格。
+  definition_source: Goffman 1963, Stigma【页码待核】
+  polysemy:
+    - author: 布鲁斯·林克; 乔·费伦
+      definition: 污名不是个体身上的属性，而是标签、刻板印象、社会分离、地位丧失与歧视共同构成的社会过程。
+      differs_from: 欧文·戈夫曼
+      note: 戈夫曼关注被污名者的互动管理与自我呈现，林克与费伦把分析重心移到施加污名的一方及其权力条件
+      source: Link & Phelan 2001, Conceptualizing Stigma【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0037
+  cluster: 社会行动与理性化
+  name_zh: 社会行动
+  name_en: social action
+  aliases: [社会行为]
+  proponent: 马克斯·韦伯
+  first_year: 1922
+  first_source: 经济与社会
+  school: [古典社会学]
+  application: [组织与科层制, 文化与消费]
+  definition: 行动者赋予主观意义、并以其意义指向他人的行动；据其取向可区分为目的理性、价值理性、情感与传统四种纯粹类型。
+  definition_source: 韦伯《经济与社会》1922【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0038
+  cluster: 社会行动与理性化
+  name_zh: 理性化
+  name_en: rationalization
+  aliases: [合理化]
+  proponent: 马克斯·韦伯
+  first_year: 1905
+  first_source: 新教伦理与资本主义精神
+  school: [古典社会学, 历史社会学]
+  application: [组织与科层制, 劳动与职业]
+  definition: 社会行动逐渐由可计算的目的理性与可预测的规则来组织，取代传统与情感支配的过程。
+  definition_source: 韦伯《新教伦理与资本主义精神》1905【页码待核】
+  polysemy:
+    - author: 尤尔根·哈贝马斯
+      definition: 理性化不必然等同于目的理性的扩张，以相互理解为取向的沟通理性同样是一种理性化，且可用来批判前者。
+      differs_from: 马克斯·韦伯
+      note: 韦伯把理性化描述为不可逆的命运，哈贝马斯则把理性拆成两种，使理性化成为可争论的过程
+      source: Habermas 1981, Theorie des kommunikativen Handelns【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0039
+  cluster: 社会行动与理性化
+  name_zh: 铁笼
+  name_en: iron cage
+  aliases: [铁制牢笼]
+  proponent: 马克斯·韦伯
+  first_year: 1905
+  first_source: 新教伦理与资本主义精神
+  school: [古典社会学]
+  application: [组织与科层制, 劳动与职业]
+  definition: 理性化的秩序一经确立便难以摆脱，个体被束缚在由规则与科层组织构成的牢笼之中。
+  definition_source: 韦伯《新教伦理与资本主义精神》1905【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0040
+  cluster: 社会行动与理性化
+  name_zh: 科层制
+  name_en: bureaucracy
+  aliases: [官僚制, 官僚科层制]
+  proponent: 马克斯·韦伯
+  first_year: 1922
+  first_source: 经济与社会
+  school: [古典社会学, 结构功能主义]
+  application: [组织与科层制, 劳动与职业]
+  definition: 以法理型支配为基础、按层级与成文规则运转的组织形式，其技术效率来自非人格化与可计算性。
+  definition_source: 韦伯《经济与社会》1922【页码待核】
+  polysemy:
+    - author: 罗伯特·默顿
+      school: [结构功能主义]
+      definition: 科层制的高度规则化会训练出仪式化的行为倾向，使遵守程序本身取代组织目标。
+      differs_from: 马克斯·韦伯
+      note: 韦伯强调科层制的技术效率与形式理性，默顿则指出同一套结构会产生可预期的反功能
+      source: Merton 1940, Bureaucratic Structure and Personality【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0041
+  cluster: 社会行动与理性化
+  name_zh: 支配类型
+  name_en: types of domination
+  aliases: [正当支配类型, 权威类型]
+  proponent: 马克斯·韦伯
+  first_year: 1922
+  first_source: 经济与社会
+  school: [古典社会学]
+  application: [组织与科层制]
+  definition: 支配的正当性依据可区分为传统、克里斯玛与法理三种纯粹类型；科层制是法理型支配的典型形态。
+  definition_source: 韦伯《经济与社会》1922【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0042
+  cluster: 社会行动与理性化
+  name_zh: 目标替代
+  name_en: goal displacement
+  aliases: [目标置换]
+  proponent: 罗伯特·默顿
+  first_year: 1940
+  first_source: Bureaucratic Structure and Personality
+  school: [结构功能主义]
+  application: [组织与科层制, 教育]
+  definition: 组织原本作为手段的规则与程序逐渐变成目的本身，使组织行为偏离最初目标。
+  definition_source: Merton 1940, Bureaucratic Structure and Personality【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0043
+  cluster: 社会行动与理性化
+  name_zh: 非正式组织
+  name_en: informal organization
+  aliases: [非正式群体]
+  proponent: 乔治·埃尔顿·梅奥
+  first_year: 1933
+  first_source: The Human Problems of an Industrial Civilization
+  school: [经济社会学]
+  application: [组织与科层制, 劳动与职业]
+  definition: 由实际互动中形成的情感与规范所构成的非正式关系结构，其运行规则常与正式组织的规定相悖。
+  definition_source: Mayo 1933, The Human Problems of an Industrial Civilization【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0044
+  cluster: 社会行动与理性化
+  name_zh: 麦当劳化
+  name_en: McDonaldization
+  aliases: []
+  proponent: 乔治·里itzer
+  first_year: 1993
+  first_source: The McDonaldization of Society
+  school: [经济社会学, 文化社会学]
+  application: [劳动与职业, 文化与消费]
+  definition: 快餐业的效率、可计算性、可预测性与控制四项原则向社会各领域扩散，是理性化在当代的延伸。
+  definition_source: Ritzer 1993, The McDonaldization of Society【页码待核】
   polysemy: []
   entry_type: 概念
   status: 草稿
