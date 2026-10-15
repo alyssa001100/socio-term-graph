@@ -1,0 +1,56 @@
+# 负例集的期望命中清单
+# selftest.py 读这个文件，逐条要求在 negative/ 的校验结果里找到对应报错
+#   level    —— 错误 / 警告
+#   file     —— 报错所属文件
+#   where    —— 报错定位，必须完全相等
+#   contains —— 报错信息里必须出现的片段
+# 未被清单认领的报错一律计为「误报」
+
+- {id: N01, file: terms.yaml, where: "TERM-9003.definition_source", level: 错误, contains: 必填字段缺失或为空, desc: 术语缺必填字段}
+- {id: N02, file: terms.yaml, where: "TERM-9002", level: 错误, contains: term_id 重复, desc: 术语 ID 重复}
+- {id: N03, file: terms.yaml, where: "TERM-9004.first_year", level: 错误, contains: 年份格式, desc: 年份格式非法}
+- {id: N04, file: terms.yaml, where: "TERM-9004.school", level: 错误, contains: 非法取值, desc: 流派枚举非法}
+- {id: N05, file: terms.yaml, where: "TERM-9004.application", level: 错误, contains: 非法取值, desc: 应用场景枚举非法}
+- {id: N06, file: terms.yaml, where: "TERM-9004.status", level: 错误, contains: 非法取值, desc: 状态枚举非法}
+- {id: N07, file: terms.yaml, where: "TERM-9004.confidence", level: 错误, contains: 非法取值, desc: 确信度枚举非法}
+- {id: N08, file: terms.yaml, where: "TERM-9004.entry_type", level: 错误, contains: 非法取值, desc: 条目类型枚举非法}
+- {id: N09, file: terms.yaml, where: "TERM-9004", level: 错误, contains: 未在 schema.fields 中定义, desc: 术语多出未知字段}
+- {id: N10, file: terms.yaml, where: "TERM-9005.polysemy[1].source", level: 错误, contains: 多义性条目必填, desc: 多义性缺出处}
+- {id: N11, file: terms.yaml, where: "TERM-9006.polysemy[2]", level: 错误, contains: 同一作者, desc: 多义性同作者重复}
+- {id: N12, file: terms.yaml, where: "TERM-9006.polysemy[2].school", level: 错误, contains: 非法取值, desc: 多义性流派枚举非法}
+
+- {id: N13, file: relations.yaml, where: "REL-9001", level: 错误, contains: rel_id 重复, desc: 关系 ID 重复}
+- {id: N14, file: relations.yaml, where: "REL-9002.type", level: 错误, contains: 非法取值, desc: 关系类型枚举非法}
+- {id: N15, file: relations.yaml, where: "REL-9003.from_term", level: 错误, contains: 引用了不存在的术语, desc: 关系起点悬空}
+- {id: N16, file: relations.yaml, where: "REL-9003.to_term", level: 错误, contains: 引用了不存在的术语, desc: 关系终点悬空}
+- {id: N17, file: relations.yaml, where: "REL-9004", level: 错误, contains: 关系两端指向同一术语, desc: 关系自环}
+- {id: N18, file: relations.yaml, where: "TERM-9001", level: 警告, contains: 超过上限 12, desc: 单术语关系数超限}
+- {id: N19, file: relations.yaml, where: "REL-9002", level: 错误, contains: 未在 schema.fields 中定义, desc: 关系多出未知字段}
+- {id: N20, file: relations.yaml, where: "REL-9005.evidence", level: 错误, contains: 必填字段缺失或为空, desc: 关系缺证据句}
+
+- {id: N21, file: cases.yaml, where: "CASE-9001.source", level: 错误, contains: 必填字段缺失或为空, desc: 案例缺出处}
+- {id: N22a, file: cases.yaml, where: "CASE-9003.attributions", level: 错误, contains: 必填字段缺失或为空, desc: 案例无归属块}
+- {id: N22b, file: cases.yaml, where: "CASE-9003", level: 错误, contains: 少于下限, desc: 归属数低于下限}
+- {id: N23, file: cases.yaml, where: "CASE-9002", level: 错误, contains: case_id 重复, desc: 案例 ID 重复}
+- {id: N24, file: cases.yaml, where: "CASE-9004.status", level: 错误, contains: 非法取值, desc: 案例状态枚举非法}
+- {id: N25, file: cases.yaml, where: "CASE-9005.attributions[1].rationale", level: 错误, contains: 必填字段缺失或为空, desc: 归属块缺理由}
+- {id: N26a, file: cases.yaml, where: "CASE-9006.attributions[1].mismatch", level: 错误, contains: 必填字段缺失或为空, desc: 不符之处为空（必填）}
+- {id: N26b, file: cases.yaml, where: "CASE-9006.attributions[1].mismatch", level: 错误, contains: 不符之处」为空, desc: 不符之处为空（防牵强闸门）}
+- {id: N27, file: cases.yaml, where: "CASE-9007.attributions[1].confidence", level: 错误, contains: 非法取值, desc: 归属确信度枚举非法}
+- {id: N28, file: cases.yaml, where: "CASE-9008.attributions[1].term_id", level: 错误, contains: 引用了不存在的术语, desc: 归属悬空}
+- {id: N29, file: cases.yaml, where: "CASE-9009.attributions[1].term_id", level: 警告, contains: 分析范畴, desc: 分析范畴被现象归属}
+- {id: N30, file: cases.yaml, where: "CASE-9010.attributions[1]", level: 警告, contains: 未记录 dissent, desc: 有争议却无分歧记录}
+- {id: N31, file: cases.yaml, where: "CASE-9011", level: 错误, contains: 未在 schema.fields 中定义, desc: 案例多出未知字段}
+
+- {id: N32, file: hotspots.yaml, where: "HOT-9004.date", level: 错误, contains: 日期格式, desc: 热点日期格式非法}
+- {id: N33, file: hotspots.yaml, where: "HOT-9002.review_after", level: 错误, contains: 必须晚于事件日期, desc: 复审日期早于事件日期}
+- {id: N34, file: hotspots.yaml, where: "HOT-9003.review_after", level: 警告, contains: 已过复审期, desc: 热点过期未复审}
+- {id: N35, file: hotspots.yaml, where: "HOT-9005.source_url", level: 警告, contains: 占位符, desc: 热点来源仍是占位符}
+- {id: N36, file: hotspots.yaml, where: "HOT-9006.description", level: 错误, contains: 必填字段缺失或为空, desc: 热点缺描述}
+- {id: N37, file: hotspots.yaml, where: "HOT-9001", level: 错误, contains: 未在 schema.fields 中定义, desc: 热点多出未知字段}
+
+- {id: N38, file: terms.yaml, where: "TERM-9005.polysemy[1]", level: 错误, contains: 未在 schema.fields 中定义, desc: 多义性条目多出未知字段}
+- {id: N39, file: cases.yaml, where: "CASE-9001.attributions[1]", level: 错误, contains: 未在 schema.fields 中定义, desc: 归属块多出未知字段}
+- {id: N40, file: relations.yaml, where: REL-9000.status, level: 错误, contains: 非法取值, desc: 关系状态枚举非法}
+- {id: N41, file: hotspots.yaml, where: HOT-9001, level: 错误, contains: hot_id 重复, desc: 热点 ID 重复}
+- {id: N42, file: hotspots.yaml, where: HOT-9007.review_after, level: 错误, contains: 日期格式, desc: 复审日期格式非法}

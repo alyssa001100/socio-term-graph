@@ -1,0 +1,160 @@
+# 负例集 · 概念层节点（terms）
+# 本文件所有条目的唯一用途是违反 validate.py 的规则，不属于知识库内容
+# 注入编号（N01…）与 negative/expected.yaml 一一对应
+# 纪律：除标注的注入点外，其余字段一律填成合规值，否则会产生无法归因的噪音报错
+
+# ---- 合规基座：供关系与归属引用，本身不注入错误 ----
+- term_id: TERM-9001
+  name_zh: 负例术语甲
+  name_en: negative term alpha
+  proponent: 负例
+  first_year: 1900
+  first_source: 负例占位
+  school: [文化社会学]
+  application: [教育]
+  definition: 仅用于负例测试的占位定义。
+  definition_source: 负例占位【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+
+- term_id: TERM-9002
+  name_zh: 负例术语乙
+  name_en: negative term beta
+  proponent: 负例
+  first_year: 1901
+  first_source: 负例占位
+  school: [文化社会学]
+  application: [教育]
+  definition: 仅用于负例测试的占位定义。
+  definition_source: 负例占位【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+
+# N02 term_id 重复：与上一条 ID 相同，其余字段合规
+- term_id: TERM-9002
+  name_zh: 负例术语乙（重复 ID）
+  name_en: negative term beta duplicate
+  proponent: 负例
+  first_year: 1901
+  first_source: 负例占位
+  school: [文化社会学]
+  application: [教育]
+  definition: 仅用于负例测试的占位定义。
+  definition_source: 负例占位【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+
+# N01 必填字段缺失：不写 definition_source
+- term_id: TERM-9003
+  name_zh: 负例术语丙
+  name_en: negative term gamma
+  proponent: 负例
+  first_year: 1902
+  first_source: 负例占位
+  school: [文化社会学]
+  application: [教育]
+  definition: 仅用于负例测试的占位定义。
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+
+# N03–N09：年份格式、四个枚举、条目类型、未知字段，全部集中在这一条
+- term_id: TERM-9004
+  name_zh: 负例术语丁
+  name_en: negative term delta
+  proponent: 负例
+  first_year: 一九〇三          # N03 年份格式应为 YYYY
+  first_source: 负例占位
+  school: [城市社会学]           # N04 流派不在封闭枚举内
+  application: [不平等]          # N05 应用场景不在封闭枚举内
+  definition: 仅用于负例测试的占位定义。
+  definition_source: 负例占位【页码待核】
+  polysemy: []
+  entry_type: 范畴              # N06 条目类型不在封闭枚举内
+  status: 待定                   # N07 状态不在封闭枚举内
+  confidence: 很像               # N08 确信度不在封闭枚举内
+  reviewer: ''
+  last_reviewed: ''
+  source: 负例占位               # N09 未知字段（写法错误：应以 definition_source 记录）
+
+# N10 多义性条目必填缺失：第 1 条不写 source
+- term_id: TERM-9005
+  name_zh: 负例术语戊
+  name_en: negative term epsilon
+  proponent: 负例
+  first_year: 1904
+  first_source: 负例占位
+  school: [文化社会学]
+  application: [教育]
+  definition: 仅用于负例测试的占位定义。
+  definition_source: 负例占位【页码待核】
+  polysemy:
+    - author: 负例作者甲
+      definition: 缺少 source 的多义性条目。
+      differs_from: 负例
+      note: 负例
+      note_x: 负例              # N38 多义性条目里的未知字段
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+
+# N11 多义性同一作者重复 · N12 多义性 school 枚举非法
+- term_id: TERM-9006
+  name_zh: 负例术语己
+  name_en: negative term zeta
+  proponent: 负例
+  first_year: 1905
+  first_source: 负例占位
+  school: [文化社会学]
+  application: [教育]
+  definition: 仅用于负例测试的占位定义。
+  definition_source: 负例占位【页码待核】
+  polysemy:
+    - author: 负例作者乙
+      school: [文化社会学]
+      definition: 合规的多义性条目。
+      source: 负例占位【页码待核】
+    - author: 负例作者乙        # N11 与上一条作者重复
+      school: [社会心理学]      # N12 流派不在封闭枚举内
+      definition: 作者重复且流派非法的多义性条目。
+      source: 负例占位【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+
+# 合规基座：分析范畴，供 N29 使用（分析范畴不应被具体现象归属）
+- term_id: TERM-9007
+  name_zh: 负例分析范畴
+  name_en: negative category
+  proponent: 负例
+  first_year: 1906
+  first_source: 负例占位
+  school: [古典社会学]
+  application: [社会分层与流动]
+  definition: 仅用于负例测试的占位分析范畴。
+  definition_source: 负例占位【页码待核】
+  polysemy: []
+  entry_type: 分析范畴
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''

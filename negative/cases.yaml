@@ -1,0 +1,154 @@
+# 负例集 · 实例层（cases）
+# 注入编号（N21…）与 negative/expected.yaml 一一对应
+
+# N21 必填字段缺失：不写 source
+- case_id: CASE-9001
+  title: 缺来源的案例
+  description: 刻意不写 source。
+  origin: 负例
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+      weight: 1                 # N39 归属块里的未知字段
+  status: 草稿
+
+# 合规基座
+- case_id: CASE-9002
+  title: 合规占位案例
+  description: 与下一条 ID 相同的合规案例。
+  origin: 负例
+  source: 负例占位【页码待核】
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 草稿
+
+# N23 case_id 重复：与上一条 ID 相同，其余字段合规
+- case_id: CASE-9002
+  title: ID 重复的案例
+  description: 与上一条 ID 相同。
+  origin: 负例
+  source: 负例占位【页码待核】
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 草稿
+
+# N22 归属数少于下限：attributions 为空（触发「必填缺失」与「少于下限」两条）
+- case_id: CASE-9003
+  title: 没有归属块的案例
+  description: attributions 为空。
+  origin: 负例
+  source: 负例占位【页码待核】
+  attributions: []
+  status: 草稿
+
+# N24 状态不在封闭枚举内
+- case_id: CASE-9004
+  title: 状态非法的案例
+  description: status 填了枚举外的值。
+  origin: 负例
+  source: 负例占位【页码待核】
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 未知
+
+# N25 归属块必填字段缺失：不写 rationale
+- case_id: CASE-9005
+  title: 归属块缺理由
+  description: 归属块不写 rationale。
+  origin: 负例
+  source: 负例占位【页码待核】
+  attributions:
+    - term_id: TERM-9001
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 草稿
+
+# N26 「不符之处」为空：防牵强的核心闸门
+- case_id: CASE-9006
+  title: 不写不符之处
+  description: mismatch 留空。
+  origin: 负例
+  source: 负例占位【页码待核】
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: ''
+      confidence: 部分符合
+  status: 草稿
+
+# N27 归属块确信度不在封闭枚举内
+- case_id: CASE-9007
+  title: 确信度非法
+  description: confidence 填了枚举外的值。
+  origin: 负例
+  source: 负例占位【页码待核】
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 很确定
+  status: 草稿
+
+# N28 归属引用不存在的术语
+- case_id: CASE-9008
+  title: 归属到不存在的术语
+  description: term_id 指向 TERM-9999。
+  origin: 负例
+  source: 负例占位【页码待核】
+  attributions:
+    - term_id: TERM-9999
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 草稿
+
+# N29 分析范畴被具体现象归属
+- case_id: CASE-9009
+  title: 归属到分析范畴
+  description: term_id 指向分析范畴 TERM-9007。
+  origin: 负例
+  source: 负例占位【页码待核】
+  attributions:
+    - term_id: TERM-9007
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 草稿
+
+# N30 确信度为「有争议」却没有记录 dissent
+- case_id: CASE-9010
+  title: 有争议但无分歧记录
+  description: confidence 为有争议，dissent 留空。
+  origin: 负例
+  source: 负例占位【页码待核】
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 有争议
+  status: 草稿
+
+# N31 未知字段
+- case_id: CASE-9011
+  title: 含未知字段的案例
+  description: 多写了一个 source_url 字段。
+  origin: 负例
+  source: 负例占位【页码待核】
+  source_url: https://example.com/负例
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 草稿

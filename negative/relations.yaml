@@ -1,0 +1,52 @@
+# 负例集 · 概念层边（relations）
+# 注入编号（N13…）与 negative/expected.yaml 一一对应
+# 方向读法：from_term --type--> to_term 读作「from 对 to 施加该关系」
+
+# 合规基座
+- {rel_id: REL-9000, from_term: TERM-9005, to_term: TERM-9006, type: 借用, status: 已定稿,
+   evidence: 负例占位证据句。,
+   source: 负例占位}
+
+# N13 rel_id 重复：与下一条 ID 相同，其余字段合规
+- {rel_id: REL-9001, from_term: TERM-9002, to_term: TERM-9003, type: 借用, status: 草稿,
+   evidence: 负例占位证据句。,
+   source: 负例占位}
+- {rel_id: REL-9001, from_term: TERM-9002, to_term: TERM-9003, type: 借用, status: 草稿,
+   evidence: 负例占位证据句。,
+   source: 负例占位}
+
+# N14 关系类型不在封闭枚举内 · N19 未知字段
+- {rel_id: REL-9002, from_term: TERM-9003, to_term: TERM-9004, type: 因果, status: 草稿,
+   evidence: 负例占位证据句。,
+   source: 负例占位,
+   note: 负例占位}
+
+# N15 起点引用不存在的术语 · N16 终点引用不存在的术语
+- {rel_id: REL-9003, from_term: TERM-9999, to_term: TERM-9998, type: 借用, status: 草稿,
+   evidence: 负例占位证据句。,
+   source: 负例占位}
+
+# N17 关系两端指向同一术语
+- {rel_id: REL-9004, from_term: TERM-9001, to_term: TERM-9001, type: 包含, status: 草稿,
+   evidence: 负例占位证据句。,
+   source: 负例占位}
+
+# N20 必填字段缺失：不写 evidence
+- {rel_id: REL-9005, from_term: TERM-9006, to_term: TERM-9001, type: 机制, status: 草稿,
+   source: 负例占位}
+
+# N18 单个术语关系数超过上限：以下 13 条全部从 TERM-9001 出发
+#     端点分散到其余术语，避免连带把别的条目也推过上限
+- {rel_id: REL-9101, from_term: TERM-9001, to_term: TERM-9002, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
+- {rel_id: REL-9102, from_term: TERM-9001, to_term: TERM-9002, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
+- {rel_id: REL-9103, from_term: TERM-9001, to_term: TERM-9002, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
+- {rel_id: REL-9104, from_term: TERM-9001, to_term: TERM-9003, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
+- {rel_id: REL-9105, from_term: TERM-9001, to_term: TERM-9003, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
+- {rel_id: REL-9106, from_term: TERM-9001, to_term: TERM-9003, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
+- {rel_id: REL-9107, from_term: TERM-9001, to_term: TERM-9004, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
+- {rel_id: REL-9108, from_term: TERM-9001, to_term: TERM-9004, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
+- {rel_id: REL-9109, from_term: TERM-9001, to_term: TERM-9004, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
+- {rel_id: REL-9110, from_term: TERM-9001, to_term: TERM-9005, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
+- {rel_id: REL-9111, from_term: TERM-9001, to_term: TERM-9005, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
+- {rel_id: REL-9112, from_term: TERM-9001, to_term: TERM-9006, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}
+- {rel_id: REL-9113, from_term: TERM-9001, to_term: TERM-9006, type: 借用, status: 草稿, evidence: 负例：用于触发关系数上限。输入, source: 负例占位}

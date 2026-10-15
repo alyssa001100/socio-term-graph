@@ -1,0 +1,114 @@
+# 负例集 · 实例层（hotspots）
+# 注入编号（N32…）与 negative/expected.yaml 一一对应
+
+# N37 未知字段
+- hot_id: HOT-9001
+  title: 含未知字段的热点
+  description: 多写了一个 channel 字段。
+  date: 2026-09
+  source_url: https://example.com/负例
+  review_after: 2027-09
+  channel: 微博
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 草稿
+
+# N33 复审日期早于事件日期（两个日期都在未来，避免同时触发「已过复审期」）
+- hot_id: HOT-9002
+  title: 复审日期早于事件日期
+  description: review_after 早于 date。
+  date: 2026-12
+  source_url: https://example.com/负例
+  review_after: 2026-11
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 草稿
+
+# N34 已过复审期
+- hot_id: HOT-9003
+  title: 已过复审期
+  description: 日期格式合法且复审晚于事件，但复审期已过。
+  date: 2024-01
+  source_url: https://example.com/负例
+  review_after: 2024-06
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 草稿
+
+# N32 日期格式非法
+- hot_id: HOT-9004
+  title: 日期格式非法
+  description: date 用了斜杠分隔。
+  date: 2026/01
+  source_url: https://example.com/负例
+  review_after: 2027-01
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 草稿
+
+# N35 来源链接仍是占位符
+- hot_id: HOT-9005
+  title: 占位来源链接
+  description: source_url 里含 REPLACE 标记。
+  date: 2026-09
+  source_url: https://example.com/REPLACE-需填入可核验来源
+  review_after: 2027-09
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 草稿
+
+# N41 热点 ID 重复：与 HOT-9001 同 ID，其余字段全部合规
+- hot_id: HOT-9001
+  title: 合规但 ID 重复的热点
+  description: 与上一条 HOT-9001 同 ID。
+  date: 2026-09
+  source_url: https://example.com/负例
+  review_after: 2027-09
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 草稿
+
+# N42 复审日期格式非法
+- hot_id: HOT-9007
+  title: 复审日期格式非法
+  description: review_after 用了斜杠分隔。
+  date: 2026-09
+  source_url: https://example.com/负例
+  review_after: 2027/09
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 草稿
+
+# N36 必填字段缺失：不写 description
+- hot_id: HOT-9006
+  title: 缺描述的热点
+  date: 2026-09
+  source_url: https://example.com/负例
+  review_after: 2027-09
+  attributions:
+    - term_id: TERM-9001
+      rationale: 负例占位理由。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+  status: 草稿
