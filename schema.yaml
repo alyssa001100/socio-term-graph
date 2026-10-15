@@ -1,0 +1,84 @@
+# ============================================================
+# 规范即配置：改标注规范只需要改这个文件
+# validate.py 按这里定义的枚举和必填规则校验数据
+# ============================================================
+version: v4
+updated: 2026-10-15
+
+# 封闭枚举 —— 自由填写会让标签体系立刻烂掉，这是数据运营的核心教训
+enums:
+  school:                      # 所属流派
+    - 古典社会学
+    - 结构功能主义
+    - 符号互动论
+    - 冲突论
+    - 交换论
+    - 现象学与常人方法学
+    - 女性主义社会学
+    - 后结构主义与后现代
+    - 文化社会学
+    - 经济社会学
+    - 历史社会学
+  application:                 # 应用场景
+    - 社会分层与流动
+    - 组织与科层制
+    - 家庭与亲密关系
+    - 城市与空间
+    - 性别
+    - 教育
+    - 健康与医疗
+    - 劳动与职业
+    - 网络与数字社会
+    - 移民与族群
+    - 文化与消费
+    - 越轨与犯罪
+  status:                      # 条目状态
+    - 草稿
+    - 已复核
+    - 有争议
+  confidence:                  # 确信度
+    - 明确实例
+    - 部分符合
+    - 有争议
+  entry_type:                  # 条目类型（v3 新增）
+    - 概念                     # 可被具体现象例证
+    - 分析范畴                 # 划分或组织现象的维度，不要求有案例
+  relation_type:               # 概念关系类型
+    - 继承
+    - 批判
+    - 借用
+    - 等同
+    - 对立
+    - 包含
+    - 转化                     # v2 新增：同一理论体系内可相互兑换的形式
+    - 机制                     # v2 新增：前者是后者得以实现的作用机制
+
+# 必填字段 —— 空值或缺失都会被校验拦下
+required:
+  terms:      [term_id, name_zh, name_en, proponent, first_year, first_source,
+               school, application, definition, definition_source, entry_type, status, confidence]
+  relations:  [rel_id, from_term, to_term, type, evidence, source, status]
+  cases:      [case_id, title, description, origin, source, attributions, status]
+  hotspots:   [hot_id, title, description, date, source_url, review_after,
+               attributions, status]
+  # 归属块是防牵强的核心：mismatch（不符之处）必填且不许空
+  attribution_required: [term_id, rationale, mismatch, confidence]
+
+# 字段白名单 —— 每张表允许出现的字段全集
+# 用途：拦截拼写错误、多余列、以及 YAML 行内映射里被逗号/换行意外截断的值
+fields:
+  terms:     [term_id, name_zh, name_en, aliases, proponent, first_year, first_source,
+              school, application, definition, definition_source, polysemy,
+              entry_type, status, confidence, reviewer, last_reviewed]
+  polysemy:  [author, school, definition, differs_from, note, source]
+  relations: [rel_id, from_term, to_term, type, evidence, source, status]
+  cases:     [case_id, title, description, origin, source, attributions, status]
+  hotspots:  [hot_id, title, description, date, source_url, review_after,
+              attributions, status]
+  attribution: [term_id, rationale, mismatch, confidence, dissent]
+
+# 数量约束
+constraints:
+  attribution_min: 1           # 每条案例/热点至少挂 1 个术语
+  hotspot_review_months: 12    # 热点默认复审周期（月）
+  relations_per_term_max: 12   # 单个术语关系数上限，防止过度连接
