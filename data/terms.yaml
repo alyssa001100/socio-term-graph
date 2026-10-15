@@ -1,0 +1,559 @@
+# 概念层·节点：术语条目
+# 统一约定：所有页码与具体表述均待核，status 保持「草稿」直至人工核对原文
+# 概念群：社会不平等是如何被生产、维持与再生产的？
+- term_id: TERM-0001
+  name_zh: 社会资本
+  name_en: social capital
+  aliases: [社会资本]
+  proponent: 皮埃尔·布迪厄
+  first_year: 1986
+  first_source: The Forms of Capital
+  school: [文化社会学, 经济社会学]
+  application: [社会分层与流动, 劳动与职业]
+  definition: 实际或潜在资源的总和，这些资源与由相互熟识的关系构成的、或多或少制度化的持久网络相联系。
+  definition_source: 布迪厄《资本的形式》1986【页码待核】
+  polysemy:
+    - author: 詹姆斯·科尔曼
+      school: [经济社会学]
+      definition: 社会结构资源，表现为义务与期望、信息渠道、规范与有效惩罚。
+      differs_from: 布迪厄
+      note: 布迪厄强调资本的不平等再生产，科尔曼强调其作为理性行动的便利条件
+      source: Coleman 1988, Social Capital in the Creation of Human Capital【页码待核】
+    - author: 罗伯特·帕特南
+      school: [文化社会学]
+      definition: 信任、规范与网络等社会组织的特征，能促进合作以提高社会效率。
+      differs_from: 科尔曼
+      note: 分析单位从个体资源转向共同体层面
+      source: Putnam 1993, Making Democracy Work【页码待核】
+    - author: 林南
+      school: [经济社会学]
+      definition: 嵌入社会网络中、可通过目的性行动获取或动员的资源。
+      differs_from: 布迪厄
+      note: 转向社会网络分析的可操作测量
+      source: Lin 2001, Social Capital【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0002
+  name_zh: 场域
+  name_en: field
+  aliases: [场, 社会空间]
+  proponent: 皮埃尔·布迪厄
+  first_year: 1984
+  first_source: Distinction
+  school: [文化社会学]
+  application: [文化与消费, 社会分层与流动]
+  definition: 由位置之间的关系构成的、有自身逻辑和必然性的社会空间，行动者在此争夺各类资本。
+  definition_source: 布迪厄《区分》1984【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0003
+  name_zh: 惯习
+  name_en: habitus
+  aliases: [习性]
+  proponent: 皮埃尔·布迪厄
+  first_year: 1977
+  first_source: Outline of a Theory of Practice
+  school: [文化社会学]
+  application: [文化与消费, 教育]
+  definition: 一套持久的、可转移的倾向系统，作为结构化结构起作用，倾向于再生产社会结构。
+  definition_source: 布迪厄《实践理论大纲》1977【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0004
+  name_zh: 弱关系
+  name_en: weak ties
+  aliases: [弱连带]
+  proponent: 马克·格兰诺维特
+  first_year: 1973
+  first_source: The Strength of Weak Ties
+  school: [经济社会学]
+  application: [劳动与职业, 网络与数字社会]
+  definition: 交往频率低、情感强度弱、互惠内容少的社交联结，在信息传递中具有独特的桥接作用。
+  definition_source: Granovetter 1973, American Journal of Sociology【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0005
+  name_zh: 内卷化
+  name_en: involution
+  aliases: [过密化]
+  proponent: 克利福德·格尔茨; 黄宗智
+  first_year: 1963
+  first_source: Agricultural Involution
+  school: [历史社会学, 经济社会学]
+  application: [教育, 劳动与职业]
+  definition: 在既定技术与制度条件下持续投入更多劳动，但边际产出不增、形态不向更高阶段转化的过程。
+  definition_source: Geertz 1963, Agricultural Involution【页码待核】
+  polysemy:
+    - author: 黄宗智
+      school: [历史社会学]
+      definition: 用于描述小农经济在人口压力下出现的、没有发展的增长。
+      differs_from: 格尔茨
+      note: 从农业生态转向中国经济史的经验研究，强化了「无发展的增长」这一含义
+      source: 黄宗智《华北的小农经济与社会变迁》1985【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0006
+  name_zh: 理性选择理论
+  name_en: rational choice theory
+  aliases: [理性选择]
+  proponent: 詹姆斯·科尔曼
+  first_year: 1990
+  first_source: Foundations of Social Theory
+  school: [交换论, 经济社会学]
+  application: [组织与科层制, 文化与消费]
+  definition: 以行动者在约束条件下追求效用最大化为基本假设，解释社会行为与社会结构形成的理论范式。
+  definition_source: Coleman 1990, Foundations of Social Theory【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0007
+  name_zh: 社会分层
+  name_en: social stratification
+  aliases: [分层]
+  proponent: 皮季里姆·索罗金
+  first_year: 1927
+  first_source: Social Mobility
+  school: [古典社会学]
+  application: [社会分层与流动]
+  definition: 社会成员因财富、权力、声望等资源占有的差异而被划分为高低有序的层级，并由此形成相对稳定的不平等结构。
+  definition_source: Sorokin 1927, Social Mobility【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0008
+  name_zh: 阶级
+  name_en: class
+  aliases: [阶级]
+  proponent: 卡尔·马克思
+  first_year: 1848
+  first_source: 共产党宣言
+  school: [古典社会学, 冲突论]
+  application: [社会分层与流动, 劳动与职业]
+  definition: 依据对生产资料的占有关系划分的社会集团，其成员在生产关系中处于相同位置。
+  definition_source: 马克思《共产党宣言》1848【页码待核】
+  polysemy:
+    - author: 马克斯·韦伯
+      school: [古典社会学]
+      definition: 在市场上具有相同生活机会的人群；与地位群体、政党并列，构成三种分层维度之一。
+      differs_from: 马克思
+      note: 马克思以生产关系为唯一划分标准，韦伯引入市场机会并改为多重维度
+      source: 韦伯《经济与社会》1922【页码待核】
+    - author: 皮埃尔·布迪厄
+      school: [文化社会学]
+      definition: 由资本总量与资本构成界定的群体位置，并通过生活方式与趣味表现自身。
+      differs_from: 韦伯
+      note: 把文化维度纳入阶级界定，阶级同时是分类实践的结果
+      source: 布迪厄《区分》1984【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0009
+  name_zh: 阶层
+  name_en: social stratum
+  aliases: [社会阶层]
+  proponent: 马克斯·韦伯
+  first_year: 1922
+  first_source: 经济与社会
+  school: [古典社会学]
+  application: [社会分层与流动]
+  definition: 依据财富、权力、声望等单一或多重标准划分的社会层级位置，强调层级之间的连续过渡而非截然对立。
+  definition_source: 韦伯《经济与社会》1922【页码待核】
+  polysemy: []
+  entry_type: 分析范畴
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0010
+  name_zh: 地位
+  name_en: status
+  aliases: [身份, 社会地位]
+  proponent: 马克斯·韦伯
+  first_year: 1922
+  first_source: 经济与社会
+  school: [古典社会学, 符号互动论]
+  application: [社会分层与流动, 文化与消费]
+  definition: 社会对某一群体所给予的声望评价，构成与阶级、政党并列的分层维度。
+  definition_source: 韦伯《经济与社会》1922【页码待核】
+  polysemy:
+    - author: 拉尔夫·林顿
+      school: [符号互动论]
+      definition: 个体在社会结构中所占据的位置，与角色（社会对该位置的期待）相区分。
+      differs_from: 韦伯
+      note: 韦伯的地位是分层维度，林顿的地位是社会结构中的位置，两者分析层次不同
+      source: Linton 1936, The Study of Man【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0011
+  name_zh: 社会流动
+  name_en: social mobility
+  aliases: [社会流动, 流动]
+  proponent: 皮季里姆·索罗金
+  first_year: 1927
+  first_source: Social Mobility
+  school: [古典社会学]
+  application: [社会分层与流动, 教育]
+  definition: 个体或群体在社会分层结构中位置的变化，可区分为垂直流动与水平流动、代内流动与代际流动。
+  definition_source: Sorokin 1927, Social Mobility【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0012
+  name_zh: 社会封闭
+  name_en: social closure
+  aliases: [封闭]
+  proponent: 马克斯·韦伯
+  first_year: 1922
+  first_source: 经济与社会
+  school: [古典社会学, 冲突论]
+  application: [社会分层与流动, 移民与族群]
+  definition: 特定群体通过限制资源与机会的获取资格、将外部者排斥在外，以维护自身优势的过程。
+  definition_source: 韦伯《经济与社会》1922【页码待核】
+  polysemy:
+    - author: 弗兰克·帕金
+      school: [冲突论]
+      definition: 将社会封闭区分为排他性封闭与篡夺性封闭两种策略，作为阶级分析的工具。
+      differs_from: 韦伯
+      note: 韦伯强调共同体化的垄断倾向，帕金把封闭改造为解释阶级形成的策略类型
+      source: Parkin 1979, Marxism and Class Theory【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0013
+  name_zh: 文化资本
+  name_en: cultural capital
+  aliases: [文化资本]
+  proponent: 皮埃尔·布迪厄
+  first_year: 1986
+  first_source: The Forms of Capital
+  school: [文化社会学]
+  application: [教育, 文化与消费, 社会分层与流动]
+  definition: 与知识、教育、品味相关的资源，以身体化、客观化与制度化三种状态存在。
+  definition_source: 布迪厄《资本的形式》1986【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0014
+  name_zh: 经济资本
+  name_en: economic capital
+  aliases: [经济资本]
+  proponent: 皮埃尔·布迪厄
+  first_year: 1986
+  first_source: The Forms of Capital
+  school: [文化社会学, 经济社会学]
+  application: [社会分层与流动]
+  definition: 可直接货币化、可制度化为财产权的资源，是其他资本形式转化与再转化的基础。
+  definition_source: 布迪厄《资本的形式》1986【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0015
+  name_zh: 符号资本
+  name_en: symbolic capital
+  aliases: [象征资本]
+  proponent: 皮埃尔·布迪厄
+  first_year: 1977
+  first_source: Outline of a Theory of Practice
+  school: [文化社会学]
+  application: [文化与消费]
+  definition: 被社会承认并赋予正当性的资本形式，是其他资本被误识为自然差异时所呈现的形态。
+  definition_source: 布迪厄《实践理论大纲》1977【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0016
+  name_zh: 再生产
+  name_en: reproduction
+  aliases: [社会再生产, 文化再生产]
+  proponent: 皮埃尔·布迪厄; 让-克洛德·帕斯隆
+  first_year: 1970
+  first_source: La Reproduction
+  school: [文化社会学, 历史社会学]
+  application: [教育, 社会分层与流动]
+  definition: 既有的社会结构与不平等关系在代际之间被延续、并被赋予正当性的机制与过程。
+  definition_source: 布迪厄、帕斯隆《再生产》1970【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0017
+  name_zh: 文凭通胀
+  name_en: credential inflation
+  aliases: [学历贬值, 文凭膨胀]
+  proponent: 兰德尔·柯林斯
+  first_year: 1979
+  first_source: The Credential Society
+  school: [冲突论]
+  application: [教育, 劳动与职业]
+  definition: 因教育文凭的供给持续增加，换取同等职业地位所需的教育年限不断上升的现象。
+  definition_source: Collins 1979, The Credential Society【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0018
+  name_zh: 社会排斥
+  name_en: social exclusion
+  aliases: [排斥, 社会排挤]
+  proponent: 勒内·勒努瓦
+  first_year: 1974
+  first_source: Les Exclus
+  school: [冲突论]
+  application: [社会分层与流动, 移民与族群, 健康与医疗]
+  definition: 个体或群体因缺乏资源、权利与参与机会而被排斥在主流社会关系与制度之外的过程。
+  definition_source: Lenoir 1974, Les Exclus【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0019
+  name_zh: 区隔
+  name_en: distinction
+  aliases: [区分]
+  proponent: 皮埃尔·布迪厄
+  first_year: 1979
+  first_source: La Distinction
+  school: [文化社会学]
+  application: [文化与消费, 教育, 社会分层与流动]
+  definition: 行动者通过品味与生活方式的差异把自身与他者区分开来，并使这种差异成为标示社会位置的象征标记。
+  definition_source: 布迪厄《区分》1979【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0020
+  name_zh: 误识
+  name_en: misrecognition
+  aliases: [误认, 不识]
+  proponent: 皮埃尔·布迪厄
+  first_year: 1972
+  first_source: Esquisse d'une théorie de la pratique
+  school: [文化社会学]
+  application: [文化与消费, 社会分层与流动]
+  definition: 行动者把社会条件建构出来的差异当作自然或应得的差异来承认，从而使支配关系获得正当性的过程。
+  definition_source: 布迪厄《实践理论大纲》1972【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0021
+  name_zh: 剥削
+  name_en: exploitation
+  aliases: [榨取]
+  proponent: 卡尔·马克思
+  first_year: 1867
+  first_source: 资本论 第一卷
+  school: [古典社会学, 冲突论]
+  application: [劳动与职业]
+  definition: 占有者凭借对生产资料的支配，无偿占有直接生产者所创造的剩余劳动的关系。
+  definition_source: 马克思《资本论》第一卷 1867【页码待核】
+  polysemy:
+    - author: 约翰·罗默
+      definition: 剥削不必以劳动价值论为前提；只要财产关系使一方以不平等的交换条件占有他方的劳动成果，即构成剥削。
+      differs_from: 马克思
+      note: 罗默把剥削从剩余价值的生产过程转移到财产关系与交换条件上，使其可脱离劳动价值论使用
+      source: Roemer 1982, A General Theory of Exploitation and Class【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0022
+  name_zh: 紧张理论
+  name_en: strain theory
+  aliases: [失范理论, 结构紧张理论]
+  proponent: 罗伯特·默顿
+  first_year: 1938
+  first_source: Social Structure and Anomie
+  school: [结构功能主义]
+  application: [越轨与犯罪, 社会分层与流动]
+  definition: 社会结构一方面确立普遍追求的文化目标，另一方面又按阶层位置不均衡地分配实现目标的手段；两者的脱节使处于劣势位置者更可能以越轨方式应对。
+  definition_source: Merton 1938, Social Structure and Anomie【页码待核】
+  polysemy:
+    - author: 罗伯特·阿格纽
+      definition: 紧张不只来自目标与手段的结构性脱节，也来自个体在具体情境中无法回避的负面刺激与期望落差。
+      differs_from: 默顿
+      note: 分析层次从社会结构下移到个体经验，使紧张理论可用于解释个体间的差异
+      source: Agnew 1992, Foundation for a General Strain Theory of Crime and Delinquency【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0023
+  name_zh: 做性别
+  name_en: doing gender
+  aliases: [性别实践]
+  proponent: 坎迪斯·韦斯特; 唐·齐默尔曼
+  first_year: 1987
+  first_source: Doing Gender
+  school: [现象学与常人方法学, 女性主义社会学]
+  application: [性别]
+  definition: 性别不是个体既有的属性，而是在日常互动中被持续完成、并被他人按既有规范期待加以解读的成就。
+  definition_source: West & Zimmerman 1987, Doing Gender【页码待核】
+  polysemy:
+    - author: 弗朗辛·多伊奇
+      definition: 互动中同样存在「不做性别」的可能，性别差异并非在任何情境下都必然被再生产。
+      differs_from: 韦斯特与齐默尔曼
+      note: 从强调性别的持续再生产，转向强调其可被削弱的条件
+      source: Deutsch 2007, Undoing Gender【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0024
+  name_zh: 规训
+  name_en: discipline
+  aliases: [纪律, 规训权力]
+  proponent: 米歇尔·福柯
+  first_year: 1975
+  first_source: Surveiller et punir
+  school: [后结构主义与后现代]
+  application: [越轨与犯罪, 组织与科层制]
+  definition: 通过层级监视、规范化裁决与检查等技术，把身体训练成既顺从又有用之人的权力运作方式。
+  definition_source: 福柯《规训与惩罚》1975【页码待核】
+  polysemy:
+    - author: 马克斯·韦伯
+      school: [古典社会学]
+      definition: 纪律是经由训练形成的、对命令模式化服从的倾向，是科层制与军事组织得以运转的前提。
+      differs_from: 米歇尔·福柯
+      note: 韦伯把纪律视为组织效率的条件，福柯则把它视为生产顺从主体的权力技术
+      source: 韦伯《经济与社会》1922【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0025
+  name_zh: 居住隔离
+  name_en: residential segregation
+  aliases: [居住分异]
+  proponent: 道格拉斯·马西; 南希·登顿
+  first_year: 1988
+  first_source: The Dimensions of Residential Segregation
+  school: [冲突论]
+  application: [城市与空间, 移民与族群, 社会分层与流动]
+  definition: 不同群体在城市空间中被系统地分配到彼此分离的居住区域，并在均等性、暴露度、集中度等维度上呈现可测量的分异。
+  definition_source: Massey & Denton 1988, The Dimensions of Residential Segregation【页码待核】
+  polysemy:
+    - author: 罗伯特·帕克; 欧内斯特·伯吉斯
+      school: [古典社会学]
+      definition: 居住分异是城市发展中不同群体竞争与演替的结果，同心圆地带反映的是空间位置的更替过程。
+      differs_from: 道格拉斯·马西与南希·登顿
+      note: 人文生态学把它解释为竞争的自然结果，马西与登顿则强调它由制度与市场歧视主动制造并固化群体边界
+      source: Park & Burgess 1925, The City【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0026
+  name_zh: 第二班
+  name_en: the second shift
+  aliases: [第二轮班]
+  proponent: 阿莉·霍克希尔德
+  first_year: 1989
+  first_source: The Second Shift
+  school: [女性主义社会学]
+  application: [家庭与亲密关系, 性别, 劳动与职业]
+  definition: 女性在完成有偿工作之后继续承担家中的家务与情感劳动，使性别分工造成的双重负担成为不平等的持续来源。
+  definition_source: Hochschild 1989, The Second Shift【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0027
+  name_zh: 去技能化
+  name_en: deskilling
+  aliases: [技能退化]
+  proponent: 哈里·布雷弗曼
+  first_year: 1974
+  first_source: Labor and Monopoly Capital
+  school: [冲突论]
+  application: [组织与科层制, 劳动与职业]
+  definition: 资本把劳动过程拆解为可由管理层设计与调度的简单动作，使技艺从劳动者手中转移到管理层，从而削弱劳动者的议价能力。
+  definition_source: Braverman 1974, Labor and Monopoly Capital【页码待核】
+  polysemy:
+    - author: 保罗·阿特韦尔
+      definition: 去技能化命题把技能当作可客观度量的对象，因而系统性地低估了新技术条件下技能结构的重构。
+      differs_from: 哈里·布雷弗曼
+      note: 争论焦点从「技能是否整体下降」转向「技能如何被重新定义」
+      source: Attewell 1987, The Deskilling Controversy【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0028
+  name_zh: 象征性边界
+  name_en: symbolic boundaries
+  aliases: [符号边界]
+  proponent: 米歇尔·拉蒙; 马塞尔·富尼耶
+  first_year: 1992
+  first_source: Cultivating Differences
+  school: [文化社会学]
+  application: [文化与消费, 移民与族群, 社会分层与流动]
+  definition: 行动者用来区分人群与事物的分类概念；当它被广泛接受并转化为资源分配的依据时，就转变为社会边界。
+  definition_source: Lamont & Fournier 1992, Cultivating Differences【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''

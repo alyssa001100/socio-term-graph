@@ -1,0 +1,124 @@
+# 概念层·边：术语之间的概念关系
+# 方向读法：from_term --type--> to_term 一律读作「from 对 to 施加该关系」
+#   例：文化资本 --借用--> 经济资本 =「文化资本借用了经济资本的概念」
+# 纪律：evidence 必须是可引用的原句或紧贴原文的转述
+- {rel_id: REL-0001, from_term: TERM-0001, to_term: TERM-0004, type: 借用, status: 草稿,
+   evidence: 林南把弱关系提供的桥接机制纳入社会资本的可动员资源框架。,
+   source: "Lin 2001, Social Capital【页码待核】"}
+- {rel_id: REL-0002, from_term: TERM-0003, to_term: TERM-0006, type: 对立, status: 草稿,
+   evidence: 布迪厄以惯习说明实践的逻辑并非理性计算，明确反对以效用最大化解释行动。,
+   source: 布迪厄《实践感》1980【页码待核】}
+- {rel_id: REL-0003, from_term: TERM-0002, to_term: TERM-0001, type: 包含, status: 草稿,
+   evidence: 场域是行动者争夺各类资本的空间，社会资本是其中一种被争夺的资本形式。,
+   source: 布迪厄《实践感》1980【页码待核】}
+- {rel_id: REL-0004, from_term: TERM-0013, to_term: TERM-0014, type: 借用, status: 草稿,
+   evidence: 布迪厄借用经济学的资本概念并将其扩展至文化领域，同时改变了该概念的适用范围。,
+   source: 布迪厄《资本的形式》1986【页码待核】}
+- {rel_id: REL-0005, from_term: TERM-0001, to_term: TERM-0014, type: 借用, status: 草稿,
+   evidence: 社会资本概念同样借自经济学资本概念，被扩展至关系网络的资源分析。,
+   source: 布迪厄《资本的形式》1986【页码待核】}
+- {rel_id: REL-0006, from_term: TERM-0015, to_term: TERM-0014, type: 借用, status: 草稿,
+   evidence: 符号资本借自经济资本概念，用以指称被承认为正当的资本形态。,
+   source: 布迪厄《实践理论大纲》1977【页码待核】}
+- {rel_id: REL-0007, from_term: TERM-0002, to_term: TERM-0013, type: 包含, status: 草稿,
+   evidence: 场域是各类资本被争夺的空间，文化资本是场域中一种主要的资本形式。,
+   source: 布迪厄《区分》1984【页码待核】}
+- {rel_id: REL-0008, from_term: TERM-0002, to_term: TERM-0014, type: 包含, status: 草稿,
+   evidence: 场域中同时存在经济资本，不同场域中各类资本的相对权重不同。,
+   source: 布迪厄《区分》1984【页码待核】}
+- {rel_id: REL-0009, from_term: TERM-0002, to_term: TERM-0015, type: 包含, status: 草稿,
+   evidence: 符号资本在特定场域内被承认，其效力依赖于该场域自身的逻辑。,
+   source: 布迪厄《实践理论大纲》1977【页码待核】}
+- {rel_id: REL-0010, from_term: TERM-0014, to_term: TERM-0013, type: 转化, status: 草稿,
+   evidence: 经济资本可经由教育投资转化为文化资本，但转化需要时间与投入，且并非等额兑换。,
+   source: 布迪厄《资本的形式》1986【页码待核】}
+- {rel_id: REL-0011, from_term: TERM-0013, to_term: TERM-0001, type: 转化, status: 草稿,
+   evidence: 制度化的文化资本有助于行动者进入并维系特定的关系网络。,
+   source: 布迪厄《资本的形式》1986【页码待核】}
+- {rel_id: REL-0012, from_term: TERM-0013, to_term: TERM-0015, type: 转化, status: 草稿,
+   evidence: 文化资本被承认为正当之后即以符号资本的形式发挥作用。,
+   source: 布迪厄《实践理论大纲》1977【页码待核】}
+- {rel_id: REL-0013, from_term: TERM-0001, to_term: TERM-0015, type: 转化, status: 草稿,
+   evidence: 由关系网络带来的优势被承认为理所当然时，即表现为符号资本。,
+   source: 布迪厄《实践理论大纲》1977【页码待核】}
+- {rel_id: REL-0014, from_term: TERM-0013, to_term: TERM-0016, type: 机制, status: 草稿,
+   evidence: 教育系统以文化资本为中介筛选并区隔学生，从而实现阶级结构的再生产。,
+   source: 布迪厄、帕斯隆《再生产》1970【页码待核】}
+- {rel_id: REL-0015, from_term: TERM-0003, to_term: TERM-0016, type: 机制, status: 草稿,
+   evidence: 惯习使被结构化的行动倾向在实践中自动延续既有结构，无需外在强制。,
+   source: 布迪厄《实践理论大纲》1977【页码待核】}
+- {rel_id: REL-0016, from_term: TERM-0012, to_term: TERM-0007, type: 机制, status: 草稿,
+   evidence: 封闭通过限制资源与机会的获取资格，维持层级之间的边界与优势位置。,
+   source: 韦伯《经济与社会》1922【页码待核】}
+- {rel_id: REL-0017, from_term: TERM-0017, to_term: TERM-0012, type: 机制, status: 草稿,
+   evidence: 柯林斯认为教育文凭主要作为职业准入的排他手段起作用，而非技能凭证。,
+   source: "Collins 1979, The Credential Society【页码待核】"}
+- {rel_id: REL-0018, from_term: TERM-0011, to_term: TERM-0012, type: 对立, status: 草稿,
+   evidence: 两者在同一维度上互斥：封闭限制位置的变动，而流动以位置变动的可能性为定义。,
+   source: "Parkin 1979, Marxism and Class Theory【页码待核】"}
+- {rel_id: REL-0019, from_term: TERM-0007, to_term: TERM-0008, type: 包含, status: 草稿,
+   evidence: 阶级是分层研究中的一种划分方式，与阶层、地位等划分方式并列。,
+   source: "Sorokin 1927, Social Mobility【页码待核】"}
+- {rel_id: REL-0020, from_term: TERM-0007, to_term: TERM-0009, type: 包含, status: 草稿,
+   evidence: 以单一或多重标准划分的层阶位置，构成分层结构的基本单位。,
+   source: 韦伯《经济与社会》1922【页码待核】}
+- {rel_id: REL-0021, from_term: TERM-0007, to_term: TERM-0010, type: 包含, status: 草稿,
+   evidence: 声望评价是分层的维度之一，与阶级、政党并列。,
+   source: 韦伯《经济与社会》1922【页码待核】}
+- {rel_id: REL-0022, from_term: TERM-0018, to_term: TERM-0012, type: 包含, status: 草稿,
+   evidence: 以获取资格为手段的社会封闭，构成社会排斥的一种特定形式。,
+   source: "Lenoir 1974, Les Exclus【页码待核】"}
+- {rel_id: REL-0023, from_term: TERM-0004, to_term: TERM-0011, type: 机制, status: 草稿,
+   evidence: 弱关系是获得职业信息、实现职业向上流动的重要渠道。,
+   source: "Granovetter 1973, The Strength of Weak Ties【页码待核】"}
+- {rel_id: REL-0024, from_term: TERM-0009, to_term: TERM-0008, type: 批判, status: 草稿,
+   evidence: 韦伯以市场机会与多重分层维度取代以生产关系为唯一标准的阶级划分。,
+   source: 韦伯《经济与社会》1922【页码待核】}
+- {rel_id: REL-0025, from_term: TERM-0013, to_term: TERM-0019, type: 机制, status: 草稿,
+   evidence: 身体化文化资本借由品味与举止的自然表现，成为实现区隔的机制。,
+   source: 布迪厄《区分》1979【页码待核】}
+- {rel_id: REL-0026, from_term: TERM-0003, to_term: TERM-0019, type: 机制, status: 草稿,
+   evidence: 阶级条件经由惯习内化为偏好与鉴赏力，使区隔不必依赖明确意图即可实现。,
+   source: 布迪厄《区分》1979【页码待核】}
+- {rel_id: REL-0027, from_term: TERM-0019, to_term: TERM-0008, type: 借用, status: 草稿,
+   evidence: 区隔分析借用阶级位置说明品味差异的分布，把生活方式的差别读作阶级结构的象征表达。,
+   source: 布迪厄《区分》1979【页码待核】}
+- {rel_id: REL-0028, from_term: TERM-0020, to_term: TERM-0015, type: 机制, status: 草稿,
+   evidence: 符号资本以被承认为前提，而误识正是使这种承认得以发生的机制。,
+   source: 布迪厄《实践理论大纲》1972【页码待核】}
+- {rel_id: REL-0029, from_term: TERM-0020, to_term: TERM-0016, type: 机制, status: 草稿,
+   evidence: 误识把社会条件造成的差异当作自然差异接受，使不平等结构免于被质疑而得以延续。,
+   source: 布迪厄《实践理论大纲》1972【页码待核】}
+- {rel_id: REL-0030, from_term: TERM-0021, to_term: TERM-0008, type: 机制, status: 草稿,
+   evidence: 马克思把阶级关系规定为对剩余劳动的占有关系，剥削是这一关系得以实现的过程。,
+   source: 马克思《资本论》第一卷 1867【页码待核】}
+- {rel_id: REL-0031, from_term: TERM-0021, to_term: TERM-0014, type: 机制, status: 草稿,
+   evidence: 对剩余劳动的持续占有是经济资本得以积累的机制。,
+   source: 马克思《资本论》第一卷 1867【页码待核】}
+- {rel_id: REL-0032, from_term: TERM-0022, to_term: TERM-0007, type: 借用, status: 草稿,
+   evidence: 紧张理论借用分层结构中的位置差异，解释不同阶层实现文化目标的手段为何不均衡。,
+   source: "Merton 1938, Social Structure and Anomie【页码待核】"}
+- {rel_id: REL-0033, from_term: TERM-0026, to_term: TERM-0016, type: 机制, status: 草稿,
+   evidence: 家务与情感劳动的性别分工把既有的不平等安排传递给下一代。,
+   source: "Hochschild 1989, The Second Shift【页码待核】"}
+- {rel_id: REL-0034, from_term: TERM-0023, to_term: TERM-0026, type: 机制, status: 草稿,
+   evidence: 性别在日常互动中被反复完成，是家务与情感劳动被持续指派给女性的机制。,
+   source: "West & Zimmerman 1987, Doing Gender【页码待核】"}
+- {rel_id: REL-0035, from_term: TERM-0024, to_term: TERM-0016, type: 机制, status: 草稿,
+   evidence: 规训把身体训练得既顺从又有用，使既有社会秩序在无需强制的情况下被持续再生产。,
+   source: 福柯《规训与惩罚》1975【页码待核】}
+- {rel_id: REL-0036, from_term: TERM-0025, to_term: TERM-0012, type: 机制, status: 草稿,
+   evidence: 空间上的居住分异把群体边界固定在邻里与学区之上，成为社会封闭得以维持的机制。,
+   source: "Massey & Denton 1988, The Dimensions of Residential Segregation【页码待核】"}
+- {rel_id: REL-0037, from_term: TERM-0025, to_term: TERM-0016, type: 机制, status: 草稿,
+   evidence: 居住隔离通过邻里资源与学校条件的差异参与不平等的代际再生产。,
+   source: "Massey & Denton 1993, American Apartheid【页码待核】"}
+- {rel_id: REL-0038, from_term: TERM-0028, to_term: TERM-0019, type: 批判, status: 草稿,
+   evidence: 拉蒙认为布迪厄把象征性边界过多地还原为阶级位置，忽略了种族、性别等其他分类资源的独立作用。,
+   source: "Lamont & Fournier 1992, Cultivating Differences【页码待核】"}
+- {rel_id: REL-0039, from_term: TERM-0028, to_term: TERM-0012, type: 机制, status: 草稿,
+   evidence: 分类概念被广泛接受后会转化为资源分配的依据，从而成为群体封闭的手段。,
+   source: "Lamont & Fournier 1992, Cultivating Differences【页码待核】"}
+- {rel_id: REL-0040, from_term: TERM-0027, to_term: TERM-0014, type: 机制, status: 草稿,
+   evidence: 把技艺转移到管理层降低了单位劳动成本，成为资本积累的机制。,
+   source: "Braverman 1974, Labor and Monopoly Capital【页码待核】"}
