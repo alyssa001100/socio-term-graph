@@ -1,0 +1,303 @@
+# 实例层·经典案例：学科内的经典现象，长期保留
+# origin 填「谁首次用它作例证」；source 必须是原始文献
+- case_id: CASE-0001
+  title: 通过熟人介绍获得工作
+  description: 求职者经由社交网络中的非亲密联系人获得招聘信息并成功入职。
+  origin: 格兰诺维特对美国郊区专业技术人员求职过程的调查
+  source: Granovetter 1974, Getting a Job【页码待核】
+  attributions:
+    - term_id: TERM-0004
+      rationale: 提供关键招聘信息的正是交往频率低的弱关系，而非交往密切的强关系。
+      mismatch: 该案例只呈现信息传递环节，未涉及资源的不平等占有与代际再生产。
+      confidence: 明确实例
+      dissent: ''
+    - term_id: TERM-0001
+      rationale: 熟人网络构成可被动员的社会资源，其动员结果影响职业获得。
+      mismatch: 布迪厄版本的侧重点是资本的制度化与代际再生产，本案没有体现。
+      confidence: 部分符合
+      dissent: 有研究认为仅凭信息渠道不足以称为社会资本
+  status: 草稿
+- case_id: CASE-0002
+  title: 法国教育系统以文化标准筛选学生
+  description: 学校以看似中立的标准评价学生，实际奖励的是上层阶级经由家庭教育获得的语言风格与审美品味。
+  origin: 布迪厄与帕斯隆对法国高等教育系统的分析
+  source: 布迪厄、帕斯隆《继承人》1964；《再生产》1970【页码待核】
+  attributions:
+    - term_id: TERM-0013
+      rationale: 学生携带的语言习惯与审美倾向源自家庭，构成身体化文化资本，却被学校当作学业能力的体现。
+      mismatch: 案例呈现的是身体化状态被评价的效应，未涉及文化资本向经济资本转化的环节。
+      confidence: 明确实例
+      dissent: ''
+    - term_id: TERM-0016
+      rationale: 学校以中立的外观完成区隔，使阶级结构在代际间延续并获得正当性。
+      mismatch: 案例主要说明教育系统一侧的机制，未涵盖家庭内部的文化传递过程。
+      confidence: 明确实例
+      dissent: ''
+    - term_id: TERM-0003
+      rationale: 学生的品味与举止表现为自然的倾向，实为阶级条件内化的结果。
+      mismatch: 惯习的核心是被结构化且能生成实践的倾向系统，案例更多呈现其被评价的一面，而非生成实践的一面。
+      confidence: 部分符合
+      dissent: ''
+  status: 草稿
+- case_id: CASE-0003
+  title: 意大利南北部区域政府绩效的差异
+  description: 北部地区拥有密集的横向社团与互助传统，南部以垂直依附关系为主，两地制度绩效呈现稳定差异。
+  origin: 帕特南对意大利区域政府的比较研究
+  source: Putnam 1993, Making Democracy Work【页码待核】
+  attributions:
+    - term_id: TERM-0001
+      rationale: 横向社团网络与信任构成共同体层面的社会资本，被用来解释制度绩效差异。
+      mismatch: 案例把社会资本置于共同体层面，与布迪厄以个体可动员资源为单位的界定不同，两条多义性线索在此未加区分。
+      confidence: 明确实例
+      dissent: ''
+    - term_id: TERM-0012
+      rationale: 南部的垂直依附结构限制了横向合作关系的建立。
+      mismatch: 封闭概念要求明确的资格排他与优势维护手段，案例描述的主要是关系形态而非排他机制。
+      confidence: 部分符合
+      dissent: ''
+  status: 草稿
+- case_id: CASE-0004
+  title: 法国小农的「马铃薯」分析
+  description: 小农因生产条件相似却相互隔离、缺乏政治联系，未能形成自为的阶级，只能被代表而不能自我代表。
+  origin: 马克思对1848年后法国政治局势的分析
+  source: 马克思《路易·波拿巴的雾月十八日》1852【页码待核】
+  attributions:
+    - term_id: TERM-0008
+      rationale: 案例区分了由生产关系决定的共同位置与通过政治联系形成的阶级主体。
+      mismatch: 「阶级」在此同时指结构位置与政治主体，案例侧重后者，未讨论前者转化为后者的一般条件。
+      confidence: 明确实例
+      dissent: ''
+    - term_id: TERM-0007
+      rationale: 小农在生产关系中的位置构成分层结构中的一类。
+      mismatch: 索罗金式的分层以高低有序的层级为分析单位，马克思的框架不以层级排序为核心，两者前提不同。
+      confidence: 部分符合
+      dissent: ''
+  status: 草稿
+- case_id: CASE-0005
+  title: 种姓制度作为极端地位群体
+  description: 种姓以宗教与仪式规范界定群体边界，形成难以逾越的地位区隔。
+  origin: 韦伯对印度宗教与社会的比较研究
+  source: 韦伯《印度的宗教》1916【页码待核】
+  attributions:
+    - term_id: TERM-0010
+      rationale: 种姓以声望与仪式身份界定群体，是地位维度的极端形态。
+      mismatch: 韦伯的地位群体以生活方式与荣誉为特征，案例中宗教教义承担了主要界定作用，超出该概念通常涵盖的范围。
+      confidence: 明确实例
+      dissent: ''
+    - term_id: TERM-0012
+      rationale: 种姓以出身这一明确的资格限制实现排他，并维护群体优势。
+      mismatch: 韦伯的封闭强调群体主动的垄断策略，种姓的排他更多由宗教规范预设，主动性较弱。
+      confidence: 部分符合
+      dissent: ''
+  status: 草稿
+- case_id: CASE-0006
+  title: 专业职业以执照与协会限制准入
+  description: 医师、律师等职业通过资格考试、行业协会与执业许可限制从业人数，维持其市场位置与报酬水平。
+  origin: 帕金对职业封闭策略的分析
+  source: Parkin 1979, Marxism and Class Theory【页码待核】
+  attributions:
+    - term_id: TERM-0012
+      rationale: 以执照与协会资格作为准入限制，符合排他性封闭的完整特征。
+      mismatch: 该案例的封闭主体是职业群体自身，与雇主实施的资格限制在行动主体上不同。
+      confidence: 明确实例
+      dissent: ''
+    - term_id: TERM-0017
+      rationale: 准入资格以学历与考试的持续加码形式出现。
+      mismatch: 文凭通胀描述整体门槛随供给上升，而职业封闭的准入标准由协会自主设定，与文凭供给量无必然联动。
+      confidence: 部分符合
+      dissent: ''
+  status: 草稿
+- case_id: CASE-0007
+  title: 白领职业学历要求的持续上升
+  description: 原本无需大学学历的职位逐步要求学位，学历要求随教育扩张而上升，而岗位技能内容变化有限。
+  origin: 柯林斯对美国文凭社会的分析
+  source: Collins 1979, The Credential Society【页码待核】
+  attributions:
+    - term_id: TERM-0017
+      rationale: 学历要求上升并非源于技能需求变化，而是文凭供给扩张的结果，正是文凭通胀的核心机制。
+      mismatch: 案例呈现雇主侧的筛选行为，未讨论学历要求上升对个人教育决策的反向影响。
+      confidence: 明确实例
+      dissent: ''
+    - term_id: TERM-0013
+      rationale: 学位属制度化的文化资本，成为职业准入的凭证。
+      mismatch: 文化资本理论强调身体化与客观化状态的长期积累，案例只涉及制度化状态。
+      confidence: 部分符合
+      dissent: ''
+  status: 草稿
+- case_id: CASE-0008
+  title: 爪哇水稻农业的劳动力持续投入
+  description: 人口压力下农业以更多劳动力投入维持产出，人均收益不增，形态未向更高阶段转化。
+  origin: 格尔茨对印尼爪哇农业的田野研究
+  source: Geertz 1963, Agricultural Involution【页码待核】
+  attributions:
+    - term_id: TERM-0005
+      rationale: 案例是该概念的原始出处，劳动力持续投入而边际产出不增，形态停滞。
+      mismatch: 格尔茨的分析限于殖民时期的农业生态条件，其结论能否外推到其他领域存在争议。
+      confidence: 明确实例
+      dissent: 有研究认为该概念被过度外推至教育、职场等非农业领域
+  status: 草稿
+- case_id: CASE-0009
+  title: 华北小农经济的无发展增长
+  description: 人口压力下家庭农场以增加劳动投入维持产量，单位劳动报酬下降，经营形态未发生质变。
+  origin: 黄宗智对华北农村的经验研究
+  source: 黄宗智《华北的小农经济与社会变迁》1985【页码待核】
+  attributions:
+    - term_id: TERM-0005
+      rationale: 案例把内卷化限定为「没有发展的增长」，是该概念的第二条多义性线索。
+      mismatch: 格尔茨的原始界定侧重生态系统层面的形态停滞，黄宗智侧重单位劳动报酬下降，两者所指机制不完全重合。
+      confidence: 部分符合
+      dissent: ''
+  status: 草稿
+- case_id: CASE-0010
+  title: 天主教学校与公立学校的辍学率差异
+  description: 在家庭结构等条件相似的情况下，天主教学校学生的辍学率更低，被归因于社群内部的代际闭合与规范支持。
+  origin: 科尔曼关于社会资本与人力资本创造的研究
+  source: Coleman 1988, Social Capital in the Creation of Human Capital【页码待核】
+  attributions:
+    - term_id: TERM-0001
+      rationale: 社群内部的代际闭合与家长间的相互监督构成可动用的社会资源，用于解释辍学率差异。
+      mismatch: 案例把社会资本当作理性行动的条件，与布迪厄以不平等再生产为核心的界定方向相反。
+      confidence: 明确实例
+      dissent: ''
+    - term_id: TERM-0006
+      rationale: 分析以行动者在约束条件下的效用考虑为起点，社会资本被处理为影响行动成本的条件。
+      mismatch: 案例只把社会资本当作条件变量，未展开行动者选择过程的模型化。
+      confidence: 部分符合
+      dissent: ''
+  status: 草稿
+- case_id: CASE-0011
+  title: 卡比尔人的婚姻与荣誉策略
+  description: 婚姻对象的选择不遵循统一规则，而依家族在荣誉与关系上的处境灵活调整，形成无规则可循却有规律性的实践。
+  origin: 布迪厄对阿尔及利亚卡比尔人的田野研究
+  source: 布迪厄《实践理论大纲》1977【页码待核】
+  attributions:
+    - term_id: TERM-0003
+      rationale: 实践者依内化的倾向在具体情境中作出调整，既不服从明文规则，也不是刻意计算。
+      mismatch: 案例呈现策略性的一面，惯习概念中「被结构化的生成性」这一层在案例里不易观察到。
+      confidence: 明确实例
+      dissent: ''
+    - term_id: TERM-0002
+      rationale: 婚姻策略的可行空间由家族在关系网络中的位置界定。
+      mismatch: 场域概念强调自身逻辑与必然性并有争夺发生，亲属关系空间是否构成自主场域存在争议。
+      confidence: 部分符合
+      dissent: ''
+  status: 草稿
+- case_id: CASE-0012
+  title: 19世纪法国文学艺术场域的自主化
+  description: 文学艺术领域逐步摆脱宫廷与市场的外部支配，形成以同行认可为标准的自主评价体系。
+  origin: 布迪厄对法国文学艺术场域的历史分析
+  source: 布迪厄《艺术的法则》1992【页码待核】
+  attributions:
+    - term_id: TERM-0002
+      rationale: 该领域形成自身逻辑与评价标准，并能对外部支配加以转换，是场域自主性的典型形态。
+      mismatch: 场域概念适用于多个领域，案例只覆盖艺术领域，外推需另行论证。
+      confidence: 明确实例
+      dissent: ''
+    - term_id: TERM-0015
+      rationale: 同行认可与艺术声望构成该场域内有效的符号资本。
+      mismatch: 符号资本要求被承认为正当，而「为艺术而艺术」的正当性本身经历长期争夺，其成立过程未被完整呈现。
+      confidence: 部分符合
+      dissent: ''
+  status: 草稿
+- case_id: CASE-0013
+  title: 礼物交换中的符号资本生产
+  description: 礼物往来表面是慷慨与荣誉的表达，实际承担建立义务与积累声望的功能，赠予的功利性被双方共同否认。
+  origin: 布迪厄对礼物交换的分析
+  source: 布迪厄《实践感》1980【页码待核】
+  attributions:
+    - term_id: TERM-0015
+      rationale: 赠予积累的声望是被承认为正当的资源，符合符号资本的定义。
+      mismatch: 符号资本是各类资本被承认后的形态，案例集中讨论声望这一条路径，未呈现资本形式的整体转换。
+      confidence: 明确实例
+      dissent: ''
+    - term_id: TERM-0014
+      rationale: 礼物交换存在可计算的利益结构，与经济交换同源。
+      mismatch: 案例中的利益须经否认与延时才能成立，不能还原为可即时结算的经济交换。
+      confidence: 部分符合
+      dissent: ''
+  status: 草稿
+- case_id: CASE-0014
+  title: 美国职业结构中的地位获得
+  description: 以路径分析追踪父亲职业地位经由教育影响子代职业地位的过程，同时呈现未被教育中介的直接效应。
+  origin: 布劳与邓肯对美国职业结构的调查
+  source: Blau & Duncan 1967, The American Occupational Structure【页码待核】
+  attributions:
+    - term_id: TERM-0011
+      rationale: 研究以代际职业地位的对应关系测量流动，确立了地位获得研究的基本范式。
+      mismatch: 路径分析测量的是地位分布的相关结构，不直接区分流动的结构性成因与个体选择。
+      confidence: 明确实例
+      dissent: ''
+    - term_id: TERM-0007
+      rationale: 父亲的职业地位构成分层结构中的位置，子代位置依此分布。
+      mismatch: 案例以职业作为分层的单一指标，未纳入韦伯意义上的声望与权力维度。
+      confidence: 部分符合
+      dissent: ''
+  status: 草稿
+- case_id: CASE-0015
+  title: 法国1970年代的「新贫困」议题
+  description: 长期失业者与社会保障体系之外的群体在政策讨论中被命名为「被排除者」，关注点从收入不足转向社会关系的断裂。
+  origin: 勒努瓦对法国社会政策对象的分析
+  source: Lenoir 1974, Les Exclus【页码待核】
+  attributions:
+    - term_id: TERM-0018
+      rationale: 案例是该概念进入政策讨论的起点，关注点从分配不足转向参与机会的缺失。
+      mismatch: 案例的政策语境以社会保障覆盖为框架，其外延能否适用于缺乏此类制度的语境存在争议。
+      confidence: 明确实例
+      dissent: ''
+  status: 草稿
+- case_id: CASE-0016
+  title: 全景敞视监狱
+  description: 边沁设计的环形监狱让囚室处于持续可见的状态，被囚者无法确认自己此刻是否正被观看，因而自行约束行为。福柯以此说明现代社会普遍存在的规训机制。
+  origin: 福柯对边沁全景敞视建筑的分析
+  source: 福柯《规训与惩罚》1975【页码待核】
+  attributions:
+  - term_id: TERM-0024
+    rationale: 层级监视与自我监视正是规训权力的典型技术，案例呈现了看与被看的不对称如何生产顺从的行为。
+    mismatch: 福柯的规训不限于监狱，学校、军营、工厂同样适用；案例只给出监狱这一最纯粹的形态，未涉及其他场域。
+    confidence: 明确实例
+    dissent: ''
+  - term_id: TERM-0016
+    rationale: 规训使个体在没有外部强制时仍维持秩序，从而参与社会结构的自我延续。
+    mismatch: 再生产概念的重点是代际之间不平等的延续，案例讨论的是同一个体在同期内的行为塑造，缺少代际维度。
+    confidence: 部分符合
+    dissent: ''
+  status: 草稿
+- case_id: CASE-0017
+  title: 协作培养与自然成长
+  description: 拉鲁比较美国中产与工人阶级家庭的育儿方式：中产家庭有组织地安排课外活动、主动与学校交涉并训练孩子表达主张；工人家庭更强调孩子自然成长与对成人的服从。同样的学校评价标准对前者更有利。
+  origin: 拉鲁对美国小学家庭的追踪观察
+  source: Lareau 2003, Unequal Childhoods【页码待核】
+  attributions:
+  - term_id: TERM-0013
+    rationale: 有组织的活动安排与同制度交涉的能力构成身体化文化资本，被学校识别并奖励。
+    mismatch: 案例呈现的是家庭教养方式转化为学校优势的过程，未涉及文化资本被制度化认可的环节（如文凭）。
+    confidence: 明确实例
+    dissent: ''
+  - term_id: TERM-0019
+    rationale: 两种教养方式被解读为家庭品味与教养水平的差异，进而标示出家庭的社会位置。
+    mismatch: 区隔的核心是差异被用于区分并贬低他者，案例侧重学校一侧的评价差异，未充分呈现家庭之间的相互区分。
+    confidence: 部分符合
+    dissent: ''
+  - term_id: TERM-0003
+    rationale: 教养方式在日常互动中长期反复，形成孩子对待外部制度与自身处境的稳定倾向。
+    mismatch: 惯习强调倾向系统的可转移性，案例主要呈现其在学业与学校互动中的表现，未验证向其他场域的迁移。
+    confidence: 部分符合
+    dissent: ''
+  status: 草稿
+- case_id: CASE-0018
+  title: 美国大城市的种族居住隔离
+  description: 马西与登顿用五个维度测量美国城市的居住分异，指出黑人聚居区在均等性与暴露度上长期偏离其他族群的模式，其形成无法由收入差异单独解释。
+  origin: 马西与登顿对全美城市居住数据与隔离指数的分析
+  source: Massey & Denton 1993, American Apartheid【页码待核】
+  attributions:
+  - term_id: TERM-0025
+    rationale: 案例按均等性、暴露度等维度量化群体在空间上的分离，直接对应居住隔离的定义。
+    mismatch: 五个维度是分析工具，案例未讨论各维度之间的因果次序，即哪一维度先起作用。
+    confidence: 明确实例
+    dissent: ''
+  - term_id: TERM-0012
+    rationale: 制度性与市场性的排斥把某一群体限定在特定区域，形成对资源与机会范围的实际封闭。
+    mismatch: 韦伯的封闭以明确的资格限制为手段，案例中的排斥多为分散的市场行为与制度惯例，缺少公开的准入规则。
+    confidence: 部分符合
+    dissent: 有研究认为购房偏好差异也构成部分解释
+  status: 草稿
