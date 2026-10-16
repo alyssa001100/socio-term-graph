@@ -159,7 +159,7 @@
    source: "Merton 1938, Social Structure and Anomie【页码待核】"}
 - {rel_id: REL-0033, from_term: TERM-0026, to_term: TERM-0016, type: 机制, status: 草稿,
    evidence: 家务与情感劳动的性别分工把既有的不平等安排传递给下一代。,
-   explain: "跨群桥接：家庭内部的性别分工把既有的不平等安排原样传给下一代——两个群在这里交汇：家庭是分配发生的现场，不平等是分配的结果。",
+   explain: "家庭内部的性别分工把既有的不平等安排原样传给下一代——两个群在这里交汇：家庭是分配发生的现场，不平等是分配的结果。",
    boundary: "这条边说的是传递，不保证下一代必然接受同一套安排——传递的强度要靠数据看。",
    source: "Hochschild 1989, The Second Shift【页码待核】"}
 - {rel_id: REL-0034, from_term: TERM-0023, to_term: TERM-0026, type: 机制, status: 草稿,
@@ -453,7 +453,7 @@
    source: "Halbwachs 1925, Les cadres sociaux de la memoire【页码待核】"}
 - {rel_id: REL-0089, from_term: TERM-0050, to_term: TERM-0012, type: 机制, status: 草稿,
    evidence: "门禁社区以产权与准入把空间排他制度化，居民资格由购房与业主身份决定。",
-   explain: "跨群桥接：社会封闭讲的是资格排他，门禁社区是它在居住空间里的一个具体实现形态。",
+   explain: "社会封闭讲的是资格排他，门禁社区是它在居住空间里的一个具体实现形态。",
    boundary: "机制说的是空间排他如何实现封闭，不等于封闭只能通过居住来实现——职业准入同样可以。",
    source: "Blakely & Snyder 1997, Fortress America【页码待核】"}
 - {rel_id: REL-0090, from_term: TERM-0048, to_term: TERM-0018, type: 机制, status: 草稿,
@@ -468,7 +468,7 @@
    source: "Wirth 1938, Urbanism as a Way of Life【页码待核】"}
 - {rel_id: REL-0092, from_term: TERM-0051, to_term: TERM-0012, type: 对立, status: 草稿,
    evidence: "城市权利主张空间的使用与改造对所有居民开放，而封闭以限制准入来维护既有优势。",
-   explain: "跨群桥接：一端要求开放，一端靠排他维持优势，二者在「谁能使用空间」这一问题上正面冲突。",
+   explain: "一端要求开放，一端靠排他维持优势，二者在「谁能使用空间」这一问题上正面冲突。",
    boundary: "对立说的是原则层面；现实中主张城市权利的运动也常提出具体的优先照顾对象，并不等于无条件开放。",
    source: "Harvey 2008, The Right to the City【页码待核】"}
 - {rel_id: REL-0093, from_term: TERM-0026, to_term: TERM-0059, type: 借用, status: 草稿,
@@ -483,31 +483,31 @@
    source: "Connell 1987, Gender and Power【页码待核】"}
 - {rel_id: REL-0095, from_term: TERM-0054, to_term: TERM-0012, type: 机制, status: 草稿,
    evidence: "沃尔比指出，父权制通过把女性排除在有偿劳动与公共职位之外来维持支配，这一排除以资格与准入限制为手段。",
-   explain: "跨群桥接：父权制的维持要借封闭的手段（把谁挡在门外），封闭因此可以服务于性别支配。",
+   explain: "父权制的维持要借封闭的手段（把谁挡在门外），封闭因此可以服务于性别支配。",
    boundary: "机制方向不能反推：封闭的存在不表示每一次封闭都由父权制驱动。",
    source: "Walby 1990, Theorizing Patriarchy【页码待核】"}
 - {rel_id: REL-0096, from_term: TERM-0065, to_term: TERM-0007, type: 机制, status: 草稿,
    evidence: "葛兰西指出，统治阶级通过把自身世界观扩展为全社会的常识而获得领导权，支配因此不必依赖强制。",
-   explain: "跨群桥接：分层要稳定，需要一套让位置差异显得自然的常识，霸权提供了这套常识的生成方式。",
+   explain: "分层要稳定，需要一套让位置差异显得自然的常识，霸权提供了这套常识的生成方式。",
    boundary: "机制只解释分层秩序的稳定性，不解释分层本身如何形成——那需要经济与制度层面的分析。",
    source: "葛兰西《狱中札记》【页码待核】"}
 - {rel_id: REL-0097, from_term: TERM-0062, to_term: TERM-0034, type: 机制, status: 草稿,
    evidence: "戈夫曼的框架分析指出情境定义支配着人们对行为性质的判断，这为标签如何被贴上提供了互动层面的说明。",
-   explain: "跨群桥接：标签理论回答「被贴上标签的是谁」，框架说明「贴标签所依据的判断从哪来」。",
+   explain: "标签理论回答「被贴上标签的是谁」，框架说明「贴标签所依据的判断从哪来」。",
    boundary: "机制方向是补充而非替代：标签理论的重心仍在标签造成的后果，不在判断图式本身。",
    source: "Goffman 1974, Frame Analysis【页码待核】"}
 - {rel_id: REL-0098, from_term: TERM-0061, to_term: TERM-0031, type: 借用, status: 草稿,
    evidence: "哈布瓦赫沿用涂尔干的集体概念，但把关注点从当下的共同情感转向群体对过去的共同记忆。",
-   explain: "跨群桥接：集体记忆借的是集体意识这个概念位，把涂尔干学派对社会整合的关注移到时间维度上。",
+   explain: "集体记忆借的是集体意识这个概念位，把涂尔干学派对社会整合的关注移到时间维度上。",
    boundary: "借用扩展了对象：集体意识指共有的信念与情感，集体记忆指对过去的共同表征。",
    source: "Halbwachs 1925, Les cadres sociaux de la memoire【页码待核】"}
 - {rel_id: REL-0099, from_term: TERM-0065, to_term: TERM-0040, type: 对立, status: 草稿,
    evidence: "科层制的服从建立在成文规则与层级监督之上；文化霸权则指出，稳定的支配更多依赖被支配者对世界观的接受。",
-   explain: "跨群桥接：同一维度（如何获得服从）上的两种机制——规则强制与意义认同，一个靠可计算性，一个靠正当性。",
+   explain: "同一维度（如何获得服从）上的两种机制——规则强制与意义认同，一个靠可计算性，一个靠正当性。",
    boundary: "二者在现实中常常并用（正式规则之外仍需正当性信念），这条边说的是机制上的区分，不是现实的二选一。",
    source: "葛兰西《狱中札记》【页码待核】"}
 - {rel_id: REL-0100, from_term: TERM-0062, to_term: TERM-0037, type: 借用, status: 草稿,
    evidence: "框架分析借韦伯「行动者赋予主观意义」的立场，把情境定义作为分析行动的起点。",
-   explain: "跨群桥接：框架借的是「行动有意义」这一前提，并把它具体化为可观察的情境定义。",
+   explain: "框架借的是「行动有意义」这一前提，并把它具体化为可观察的情境定义。",
    boundary: "借用之后重心不同：韦伯关注行动的意义取向类型，框架分析关注意义在互动中如何被建立。",
    source: "Goffman 1974, Frame Analysis【页码待核】"}

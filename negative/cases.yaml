@@ -167,3 +167,18 @@
       confidence: 部分符合
       dissent: ''
   status: 草稿
+
+# N58 归属块的 match 把界面标签「相符之处」又写了一遍
+#     match 本身长度合规、其余字段全部合规，只有开头多了一个界面会自己加的标签
+- case_id: CASE-9013
+  title: 负例：相符之处重复界面标签
+  description: 负例占位描述。
+  origin: 负例占位出处
+  source: 负例占位来源
+  attributions:
+    - term_id: TERM-9001
+      match: 相符之处：负例占位的相符说明，长度足够，但不含真实论断。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+      dissent: ''
+  status: 草稿

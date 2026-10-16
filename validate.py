@@ -67,9 +67,54 @@ def check_min_len(issues, fname, where, record, field, minimum, label=""):
                        f"—— 缺的是具体说明，不是字数"))
 
 
+# 界面上带固定标签的字段：标签由 build_site.py 的模板加上去，数据里不该再写一遍
+LABELED_FIELDS = {"match": "相符之处", "mismatch": "不符之处",
+                  "explain": "编者解读", "boundary": "边界", "analysis": "解析"}
+
+# 能由其它字段推出的分类标签：界面自己会标，数据里写死一遍是负债
+DERIVED_LABEL = {"explain": "跨群桥接"}
+
+
+def check_label_echo(issues, fname, where, record):
+    """拦「数据里把界面标签又写了一遍」。
+
+    这个错误不会让任何校验失败：`match` 写成「相符之处是……」，渲染出来就是
+    「相符之处：相符之处是……」。只能靠规则拦，人眼在几百条数据里看不出来。
+    """
+    for f, label in LABELED_FIELDS.items():
+        v = record.get(f)
+        if isinstance(v, str) and v.startswith(label):
+            issues.append(("警告", fname, f"{where}.{f}",
+                           f"取值以「{label}」开头，但界面会自动加上这个标签，"
+                           f"页面上会重复成「{label}：{label}…」"))
+
+
+def check_derived_label(issues, fname, where, record, cluster_of):
+    """拦「把能推出的分类标签写死在数据里」。
+
+    桥接与否由两端术语的 `cluster` 推出，界面自己会标（`build_site.py` 的
+    `relRow()` 按 cluster 是否相同决定要不要挂「跨群桥接」标签）。数据里再写
+    一遍，代价不只是页面上重复：术语迁去别的概念群之后，这行前缀会不声不响
+    变成一句错的断言，而其它规则只看 cluster，永远发现不了。
+    """
+    label = DERIVED_LABEL.get("explain")
+    v = record.get("explain")
+    if not (isinstance(v, str) and v.startswith(label)):
+        return
+    a = cluster_of.get(record.get("from_term"))
+    b = cluster_of.get(record.get("to_term"))
+    if a and b and a != b:
+        issues.append(("警告", fname, f"{where}.explain",
+                       f"取值以「{label}」开头，但界面会按两端所属概念群自动标注这个标签，"
+                       f"页面上会重复"))
+    else:
+        issues.append(("警告", fname, f"{where}.explain",
+                       f"取值以「{label}」开头，但两端术语同属「{a}」群 —— 这行标签与实际的"
+                       f"群归属矛盾，术语迁移后会变成错的断言"))
+
+
 def check_schema(schema):
     """schema 自身的自洽性：clusters 与 enums.cluster 必须一一对应。
-
     新增一个概念群要同时改两处——clusters 里写核心问题、enums.cluster 里放开取值。
     只改前者不会报「配置有问题」，而是让该群的每一条术语都报「枚举非法」：
     错误信息指向数据，根因却在配置，是这套系统里最难查的一类报错。
@@ -130,6 +175,7 @@ def check_all(d, schema):
     # ---------- 关系 ----------
     rel_ids = set()
     per_term = Counter()
+    cluster_of = {t["term_id"]: t.get("cluster") for t in data["terms"]}
     for r in data["relations"]:
         where = r.get("rel_id", "?")
         check_required(issues, "relations.yaml", where, r, req["relations"])
@@ -143,6 +189,8 @@ def check_all(d, schema):
                       cons["explain_min_chars"], "关系解释")
         check_min_len(issues, "relations.yaml", where, r, "boundary",
                       cons["boundary_min_chars"], "边界说明")
+        check_label_echo(issues, "relations.yaml", where, r)
+        check_derived_label(issues, "relations.yaml", where, r, cluster_of)
         for side in ("from_term", "to_term"):
             if r.get(side) not in term_ids:
                 issues.append(("错误", "relations.yaml", f"{where}.{side}",
@@ -157,7 +205,6 @@ def check_all(d, schema):
     counts["relations"] = len(data["relations"])
 
     # 跨群桥接：跨概念群的关系最容易牵强，单独设约束
-    cluster_of = {t["term_id"]: t.get("cluster") for t in data["terms"]}
     pair_bridges, bridges = Counter(), 0
     for r in data["relations"]:
         ca, cb = cluster_of.get(r.get("from_term")), cluster_of.get(r.get("to_term"))
@@ -206,6 +253,7 @@ def check_all(d, schema):
                     issues.append(("错误", fname, f"{w}.term_id",
                                    f"引用了不存在的术语 {a.get('term_id')}"))
                 check_min_len(issues, fname, w, a, "match", cons["match_min_chars"], "相符之处")
+                check_label_echo(issues, fname, w, a)
                 # 防牵强的核心规则
                 if not str(a.get("mismatch", "")).strip():
                     issues.append(("错误", fname, f"{w}.mismatch",
@@ -213,6 +261,7 @@ def check_all(d, schema):
                 if a.get("confidence") == "有争议" and not a.get("dissent"):
                     issues.append(("警告", fname, w, "确信度为「有争议」但未记录 dissent 意见"))
             check_min_len(issues, fname, where, c, "analysis", cons["analysis_min_chars"], "热点解析")
+            check_label_echo(issues, fname, where, c)
             if key == "hotspots":
                 dt, ra = str(c.get("date", "")), str(c.get("review_after", ""))
                 for f, v in (("date", dt), ("review_after", ra)):

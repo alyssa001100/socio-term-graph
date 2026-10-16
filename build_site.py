@@ -62,6 +62,7 @@ details li{margin-bottom:7px;font-size:14px}
 .poly li{padding-left:2px}
 .who{font-weight:600}
 .reltype{background:#eef1f5;color:#3c4a5c;border-radius:5px;padding:0 6px;font-size:12px;margin:0 3px}
+.reltype.br{background:#fdf1e3;color:#8c5a2b;border:1px dashed #d99a4e}
 a.t{color:var(--acc);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--acc)}
 .case{color:var(--mut);font-size:13px}
 .relblock{margin-bottom:9px}
@@ -163,9 +164,12 @@ const esc = s => String(s).replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'
 function relRow(t){
   const out = [];
   const block = (r, dir) => {
+    // 桥接与否由两端的 cluster 推出，不写死在数据里：术语换了概念群，这里跟着变
+    const br = DATA.clusterOf[t.term_id] !== DATA.clusterOf[r.other_id]
+      ? '<span class="reltype br">跨群桥接</span>' : '';
     const head = dir === 'out'
-      ? `本条目<span class="reltype">${esc(r.type)}</span>→ <a class="t" data-j="${r.other_id}">${esc(r.other)}</a>`
-      : `<a class="t" data-j="${r.other_id}">${esc(r.other)}</a><span class="reltype">${esc(r.type)}</span>→ 本条目`;
+      ? `本条目<span class="reltype">${esc(r.type)}</span>${br}→ <a class="t" data-j="${r.other_id}">${esc(r.other)}</a>`
+      : `<a class="t" data-j="${r.other_id}">${esc(r.other)}</a><span class="reltype">${esc(r.type)}</span>${br}→ 本条目`;
     return `<div class="relblock"><div class="relhead">${head}</div>` +
       `<span class="note"><span class="tagline me">编者解读</span>${esc(r.explain || '')}</span>` +
       (r.boundary ? `<span class="bd"><span class="tagline">边界</span>${esc(r.boundary)}</span>` : '') +
@@ -226,7 +230,7 @@ function render(){
 
 document.getElementById('sub').textContent =
   `${DATA.clusterOrder.length} 个概念群　·　术语之间以「关系」相连成网，` +
-  `跨概念群处是桥接（橙色虚线）　·　点节点可跳到词条`;
+  `跨概念群处是桥接：网络视图里是橙色虚线，词条的关系条目上带「跨群桥接」标签　·　点节点可跳到词条`;
 
 document.getElementById('stats').innerHTML = [
   ['术语', DATA.meta.terms], ['概念关系', DATA.meta.relations],

@@ -78,3 +78,10 @@
 
 # v7 新增：schema 自身一致性（clusters 与 enums.cluster 一一对应）
 - {id: N57, file: schema.yaml, where: schema.clusters, level: 错误, contains: 却不在 enums.cluster, desc: 概念群只登记在 clusters、未放开枚举}
+
+# v10 新增：标签归呈现层，数据里不该再写一遍
+# 这四条唯一的共同点是「看数据看不出来」：取值本身通顺、长度合规、字段齐全，
+# 只有渲染之后才会露出重复。人眼在几百条记录里看不见，只能靠规则。
+- {id: N58, file: cases.yaml, where: "CASE-9013.attributions[1].match", level: 警告, contains: 自动加上这个标签, desc: 归属块 match 重复界面标签}
+- {id: N59, file: hotspots.yaml, where: HOT-9011.analysis, level: 警告, contains: 自动加上这个标签, desc: 热点解析重复界面标签}
+- {id: N60, file: relations.yaml, where: REL-9501.explain, level: 警告, contains: 界面会按两端所属概念群自动标注, desc: 关系解释写死「跨群桥接」标签}

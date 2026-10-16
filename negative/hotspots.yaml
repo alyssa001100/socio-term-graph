@@ -167,3 +167,20 @@
       confidence: 部分符合
       dissent: ''
   status: 草稿
+
+# N59 热点解析把界面标签「解析」又写了一遍
+#     analysis 长度合规（60 字以上），只有开头多了一个界面会自己加的标签
+- hot_id: HOT-9011
+  title: 负例：热点解析重复界面标签
+  description: 负例占位描述。
+  date: 2025-01
+  source_url: https://example.org/ok
+  review_after: 2027-01
+  analysis: 解析：负例占位的逐层说明，先分层、再逐层定符合度、后点出最易混淆处，最后交代确信度的理由，长度足够撑过下限，但不含任何真实论断。
+  attributions:
+    - term_id: TERM-9001
+      match: 负例占位的相符之处说明，长度足够但不含真实论断。
+      mismatch: 负例占位的不符之处。
+      confidence: 部分符合
+      dissent: ''
+  status: 草稿
