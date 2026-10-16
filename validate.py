@@ -67,13 +67,34 @@ def check_min_len(issues, fname, where, record, field, minimum, label=""):
                        f"—— 缺的是具体说明，不是字数"))
 
 
+def check_schema(schema):
+    """schema 自身的自洽性：clusters 与 enums.cluster 必须一一对应。
+
+    新增一个概念群要同时改两处——clusters 里写核心问题、enums.cluster 里放开取值。
+    只改前者不会报「配置有问题」，而是让该群的每一条术语都报「枚举非法」：
+    错误信息指向数据，根因却在配置，是这套系统里最难查的一类报错。
+    这条规则把根因直接点出来，让报错指向该改的那一行。
+    """
+    issues = []
+    declared = set(schema.get("clusters") or {})
+    allowed = set(schema["enums"].get("cluster") or [])
+    for c in sorted(declared - allowed):
+        issues.append(("错误", "schema.yaml", "schema.clusters",
+                       f"概念群「{c}」在 clusters 里有定义，却不在 enums.cluster 里 —— "
+                       f"该群术语会被误判为枚举非法"))
+    for c in sorted(allowed - declared):
+        issues.append(("错误", "schema.yaml", "schema.clusters",
+                       f"枚举值「{c}」在 enums.cluster 里，却不在 clusters 中 —— 缺核心问题定义"))
+    return issues
+
+
 def check_all(d, schema):
     """校验目录 d 下的四张表，返回 (issues, counts)。供命令行与 selftest.py 共用。"""
     enums, req, cons = schema["enums"], schema["required"], schema["constraints"]
     fld = schema["fields"]
 
     data = {k: load(os.path.join(d, v)) for k, v in FILES.items()}
-    issues, counts = [], {}
+    issues, counts = check_schema(schema), {}
 
     # ---------- 术语 ----------
     term_ids = set()

@@ -184,3 +184,80 @@
   confidence: 明确实例
   reviewer: ''
   last_reviewed: ''
+
+# ---- v7 新增概念群的负例基座：验证跨群规则用的是配置里的群，而不是写死的三个 ----
+# 合规基座：城市、空间与社区
+- term_id: TERM-9009
+  cluster: 城市、空间与社区
+  name_zh: 负例城市术语
+  name_en: negative urban term
+  proponent: 负例
+  first_year: 1908
+  first_source: 负例占位
+  school: [芝加哥学派]
+  application: [城市与空间]
+  definition: 仅用于负例测试的占位定义。
+  definition_source: 负例占位【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+
+# 合规基座：性别、家庭与照护
+- term_id: TERM-9010
+  cluster: 性别、家庭与照护
+  name_zh: 负例性别术语
+  name_en: negative gender term
+  proponent: 负例
+  first_year: 1909
+  first_source: 负例占位
+  school: [女性主义社会学]
+  application: [性别]
+  definition: 仅用于负例测试的占位定义。
+  definition_source: 负例占位【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+
+# 合规基座：知识、文化与意义
+- term_id: TERM-9011
+  cluster: 知识、文化与意义
+  name_zh: 负例知识术语
+  name_en: negative knowledge term
+  proponent: 负例
+  first_year: 1910
+  first_source: 负例占位
+  school: [文化社会学]
+  application: [文化与消费]
+  definition: 仅用于负例测试的占位定义。
+  definition_source: 负例占位【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+
+# N56 概念群枚举近似拼写：新群名里带顿号，漏掉顿号就是一个查不出来的「新群」
+- term_id: TERM-9012
+  cluster: 城市空间与社区
+  name_zh: 负例近似群名术语
+  name_en: negative near-miss cluster term
+  proponent: 负例
+  first_year: 1911
+  first_source: 负例占位
+  school: [芝加哥学派]
+  application: [城市与空间]
+  definition: 仅用于负例测试的占位定义。
+  definition_source: 负例占位【页码待核】
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''

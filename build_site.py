@@ -4,7 +4,7 @@
 用法：python3 build_site.py
 输出：site/index.html（自包含，数据内嵌）
 """
-import json, math, os, random
+import json, math, os, random, sys
 from collections import Counter
 import yaml
 
@@ -204,10 +204,10 @@ function card(t){
     <p class="def"><b>定义</b>　${esc(t.definition)}</p>
     <div class="tags">${t.school.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}
       ${t.application.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div>
-    <details><summary>多义性（${(t.polysemy||[]).length}）</summary><ul class="poly">${poly}</ul></details>
-    <details><summary>概念关系（${t.rel_out.length + t.rel_in.length}）</summary><ul>${relRow(t)}</ul></details>
+    ${(t.polysemy||[]).length ? `<details><summary>多义性（${t.polysemy.length}）</summary><ul class="poly">${poly}</ul></details>` : ''}
+    ${t.rel_out.length + t.rel_in.length ? `<details><summary>概念关系（${t.rel_out.length + t.rel_in.length}）</summary><ul>${relRow(t)}</ul></details>` : ''}
     ${t.cases.length ? `<details><summary>经典案例（${t.cases.length}）</summary><ul>${cases}</ul></details>` : ''}
-    <details><summary>社会热点（${t.hotspots.length}）</summary><ul>${hots}</ul></details>
+    ${t.hotspots.length ? `<details><summary>社会热点（${t.hotspots.length}）</summary><ul>${hots}</ul></details>` : ''}
   </div>`;
 }
 
@@ -328,11 +328,18 @@ draw();
 """
 
 
+# 概念群配色：每个群一种色相，靠颜色区分群，不靠位置。
+# 六个群必须六种颜色——少一种就会静默落到 FALLBACK_COLOR，图上两个群变成同一个颜色，
+# 而这种错误不会让任何校验失败，只会让读图的人看不懂。所以下面有配色自检。
 CLUSTER_COLORS = {
     "社会不平等": "#8c5a2b",
     "社会秩序与越轨": "#3c6e71",
     "社会行动与理性化": "#7a5c9e",
+    "城市、空间与社区": "#3f6fa8",
+    "性别、家庭与照护": "#a8567a",
+    "知识、文化与意义": "#6d8c3f",
 }
+FALLBACK_COLOR = "#6b6660"
 NET_W, NET_H = 1000, 900
 
 
@@ -444,12 +451,16 @@ def place_labels(terms, pos, radius, width, height, size=11.0):
         r = radius[tid]
         w, h = _text_w(t["name_zh"], size), size * 1.3
         gap = 4.0
-        cands = [
-            ("middle", x, y + r + gap + h * 0.78),
-            ("middle", x, y - r - gap + h * 0.22),
-            ("start", x + r + gap, y + h * 0.28),
-            ("end", x - r - gap, y + h * 0.28),
-        ]
+        # 三圈候选：近圈放不下就往外挪，最远一圈也不超过「离节点过远」的 60px 上限。
+        cands = []
+        for extra in (0.0, 15.0, 30.0):
+            g = gap + extra
+            cands += [
+                ("middle", x, y + r + g + h * 0.78),
+                ("middle", x, y - r - g + h * 0.22),
+                ("start", x + r + g, y + h * 0.28),
+                ("end", x - r - g, y + h * 0.28),
+            ]
         best, best_pen = None, None
         for anchor, lx, ly in cands:
             pen = label_penalty(_text_box(anchor, lx, ly, w, h), placed,
@@ -568,11 +579,23 @@ def main():
         "enums": schema["enums"], "terms": terms,
         "clusters": schema.get("clusters", {}),
         "clusterOrder": cluster_names,
-        "clusterColors": {c: CLUSTER_COLORS.get(c, "#6b6660") for c in cluster_names},
+        "clusterColors": {c: CLUSTER_COLORS.get(c, FALLBACK_COLOR) for c in cluster_names},
         "clusterOf": {t["term_id"]: t.get("cluster") for t in terms},
         "layout": lay, "radius": rad, "label": lab, "view": view,
         "size": [NET_W, NET_H],
     }
+
+    # 配色自检：缺配色或多群撞色都会让网络视图不可读，且不会触发任何数据校验
+    missing = [c for c in cluster_names if c not in CLUSTER_COLORS]
+    dupes = [col for col, n in Counter(CLUSTER_COLORS[c] for c in cluster_names
+                                       if c in CLUSTER_COLORS).items() if n > 1]
+    if missing or dupes:
+        for c in missing:
+            print(f"  配色自检：概念群「{c}」没有配色，会落到默认灰 —— 请在 CLUSTER_COLORS 里补一个")
+        for col in dupes:
+            print(f"  配色自检：颜色 {col} 被多个概念群共用 —— 图上会分不出群")
+        sys.exit("配色自检不通过：概念群与配色必须一一对应。")
+    print(f"  配色自检：{len(cluster_names)} 个概念群各自独立配色　OK")
 
     # 布局自检：各概念群的重心两两之间应有足够距离，否则群在图上会糊成一团
     cents = {}

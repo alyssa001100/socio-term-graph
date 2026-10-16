@@ -23,6 +23,9 @@ NEG = os.path.join(ROOT, "negative")
 
 def main():
     schema = yaml.safe_load(open(os.path.join(ROOT, "schema.yaml"), encoding="utf-8"))
+    # N57 注入 schema 自身的不一致：只在 clusters 里登记，没在 enums.cluster 里放开。
+    #     该群不挂任何术语，因此不会连带污染其它负例的报错。
+    schema["clusters"]["负例未登记群"] = "负例：只在 clusters 出现，未在 enums.cluster 出现"
     expected = yaml.safe_load(open(os.path.join(NEG, "expected.yaml"), encoding="utf-8"))
     issues, _ = check_all(NEG, schema)
 

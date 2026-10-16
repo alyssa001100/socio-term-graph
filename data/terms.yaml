@@ -456,7 +456,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0023
-  cluster: 社会不平等
+  cluster: 性别、家庭与照护
   name_zh: 做性别
   name_en: doing gender
   aliases: [性别实践]
@@ -527,7 +527,7 @@
   reviewer: ''
   last_reviewed: ''
 - term_id: TERM-0026
-  cluster: 社会不平等
+  cluster: 性别、家庭与照护
   name_zh: 第二班
   name_en: the second shift
   aliases: [第二轮班]
@@ -890,6 +890,527 @@
   definition: 快餐业的效率、可计算性、可预测性与控制四项原则向社会各领域扩散，是理性化在当代的延伸。
   definition_source: Ritzer 1993, The McDonaldization of Society【页码待核】
   polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+
+# ============================================================
+# 概念群：城市、空间与社区（v7 新增）
+# 核心问题：城市空间如何被社会关系塑造，又如何反过来塑造社会关系？
+# ============================================================
+- term_id: TERM-0045
+  cluster: 城市、空间与社区
+  name_zh: 城市性
+  name_en: urbanism
+  aliases: [城市主义, 城市生活方式]
+  proponent: 路易斯·沃斯
+  first_year: 1938
+  first_source: Urbanism as a Way of Life
+  school: [芝加哥学派]
+  application: [城市与空间, 文化与消费]
+  definition: 由人口规模、密度与异质性共同决定的生活方式；它使初级关系衰退，人际接触转为次级的、片段式的交往。
+  definition_source: Wirth 1938, Urbanism as a Way of Life【页码待核】
+  polysemy:
+    - author: 赫伯特·甘斯
+      school: [芝加哥学派]
+      definition: 城市性并不必然带来疏离；族群与阶层会把城市居民重新组织为有内聚力的「城市村民」式社区。
+      differs_from: 路易斯·沃斯
+      note: 把沃斯视为城市化必然后果的疏离，改写为随人群构成而变动的或然结果
+      source: Gans 1962, The Urban Villagers【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0046
+  cluster: 城市、空间与社区
+  name_zh: 同心圆模型
+  name_en: concentric zone model
+  aliases: [同心带模型, 伯吉斯模型]
+  proponent: 欧内斯特·伯吉斯
+  first_year: 1925
+  first_source: The Growth of the City
+  school: [芝加哥学派]
+  application: [城市与空间, 越轨与犯罪]
+  definition: 城市自中心商业区向外按同心带扩张的空间模型，不同群体依区位分布居住，过渡带集中出现社会解组与越轨。
+  definition_source: Burgess 1925, The Growth of the City【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0047
+  cluster: 城市、空间与社区
+  name_zh: 礼俗社会与法理社会
+  name_en: Gemeinschaft und Gesellschaft
+  aliases: [共同体与社会, 礼俗社会与法理社会]
+  proponent: 斐迪南·滕尼斯
+  first_year: 1887
+  first_source: Gemeinschaft und Gesellschaft
+  school: [古典社会学]
+  application: [城市与空间, 文化与消费]
+  definition: 以情感、血缘与共同传统为纽带的共同体，与以利益计算、契约与选择为纽带的社会，构成一组对照类型。
+  definition_source: 滕尼斯《共同体与社会》1887【页码待核】
+  polysemy:
+    - author: 塔尔科特·帕森斯
+      school: [结构功能主义]
+      definition: 把共同体与社会分别对应传统社会与现代社会的两种整合方式，并置于进化序列的两端。
+      differs_from: 斐迪南·滕尼斯
+      note: 把并置的分析类型读成时间上的先后阶段，这一读法后来被广泛接受也广泛批评
+      source: Parsons 1951, The Social System【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0048
+  cluster: 城市、空间与社区
+  name_zh: 士绅化
+  name_en: gentrification
+  aliases: [绅士化, 中产化, 缙绅化]
+  proponent: 露丝·格拉斯
+  first_year: 1964
+  first_source: London - Aspects of Change
+  school: [新马克思主义]
+  application: [城市与空间, 社会分层与流动]
+  definition: 中产阶层迁入并改造工人阶层社区，带动房价与商业业态更替，使原有低收入居民被迫迁出的过程。
+  definition_source: Glass 1964, London - Aspects of Change【页码待核】
+  polysemy:
+    - author: 尼尔·史密斯
+      school: [新马克思主义]
+      definition: 士绅化的发生条件是地块的潜在地租与资本化地租之间出现差额，因此它是资本回流中心区的结果，而非仅由中产品味驱动。
+      differs_from: 露丝·格拉斯
+      note: 从描述性命名转向政治经济学的因果解释，重点由迁入者的偏好移到资本的地租逻辑
+      source: Smith 1979, Toward a Theory of Gentrification【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0049
+  cluster: 城市、空间与社区
+  name_zh: 空间生产
+  name_en: production of space
+  aliases: [空间的生产]
+  proponent: 亨利·列斐伏尔
+  first_year: 1974
+  first_source: La production de l'espace
+  school: [新马克思主义]
+  application: [城市与空间]
+  definition: 空间不是中性的容器，而是社会关系生产出来的产物；社会空间是社会关系的产物，同时也反过来塑造社会关系。
+  definition_source: Lefebvre 1974, La production de l'espace【页码待核】
+  polysemy:
+    - author: 爱德华·索亚
+      school: [新马克思主义]
+      definition: 把列斐伏尔的三元结构重述为空间性、历史性与社会性的辩证，并以「第三空间」指称既真实又被想象的空间。
+      differs_from: 亨利·列斐伏尔
+      note: 把空间生产的分析扩展为一种空间认识论，重心由生产关系转向空间性的三元辩证
+      source: Soja 1989, Postmodern Geographies【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0050
+  cluster: 城市、空间与社区
+  name_zh: 门禁社区
+  name_en: gated community
+  aliases: [封闭社区, 门禁小区]
+  proponent: 爱德华·布莱克利; 玛丽·盖尔·斯奈德
+  first_year: 1997
+  first_source: Fortress America
+  school: [冲突论]
+  application: [城市与空间, 社会分层与流动]
+  definition: 以围墙、门禁与私属安保封闭起来，并由业主组织自我治理的居住形态。
+  definition_source: Blakely & Snyder 1997, Fortress America【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0051
+  cluster: 城市、空间与社区
+  name_zh: 城市权利
+  name_en: right to the city
+  aliases: [城市权]
+  proponent: 亨利·列斐伏尔
+  first_year: 1968
+  first_source: Le droit a la ville
+  school: [新马克思主义]
+  application: [城市与空间]
+  definition: 居民对城市空间的使用与改造享有的集体主张权，不因产权或资本增值而被让渡。
+  definition_source: Lefebvre 1968, Le droit a la ville【页码待核】
+  polysemy:
+    - author: 大卫·哈维
+      school: [新马克思主义]
+      definition: 城市权利应当被理解为对城市化过程本身的集体权利，即改变城市的权利，而不只是使用既有城市资源的权利。
+      differs_from: 亨利·列斐伏尔
+      note: 把主张的重心由空间使用移到城市化过程的支配权，并强调其阶级基础
+      source: Harvey 2008, The Right to the City【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0052
+  cluster: 城市、空间与社区
+  name_zh: 邻里效应
+  name_en: neighborhood effects
+  aliases: [社区效应, 邻里作用]
+  proponent: 威廉·威尔逊
+  first_year: 1987
+  first_source: The Truly Disadvantaged
+  school: [芝加哥学派]
+  application: [城市与空间, 社会分层与流动]
+  definition: 邻里层面的贫困集中与集体效能，对居民的机会与行为产生独立于个体特征的影响。
+  definition_source: Wilson 1987, The Truly Disadvantaged【页码待核】
+  polysemy:
+    - author: 罗伯特·桑普森
+      school: [芝加哥学派]
+      definition: 邻里影响的关键不是贫困本身，而是居民之间的社会凝聚力与共同干预意愿，即集体效能。
+      differs_from: 威廉·威尔逊
+      note: 把机制从结构性的贫困集中转向社区自身的社会组织能力，使邻里差异可以解释同一贫困水平下的不同结果
+      source: Sampson 2012, Great American City【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+
+# ============================================================
+# 概念群：性别、家庭与照护（v7 新增）
+# 核心问题：性别与家庭安排如何被组织起来，又如何生产与延续不平等？
+# ============================================================
+- term_id: TERM-0053
+  cluster: 性别、家庭与照护
+  name_zh: 性别
+  name_en: gender
+  aliases: [社会性别]
+  proponent: 安·奥克利
+  first_year: 1972
+  first_source: Sex, Gender and Society
+  school: [女性主义社会学]
+  application: [性别, 家庭与亲密关系]
+  definition: 社会文化对男女差异的建构与分类，区别于生物性的生理性别；性别是被社会定义的，而非由生理直接决定。
+  definition_source: Oakley 1972, Sex, Gender and Society【页码待核】
+  polysemy:
+    - author: 朱迪斯·巴特勒
+      school: [后结构主义与后现代]
+      definition: 性别是持续被操演出来的效果，并不存在先于操演的本质主体；生理性别同样经由话语被建构。
+      differs_from: 安·奥克利
+      note: 奥克利把生理性别与文化性别分开，巴特勒则质疑这一区分的立足点，把两层都归入操演与话语
+      source: Butler 1990, Gender Trouble【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0054
+  cluster: 性别、家庭与照护
+  name_zh: 父权制
+  name_en: patriarchy
+  aliases: [男权制, 家长制]
+  proponent: 西尔维亚·沃尔比
+  first_year: 1990
+  first_source: Theorizing Patriarchy
+  school: [女性主义社会学]
+  application: [性别, 家庭与亲密关系]
+  definition: 男性对女性劳动、身体与再生产形成系统性支配的结构，由家庭生产、有偿劳动、国家、暴力、性与文化六个相互支撑的领域构成。
+  definition_source: Walby 1990, Theorizing Patriarchy【页码待核】
+  polysemy:
+    - author: 凯特·米利特
+      school: [女性主义社会学]
+      definition: 父权制是两性之间的一种政治支配关系，其根基在于性政治，即对性的支配与顺从的安排。
+      differs_from: 西尔维亚·沃尔比
+      note: 米利特把它界定为一种根本的权力关系，沃尔比则把它拆为多个可分别变动的结构领域，因而可以解释父权制在不同领域进展不一
+      source: Millett 1970, Sexual Politics【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0055
+  cluster: 性别、家庭与照护
+  name_zh: 性别秩序
+  name_en: gender order
+  aliases: [性别体制]
+  proponent: 雷温·康奈尔
+  first_year: 1987
+  first_source: Gender and Power
+  school: [女性主义社会学]
+  application: [性别, 劳动与职业]
+  definition: 一个社会中性别关系的历史构成形态，可从劳动、权力与情感投注三个结构维度分别考察。
+  definition_source: Connell 1987, Gender and Power【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0056
+  cluster: 性别、家庭与照护
+  name_zh: 霸权男性气质
+  name_en: hegemonic masculinity
+  aliases: [支配性男性气质]
+  proponent: 雷温·康奈尔
+  first_year: 1995
+  first_source: Masculinities
+  school: [女性主义社会学]
+  application: [性别]
+  definition: 在特定性别秩序中受到推崇的男性气质配置，它使男性对女性的支配与男性内部的等级秩序同时获得正当性。
+  definition_source: Connell 1995, Masculinities【页码待核】
+  polysemy:
+    - author: 雷温·康奈尔; 詹姆斯·梅斯纳
+      school: [女性主义社会学]
+      definition: 霸权男性气质应被理解为一种配置性实践，即在一组可得的男性气质中占据支配位置的那种，其内容随情境变动，而非固定的角色类型。
+      differs_from: 雷温·康奈尔（1995）
+      note: 弱化早期表述中的角色色彩，强调它是被反复完成的实践，且与从属男性气质的关系是可变的
+      source: Connell & Messerschmidt 2005, Hegemonic Masculinity Rethinking the Concept【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0057
+  cluster: 性别、家庭与照护
+  name_zh: 性别分工
+  name_en: sexual division of labour
+  aliases: [两性分工]
+  proponent: 安·奥克利
+  first_year: 1974
+  first_source: The Sociology of Housework
+  school: [女性主义社会学]
+  application: [劳动与职业, 家庭与亲密关系]
+  definition: 以性别为分配依据的任务划分，使有偿工作与无偿家务分别落在男性与女性身上，并使家务被排除在「工作」的范畴之外。
+  definition_source: Oakley 1974, The Sociology of Housework【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0058
+  cluster: 性别、家庭与照护
+  name_zh: 亲密关系的转型
+  name_en: transformation of intimacy
+  aliases: [纯粹关系, 关系民主化]
+  proponent: 安东尼·吉登斯
+  first_year: 1992
+  first_source: The Transformation of Intimacy
+  school: [现代性研究]
+  application: [家庭与亲密关系, 性别]
+  definition: 亲密关系从由制度与角色规定的安排，转向以情感满足与平等协商为基础的纯粹关系。
+  definition_source: Giddens 1992, The Transformation of Intimacy【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0059
+  cluster: 性别、家庭与照护
+  name_zh: 照护劳动
+  name_en: care work
+  aliases: [照料劳动, 关怀劳动]
+  proponent: 珍妮特·芬奇; 杜尔西·格罗夫斯
+  first_year: 1983
+  first_source: A Labour of Love
+  school: [女性主义社会学]
+  application: [家庭与亲密关系, 劳动与职业]
+  definition: 以照料他人的身体与情感为主要内容的劳动，通常无偿、不被计为工作，且主要由女性承担。
+  definition_source: Finch & Groves 1983, A Labour of Love【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0060
+  cluster: 性别、家庭与照护
+  name_zh: 核心家庭
+  name_en: nuclear family
+  aliases: [夫妇家庭, 小家庭]
+  proponent: 塔尔科特·帕森斯
+  first_year: 1955
+  first_source: Family, Socialization and Interaction Process
+  school: [结构功能主义]
+  application: [家庭与亲密关系]
+  definition: 由一对夫妻与其未婚子女组成的家庭单位；帕森斯认为它最适应工业社会对地理与职业流动的要求，其稳定依赖工具性与表达性的角色分工。
+  definition_source: Parsons & Bales 1955, Family, Socialization and Interaction Process【页码待核】
+  polysemy:
+    - author: 贝蒂·弗里丹
+      school: [女性主义社会学]
+      definition: 核心家庭中「妻子与母亲」的角色并非天然的情感归宿，而是把女性限制在家务与育儿之中、使其无从发展其他能力的社会安排。
+      differs_from: 塔尔科特·帕森斯
+      note: 帕森斯把它读作维持社会稳定的功能单位，弗里丹把它读作一种带来无名困扰的角色限制
+      source: Friedan 1963, The Feminine Mystique【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+
+# ============================================================
+# 概念群：知识、文化与意义（v7 新增）
+# 核心问题：意义、分类与知识如何组织行动，又如何参与权力的运作？
+# ============================================================
+- term_id: TERM-0061
+  cluster: 知识、文化与意义
+  name_zh: 集体记忆
+  name_en: collective memory
+  aliases: [社会记忆]
+  proponent: 莫里斯·哈布瓦赫
+  first_year: 1925
+  first_source: Les cadres sociaux de la memoire
+  school: [古典社会学, 文化社会学]
+  application: [文化与消费]
+  definition: 由社会群体在当下共同构建并维系的、关于过去的共同表征；记忆依赖群体的框架，个体只在群体中才得以回忆。
+  definition_source: Halbwachs 1925, Les cadres sociaux de la memoire【页码待核】
+  polysemy:
+    - author: 扬·阿斯曼
+      school: [文化社会学]
+      definition: 记忆分为沟通记忆与文化记忆两层：前者限于三代之内的日常交流，后者经由文本、仪式与制度被固化并跨越世代。
+      differs_from: 莫里斯·哈布瓦赫
+      note: 把记忆的载体从群体的日常交往扩展到制度化的文本与仪式，因而可以解释记忆如何跨越世代而不依赖亲历者
+      source: Assmann 1992, Das kulturelle Gedaechtnis【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0062
+  cluster: 知识、文化与意义
+  name_zh: 框架
+  name_en: frame
+  aliases: [框架分析, 情境定义]
+  proponent: 欧文·戈夫曼
+  first_year: 1974
+  first_source: Frame Analysis
+  school: [符号互动论]
+  application: [文化与消费, 网络与数字社会]
+  definition: 人们在互动中用来定义情境的解释图式，它决定经验中的哪些部分被看见、以及如何被解释。
+  definition_source: Goffman 1974, Frame Analysis【页码待核】
+  polysemy:
+    - author: 罗伯特·恩特曼
+      school: [文化社会学]
+      definition: 框架是选择并凸显现实的某些方面，使问题获得定义、因果被诊断、评价被给出、对策被提出。
+      differs_from: 欧文·戈夫曼
+      note: 戈夫曼关注互动中情境定义的成立，恩特曼把框架移到媒介内容与公共舆论层面，使其成为可分析、可测量的文本特征
+      source: Entman 1993, Framing Toward Clarification of a Fractured Paradigm【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0063
+  cluster: 知识、文化与意义
+  name_zh: 文化工具箱
+  name_en: toolkit of culture
+  aliases: [文化剧目, 工具箱理论]
+  proponent: 安·斯维德勒
+  first_year: 1986
+  first_source: Culture in Action
+  school: [文化社会学]
+  application: [文化与消费]
+  definition: 文化是一组可供行动者策略性取用的符号、故事、仪式与世界观，而不是决定行动方向的价值观系统。
+  definition_source: Swidler 1986, Culture in Action【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0064
+  cluster: 知识、文化与意义
+  name_zh: 神话
+  name_en: myth
+  aliases: [现代神话, 迷思]
+  proponent: 罗兰·巴特
+  first_year: 1957
+  first_source: Mythologies
+  school: [文化研究]
+  application: [文化与消费]
+  definition: 把历史性的、由特定利益构成的意义呈现为自然而然之事实的二级符号系统。
+  definition_source: Barthes 1957, Mythologies【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0065
+  cluster: 知识、文化与意义
+  name_zh: 文化霸权
+  name_en: cultural hegemony
+  aliases: [领导权, 霸权]
+  proponent: 安东尼奥·葛兰西
+  first_year: 1932
+  first_source: 狱中札记
+  school: [新马克思主义]
+  application: [文化与消费, 网络与数字社会]
+  definition: 统治阶级通过把自身的世界观扩展为全社会的常识而取得的领导权，使支配无需依赖强制即可被接受。
+  definition_source: 葛兰西《狱中札记》【页码待核】
+  polysemy:
+    - author: 雷蒙·威廉斯
+      school: [文化研究]
+      definition: 霸权是一个持续被协商的过程，其内部始终并存支配性的、残余的与新兴的文化要素，因此需要不断被重新赢得。
+      differs_from: 安东尼奥·葛兰西
+      note: 把霸权从一次取得的静态支配，改写为不断被挑战与修补的动态过程，为对立文化的存在留出位置
+      source: Williams 1977, Marxism and Literature【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0066
+  cluster: 知识、文化与意义
+  name_zh: 亚文化
+  name_en: subculture
+  aliases: [次文化]
+  proponent: 迪克·赫伯迪格
+  first_year: 1979
+  first_source: Subculture - The Meaning of Style
+  school: [文化研究]
+  application: [文化与消费, 越轨与犯罪]
+  definition: 从属群体在母文化内部发展出的、以风格与仪式表达差异并回应结构性困境的生活方式。
+  definition_source: Hebdige 1979, Subculture - The Meaning of Style【页码待核】
+  polysemy:
+    - author: 阿尔伯特·科恩
+      school: [结构功能主义]
+      definition: 亚文化是处境相似的行动者共同形成的、用以解决地位挫折的行为规范，其内容常与主流规范相冲突。
+      differs_from: 迪克·赫伯迪格
+      note: 科恩把亚文化读作对地位挫折的集体解决方案，伯明翰学派则把它读作以风格与符号进行的抵抗，两者的解释重心分别在行动规范与意义表达
+      source: Cohen 1955, Delinquent Boys【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0067
+  cluster: 知识、文化与意义
+  name_zh: 编码与解码
+  name_en: encoding and decoding
+  aliases: [编码解码模型]
+  proponent: 斯图亚特·霍尔
+  first_year: 1973
+  first_source: Encoding and Decoding in the Television Discourse
+  school: [文化研究]
+  application: [网络与数字社会, 文化与消费]
+  definition: 传播是编码与解码两个相对独立的环节；解码可产生主导、协商与对抗三种立场，因此讯息的意义不由发送一端独断。
+  definition_source: Hall 1973, Encoding and Decoding in the Television Discourse【页码待核】
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+- term_id: TERM-0068
+  cluster: 知识、文化与意义
+  name_zh: 社会建构
+  name_en: social construction
+  aliases: [现实的社会建构, 社会建构论]
+  proponent: 彼得·伯格; 托马斯·卢克曼
+  first_year: 1966
+  first_source: The Social Construction of Reality
+  school: [现象学与常人方法学]
+  application: [文化与消费, 教育]
+  definition: 现实是经由类型化、制度化与正当化等过程被社会地生产出来的；常识世界因此具有客观性的外表，却依赖持续的社会维持。
+  definition_source: Berger & Luckmann 1966, The Social Construction of Reality【页码待核】
   entry_type: 概念
   status: 草稿
   confidence: 明确实例

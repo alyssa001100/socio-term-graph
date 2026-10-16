@@ -91,3 +91,20 @@
    explain: 负例占位解释：长度足够，但不含真实论断。,
    boundary: 无关。,
    source: 负例占位}
+
+# ---- v7 新增概念群的跨群规则：同样的规则换一对群再验一次 ----
+# 规则若被写成「只认原本那三个群」，这三条负例就会全部漏检
+# N54 每对概念群桥接超过上限：以下 6 条全部跨 TERM-9009（城市、空间与社区）
+#     与 TERM-9011（知识、文化与意义），超过上限 5
+- {rel_id: REL-9400, from_term: TERM-9009, to_term: TERM-9011, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9401, from_term: TERM-9009, to_term: TERM-9011, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9402, from_term: TERM-9009, to_term: TERM-9011, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9403, from_term: TERM-9009, to_term: TERM-9011, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9404, from_term: TERM-9009, to_term: TERM-9011, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+- {rel_id: REL-9405, from_term: TERM-9009, to_term: TERM-9011, type: 借用, status: 草稿, evidence: 负例：用于触发跨群桥接上限。输入, source: 负例占位, explain: 负例占位解释：长度足够，但不含真实论断。}
+
+# N55 跨概念群断言「等同」：性别、家庭与照护 ↔ 知识、文化与意义
+- {rel_id: REL-9406, from_term: TERM-9010, to_term: TERM-9011, type: 等同, status: 草稿,
+   evidence: 负例：新群之间的跨群等同断言。,
+   explain: 负例占位解释：长度足够，但不含真实论断。,
+   source: 负例占位}

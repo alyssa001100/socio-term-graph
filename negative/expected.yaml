@@ -70,3 +70,11 @@
 - {id: N52, file: hotspots.yaml, where: HOT-9010.analysis, level: 错误, contains: 少于下限, desc: 热点解析过短}
 - {id: N53, file: cases.yaml, where: "CASE-9012.attributions[1]", level: 错误, contains: 未在 schema.fields 中定义, desc: 归属块沿用旧字段名 rationale}
 - {id: N53b, file: cases.yaml, where: "CASE-9012.attributions[1].match", level: 错误, contains: 必填字段缺失或为空, desc: 旧字段名连带缺 match}
+
+# v7 新增概念群：同样的跨群规则换一对群再验一次（规则若写死成原本三个群，这里会漏检）
+- {id: N54, file: relations.yaml, where: "城市、空间与社区 ↔ 知识、文化与意义", level: 警告, contains: 超过每对概念群上限, desc: 新概念群之间的桥接超过上限}
+- {id: N55, file: relations.yaml, where: REL-9406, level: 错误, contains: 不得断言「等同」, desc: 新概念群之间的等同断言}
+- {id: N56, file: terms.yaml, where: TERM-9012.cluster, level: 错误, contains: 非法取值, desc: 新群名近似拼写（漏顿号）}
+
+# v7 新增：schema 自身一致性（clusters 与 enums.cluster 一一对应）
+- {id: N57, file: schema.yaml, where: schema.clusters, level: 错误, contains: 却不在 enums.cluster, desc: 概念群只登记在 clusters、未放开枚举}
