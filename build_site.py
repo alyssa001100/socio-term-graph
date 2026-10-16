@@ -58,6 +58,9 @@ details{border-top:1px dashed var(--line);padding-top:8px;margin-top:9px}
 summary{cursor:pointer;font-size:13px;color:var(--acc);outline:none;user-select:none}
 summary::marker{color:var(--line)}
 details ul{margin:8px 0 2px;padding-left:19px}
+/* 折叠区展开/收起时的高度过渡由脚本用 WAAPI 驱动（见 wireDetails），
+   这里只需要裁掉动画过程中的溢出，避免文字从框里冒出来 */
+details>ul{overflow:hidden}
 details li{margin-bottom:7px;font-size:14px}
 .poly li{padding-left:2px}
 .who{font-weight:600}
@@ -95,9 +98,20 @@ footer{color:var(--mut);font-size:12px;padding:0 28px 40px}
 /* 群内连线用该群的颜色、压暗；跨群桥接用橙色虚线并压在最上层，
    一眼就能看出「哪几处是概念群之间的桥」 */
 .e{stroke-width:1.3;opacity:.42}
-.e.br{stroke:#c9822b;stroke-width:2.2;stroke-dasharray:6 4;opacity:1}
+.e.br{stroke:#c9822b;stroke-width:2.2;stroke-dasharray:6 4;opacity:1;
+  /* 虚线流动：跨群桥接是「少数、需要留意」的那类边，让它自己动起来 */
+  animation:dashflow 1.8s linear infinite}
+@keyframes dashflow{to{stroke-dashoffset:-20}}
 .lead{stroke-width:1;opacity:.4}
 .gnode{cursor:pointer}
+/* 悬停聚焦：只留这个节点和它的邻居，其余压暗——68 个节点谁也看不清谁 */
+.e,.gnode{transition:opacity .18s ease}
+#graph.focusing .e:not(.on),#graph.focusing .gnode:not(.on){opacity:.1}
+#graph.focusing .gnode.on circle{stroke:var(--fg);stroke-width:1.6}
+@media (prefers-reduced-motion:reduce){
+  .e.br{animation:none}
+  .e,.gnode{transition:none}
+}
 .gnode circle{stroke:#fff;stroke-width:1.6}
 .gnode:hover circle{stroke:#1f1d1a;stroke-width:2.2}
 .gnode:hover text{font-weight:600}
@@ -132,6 +146,36 @@ footer{color:var(--mut);font-size:12px;padding:0 28px 40px}
 <script>
 const DATA = __DATA__;
 const S = {cluster:new Set(), school:new Set(), app:new Set(), q:'', view:'list'};
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// 邻接表：悬停聚焦用。关系已经在数据里，不另外存一份
+const NB = {};
+DATA.terms.forEach(t => { NB[t.term_id] = new Set([t.term_id,
+  ...(t.rel_out || []).map(r => r.other_id),
+  ...(t.rel_in  || []).map(r => r.other_id)]); });
+
+// 折叠区的高度过渡：details 原生的开合是瞬间跳变，量一下内容高度再补间
+function wireDetails(){
+  document.querySelectorAll('details').forEach(d => {
+    const box = d.querySelector(':scope > ul');
+    if (!box) return;
+    d.querySelector('summary').addEventListener('click', e => {
+      if (RM) return;                        // 关掉动画偏好时，退回浏览器原生开合
+      e.preventDefault();
+      box.getAnimations().forEach(a => a.cancel());   // 连点两下时不叠加
+      const h = box.offsetHeight;
+      if (!d.open){
+        d.open = true;
+        box.animate([{height:'0px',opacity:0},{height:h+'px',opacity:1}],
+                    {duration:240, easing:'cubic-bezier(.2,.7,.2,1)'});
+      } else {
+        box.animate([{height:h+'px',opacity:1},{height:'0px',opacity:0}],
+                    {duration:170, easing:'cubic-bezier(.4,0,.6,1)'})
+           .onfinish = () => { d.open = false; };
+      }
+    });
+  });
+}
 
 function chips(el, values, field, key){
   const cnt = {};
@@ -226,6 +270,7 @@ function render(){
     if (el){ el.scrollIntoView({behavior:'smooth',block:'center'});
              el.classList.add('hl'); setTimeout(()=>el.classList.remove('hl'),1600); }
   });
+  wireDetails();
 }
 
 document.getElementById('sub').textContent =
@@ -267,6 +312,13 @@ function gotoCard(id){
            el.classList.add('hl'); setTimeout(()=>el.classList.remove('hl'), 1800); }
 }
 
+function focusNode(id){
+  const g = document.getElementById('graph'), nb = NB[id] || new Set([id]);
+  g.classList.add('focusing');
+  g.querySelectorAll('.gnode').forEach(n => n.classList.toggle('on', nb.has(n.dataset.j)));
+  g.querySelectorAll('.e').forEach(e => e.classList.toggle('on', e.dataset.a === id || e.dataset.b === id));
+}
+
 function renderGraph(){
   const list = DATA.terms.filter(matched);
   const on = new Set(list.map(t => t.term_id));
@@ -278,7 +330,8 @@ function renderGraph(){
     const isBr = DATA.clusterOf[t.term_id] !== DATA.clusterOf[r.other_id];
     const col = DATA.clusterColors[DATA.clusterOf[t.term_id]] || '#8c5a2b';
     (isBr ? bridge : inner).push(
-      `<line class="e${isBr ? ' br' : ''}"${isBr ? '' : ` style="stroke:${col}"`}` +
+      `<line class="e${isBr ? ' br' : ''}" data-a="${t.term_id}" data-b="${r.other_id}"` +
+      `${isBr ? '' : ` style="stroke:${col}"`}` +
       ` x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}"/>`);
   }));
   const P = inner.concat(bridge);
@@ -302,6 +355,12 @@ function renderGraph(){
   document.getElementById('graph').innerHTML =
     `<svg viewBox="${V.join(' ')}" preserveAspectRatio="xMidYMid meet">${P.join('')}</svg>`;
   document.querySelectorAll('.gnode').forEach(g => g.onclick = () => gotoCard(g.dataset.j));
+  // 悬停聚焦：把「这个点和谁相连」从读标签变成看得见
+  const gEl = document.getElementById('graph');
+  gEl.querySelectorAll('.gnode').forEach(n => {
+    n.onmouseenter = () => focusNode(n.dataset.j);
+    n.onmouseleave = () => gEl.classList.remove('focusing');
+  });
   document.getElementById('foot').textContent =
     `网络视图：${list.length} 个节点　·　实线＝群内关系（按概念群着色），橙色虚线＝跨概念群桥接　·　点节点可跳到词条`;
 }
