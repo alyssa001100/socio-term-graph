@@ -42,4 +42,4 @@ labels:
   term_ids:
   - TERM-0003
 - item_id: ITEM-012
-  term_ids:
+  term_ids: []

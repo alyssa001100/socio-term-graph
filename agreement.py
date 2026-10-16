@@ -66,8 +66,17 @@ def main():
     data = {}
     for f in files:
         d = yaml.safe_load(open(f, encoding="utf-8"))
-        data[d["annotator"]] = {i["item_id"]: set(i["term_ids"])
-                                for i in (d.get("labels") or [])}
+        labels = {}
+        for i in (d.get("labels") or []):
+            # 「明确标注为空」写 []，「没标/漏标」写空值。两者在一致性检验里
+            # 含义不同（前者是判定结果，后者是缺失），所以拒绝空值而不是猜。
+            if i.get("term_ids") is None:
+                print(f"{f}: {i.get('item_id')} 的 term_ids 是空值。"
+                      f"\n  若该条确无成立的术语，请写 `term_ids: []`（明确标注为空）；"
+                      f"\n  若是漏标，请补上或删除该条目——二者不可混同。")
+                return 1
+            labels[i["item_id"]] = set(i["term_ids"])
+        data[d["annotator"]] = labels
     names = list(data)
 
     by_item = defaultdict(dict)
