@@ -2,8 +2,8 @@
 # 规范即配置：改标注规范只需要改这个文件
 # validate.py 按这里定义的枚举和必填规则校验数据
 # ============================================================
-version: v7
-updated: 2026-10-15
+version: v8
+updated: 2026-10-16
 
 # 概念群 —— 每个群围绕一个核心问题，群内关系密集，群间只允许少量桥接
 clusters:
@@ -79,8 +79,10 @@ required:
                school, application, definition, definition_source, entry_type, status, confidence]
   relations:  [rel_id, from_term, to_term, type, evidence, explain, source, status]
   cases:      [case_id, title, description, origin, source, attributions, status]
-  hotspots:   [hot_id, title, description, date, source_url, review_after,
+  hotspots:   [hot_id, title, description, date, review_after,
                analysis, attributions, status]
+  # v8 起 source_url 改为选填：出处登记到「作者 + 书目」为止，页码与链接都不再要求。
+  # 手上有可核验链接时写进 fields 白名单里的 source_url 即可，没写不算缺项。
   # 归属块是防牵强的核心：相符与不符都必须写，只写「像」就是牵强
   attribution_required: [term_id, match, mismatch, confidence]
 

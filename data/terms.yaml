@@ -12,26 +12,26 @@
   school: [文化社会学, 经济社会学]
   application: [社会分层与流动, 劳动与职业]
   definition: 实际或潜在资源的总和，这些资源与由相互熟识的关系构成的、或多或少制度化的持久网络相联系。
-  definition_source: 布迪厄《资本的形式》1986【页码待核】
+  definition_source: 布迪厄《资本的形式》1986
   polysemy:
     - author: 詹姆斯·科尔曼
       school: [经济社会学]
       definition: 社会结构资源，表现为义务与期望、信息渠道、规范与有效惩罚。
       differs_from: 布迪厄
       note: 布迪厄强调资本的不平等再生产，科尔曼强调其作为理性行动的便利条件
-      source: Coleman 1988, Social Capital in the Creation of Human Capital【页码待核】
+      source: Coleman 1988, Social Capital in the Creation of Human Capital
     - author: 罗伯特·帕特南
       school: [文化社会学]
       definition: 信任、规范与网络等社会组织的特征，能促进合作以提高社会效率。
       differs_from: 科尔曼
       note: 分析单位从个体资源转向共同体层面
-      source: Putnam 1993, Making Democracy Work【页码待核】
+      source: Putnam 1993, Making Democracy Work
     - author: 林南
       school: [经济社会学]
       definition: 嵌入社会网络中、可通过目的性行动获取或动员的资源。
       differs_from: 布迪厄
       note: 转向社会网络分析的可操作测量
-      source: Lin 2001, Social Capital【页码待核】
+      source: Lin 2001, Social Capital
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -48,7 +48,7 @@
   school: [文化社会学]
   application: [文化与消费, 社会分层与流动]
   definition: 由位置之间的关系构成的、有自身逻辑和必然性的社会空间，行动者在此争夺各类资本。
-  definition_source: 布迪厄《区分》1984【页码待核】
+  definition_source: 布迪厄《区分》1984
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -66,7 +66,7 @@
   school: [文化社会学]
   application: [文化与消费, 教育]
   definition: 一套持久的、可转移的倾向系统，作为结构化结构起作用，倾向于再生产社会结构。
-  definition_source: 布迪厄《实践理论大纲》1977【页码待核】
+  definition_source: 布迪厄《实践理论大纲》1977
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -84,7 +84,7 @@
   school: [经济社会学]
   application: [劳动与职业, 网络与数字社会]
   definition: 交往频率低、情感强度弱、互惠内容少的社交联结，在信息传递中具有独特的桥接作用。
-  definition_source: Granovetter 1973, American Journal of Sociology【页码待核】
+  definition_source: Granovetter 1973, American Journal of Sociology
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -102,14 +102,14 @@
   school: [历史社会学, 经济社会学]
   application: [教育, 劳动与职业]
   definition: 在既定技术与制度条件下持续投入更多劳动，但边际产出不增、形态不向更高阶段转化的过程。
-  definition_source: Geertz 1963, Agricultural Involution【页码待核】
+  definition_source: Geertz 1963, Agricultural Involution
   polysemy:
     - author: 黄宗智
       school: [历史社会学]
       definition: 用于描述小农经济在人口压力下出现的、没有发展的增长。
       differs_from: 格尔茨
       note: 从农业生态转向中国经济史的经验研究，强化了「无发展的增长」这一含义
-      source: 黄宗智《华北的小农经济与社会变迁》1985【页码待核】
+      source: 黄宗智《华北的小农经济与社会变迁》1985
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -126,7 +126,7 @@
   school: [交换论, 经济社会学]
   application: [组织与科层制, 文化与消费]
   definition: 以行动者在约束条件下追求效用最大化为基本假设，解释社会行为与社会结构形成的理论范式。
-  definition_source: Coleman 1990, Foundations of Social Theory【页码待核】
+  definition_source: Coleman 1990, Foundations of Social Theory
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -144,7 +144,7 @@
   school: [古典社会学]
   application: [社会分层与流动]
   definition: 社会成员因财富、权力、声望等资源占有的差异而被划分为高低有序的层级，并由此形成相对稳定的不平等结构。
-  definition_source: Sorokin 1927, Social Mobility【页码待核】
+  definition_source: Sorokin 1927, Social Mobility
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -162,20 +162,20 @@
   school: [古典社会学, 冲突论]
   application: [社会分层与流动, 劳动与职业]
   definition: 依据对生产资料的占有关系划分的社会集团，其成员在生产关系中处于相同位置。
-  definition_source: 马克思《共产党宣言》1848【页码待核】
+  definition_source: 马克思《共产党宣言》1848
   polysemy:
     - author: 马克斯·韦伯
       school: [古典社会学]
       definition: 在市场上具有相同生活机会的人群；与地位群体、政党并列，构成三种分层维度之一。
       differs_from: 马克思
       note: 马克思以生产关系为唯一划分标准，韦伯引入市场机会并改为多重维度
-      source: 韦伯《经济与社会》1922【页码待核】
+      source: 韦伯《经济与社会》1922
     - author: 皮埃尔·布迪厄
       school: [文化社会学]
       definition: 由资本总量与资本构成界定的群体位置，并通过生活方式与趣味表现自身。
       differs_from: 韦伯
       note: 把文化维度纳入阶级界定，阶级同时是分类实践的结果
-      source: 布迪厄《区分》1984【页码待核】
+      source: 布迪厄《区分》1984
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -192,7 +192,7 @@
   school: [古典社会学]
   application: [社会分层与流动]
   definition: 依据财富、权力、声望等单一或多重标准划分的社会层级位置，强调层级之间的连续过渡而非截然对立。
-  definition_source: 韦伯《经济与社会》1922【页码待核】
+  definition_source: 韦伯《经济与社会》1922
   polysemy: []
   entry_type: 分析范畴
   status: 草稿
@@ -210,14 +210,14 @@
   school: [古典社会学, 符号互动论]
   application: [社会分层与流动, 文化与消费]
   definition: 社会对某一群体所给予的声望评价，构成与阶级、政党并列的分层维度。
-  definition_source: 韦伯《经济与社会》1922【页码待核】
+  definition_source: 韦伯《经济与社会》1922
   polysemy:
     - author: 拉尔夫·林顿
       school: [符号互动论]
       definition: 个体在社会结构中所占据的位置，与角色（社会对该位置的期待）相区分。
       differs_from: 韦伯
       note: 韦伯的地位是分层维度，林顿的地位是社会结构中的位置，两者分析层次不同
-      source: Linton 1936, The Study of Man【页码待核】
+      source: Linton 1936, The Study of Man
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -234,7 +234,7 @@
   school: [古典社会学]
   application: [社会分层与流动, 教育]
   definition: 个体或群体在社会分层结构中位置的变化，可区分为垂直流动与水平流动、代内流动与代际流动。
-  definition_source: Sorokin 1927, Social Mobility【页码待核】
+  definition_source: Sorokin 1927, Social Mobility
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -252,14 +252,14 @@
   school: [古典社会学, 冲突论]
   application: [社会分层与流动, 移民与族群]
   definition: 特定群体通过限制资源与机会的获取资格、将外部者排斥在外，以维护自身优势的过程。
-  definition_source: 韦伯《经济与社会》1922【页码待核】
+  definition_source: 韦伯《经济与社会》1922
   polysemy:
     - author: 弗兰克·帕金
       school: [冲突论]
       definition: 将社会封闭区分为排他性封闭与篡夺性封闭两种策略，作为阶级分析的工具。
       differs_from: 韦伯
       note: 韦伯强调共同体化的垄断倾向，帕金把封闭改造为解释阶级形成的策略类型
-      source: Parkin 1979, Marxism and Class Theory【页码待核】
+      source: Parkin 1979, Marxism and Class Theory
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -276,7 +276,7 @@
   school: [文化社会学]
   application: [教育, 文化与消费, 社会分层与流动]
   definition: 与知识、教育、品味相关的资源，以身体化、客观化与制度化三种状态存在。
-  definition_source: 布迪厄《资本的形式》1986【页码待核】
+  definition_source: 布迪厄《资本的形式》1986
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -294,7 +294,7 @@
   school: [文化社会学, 经济社会学]
   application: [社会分层与流动]
   definition: 可直接货币化、可制度化为财产权的资源，是其他资本形式转化与再转化的基础。
-  definition_source: 布迪厄《资本的形式》1986【页码待核】
+  definition_source: 布迪厄《资本的形式》1986
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -312,7 +312,7 @@
   school: [文化社会学]
   application: [文化与消费]
   definition: 被社会承认并赋予正当性的资本形式，是其他资本被误识为自然差异时所呈现的形态。
-  definition_source: 布迪厄《实践理论大纲》1977【页码待核】
+  definition_source: 布迪厄《实践理论大纲》1977
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -330,7 +330,7 @@
   school: [文化社会学, 历史社会学]
   application: [教育, 社会分层与流动]
   definition: 既有的社会结构与不平等关系在代际之间被延续、并被赋予正当性的机制与过程。
-  definition_source: 布迪厄、帕斯隆《再生产》1970【页码待核】
+  definition_source: 布迪厄、帕斯隆《再生产》1970
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -348,7 +348,7 @@
   school: [冲突论]
   application: [教育, 劳动与职业]
   definition: 因教育文凭的供给持续增加，换取同等职业地位所需的教育年限不断上升的现象。
-  definition_source: Collins 1979, The Credential Society【页码待核】
+  definition_source: Collins 1979, The Credential Society
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -366,7 +366,7 @@
   school: [冲突论]
   application: [社会分层与流动, 移民与族群, 健康与医疗]
   definition: 个体或群体因缺乏资源、权利与参与机会而被排斥在主流社会关系与制度之外的过程。
-  definition_source: Lenoir 1974, Les Exclus【页码待核】
+  definition_source: Lenoir 1974, Les Exclus
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -384,7 +384,7 @@
   school: [文化社会学]
   application: [文化与消费, 教育, 社会分层与流动]
   definition: 行动者通过品味与生活方式的差异把自身与他者区分开来，并使这种差异成为标示社会位置的象征标记。
-  definition_source: 布迪厄《区分》1979【页码待核】
+  definition_source: 布迪厄《区分》1979
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -402,7 +402,7 @@
   school: [文化社会学]
   application: [文化与消费, 社会分层与流动]
   definition: 行动者把社会条件建构出来的差异当作自然或应得的差异来承认，从而使支配关系获得正当性的过程。
-  definition_source: 布迪厄《实践理论大纲》1972【页码待核】
+  definition_source: 布迪厄《实践理论大纲》1972
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -420,13 +420,13 @@
   school: [古典社会学, 冲突论]
   application: [劳动与职业]
   definition: 占有者凭借对生产资料的支配，无偿占有直接生产者所创造的剩余劳动的关系。
-  definition_source: 马克思《资本论》第一卷 1867【页码待核】
+  definition_source: 马克思《资本论》第一卷 1867
   polysemy:
     - author: 约翰·罗默
       definition: 剥削不必以劳动价值论为前提；只要财产关系使一方以不平等的交换条件占有他方的劳动成果，即构成剥削。
       differs_from: 马克思
       note: 罗默把剥削从剩余价值的生产过程转移到财产关系与交换条件上，使其可脱离劳动价值论使用
-      source: Roemer 1982, A General Theory of Exploitation and Class【页码待核】
+      source: Roemer 1982, A General Theory of Exploitation and Class
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -443,13 +443,13 @@
   school: [结构功能主义]
   application: [越轨与犯罪, 社会分层与流动]
   definition: 社会结构一方面确立普遍追求的文化目标，另一方面又按阶层位置不均衡地分配实现目标的手段；两者的脱节使处于劣势位置者更可能以越轨方式应对。
-  definition_source: Merton 1938, Social Structure and Anomie【页码待核】
+  definition_source: Merton 1938, Social Structure and Anomie
   polysemy:
     - author: 罗伯特·阿格纽
       definition: 紧张不只来自目标与手段的结构性脱节，也来自个体在具体情境中无法回避的负面刺激与期望落差。
       differs_from: 默顿
       note: 分析层次从社会结构下移到个体经验，使紧张理论可用于解释个体间的差异
-      source: Agnew 1992, Foundation for a General Strain Theory of Crime and Delinquency【页码待核】
+      source: Agnew 1992, Foundation for a General Strain Theory of Crime and Delinquency
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -466,13 +466,13 @@
   school: [现象学与常人方法学, 女性主义社会学]
   application: [性别]
   definition: 性别不是个体既有的属性，而是在日常互动中被持续完成、并被他人按既有规范期待加以解读的成就。
-  definition_source: West & Zimmerman 1987, Doing Gender【页码待核】
+  definition_source: West & Zimmerman 1987, Doing Gender
   polysemy:
     - author: 弗朗辛·多伊奇
       definition: 互动中同样存在「不做性别」的可能，性别差异并非在任何情境下都必然被再生产。
       differs_from: 韦斯特与齐默尔曼
       note: 从强调性别的持续再生产，转向强调其可被削弱的条件
-      source: Deutsch 2007, Undoing Gender【页码待核】
+      source: Deutsch 2007, Undoing Gender
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -489,14 +489,14 @@
   school: [后结构主义与后现代]
   application: [越轨与犯罪, 组织与科层制]
   definition: 通过层级监视、规范化裁决与检查等技术，把身体训练成既顺从又有用之人的权力运作方式。
-  definition_source: 福柯《规训与惩罚》1975【页码待核】
+  definition_source: 福柯《规训与惩罚》1975
   polysemy:
     - author: 马克斯·韦伯
       school: [古典社会学]
       definition: 纪律是经由训练形成的、对命令模式化服从的倾向，是科层制与军事组织得以运转的前提。
       differs_from: 米歇尔·福柯
       note: 韦伯把纪律视为组织效率的条件，福柯则把它视为生产顺从主体的权力技术
-      source: 韦伯《经济与社会》1922【页码待核】
+      source: 韦伯《经济与社会》1922
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -513,14 +513,14 @@
   school: [冲突论]
   application: [城市与空间, 移民与族群, 社会分层与流动]
   definition: 不同群体在城市空间中被系统地分配到彼此分离的居住区域，并在均等性、暴露度、集中度等维度上呈现可测量的分异。
-  definition_source: Massey & Denton 1988, The Dimensions of Residential Segregation【页码待核】
+  definition_source: Massey & Denton 1988, The Dimensions of Residential Segregation
   polysemy:
     - author: 罗伯特·帕克; 欧内斯特·伯吉斯
       school: [古典社会学]
       definition: 居住分异是城市发展中不同群体竞争与演替的结果，同心圆地带反映的是空间位置的更替过程。
       differs_from: 道格拉斯·马西与南希·登顿
       note: 人文生态学把它解释为竞争的自然结果，马西与登顿则强调它由制度与市场歧视主动制造并固化群体边界
-      source: Park & Burgess 1925, The City【页码待核】
+      source: Park & Burgess 1925, The City
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -537,7 +537,7 @@
   school: [女性主义社会学]
   application: [家庭与亲密关系, 性别, 劳动与职业]
   definition: 女性在完成有偿工作之后继续承担家中的家务与情感劳动，使性别分工造成的双重负担成为不平等的持续来源。
-  definition_source: Hochschild 1989, The Second Shift【页码待核】
+  definition_source: Hochschild 1989, The Second Shift
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -555,13 +555,13 @@
   school: [冲突论]
   application: [组织与科层制, 劳动与职业]
   definition: 资本把劳动过程拆解为可由管理层设计与调度的简单动作，使技艺从劳动者手中转移到管理层，从而削弱劳动者的议价能力。
-  definition_source: Braverman 1974, Labor and Monopoly Capital【页码待核】
+  definition_source: Braverman 1974, Labor and Monopoly Capital
   polysemy:
     - author: 保罗·阿特韦尔
       definition: 去技能化命题把技能当作可客观度量的对象，因而系统性地低估了新技术条件下技能结构的重构。
       differs_from: 哈里·布雷弗曼
       note: 争论焦点从「技能是否整体下降」转向「技能如何被重新定义」
-      source: Attewell 1987, The Deskilling Controversy【页码待核】
+      source: Attewell 1987, The Deskilling Controversy
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -578,7 +578,7 @@
   school: [文化社会学]
   application: [文化与消费, 移民与族群, 社会分层与流动]
   definition: 行动者用来区分人群与事物的分类概念；当它被广泛接受并转化为资源分配的依据时，就转变为社会边界。
-  definition_source: Lamont & Fournier 1992, Cultivating Differences【页码待核】
+  definition_source: Lamont & Fournier 1992, Cultivating Differences
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -596,14 +596,14 @@
   school: [古典社会学, 结构功能主义]
   application: [越轨与犯罪, 社会分层与流动]
   definition: 社会用以约束个体欲望与期待的规范出现松弛或缺失的状态，使欲求失去限度。
-  definition_source: 迪尔凯姆《社会分工论》1893【页码待核】
+  definition_source: 迪尔凯姆《社会分工论》1893
   polysemy:
     - author: 罗伯特·默顿
       school: [结构功能主义]
       definition: 失范不是规范缺失，而是社会结构所提倡的文化目标与它实际提供的合法手段之间出现脱节。
       differs_from: 埃米尔·迪尔凯姆
       note: 迪尔凯姆把失范理解为规范对欲望的约束失效，默顿则把失范的来源从个体欲求转向社会结构的分配不均
-      source: Merton 1938, Social Structure and Anomie【页码待核】
+      source: Merton 1938, Social Structure and Anomie
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -620,7 +620,7 @@
   school: [古典社会学, 结构功能主义]
   application: [劳动与职业, 越轨与犯罪]
   definition: 社会成员之间因共同意识或分工形成的相互依赖而产生的联结，使社会得以保持凝聚。
-  definition_source: 迪尔凯姆《社会分工论》1893【页码待核】
+  definition_source: 迪尔凯姆《社会分工论》1893
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -638,7 +638,7 @@
   school: [古典社会学, 结构功能主义]
   application: [文化与消费, 越轨与犯罪]
   definition: 一个社会中多数成员共有的信念与情感的总和，构成社会凝聚的道德基础。
-  definition_source: 迪尔凯姆《社会分工论》1893【页码待核】
+  definition_source: 迪尔凯姆《社会分工论》1893
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -656,7 +656,7 @@
   school: [古典社会学, 结构功能主义]
   application: [越轨与犯罪, 组织与科层制]
   definition: 社会通过规范、舆论、制度与制裁使成员服从既定秩序的各种机制的总和。
-  definition_source: Ross 1901, Social Control【页码待核】
+  definition_source: Ross 1901, Social Control
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -674,7 +674,7 @@
   school: [古典社会学]
   application: [越轨与犯罪, 城市与空间]
   definition: 社区因缺乏共同规范与非正式控制能力，无法有效约束成员行为的状态。
-  definition_source: Shaw & McKay 1942, Juvenile Delinquency and Urban Areas【页码待核】
+  definition_source: Shaw & McKay 1942, Juvenile Delinquency and Urban Areas
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -692,7 +692,7 @@
   school: [符号互动论, 冲突论]
   application: [越轨与犯罪]
   definition: 越轨不是行为本身的固有属性，而是社会对行为施加标签的结果；被成功贴上标签的人由此进入越轨生涯。
-  definition_source: Becker 1963, Outsiders【页码待核】
+  definition_source: Becker 1963, Outsiders
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -710,7 +710,7 @@
   school: [符号互动论]
   application: [越轨与犯罪]
   definition: 个体在被公开标签之后，把越轨身份纳入自我认同并据此重新组织行为的结果。
-  definition_source: Lemert 1951, Social Pathology【页码待核】
+  definition_source: Lemert 1951, Social Pathology
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -728,13 +728,13 @@
   school: [符号互动论]
   application: [越轨与犯罪, 健康与医疗]
   definition: 一种被社会视为贬损的属性，使持有者在日常互动中失去完整的成员资格。
-  definition_source: Goffman 1963, Stigma【页码待核】
+  definition_source: Goffman 1963, Stigma
   polysemy:
     - author: 布鲁斯·林克; 乔·费伦
       definition: 污名不是个体身上的属性，而是标签、刻板印象、社会分离、地位丧失与歧视共同构成的社会过程。
       differs_from: 欧文·戈夫曼
       note: 戈夫曼关注被污名者的互动管理与自我呈现，林克与费伦把分析重心移到施加污名的一方及其权力条件
-      source: Link & Phelan 2001, Conceptualizing Stigma【页码待核】
+      source: Link & Phelan 2001, Conceptualizing Stigma
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -751,7 +751,7 @@
   school: [古典社会学]
   application: [组织与科层制, 文化与消费]
   definition: 行动者赋予主观意义、并以其意义指向他人的行动；据其取向可区分为目的理性、价值理性、情感与传统四种纯粹类型。
-  definition_source: 韦伯《经济与社会》1922【页码待核】
+  definition_source: 韦伯《经济与社会》1922
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -769,13 +769,13 @@
   school: [古典社会学, 历史社会学]
   application: [组织与科层制, 劳动与职业]
   definition: 社会行动逐渐由可计算的目的理性与可预测的规则来组织，取代传统与情感支配的过程。
-  definition_source: 韦伯《新教伦理与资本主义精神》1905【页码待核】
+  definition_source: 韦伯《新教伦理与资本主义精神》1905
   polysemy:
     - author: 尤尔根·哈贝马斯
       definition: 理性化不必然等同于目的理性的扩张，以相互理解为取向的沟通理性同样是一种理性化，且可用来批判前者。
       differs_from: 马克斯·韦伯
       note: 韦伯把理性化描述为不可逆的命运，哈贝马斯则把理性拆成两种，使理性化成为可争论的过程
-      source: Habermas 1981, Theorie des kommunikativen Handelns【页码待核】
+      source: Habermas 1981, Theorie des kommunikativen Handelns
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -792,7 +792,7 @@
   school: [古典社会学]
   application: [组织与科层制, 劳动与职业]
   definition: 理性化的秩序一经确立便难以摆脱，个体被束缚在由规则与科层组织构成的牢笼之中。
-  definition_source: 韦伯《新教伦理与资本主义精神》1905【页码待核】
+  definition_source: 韦伯《新教伦理与资本主义精神》1905
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -810,14 +810,14 @@
   school: [古典社会学, 结构功能主义]
   application: [组织与科层制, 劳动与职业]
   definition: 以法理型支配为基础、按层级与成文规则运转的组织形式，其技术效率来自非人格化与可计算性。
-  definition_source: 韦伯《经济与社会》1922【页码待核】
+  definition_source: 韦伯《经济与社会》1922
   polysemy:
     - author: 罗伯特·默顿
       school: [结构功能主义]
       definition: 科层制的高度规则化会训练出仪式化的行为倾向，使遵守程序本身取代组织目标。
       differs_from: 马克斯·韦伯
       note: 韦伯强调科层制的技术效率与形式理性，默顿则指出同一套结构会产生可预期的反功能
-      source: Merton 1940, Bureaucratic Structure and Personality【页码待核】
+      source: Merton 1940, Bureaucratic Structure and Personality
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -834,7 +834,7 @@
   school: [古典社会学]
   application: [组织与科层制]
   definition: 支配的正当性依据可区分为传统、克里斯玛与法理三种纯粹类型；科层制是法理型支配的典型形态。
-  definition_source: 韦伯《经济与社会》1922【页码待核】
+  definition_source: 韦伯《经济与社会》1922
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -852,7 +852,7 @@
   school: [结构功能主义]
   application: [组织与科层制, 教育]
   definition: 组织原本作为手段的规则与程序逐渐变成目的本身，使组织行为偏离最初目标。
-  definition_source: Merton 1940, Bureaucratic Structure and Personality【页码待核】
+  definition_source: Merton 1940, Bureaucratic Structure and Personality
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -870,7 +870,7 @@
   school: [经济社会学]
   application: [组织与科层制, 劳动与职业]
   definition: 由实际互动中形成的情感与规范所构成的非正式关系结构，其运行规则常与正式组织的规定相悖。
-  definition_source: Mayo 1933, The Human Problems of an Industrial Civilization【页码待核】
+  definition_source: Mayo 1933, The Human Problems of an Industrial Civilization
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -888,7 +888,7 @@
   school: [经济社会学, 文化社会学]
   application: [劳动与职业, 文化与消费]
   definition: 快餐业的效率、可计算性、可预测性与控制四项原则向社会各领域扩散，是理性化在当代的延伸。
-  definition_source: Ritzer 1993, The McDonaldization of Society【页码待核】
+  definition_source: Ritzer 1993, The McDonaldization of Society
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -911,14 +911,14 @@
   school: [芝加哥学派]
   application: [城市与空间, 文化与消费]
   definition: 由人口规模、密度与异质性共同决定的生活方式；它使初级关系衰退，人际接触转为次级的、片段式的交往。
-  definition_source: Wirth 1938, Urbanism as a Way of Life【页码待核】
+  definition_source: Wirth 1938, Urbanism as a Way of Life
   polysemy:
     - author: 赫伯特·甘斯
       school: [芝加哥学派]
       definition: 城市性并不必然带来疏离；族群与阶层会把城市居民重新组织为有内聚力的「城市村民」式社区。
       differs_from: 路易斯·沃斯
       note: 把沃斯视为城市化必然后果的疏离，改写为随人群构成而变动的或然结果
-      source: Gans 1962, The Urban Villagers【页码待核】
+      source: Gans 1962, The Urban Villagers
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -935,7 +935,7 @@
   school: [芝加哥学派]
   application: [城市与空间, 越轨与犯罪]
   definition: 城市自中心商业区向外按同心带扩张的空间模型，不同群体依区位分布居住，过渡带集中出现社会解组与越轨。
-  definition_source: Burgess 1925, The Growth of the City【页码待核】
+  definition_source: Burgess 1925, The Growth of the City
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -952,14 +952,14 @@
   school: [古典社会学]
   application: [城市与空间, 文化与消费]
   definition: 以情感、血缘与共同传统为纽带的共同体，与以利益计算、契约与选择为纽带的社会，构成一组对照类型。
-  definition_source: 滕尼斯《共同体与社会》1887【页码待核】
+  definition_source: 滕尼斯《共同体与社会》1887
   polysemy:
     - author: 塔尔科特·帕森斯
       school: [结构功能主义]
       definition: 把共同体与社会分别对应传统社会与现代社会的两种整合方式，并置于进化序列的两端。
       differs_from: 斐迪南·滕尼斯
       note: 把并置的分析类型读成时间上的先后阶段，这一读法后来被广泛接受也广泛批评
-      source: Parsons 1951, The Social System【页码待核】
+      source: Parsons 1951, The Social System
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -976,14 +976,14 @@
   school: [新马克思主义]
   application: [城市与空间, 社会分层与流动]
   definition: 中产阶层迁入并改造工人阶层社区，带动房价与商业业态更替，使原有低收入居民被迫迁出的过程。
-  definition_source: Glass 1964, London - Aspects of Change【页码待核】
+  definition_source: Glass 1964, London - Aspects of Change
   polysemy:
     - author: 尼尔·史密斯
       school: [新马克思主义]
       definition: 士绅化的发生条件是地块的潜在地租与资本化地租之间出现差额，因此它是资本回流中心区的结果，而非仅由中产品味驱动。
       differs_from: 露丝·格拉斯
       note: 从描述性命名转向政治经济学的因果解释，重点由迁入者的偏好移到资本的地租逻辑
-      source: Smith 1979, Toward a Theory of Gentrification【页码待核】
+      source: Smith 1979, Toward a Theory of Gentrification
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1000,14 +1000,14 @@
   school: [新马克思主义]
   application: [城市与空间]
   definition: 空间不是中性的容器，而是社会关系生产出来的产物；社会空间是社会关系的产物，同时也反过来塑造社会关系。
-  definition_source: Lefebvre 1974, La production de l'espace【页码待核】
+  definition_source: Lefebvre 1974, La production de l'espace
   polysemy:
     - author: 爱德华·索亚
       school: [新马克思主义]
       definition: 把列斐伏尔的三元结构重述为空间性、历史性与社会性的辩证，并以「第三空间」指称既真实又被想象的空间。
       differs_from: 亨利·列斐伏尔
       note: 把空间生产的分析扩展为一种空间认识论，重心由生产关系转向空间性的三元辩证
-      source: Soja 1989, Postmodern Geographies【页码待核】
+      source: Soja 1989, Postmodern Geographies
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1024,7 +1024,7 @@
   school: [冲突论]
   application: [城市与空间, 社会分层与流动]
   definition: 以围墙、门禁与私属安保封闭起来，并由业主组织自我治理的居住形态。
-  definition_source: Blakely & Snyder 1997, Fortress America【页码待核】
+  definition_source: Blakely & Snyder 1997, Fortress America
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1041,14 +1041,14 @@
   school: [新马克思主义]
   application: [城市与空间]
   definition: 居民对城市空间的使用与改造享有的集体主张权，不因产权或资本增值而被让渡。
-  definition_source: Lefebvre 1968, Le droit a la ville【页码待核】
+  definition_source: Lefebvre 1968, Le droit a la ville
   polysemy:
     - author: 大卫·哈维
       school: [新马克思主义]
       definition: 城市权利应当被理解为对城市化过程本身的集体权利，即改变城市的权利，而不只是使用既有城市资源的权利。
       differs_from: 亨利·列斐伏尔
       note: 把主张的重心由空间使用移到城市化过程的支配权，并强调其阶级基础
-      source: Harvey 2008, The Right to the City【页码待核】
+      source: Harvey 2008, The Right to the City
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1065,14 +1065,14 @@
   school: [芝加哥学派]
   application: [城市与空间, 社会分层与流动]
   definition: 邻里层面的贫困集中与集体效能，对居民的机会与行为产生独立于个体特征的影响。
-  definition_source: Wilson 1987, The Truly Disadvantaged【页码待核】
+  definition_source: Wilson 1987, The Truly Disadvantaged
   polysemy:
     - author: 罗伯特·桑普森
       school: [芝加哥学派]
       definition: 邻里影响的关键不是贫困本身，而是居民之间的社会凝聚力与共同干预意愿，即集体效能。
       differs_from: 威廉·威尔逊
       note: 把机制从结构性的贫困集中转向社区自身的社会组织能力，使邻里差异可以解释同一贫困水平下的不同结果
-      source: Sampson 2012, Great American City【页码待核】
+      source: Sampson 2012, Great American City
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1094,14 +1094,14 @@
   school: [女性主义社会学]
   application: [性别, 家庭与亲密关系]
   definition: 社会文化对男女差异的建构与分类，区别于生物性的生理性别；性别是被社会定义的，而非由生理直接决定。
-  definition_source: Oakley 1972, Sex, Gender and Society【页码待核】
+  definition_source: Oakley 1972, Sex, Gender and Society
   polysemy:
     - author: 朱迪斯·巴特勒
       school: [后结构主义与后现代]
       definition: 性别是持续被操演出来的效果，并不存在先于操演的本质主体；生理性别同样经由话语被建构。
       differs_from: 安·奥克利
       note: 奥克利把生理性别与文化性别分开，巴特勒则质疑这一区分的立足点，把两层都归入操演与话语
-      source: Butler 1990, Gender Trouble【页码待核】
+      source: Butler 1990, Gender Trouble
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1118,14 +1118,14 @@
   school: [女性主义社会学]
   application: [性别, 家庭与亲密关系]
   definition: 男性对女性劳动、身体与再生产形成系统性支配的结构，由家庭生产、有偿劳动、国家、暴力、性与文化六个相互支撑的领域构成。
-  definition_source: Walby 1990, Theorizing Patriarchy【页码待核】
+  definition_source: Walby 1990, Theorizing Patriarchy
   polysemy:
     - author: 凯特·米利特
       school: [女性主义社会学]
       definition: 父权制是两性之间的一种政治支配关系，其根基在于性政治，即对性的支配与顺从的安排。
       differs_from: 西尔维亚·沃尔比
       note: 米利特把它界定为一种根本的权力关系，沃尔比则把它拆为多个可分别变动的结构领域，因而可以解释父权制在不同领域进展不一
-      source: Millett 1970, Sexual Politics【页码待核】
+      source: Millett 1970, Sexual Politics
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1142,7 +1142,7 @@
   school: [女性主义社会学]
   application: [性别, 劳动与职业]
   definition: 一个社会中性别关系的历史构成形态，可从劳动、权力与情感投注三个结构维度分别考察。
-  definition_source: Connell 1987, Gender and Power【页码待核】
+  definition_source: Connell 1987, Gender and Power
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1159,14 +1159,14 @@
   school: [女性主义社会学]
   application: [性别]
   definition: 在特定性别秩序中受到推崇的男性气质配置，它使男性对女性的支配与男性内部的等级秩序同时获得正当性。
-  definition_source: Connell 1995, Masculinities【页码待核】
+  definition_source: Connell 1995, Masculinities
   polysemy:
     - author: 雷温·康奈尔; 詹姆斯·梅斯纳
       school: [女性主义社会学]
       definition: 霸权男性气质应被理解为一种配置性实践，即在一组可得的男性气质中占据支配位置的那种，其内容随情境变动，而非固定的角色类型。
       differs_from: 雷温·康奈尔（1995）
       note: 弱化早期表述中的角色色彩，强调它是被反复完成的实践，且与从属男性气质的关系是可变的
-      source: Connell & Messerschmidt 2005, Hegemonic Masculinity Rethinking the Concept【页码待核】
+      source: Connell & Messerschmidt 2005, Hegemonic Masculinity Rethinking the Concept
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1183,7 +1183,7 @@
   school: [女性主义社会学]
   application: [劳动与职业, 家庭与亲密关系]
   definition: 以性别为分配依据的任务划分，使有偿工作与无偿家务分别落在男性与女性身上，并使家务被排除在「工作」的范畴之外。
-  definition_source: Oakley 1974, The Sociology of Housework【页码待核】
+  definition_source: Oakley 1974, The Sociology of Housework
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1200,7 +1200,7 @@
   school: [现代性研究]
   application: [家庭与亲密关系, 性别]
   definition: 亲密关系从由制度与角色规定的安排，转向以情感满足与平等协商为基础的纯粹关系。
-  definition_source: Giddens 1992, The Transformation of Intimacy【页码待核】
+  definition_source: Giddens 1992, The Transformation of Intimacy
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1217,7 +1217,7 @@
   school: [女性主义社会学]
   application: [家庭与亲密关系, 劳动与职业]
   definition: 以照料他人的身体与情感为主要内容的劳动，通常无偿、不被计为工作，且主要由女性承担。
-  definition_source: Finch & Groves 1983, A Labour of Love【页码待核】
+  definition_source: Finch & Groves 1983, A Labour of Love
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1234,14 +1234,14 @@
   school: [结构功能主义]
   application: [家庭与亲密关系]
   definition: 由一对夫妻与其未婚子女组成的家庭单位；帕森斯认为它最适应工业社会对地理与职业流动的要求，其稳定依赖工具性与表达性的角色分工。
-  definition_source: Parsons & Bales 1955, Family, Socialization and Interaction Process【页码待核】
+  definition_source: Parsons & Bales 1955, Family, Socialization and Interaction Process
   polysemy:
     - author: 贝蒂·弗里丹
       school: [女性主义社会学]
       definition: 核心家庭中「妻子与母亲」的角色并非天然的情感归宿，而是把女性限制在家务与育儿之中、使其无从发展其他能力的社会安排。
       differs_from: 塔尔科特·帕森斯
       note: 帕森斯把它读作维持社会稳定的功能单位，弗里丹把它读作一种带来无名困扰的角色限制
-      source: Friedan 1963, The Feminine Mystique【页码待核】
+      source: Friedan 1963, The Feminine Mystique
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1263,14 +1263,14 @@
   school: [古典社会学, 文化社会学]
   application: [文化与消费]
   definition: 由社会群体在当下共同构建并维系的、关于过去的共同表征；记忆依赖群体的框架，个体只在群体中才得以回忆。
-  definition_source: Halbwachs 1925, Les cadres sociaux de la memoire【页码待核】
+  definition_source: Halbwachs 1925, Les cadres sociaux de la memoire
   polysemy:
     - author: 扬·阿斯曼
       school: [文化社会学]
       definition: 记忆分为沟通记忆与文化记忆两层：前者限于三代之内的日常交流，后者经由文本、仪式与制度被固化并跨越世代。
       differs_from: 莫里斯·哈布瓦赫
       note: 把记忆的载体从群体的日常交往扩展到制度化的文本与仪式，因而可以解释记忆如何跨越世代而不依赖亲历者
-      source: Assmann 1992, Das kulturelle Gedaechtnis【页码待核】
+      source: Assmann 1992, Das kulturelle Gedaechtnis
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1287,14 +1287,14 @@
   school: [符号互动论]
   application: [文化与消费, 网络与数字社会]
   definition: 人们在互动中用来定义情境的解释图式，它决定经验中的哪些部分被看见、以及如何被解释。
-  definition_source: Goffman 1974, Frame Analysis【页码待核】
+  definition_source: Goffman 1974, Frame Analysis
   polysemy:
     - author: 罗伯特·恩特曼
       school: [文化社会学]
       definition: 框架是选择并凸显现实的某些方面，使问题获得定义、因果被诊断、评价被给出、对策被提出。
       differs_from: 欧文·戈夫曼
       note: 戈夫曼关注互动中情境定义的成立，恩特曼把框架移到媒介内容与公共舆论层面，使其成为可分析、可测量的文本特征
-      source: Entman 1993, Framing Toward Clarification of a Fractured Paradigm【页码待核】
+      source: Entman 1993, Framing Toward Clarification of a Fractured Paradigm
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1311,7 +1311,7 @@
   school: [文化社会学]
   application: [文化与消费]
   definition: 文化是一组可供行动者策略性取用的符号、故事、仪式与世界观，而不是决定行动方向的价值观系统。
-  definition_source: Swidler 1986, Culture in Action【页码待核】
+  definition_source: Swidler 1986, Culture in Action
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1328,7 +1328,7 @@
   school: [文化研究]
   application: [文化与消费]
   definition: 把历史性的、由特定利益构成的意义呈现为自然而然之事实的二级符号系统。
-  definition_source: Barthes 1957, Mythologies【页码待核】
+  definition_source: Barthes 1957, Mythologies
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1345,14 +1345,14 @@
   school: [新马克思主义]
   application: [文化与消费, 网络与数字社会]
   definition: 统治阶级通过把自身的世界观扩展为全社会的常识而取得的领导权，使支配无需依赖强制即可被接受。
-  definition_source: 葛兰西《狱中札记》【页码待核】
+  definition_source: 葛兰西《狱中札记》
   polysemy:
     - author: 雷蒙·威廉斯
       school: [文化研究]
       definition: 霸权是一个持续被协商的过程，其内部始终并存支配性的、残余的与新兴的文化要素，因此需要不断被重新赢得。
       differs_from: 安东尼奥·葛兰西
       note: 把霸权从一次取得的静态支配，改写为不断被挑战与修补的动态过程，为对立文化的存在留出位置
-      source: Williams 1977, Marxism and Literature【页码待核】
+      source: Williams 1977, Marxism and Literature
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1369,14 +1369,14 @@
   school: [文化研究]
   application: [文化与消费, 越轨与犯罪]
   definition: 从属群体在母文化内部发展出的、以风格与仪式表达差异并回应结构性困境的生活方式。
-  definition_source: Hebdige 1979, Subculture - The Meaning of Style【页码待核】
+  definition_source: Hebdige 1979, Subculture - The Meaning of Style
   polysemy:
     - author: 阿尔伯特·科恩
       school: [结构功能主义]
       definition: 亚文化是处境相似的行动者共同形成的、用以解决地位挫折的行为规范，其内容常与主流规范相冲突。
       differs_from: 迪克·赫伯迪格
       note: 科恩把亚文化读作对地位挫折的集体解决方案，伯明翰学派则把它读作以风格与符号进行的抵抗，两者的解释重心分别在行动规范与意义表达
-      source: Cohen 1955, Delinquent Boys【页码待核】
+      source: Cohen 1955, Delinquent Boys
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1393,7 +1393,7 @@
   school: [文化研究]
   application: [网络与数字社会, 文化与消费]
   definition: 传播是编码与解码两个相对独立的环节；解码可产生主导、协商与对抗三种立场，因此讯息的意义不由发送一端独断。
-  definition_source: Hall 1973, Encoding and Decoding in the Television Discourse【页码待核】
+  definition_source: Hall 1973, Encoding and Decoding in the Television Discourse
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -1410,7 +1410,7 @@
   school: [现象学与常人方法学]
   application: [文化与消费, 教育]
   definition: 现实是经由类型化、制度化与正当化等过程被社会地生产出来的；常识世界因此具有客观性的外表，却依赖持续的社会维持。
-  definition_source: Berger & Luckmann 1966, The Social Construction of Reality【页码待核】
+  definition_source: Berger & Luckmann 1966, The Social Construction of Reality
   entry_type: 概念
   status: 草稿
   confidence: 明确实例

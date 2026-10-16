@@ -74,6 +74,20 @@ LABELED_FIELDS = {"match": "相符之处", "mismatch": "不符之处",
 # 能由其它字段推出的分类标签：界面自己会标，数据里写死一遍是负债
 DERIVED_LABEL = {"explain": "跨群桥接"}
 
+# 出处只登记到「作者 + 书目」为止：页码与链接都不要求（v8 起）。
+# 但「待填」标记比空着更危险——它看起来像已经登记过了，所以按字面拦下。
+PLACEHOLDER_MARKERS = ("REPLACE", "待核", "待填", "TODO")
+SOURCE_FIELDS = ("first_source", "definition_source", "source", "source_url")
+
+
+def check_placeholder(issues, fname, where, record):
+    for f in SOURCE_FIELDS:
+        v = record.get(f)
+        if isinstance(v, str) and any(m in v for m in PLACEHOLDER_MARKERS):
+            issues.append(("警告", fname, f"{where}.{f}",
+                           "出处含占位符标记 —— 不要求页码与链接，但不要留待填标记，"
+                           "要么写作者与书目，要么留空"))
+
 
 def check_label_echo(issues, fname, where, record):
     """拦「数据里把界面标签又写了一遍」。
@@ -159,6 +173,7 @@ def check_all(d, schema):
         check_enum(issues, "terms.yaml", where, "status", t.get("status"), enums["status"])
         check_enum(issues, "terms.yaml", where, "confidence", t.get("confidence"), enums["confidence"])
         check_enum(issues, "terms.yaml", where, "entry_type", t.get("entry_type"), enums["entry_type"])
+        check_placeholder(issues, "terms.yaml", where, t)
         seen_authors = set()
         for i, p in enumerate(t.get("polysemy") or [], 1):
             w = f"{where}.polysemy[{i}]"
@@ -166,6 +181,7 @@ def check_all(d, schema):
             for f in ("author", "definition", "source"):
                 if not p.get(f):
                     issues.append(("错误", "terms.yaml", f"{w}.{f}", "多义性条目必填"))
+            check_placeholder(issues, "terms.yaml", w, p)
             check_enum(issues, "terms.yaml", w, "school", p.get("school", []), enums["school"])
             if p.get("author") in seen_authors:
                 issues.append(("错误", "terms.yaml", w, f"同一作者 {p.get('author')} 重复列出"))
@@ -191,6 +207,7 @@ def check_all(d, schema):
                       cons["boundary_min_chars"], "边界说明")
         check_label_echo(issues, "relations.yaml", where, r)
         check_derived_label(issues, "relations.yaml", where, r, cluster_of)
+        check_placeholder(issues, "relations.yaml", where, r)
         for side in ("from_term", "to_term"):
             if r.get(side) not in term_ids:
                 issues.append(("错误", "relations.yaml", f"{where}.{side}",
@@ -262,6 +279,7 @@ def check_all(d, schema):
                     issues.append(("警告", fname, w, "确信度为「有争议」但未记录 dissent 意见"))
             check_min_len(issues, fname, where, c, "analysis", cons["analysis_min_chars"], "热点解析")
             check_label_echo(issues, fname, where, c)
+            check_placeholder(issues, fname, where, c)
             if key == "hotspots":
                 dt, ra = str(c.get("date", "")), str(c.get("review_after", ""))
                 for f, v in (("date", dt), ("review_after", ra)):
@@ -275,8 +293,6 @@ def check_all(d, schema):
                     if (ty, tm) < (today.year, today.month):
                         issues.append(("警告", fname, f"{where}.review_after",
                                        f"已过复审期（{ra}）—— 复审后延后日期，或降级为「历史热点」"))
-                if "REPLACE" in str(c.get("source_url", "")):
-                    issues.append(("警告", fname, f"{where}.source_url", "来源链接仍是占位符，需替换为可核验来源"))
         counts[key] = len(data[key])
 
     return issues, counts

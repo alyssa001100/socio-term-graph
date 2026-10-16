@@ -85,3 +85,8 @@
 - {id: N58, file: cases.yaml, where: "CASE-9013.attributions[1].match", level: 警告, contains: 自动加上这个标签, desc: 归属块 match 重复界面标签}
 - {id: N59, file: hotspots.yaml, where: HOT-9011.analysis, level: 警告, contains: 自动加上这个标签, desc: 热点解析重复界面标签}
 - {id: N60, file: relations.yaml, where: REL-9501.explain, level: 警告, contains: 界面会按两端所属概念群自动标注, desc: 关系解释写死「跨群桥接」标签}
+
+# v8 起出处只登记到「作者 + 书目」：页码与链接都不要求，但占位符要拦
+# 同一条规则在三个不同字段上各验一次，防止实现被写死成只认 source_url
+- {id: N61, file: relations.yaml, where: REL-9502.source, level: 警告, contains: 占位符, desc: 关系出处留了待填标记}
+- {id: N62, file: terms.yaml, where: TERM-9013.definition_source, level: 警告, contains: 占位符, desc: 术语定义出处留了待填标记}

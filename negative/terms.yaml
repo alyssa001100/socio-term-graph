@@ -14,7 +14,27 @@
   school: [文化社会学]
   application: [教育]
   definition: 仅用于负例测试的占位定义。
-  definition_source: 负例占位【页码待核】
+  definition_source: 负例占位
+  polysemy: []
+  entry_type: 概念
+  status: 草稿
+  confidence: 明确实例
+  reviewer: ''
+  last_reviewed: ''
+
+# N62 出处留了待填标记：定义出处写成「书名待核」
+#     规则在热点上已有负例（N35），这条换一个字段（definition_source）再验一次
+- term_id: TERM-9013
+  cluster: 社会不平等
+  name_zh: 负例待核出处术语
+  name_en: negative placeholder-source term
+  proponent: 负例
+  first_year: 1912
+  first_source: 负例占位
+  school: [文化社会学]
+  application: [教育]
+  definition: 仅用于负例测试的占位定义。
+  definition_source: 负例作者 2000, 书名待核
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -32,7 +52,7 @@
   school: [文化社会学]
   application: [教育]
   definition: 仅用于负例测试的占位定义。
-  definition_source: 负例占位【页码待核】
+  definition_source: 负例占位
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -51,7 +71,7 @@
   school: [文化社会学]
   application: [教育]
   definition: 仅用于负例测试的占位定义。
-  definition_source: 负例占位【页码待核】
+  definition_source: 负例占位
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -87,7 +107,7 @@
   school: [城市社会学]           # N04 流派不在封闭枚举内
   application: [不平等]          # N05 应用场景不在封闭枚举内
   definition: 仅用于负例测试的占位定义。
-  definition_source: 负例占位【页码待核】
+  definition_source: 负例占位
   polysemy: []
   entry_type: 范畴              # N06 条目类型不在封闭枚举内
   status: 待定                   # N07 状态不在封闭枚举内
@@ -107,7 +127,7 @@
   school: [文化社会学]
   application: [教育]
   definition: 仅用于负例测试的占位定义。
-  definition_source: 负例占位【页码待核】
+  definition_source: 负例占位
   polysemy:
     - author: 负例作者甲
       definition: 缺少 source 的多义性条目。
@@ -131,16 +151,16 @@
   school: [文化社会学]
   application: [教育]
   definition: 仅用于负例测试的占位定义。
-  definition_source: 负例占位【页码待核】
+  definition_source: 负例占位
   polysemy:
     - author: 负例作者乙
       school: [文化社会学]
       definition: 合规的多义性条目。
-      source: 负例占位【页码待核】
+      source: 负例占位
     - author: 负例作者乙        # N11 与上一条作者重复
       school: [社会心理学]      # N12 流派不在封闭枚举内
       definition: 作者重复且流派非法的多义性条目。
-      source: 负例占位【页码待核】
+      source: 负例占位
   entry_type: 概念
   status: 草稿
   confidence: 明确实例
@@ -158,7 +178,7 @@
   school: [古典社会学]
   application: [社会分层与流动]
   definition: 仅用于负例测试的占位分析范畴。
-  definition_source: 负例占位【页码待核】
+  definition_source: 负例占位
   polysemy: []
   entry_type: 分析范畴
   status: 草稿
@@ -177,7 +197,7 @@
   school: [古典社会学]
   application: [越轨与犯罪]
   definition: 仅用于负例测试的占位定义。
-  definition_source: 负例占位【页码待核】
+  definition_source: 负例占位
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -197,7 +217,7 @@
   school: [芝加哥学派]
   application: [城市与空间]
   definition: 仅用于负例测试的占位定义。
-  definition_source: 负例占位【页码待核】
+  definition_source: 负例占位
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -216,7 +236,7 @@
   school: [女性主义社会学]
   application: [性别]
   definition: 仅用于负例测试的占位定义。
-  definition_source: 负例占位【页码待核】
+  definition_source: 负例占位
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -235,7 +255,7 @@
   school: [文化社会学]
   application: [文化与消费]
   definition: 仅用于负例测试的占位定义。
-  definition_source: 负例占位【页码待核】
+  definition_source: 负例占位
   polysemy: []
   entry_type: 概念
   status: 草稿
@@ -254,7 +274,7 @@
   school: [芝加哥学派]
   application: [城市与空间]
   definition: 仅用于负例测试的占位定义。
-  definition_source: 负例占位【页码待核】
+  definition_source: 负例占位
   polysemy: []
   entry_type: 概念
   status: 草稿

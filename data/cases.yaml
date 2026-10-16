@@ -9,7 +9,7 @@
   title: 通过熟人介绍获得工作
   description: 求职者经由社交网络中的非亲密联系人获得招聘信息并成功入职。
   origin: 格兰诺维特对美国郊区专业技术人员求职过程的调查
-  source: Granovetter 1974, Getting a Job【页码待核】
+  source: Granovetter 1974, Getting a Job
   attributions:
     - term_id: TERM-0004
       match: 提供关键信息的既不是亲属也不是密友，而是平时不常来往的熟人，对上「交往频率低、情感强度弱、互惠内容少」这一要件所指的联系形态。
@@ -26,7 +26,7 @@
   title: 法国教育系统以文化标准筛选学生
   description: 学校以看似中立的标准评价学生，实际奖励的是上层阶级经由家庭教育获得的语言风格与审美品味。
   origin: 布迪厄与帕斯隆对法国高等教育系统的分析
-  source: 布迪厄、帕斯隆《继承人》1964；《再生产》1970【页码待核】
+  source: 布迪厄、帕斯隆《继承人》1964；《再生产》1970
   attributions:
     - term_id: TERM-0013
       match: 语言风格与审美品味由家庭教育长期习得、随身携带，却被学校当作学生自身的能力来评价，对上「以身体化状态存在」这一要件。
@@ -48,7 +48,7 @@
   title: 意大利南北部区域政府绩效的差异
   description: 北部地区拥有密集的横向社团与互助传统，南部以垂直依附关系为主，两地制度绩效呈现稳定差异。
   origin: 帕特南对意大利区域政府的比较研究
-  source: Putnam 1993, Making Democracy Work【页码待核】
+  source: Putnam 1993, Making Democracy Work
   attributions:
     - term_id: TERM-0001
       match: 密集的横向社团与互助传统构成持久的关系网络，对上「与相互熟识的关系构成的持久网络相联系」这一要件；它命中的是本条目记录的第二条线索（帕特南）。
@@ -65,7 +65,7 @@
   title: 法国小农的「马铃薯」分析
   description: 小农因生产条件相似却相互隔离、缺乏政治联系，未能形成自为的阶级，只能被代表而不能自我代表。
   origin: 马克思对1848年后法国政治局势的分析
-  source: 马克思《路易·波拿巴的雾月十八日》1852【页码待核】
+  source: 马克思《路易·波拿巴的雾月十八日》1852
   attributions:
     - term_id: TERM-0008
       match: 小农因生产条件相同而被认定为同一类人，对上「依据对生产资料的占有关系划分、其成员在生产关系中处于相同位置」这一要件。
@@ -82,7 +82,7 @@
   title: 种姓制度作为极端地位群体
   description: 种姓以宗教与仪式规范界定群体边界，形成难以逾越的地位区隔。
   origin: 韦伯对印度宗教与社会的比较研究
-  source: 韦伯《印度的宗教》1916【页码待核】
+  source: 韦伯《印度的宗教》1916
   attributions:
     - term_id: TERM-0010
       match: 种姓以仪式身份与声望界定群体边界，对上「社会对某一群体所给予的声望评价」这一要件。
@@ -99,7 +99,7 @@
   title: 专业职业以执照与协会限制准入
   description: 医师、律师等职业通过资格考试、行业协会与执业许可限制从业人数，维持其市场位置与报酬水平。
   origin: 帕金对职业封闭策略的分析
-  source: Parkin 1979, Marxism and Class Theory【页码待核】
+  source: Parkin 1979, Marxism and Class Theory
   attributions:
     - term_id: TERM-0012
       match: 资格考试、协会会员与执业许可共同构成准入资格，未取得者不得从业，对上「限制资源与机会的获取资格」这一要件。
@@ -116,7 +116,7 @@
   title: 白领职业学历要求的持续上升
   description: 原本无需大学学历的职位逐步要求学位，学历要求随教育扩张而上升，而岗位技能内容变化有限。
   origin: 柯林斯对美国文凭社会的分析
-  source: Collins 1979, The Credential Society【页码待核】
+  source: Collins 1979, The Credential Society
   attributions:
     - term_id: TERM-0017
       match: 岗位技能内容变化有限、学历要求却持续上升，对上「因文凭供给增加而使换取同等职业地位所需的教育年限上升」这一要件，并排除了技能需求这一替代解释。
@@ -133,7 +133,7 @@
   title: 爪哇水稻农业的劳动力持续投入
   description: 人口压力下农业以更多劳动力投入维持产出，人均收益不增，形态未向更高阶段转化。
   origin: 格尔茨对印尼爪哇农业的田野研究
-  source: Geertz 1963, Agricultural Involution【页码待核】
+  source: Geertz 1963, Agricultural Involution
   attributions:
     - term_id: TERM-0005
       match: 劳动力持续投入而人均收益不增、形态不向更高阶段转化，对上「边际产出不增、形态停滞」这一要件；本案也是该概念的原始出处。
@@ -145,7 +145,7 @@
   title: 华北小农经济的无发展增长
   description: 人口压力下家庭农场以增加劳动投入维持产量，单位劳动报酬下降，经营形态未发生质变。
   origin: 黄宗智对华北农村的经验研究
-  source: 黄宗智《华北的小农经济与社会变迁》1985【页码待核】
+  source: 黄宗智《华北的小农经济与社会变迁》1985
   attributions:
     - term_id: TERM-0005
       match: 劳动投入持续增加而单位劳动报酬下降，对上「边际产出不增」这一要件；它命中的是本条目记录的第二条线索（黄宗智）。
@@ -157,7 +157,7 @@
   title: 天主教学校与公立学校的辍学率差异
   description: 在家庭结构等条件相似的情况下，天主教学校学生的辍学率更低，被归因于社群内部的代际闭合与规范支持。
   origin: 科尔曼关于社会资本与人力资本创造的研究
-  source: Coleman 1988, Social Capital in the Creation of Human Capital【页码待核】
+  source: Coleman 1988, Social Capital in the Creation of Human Capital
   attributions:
     - term_id: TERM-0001
       match: 社群内部的代际闭合与家长间的相互监督构成可动用的关系资源，对上「与相互熟识的关系构成的持久网络相联系的可动员资源」这一要件。
@@ -174,7 +174,7 @@
   title: 卡比尔人的婚姻与荣誉策略
   description: 婚姻对象的选择不遵循统一规则，而依家族在荣誉与关系上的处境灵活调整，形成无规则可循却有规律性的实践。
   origin: 布迪厄对阿尔及利亚卡比尔人的田野研究
-  source: 布迪厄《实践理论大纲》1977【页码待核】
+  source: 布迪厄《实践理论大纲》1977
   attributions:
     - term_id: TERM-0003
       match: 婚姻选择不服从明文规则，却随家族处境稳定地生出可预期的做法，对上「一套持久的、可转移的倾向系统」这一要件。
@@ -191,7 +191,7 @@
   title: 19世纪法国文学艺术场域的自主化
   description: 文学艺术领域逐步摆脱宫廷与市场的外部支配，形成以同行认可为标准的自主评价体系。
   origin: 布迪厄对法国文学艺术场域的历史分析
-  source: 布迪厄《艺术的法则》1992【页码待核】
+  source: 布迪厄《艺术的法则》1992
   attributions:
     - term_id: TERM-0002
       match: 该领域逐步形成以同行认可为准的评价体系，并能把外部的政治与经济要求转译成内部标准，对上「有自身逻辑和必然性」这一要件。
@@ -208,7 +208,7 @@
   title: 礼物交换中的符号资本生产
   description: 礼物往来表面是慷慨与荣誉的表达，实际承担建立义务与积累声望的功能，赠予的功利性被双方共同否认。
   origin: 布迪厄对礼物交换的分析
-  source: 布迪厄《实践感》1980【页码待核】
+  source: 布迪厄《实践感》1980
   attributions:
     - term_id: TERM-0015
       match: 赠予积累起来的声望被双方共同承认，并继续投入交换，对上「被社会承认并赋予正当性」这一要件。
@@ -225,7 +225,7 @@
   title: 美国职业结构中的地位获得
   description: 以路径分析追踪父亲职业地位经由教育影响子代职业地位的过程，同时呈现未被教育中介的直接效应。
   origin: 布劳与邓肯对美国职业结构的调查
-  source: Blau & Duncan 1967, The American Occupational Structure【页码待核】
+  source: Blau & Duncan 1967, The American Occupational Structure
   attributions:
     - term_id: TERM-0011
       match: 研究以父代与子代职业地位的对应关系测量位置变化，对上「个体或群体在社会分层结构中位置的变化」这一要件。
@@ -242,7 +242,7 @@
   title: 法国1970年代的「新贫困」议题
   description: 长期失业者与社会保障体系之外的群体在政策讨论中被命名为「被排除者」，关注点从收入不足转向社会关系的断裂。
   origin: 勒努瓦对法国社会政策对象的分析
-  source: Lenoir 1974, Les Exclus【页码待核】
+  source: Lenoir 1974, Les Exclus
   attributions:
     - term_id: TERM-0018
       match: 关注点从收入不足转向社会关系的断裂，对上「因缺乏资源、权利与参与机会而被排斥在主流社会关系与制度之外」这一要件。
@@ -254,7 +254,7 @@
   title: 全景敞视监狱
   description: 边沁设计的环形监狱让囚室处于持续可见的状态，被囚者无法确认自己此刻是否正被观看，因而自行约束行为。福柯以此说明现代社会普遍存在的规训机制。
   origin: 福柯对边沁全景敞视建筑的分析
-  source: 福柯《规训与惩罚》1975【页码待核】
+  source: 福柯《规训与惩罚》1975
   attributions:
     - term_id: TERM-0024
       match: 被囚者无法确认自己此刻是否正被观看，因而自行约束行为，对上「通过层级监视与检查等技术把身体训练成既顺从又有用」这一要件。
@@ -271,7 +271,7 @@
   title: 协作培养与自然成长
   description: 拉鲁比较美国中产与工人阶级家庭的育儿方式：中产家庭有组织地安排课外活动、主动与学校交涉并训练孩子表达主张；工人家庭更强调孩子自然成长与对成人的服从。同样的学校评价标准对前者更有利。
   origin: 拉鲁对美国小学家庭的追踪观察
-  source: Lareau 2003, Unequal Childhoods【页码待核】
+  source: Lareau 2003, Unequal Childhoods
   attributions:
     - term_id: TERM-0013
       match: 有组织的活动安排与同制度交涉的能力由家庭长期养成，被学校识别并奖励，对上「与知识、教育、品味相关、以身体化状态存在的资源」这一要件。
@@ -293,7 +293,7 @@
   title: 美国大城市的种族居住隔离
   description: 马西与登顿用五个维度测量美国城市的居住分异，指出黑人聚居区在均等性与暴露度上长期偏离其他族群的模式，其形成无法由收入差异单独解释。
   origin: 马西与登顿对全美城市居住数据与隔离指数的分析
-  source: Massey & Denton 1993, American Apartheid【页码待核】
+  source: Massey & Denton 1993, American Apartheid
   attributions:
     - term_id: TERM-0025
       match: 案例按均等性、暴露度等维度量化群体在空间上的分离，对上「在均等性、暴露度、集中度等维度上呈现可测量的分异」这一要件。

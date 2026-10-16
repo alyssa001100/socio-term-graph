@@ -19,7 +19,7 @@
   title: 合规占位案例
   description: 与下一条 ID 相同的合规案例。
   origin: 负例
-  source: 负例占位【页码待核】
+  source: 负例占位
   attributions:
     - term_id: TERM-9001
       match: 负例占位的相符之处说明，长度足够但不含真实论断。
@@ -32,7 +32,7 @@
   title: ID 重复的案例
   description: 与上一条 ID 相同。
   origin: 负例
-  source: 负例占位【页码待核】
+  source: 负例占位
   attributions:
     - term_id: TERM-9001
       match: 负例占位的相符之处说明，长度足够但不含真实论断。
@@ -45,7 +45,7 @@
   title: 没有归属块的案例
   description: attributions 为空。
   origin: 负例
-  source: 负例占位【页码待核】
+  source: 负例占位
   attributions: []
   status: 草稿
 
@@ -54,7 +54,7 @@
   title: 状态非法的案例
   description: status 填了枚举外的值。
   origin: 负例
-  source: 负例占位【页码待核】
+  source: 负例占位
   attributions:
     - term_id: TERM-9001
       match: 负例占位的相符之处说明，长度足够但不含真实论断。
@@ -67,7 +67,7 @@
   title: 归属块缺理由
   description: 归属块不写 rationale。
   origin: 负例
-  source: 负例占位【页码待核】
+  source: 负例占位
   attributions:
     - term_id: TERM-9001
       mismatch: 负例占位的不符之处。
@@ -79,7 +79,7 @@
   title: 不写不符之处
   description: mismatch 留空。
   origin: 负例
-  source: 负例占位【页码待核】
+  source: 负例占位
   attributions:
     - term_id: TERM-9001
       match: 负例占位的相符之处说明，长度足够但不含真实论断。
@@ -92,7 +92,7 @@
   title: 确信度非法
   description: confidence 填了枚举外的值。
   origin: 负例
-  source: 负例占位【页码待核】
+  source: 负例占位
   attributions:
     - term_id: TERM-9001
       match: 负例占位的相符之处说明，长度足够但不含真实论断。
@@ -105,7 +105,7 @@
   title: 归属到不存在的术语
   description: term_id 指向 TERM-9999。
   origin: 负例
-  source: 负例占位【页码待核】
+  source: 负例占位
   attributions:
     - term_id: TERM-9999
       match: 负例占位的相符之处说明，长度足够但不含真实论断。
@@ -118,7 +118,7 @@
   title: 归属到分析范畴
   description: term_id 指向分析范畴 TERM-9007。
   origin: 负例
-  source: 负例占位【页码待核】
+  source: 负例占位
   attributions:
     - term_id: TERM-9007
       match: 负例占位的相符之处说明，长度足够但不含真实论断。
@@ -131,7 +131,7 @@
   title: 有争议但无分歧记录
   description: confidence 为有争议，dissent 留空。
   origin: 负例
-  source: 负例占位【页码待核】
+  source: 负例占位
   attributions:
     - term_id: TERM-9001
       match: 负例占位的相符之处说明，长度足够但不含真实论断。
@@ -144,7 +144,7 @@
   title: 含未知字段的案例
   description: 多写了一个 source_url 字段。
   origin: 负例
-  source: 负例占位【页码待核】
+  source: 负例占位
   source_url: https://example.com/负例
   attributions:
     - term_id: TERM-9001

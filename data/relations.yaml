@@ -6,269 +6,269 @@
    evidence: 林南把弱关系提供的桥接机制纳入社会资本的可动员资源框架。,
    explain: "社会资本把弱关系从「关系强度」的一种，改造成「可被动员的桥接资源」——概念被借来之后承担了新任务。",
    boundary: "这是借用而非等同：弱关系只描述联结本身的强弱，社会资本还要求这些联结能被稳定占有并兑换成别的资源。",
-   source: "Lin 2001, Social Capital【页码待核】"}
+   source: "Lin 2001, Social Capital"}
 - {rel_id: REL-0002, from_term: TERM-0003, to_term: TERM-0006, type: 对立, status: 草稿,
    evidence: 布迪厄以惯习说明实践的逻辑并非理性计算，明确反对以效用最大化解释行动。,
    explain: "两条解释行动的路径在同一维度上互斥：一条把行动追溯到内化的倾向系统，一条追溯到约束条件下的效用计算。",
    boundary: "对立不等于互不相关：布迪厄并不否认行动有策略性，他否认的是把策略还原为有意识的最大化计算。",
-   source: 布迪厄《实践感》1980【页码待核】}
+   source: 布迪厄《实践感》1980}
 - {rel_id: REL-0003, from_term: TERM-0002, to_term: TERM-0001, type: 包含, status: 草稿,
    evidence: 场域是行动者争夺各类资本的空间，社会资本是其中一种被争夺的资本形式。,
    explain: "社会资本被安置在场域内部：它是行动者争夺的资源之一，其分量取决于该场域自身的规则。",
    boundary: "包含说的是分析位置而非时间先后——场域并不是先于社会资本出现的东西。",
-   source: 布迪厄《实践感》1980【页码待核】}
+   source: 布迪厄《实践感》1980}
 - {rel_id: REL-0004, from_term: TERM-0013, to_term: TERM-0014, type: 借用, status: 草稿,
    evidence: 布迪厄借用经济学的资本概念并将其扩展至文化领域，同时改变了该概念的适用范围。,
    explain: "布迪厄把「资本」这个经济学词借进文化领域，同时改写了它的适用范围：文化资本可以积累、可以投资，却不能直接标价。",
    boundary: "借用改变了原概念：文化资本的收益无法像利润那样被直接换算成货币。",
-   source: 布迪厄《资本的形式》1986【页码待核】}
+   source: 布迪厄《资本的形式》1986}
 - {rel_id: REL-0005, from_term: TERM-0001, to_term: TERM-0014, type: 借用, status: 草稿,
    evidence: 社会资本概念同样借自经济学资本概念，被扩展至关系网络的资源分析。,
    explain: "社会资本与符号资本是同一套借用动作的两个落点：都是把「资本」的积累性迁移到非经济领域。",
    boundary: "社会资本强调的是可动员性，经济资本的强调的是可计价性，两者不可互换。",
-   source: 布迪厄《资本的形式》1986【页码待核】}
+   source: 布迪厄《资本的形式》1986}
 - {rel_id: REL-0006, from_term: TERM-0015, to_term: TERM-0014, type: 借用, status: 草稿,
    evidence: 符号资本借自经济资本概念，用以指称被承认为正当的资本形态。,
    explain: "符号资本借「资本」之名，强调被承认的优势同样可以被积累和继承，只是它的账本记在声望与体面里。",
    boundary: "符号资本只在被承认时才有效力：没有承认，它连账面价值都不存在。",
-   source: 布迪厄《实践理论大纲》1977【页码待核】}
+   source: 布迪厄《实践理论大纲》1977}
 - {rel_id: REL-0007, from_term: TERM-0002, to_term: TERM-0013, type: 包含, status: 草稿,
    evidence: 场域是各类资本被争夺的空间，文化资本是场域中一种主要的资本形式。,
    explain: "文化资本是场域中最具区分效力的资源之一，场域分析正是围绕它对行动者的争夺展开的。",
-   source: 布迪厄《区分》1984【页码待核】}
+   source: 布迪厄《区分》1984}
 - {rel_id: REL-0008, from_term: TERM-0002, to_term: TERM-0014, type: 包含, status: 草稿,
    evidence: 场域中同时存在经济资本，不同场域中各类资本的相对权重不同。,
    explain: "经济资本同样在场域内起作用，但它的兑换效力随场域而变——这正是布迪厄反对单一经济决定论的落点。",
    boundary: "「场域包含经济资本」不等于经济资本决定一切；不同场域里各类资本的相对权重并不相同。",
-   source: 布迪厄《区分》1984【页码待核】}
+   source: 布迪厄《区分》1984}
 - {rel_id: REL-0009, from_term: TERM-0002, to_term: TERM-0015, type: 包含, status: 草稿,
    evidence: 符号资本在特定场域内被承认，其效力依赖于该场域自身的逻辑。,
    explain: "符号资本的效力完全依赖场域内部成员的承认，离开该场域，它的效力随之消失。",
    boundary: "被承认的前提是场域内共享的信念，不是普遍认同——出了这个场域，符号资本可能一文不值。",
-   source: 布迪厄《实践理论大纲》1977【页码待核】}
+   source: 布迪厄《实践理论大纲》1977}
 - {rel_id: REL-0010, from_term: TERM-0014, to_term: TERM-0013, type: 转化, status: 草稿,
    evidence: 经济资本可经由教育投资转化为文化资本，但转化需要时间与投入，且并非等额兑换。,
    explain: "教育投资是经济资本转为文化资本的通道，但转化要付出时间与家庭陪伴，回报率也不确定。",
    boundary: "转化不是等额兑换，也不会自动发生：家庭能提供的闲暇与陪伴本身就是转化的条件。",
-   source: 布迪厄《资本的形式》1986【页码待核】}
+   source: 布迪厄《资本的形式》1986}
 - {rel_id: REL-0011, from_term: TERM-0013, to_term: TERM-0001, type: 转化, status: 草稿,
    evidence: 制度化的文化资本有助于行动者进入并维系特定的关系网络。,
    explain: "制度化的文化资本（学历、头衔）是进入关系网络的门票：它让行动者被当作「值得交往的人」。",
    boundary: "这条边说的是有助于进入网络，不是保证网络中的资源可被动员——那是社会资本自身的问题。",
-   source: 布迪厄《资本的形式》1986【页码待核】}
+   source: 布迪厄《资本的形式》1986}
 - {rel_id: REL-0012, from_term: TERM-0013, to_term: TERM-0015, type: 转化, status: 草稿,
    evidence: 文化资本被承认为正当之后即以符号资本的形式发挥作用。,
    explain: "文化资本被承认为正当之后，就以声望的形式发挥作用，无须再靠实际效用证明自己。",
    boundary: "「转化为符号资本」不是说文化资本消失了，而是说它多了一层正当性的外衣。",
-   source: 布迪厄《实践理论大纲》1977【页码待核】}
+   source: 布迪厄《实践理论大纲》1977}
 - {rel_id: REL-0013, from_term: TERM-0001, to_term: TERM-0015, type: 转化, status: 草稿,
    evidence: 由关系网络带来的优势被承认为理所当然时，即表现为符号资本。,
    explain: "由关系网络带来的优势，一旦被当作理所当然，就以符号资本的形式起作用。",
    boundary: "这条边成立的前提是「被承认」；不被承认的关系优势只是私人便利，不构成符号资本。",
-   source: 布迪厄《实践理论大纲》1977【页码待核】}
+   source: 布迪厄《实践理论大纲》1977}
 - {rel_id: REL-0014, from_term: TERM-0013, to_term: TERM-0016, type: 机制, status: 草稿,
    evidence: 教育系统以文化资本为中介筛选并区隔学生，从而实现阶级结构的再生产。,
    explain: "教育系统以文化资本为筛选标准，把阶级结构一代代传下去——布迪厄用这条机制说明学校并非中立的选拔场。",
    boundary: "这是机制而非意图：教师与学生都不是在合谋，结构的延续不需要任何人有意为之。",
-   source: 布迪厄、帕斯隆《再生产》1970【页码待核】}
+   source: 布迪厄、帕斯隆《再生产》1970}
 - {rel_id: REL-0015, from_term: TERM-0003, to_term: TERM-0016, type: 机制, status: 草稿,
    evidence: 惯习使被结构化的行动倾向在实践中自动延续既有结构，无需外在强制。,
    explain: "惯习让结构在行动中自动延续，既不需要强制也不需要共谋，这是布迪厄解释秩序稳定性的关键一步。",
-   source: 布迪厄《实践理论大纲》1977【页码待核】}
+   source: 布迪厄《实践理论大纲》1977}
 - {rel_id: REL-0016, from_term: TERM-0012, to_term: TERM-0007, type: 机制, status: 草稿,
    evidence: 封闭通过限制资源与机会的获取资格，维持层级之间的边界与优势位置。,
    explain: "封闭是分层得以维持的机制之一：靠资格限制把层与层之间的边界固定下来，不让位置随意流动。",
    boundary: "封闭解释的是边界如何被固定，不解释层级为何存在——那是分层理论要回答的问题。",
-   source: 韦伯《经济与社会》1922【页码待核】}
+   source: 韦伯《经济与社会》1922}
 - {rel_id: REL-0017, from_term: TERM-0017, to_term: TERM-0012, type: 机制, status: 草稿,
    evidence: 柯林斯认为教育文凭主要作为职业准入的排他手段起作用，而非技能凭证。,
    explain: "柯林斯把文凭扩张到「排他工具」这一层：教育的膨胀并非技能需求所致，而是职业准入的排他竞争。",
    boundary: "这条边依赖一个制度条件：雇主以文凭作筛选工具。缺了这个条件，文凭膨胀不会自动变成封闭。",
-   source: "Collins 1979, The Credential Society【页码待核】"}
+   source: "Collins 1979, The Credential Society"}
 - {rel_id: REL-0018, from_term: TERM-0011, to_term: TERM-0012, type: 对立, status: 草稿,
    evidence: 两者在同一维度上互斥：封闭限制位置的变动，而流动以位置变动的可能性为定义。,
    explain: "两者在同一维度上互斥：封闭压低位置变动的可能，流动则以位置变动的可能为定义。",
    boundary: "不是非此即彼：现实社会中总同时存在一定流动与一定封闭，这条边说的是二者在逻辑上的紧张关系。",
-   source: "Parkin 1979, Marxism and Class Theory【页码待核】"}
+   source: "Parkin 1979, Marxism and Class Theory"}
 - {rel_id: REL-0019, from_term: TERM-0007, to_term: TERM-0008, type: 包含, status: 草稿,
    evidence: 阶级是分层研究中的一种划分方式，与阶层、地位等划分方式并列。,
    explain: "阶级是分层的一种划分方式，与阶层、地位并列，而不是分层的同义词。",
    boundary: "包含容易被误读成「阶级⊂阶层」的进化论叙事；这里只表示分析上的归属关系。",
-   source: "Sorokin 1927, Social Mobility【页码待核】"}
+   source: "Sorokin 1927, Social Mobility"}
 - {rel_id: REL-0020, from_term: TERM-0007, to_term: TERM-0009, type: 包含, status: 草稿,
    evidence: 以单一或多重标准划分的层阶位置，构成分层结构的基本单位。,
    explain: "阶层是分层的基本单位：按单一或多重标准划出的层阶位置，层级之间是连续过渡而非截然对立。",
-   source: 韦伯《经济与社会》1922【页码待核】}
+   source: 韦伯《经济与社会》1922}
 - {rel_id: REL-0021, from_term: TERM-0007, to_term: TERM-0010, type: 包含, status: 草稿,
    evidence: 声望评价是分层的维度之一，与阶级、政党并列。,
    explain: "地位是分层的维度之一，与阶级、政党并列，构成韦伯式三重分层中的评价维度。",
    boundary: "地位讲的是被给予的声望评价，不是个体自己争取到的成就。",
-   source: 韦伯《经济与社会》1922【页码待核】}
+   source: 韦伯《经济与社会》1922}
 - {rel_id: REL-0022, from_term: TERM-0018, to_term: TERM-0012, type: 包含, status: 草稿,
    evidence: 以获取资格为手段的社会封闭，构成社会排斥的一种特定形式。,
    explain: "以资格为手段的封闭，是排斥的一种特定形式；排斥的范围更大，还包括那些不涉及资格限制的排除。",
    boundary: "反过来说不成立：排斥不必通过封闭实现，缺少参与机会同样构成排斥。",
-   source: "Lenoir 1974, Les Exclus【页码待核】"}
+   source: "Lenoir 1974, Les Exclus"}
 - {rel_id: REL-0023, from_term: TERM-0004, to_term: TERM-0011, type: 机制, status: 草稿,
    evidence: 弱关系是获得职业信息、实现职业向上流动的重要渠道。,
    explain: "弱关系是职业信息的实际来源，因而成为向上流动的通道——这是格兰诺维特的经验发现，不是理论推演。",
    boundary: "这条边针对的是信息渠道，不涵盖其他流动途径（如继承、政策安排）。",
-   source: "Granovetter 1973, The Strength of Weak Ties【页码待核】"}
+   source: "Granovetter 1973, The Strength of Weak Ties"}
 - {rel_id: REL-0024, from_term: TERM-0009, to_term: TERM-0008, type: 批判, status: 草稿,
    evidence: 韦伯以市场机会与多重分层维度取代以生产关系为唯一标准的阶级划分。,
    explain: "韦伯以市场机会与多重分层维度取代生产关系这一唯一标准，这是社会学史上对马克思分层观最持久的批评。",
    boundary: "批判不等于取代：两条划分标准并存，因此本项目严禁把「阶层」合并进「阶级」。",
-   source: 韦伯《经济与社会》1922【页码待核】}
+   source: 韦伯《经济与社会》1922}
 - {rel_id: REL-0025, from_term: TERM-0013, to_term: TERM-0019, type: 机制, status: 草稿,
    evidence: 身体化文化资本借由品味与举止的自然表现，成为实现区隔的机制。,
    explain: "身体化的文化资本通过品味与举止自然流露，进而成为实现区隔的机制。",
    boundary: "机制的重点是「自然流露」：一旦刻意展示，区分效果反而会打折。",
-   source: 布迪厄《区分》1979【页码待核】}
+   source: 布迪厄《区分》1979}
 - {rel_id: REL-0026, from_term: TERM-0003, to_term: TERM-0019, type: 机制, status: 草稿,
    evidence: 阶级条件经由惯习内化为偏好与鉴赏力，使区隔不必依赖明确意图即可实现。,
    explain: "阶级条件经惯习内化为偏好与鉴赏力，区隔因此不需要明确意图就能达成。",
-   source: 布迪厄《区分》1979【页码待核】}
+   source: 布迪厄《区分》1979}
 - {rel_id: REL-0027, from_term: TERM-0019, to_term: TERM-0008, type: 借用, status: 草稿,
    evidence: 区隔分析借用阶级位置说明品味差异的分布，把生活方式的差别读作阶级结构的象征表达。,
    explain: "区隔研究借阶级位置解释品味分布的规律，把生活方式的差别读作阶级结构的象征表达。",
    boundary: "借用仅在解释框架层面：品味差异并不总是阶级差异，拉蒙的批评（REL-0038）正是针对这一点。",
-   source: 布迪厄《区分》1979【页码待核】}
+   source: 布迪厄《区分》1979}
 - {rel_id: REL-0028, from_term: TERM-0020, to_term: TERM-0015, type: 机制, status: 草稿,
    evidence: 符号资本以被承认为前提，而误识正是使这种承认得以发生的机制。,
    explain: "符号资本以被承认为前提，而误识正是让这种承认得以发生的机制。",
-   source: 布迪厄《实践理论大纲》1972【页码待核】}
+   source: 布迪厄《实践理论大纲》1972}
 - {rel_id: REL-0029, from_term: TERM-0020, to_term: TERM-0016, type: 机制, status: 草稿,
    evidence: 误识把社会条件造成的差异当作自然差异接受，使不平等结构免于被质疑而得以延续。,
    explain: "把社会条件造成的差异当作自然或应得的差异接受，不平等因此免于被质疑而被延续。",
    boundary: "误识不是无知：被误识的人往往确信自己看到的就是事实，所以这条机制比强制更稳固。",
-   source: 布迪厄《实践理论大纲》1972【页码待核】}
+   source: 布迪厄《实践理论大纲》1972}
 - {rel_id: REL-0030, from_term: TERM-0021, to_term: TERM-0008, type: 机制, status: 草稿,
    evidence: 马克思把阶级关系规定为对剩余劳动的占有关系，剥削是这一关系得以实现的过程。,
    explain: "马克思把阶级关系规定为对剩余劳动的占有关系，剥削是这一关系实际发生的过程。",
    boundary: "机制说的是「如何实现」，不是「是否公平」——价值判断在此处不参与机制描述。",
-   source: 马克思《资本论》第一卷 1867【页码待核】}
+   source: 马克思《资本论》第一卷 1867}
 - {rel_id: REL-0031, from_term: TERM-0021, to_term: TERM-0014, type: 机制, status: 草稿,
    evidence: 对剩余劳动的持续占有是经济资本得以积累的机制。,
    explain: "对剩余劳动的持续占有，是经济资本得以积累的机制。",
    boundary: "这条边只覆盖以雇佣劳动为形式的积累路径，不涵盖靠贸易、地租等方式完成的积累。",
-   source: 马克思《资本论》第一卷 1867【页码待核】}
+   source: 马克思《资本论》第一卷 1867}
 - {rel_id: REL-0032, from_term: TERM-0022, to_term: TERM-0007, type: 借用, status: 草稿,
    evidence: 紧张理论借用分层结构中的位置差异，解释不同阶层实现文化目标的手段为何不均衡。,
    explain: "默顿借分层位置的差异，解释文化目标与制度手段为何在不同阶层之间脱节。",
    boundary: "借用的是分层中的位置差异，不是分层理论本身；紧张理论关注的是脱节，不是层级的高低。",
-   source: "Merton 1938, Social Structure and Anomie【页码待核】"}
+   source: "Merton 1938, Social Structure and Anomie"}
 - {rel_id: REL-0033, from_term: TERM-0026, to_term: TERM-0016, type: 机制, status: 草稿,
    evidence: 家务与情感劳动的性别分工把既有的不平等安排传递给下一代。,
    explain: "家庭内部的性别分工把既有的不平等安排原样传给下一代——两个群在这里交汇：家庭是分配发生的现场，不平等是分配的结果。",
    boundary: "这条边说的是传递，不保证下一代必然接受同一套安排——传递的强度要靠数据看。",
-   source: "Hochschild 1989, The Second Shift【页码待核】"}
+   source: "Hochschild 1989, The Second Shift"}
 - {rel_id: REL-0034, from_term: TERM-0023, to_term: TERM-0026, type: 机制, status: 草稿,
    evidence: 性别在日常互动中被反复完成，是家务与情感劳动被持续指派给女性的机制。,
    explain: "性别在日常互动中被反复完成，这正是家务与情感劳动持续落在女性身上的机制。",
    boundary: "做性别强调「被做出来」，因此这套分配不是天然如此，而是每次互动都在被重新生产。",
-   source: "West & Zimmerman 1987, Doing Gender【页码待核】"}
+   source: "West & Zimmerman 1987, Doing Gender"}
 - {rel_id: REL-0035, from_term: TERM-0024, to_term: TERM-0016, type: 机制, status: 草稿,
    evidence: 规训把身体训练得既顺从又有用，使既有社会秩序在无需强制的情况下被持续再生产。,
    explain: "规训生产出既顺从又有用的身体，秩序因此无需强制即可延续。",
    boundary: "规训不是压迫的同义词：它同时提高效能与服从，两者是同一套技术的两面。",
-   source: 福柯《规训与惩罚》1975【页码待核】}
+   source: 福柯《规训与惩罚》1975}
 - {rel_id: REL-0036, from_term: TERM-0025, to_term: TERM-0012, type: 机制, status: 草稿,
    evidence: 空间上的居住分异把群体边界固定在邻里与学区之上，成为社会封闭得以维持的机制。,
    explain: "居住分异把群体边界固定到邻里与学区之上，成为封闭在日常空间里的维持机制。",
    boundary: "空间分异本身不等于封闭：只有当地理边界被用来分配资源与机会时，机制才成立。",
-   source: "Massey & Denton 1988, The Dimensions of Residential Segregation【页码待核】"}
+   source: "Massey & Denton 1988, The Dimensions of Residential Segregation"}
 - {rel_id: REL-0037, from_term: TERM-0025, to_term: TERM-0016, type: 机制, status: 草稿,
    evidence: 居住隔离通过邻里资源与学校条件的差异参与不平等的代际再生产。,
    explain: "邻里资源与学校条件的差异，使空间上的分异参与到不平等的代际传递之中。",
    boundary: "这条边经过教育等中介环节，不是说住在哪里直接决定下一代的位置。",
-   source: "Massey & Denton 1993, American Apartheid【页码待核】"}
+   source: "Massey & Denton 1993, American Apartheid"}
 - {rel_id: REL-0038, from_term: TERM-0028, to_term: TERM-0019, type: 批判, status: 草稿,
    evidence: 拉蒙认为布迪厄把象征性边界过多地还原为阶级位置，忽略了种族、性别等其他分类资源的独立作用。,
    explain: "拉蒙指出布迪厄把象征性边界过多还原为阶级位置，忽略了种族、性别等分类资源的独立作用。",
    boundary: "批评针对的是还原倾向，不是区隔分析的整体有效性——两者仍在同一个问题上对话。",
-   source: "Lamont & Fournier 1992, Cultivating Differences【页码待核】"}
+   source: "Lamont & Fournier 1992, Cultivating Differences"}
 - {rel_id: REL-0039, from_term: TERM-0028, to_term: TERM-0012, type: 机制, status: 草稿,
    evidence: 分类概念被广泛接受后会转化为资源分配的依据，从而成为群体封闭的手段。,
    explain: "分类概念一旦被广泛接受，就会转为资源分配的依据，从而成为群体封闭的手段。",
    boundary: "象征性边界要变成社会边界才起作用，中间这一步靠的是资源分配，不是共识本身。",
-   source: "Lamont & Fournier 1992, Cultivating Differences【页码待核】"}
+   source: "Lamont & Fournier 1992, Cultivating Differences"}
 - {rel_id: REL-0040, from_term: TERM-0027, to_term: TERM-0014, type: 机制, status: 草稿,
    evidence: 把技艺转移到管理层降低了单位劳动成本，成为资本积累的机制。,
    explain: "把技艺转移到管理层降低了单位劳动成本，构成资本积累的一条机制。",
    boundary: "这条机制描述的是劳动过程的重组，不涉及技术是否进步的判断。",
-   source: "Braverman 1974, Labor and Monopoly Capital【页码待核】"}
+   source: "Braverman 1974, Labor and Monopoly Capital"}
 
 # ==== 概念群：社会秩序与越轨 · 群内关系 ====
 - {rel_id: REL-0041, from_term: TERM-0031, to_term: TERM-0030, type: 机制, status: 草稿,
    evidence: 多数成员共有的信念与情感构成社会凝聚的道德基础，是社会团结得以形成的机制。,
    explain: "多数成员共有的信念与情感构成社会凝聚的道德基础，社会团结由此形成。",
    boundary: "集体意识是内容，社会团结是状态：两者不能互相替代。",
-   source: 迪尔凯姆《社会分工论》1893【页码待核】}
+   source: 迪尔凯姆《社会分工论》1893}
 - {rel_id: REL-0042, from_term: TERM-0029, to_term: TERM-0030, type: 对立, status: 草稿,
    evidence: 规范约束的松弛使成员间的联结失去依据，失范状态与社会团结此消彼长。,
    explain: "规范约束一松弛，成员之间的联结就失去依据；失范与社会团结此消彼长。",
    boundary: "这是逻辑上的此消彼长，不是说现实中两者不能并存于同一社会的不同部分。",
-   source: 迪尔凯姆《社会分工论》1893【页码待核】}
+   source: 迪尔凯姆《社会分工论》1893}
 - {rel_id: REL-0043, from_term: TERM-0033, to_term: TERM-0032, type: 对立, status: 草稿,
    evidence: 社区共同规范瓦解之后，非正式社会控制随之失效。,
    explain: "社区共同规范瓦解之后，非正式社会控制随之失效。",
    boundary: "解组先于控制失效，顺序不能颠倒：控制失效是解组的结果而非原因。",
-   source: "Shaw & McKay 1942, Juvenile Delinquency and Urban Areas【页码待核】"}
+   source: "Shaw & McKay 1942, Juvenile Delinquency and Urban Areas"}
 - {rel_id: REL-0044, from_term: TERM-0034, to_term: TERM-0035, type: 机制, status: 草稿,
    evidence: 公开的标签改变了自我认同，成为越轨生涯得以延续的机制。,
    explain: "公开的标签改写自我认同，越轨生涯因此得以延续——这是标签理论从「一次越轨」走向「长期越轨」的关键一步。",
    boundary: "机制的关键词是「公开」：未被公开的标签不产生次级越轨。",
-   source: "Lemert 1951, Social Pathology【页码待核】"}
+   source: "Lemert 1951, Social Pathology"}
 - {rel_id: REL-0045, from_term: TERM-0036, to_term: TERM-0034, type: 借用, status: 草稿,
    evidence: 戈夫曼关于污名的讨论借用了标签理论「越轨由社会反应界定」的基本主张。,
    explain: "戈夫曼借「越轨由社会反应界定」这一主张，把它扩展为对受损身份的普遍分析。",
    boundary: "借用之后关注点转移了：标签理论看贴标签的过程，污名看持有者如何在互动中管理它。",
-   source: "Goffman 1963, Stigma【页码待核】"}
+   source: "Goffman 1963, Stigma"}
 - {rel_id: REL-0046, from_term: TERM-0032, to_term: TERM-0029, type: 对立, status: 草稿,
    evidence: 社会控制的诸机制正是针对规范约束失效的状态作出的回应。,
    explain: "社会控制的诸机制，正是针对规范约束失效这一状态作出的回应。",
    boundary: "与 REL-0042 方向不同，两条边不可合并：失范—团结讲社会整合，控制—失范讲社会如何回应失范。",
-   source: "Ross 1901, Social Control【页码待核】"}
+   source: "Ross 1901, Social Control"}
 
 # ==== 概念群：社会行动与理性化 · 群内关系 ====
 - {rel_id: REL-0047, from_term: TERM-0038, to_term: TERM-0040, type: 机制, status: 草稿,
    evidence: 目的理性的计算需要可预测的规则体系，科层制是理性化在组织层面的实现形式。,
    explain: "目的理性的计算需要可预测的规则体系，科层制就是理性化在组织层面的实现形式。",
    boundary: "科层制是理性化的一个实现形式，不是唯一形式；市场、法律同样可以被理性化。",
-   source: 韦伯《经济与社会》1922【页码待核】}
+   source: 韦伯《经济与社会》1922}
 - {rel_id: REL-0048, from_term: TERM-0038, to_term: TERM-0039, type: 机制, status: 草稿,
    evidence: 理性化的秩序一经确立便难以退出，个体由此被束缚其中。,
    explain: "理性化的秩序一经确立便难以退出，个体由此被束缚其中——这是韦伯命题的悲观一面。",
    boundary: "铁笼说的是「难以退出」，不是「无处可去」；它描述的是退出成本，不是绝对封闭。",
-   source: 韦伯《新教伦理与资本主义精神》1905【页码待核】}
+   source: 韦伯《新教伦理与资本主义精神》1905}
 - {rel_id: REL-0049, from_term: TERM-0041, to_term: TERM-0040, type: 包含, status: 草稿,
    evidence: 科层制是法理型支配的典型形态，属于三种纯粹支配类型之一的具体化。,
    explain: "科层制是法理型支配的具体化，属于三种纯粹支配类型之一。",
    boundary: "「纯粹类型」是分析工具而非现实分类：现实中的支配形态多是混合的。",
-   source: 韦伯《经济与社会》1922【页码待核】}
+   source: 韦伯《经济与社会》1922}
 - {rel_id: REL-0050, from_term: TERM-0040, to_term: TERM-0042, type: 机制, status: 草稿,
    evidence: 科层制对规则与程序的强调训练出仪式化倾向，使手段取代目标本身。,
    explain: "对规则与程序的强调训练出仪式化倾向，手段于是取代了目标本身。",
    boundary: "目标替代的起因是遵守规则被当成了成绩，而不是成员有意偷懒。",
-   source: "Merton 1940, Bureaucratic Structure and Personality【页码待核】"}
+   source: "Merton 1940, Bureaucratic Structure and Personality"}
 - {rel_id: REL-0051, from_term: TERM-0043, to_term: TERM-0040, type: 对立, status: 草稿,
    evidence: 非正式关系结构按实际互动而非成文规则运行，与科层制的正式结构相互抵消。,
    explain: "非正式关系结构按实际互动运行，与成文规则相互抵消，两者在协调机制上互斥。",
    boundary: "对立说的是协调方式，不是说非正式组织必然破坏科层制；它也可能替正式结构补漏。",
-   source: "Mayo 1933, The Human Problems of an Industrial Civilization【页码待核】"}
+   source: "Mayo 1933, The Human Problems of an Industrial Civilization"}
 - {rel_id: REL-0052, from_term: TERM-0044, to_term: TERM-0038, type: 继承, status: 草稿,
    evidence: 里泽尔 明确把麦当劳化界定为韦伯理性化命题在当代社会的延伸。,
    explain: "里泽尔明确把麦当劳化界定为韦伯理性化命题在当代社会的延伸。",
    boundary: "继承关系意味着承认真问题意识；「当代延伸」的正是效率与可计算性那套逻辑。",
-   source: "Ritzer 1993, The McDonaldization of Society【页码待核】"}
+   source: "Ritzer 1993, The McDonaldization of Society"}
 - {rel_id: REL-0053, from_term: TERM-0037, to_term: TERM-0041, type: 包含, status: 草稿,
    evidence: 支配是行动者以意义指向他人并寻求服从的一类社会行动。,
    explain: "支配是社会行动的一个子类：行动者以意义指向他人并寻求服从的那一类。",
-   source: 韦伯《经济与社会》1922【页码待核】}
+   source: 韦伯《经济与社会》1922}
 - {rel_id: REL-0054, from_term: TERM-0044, to_term: TERM-0042, type: 机制, status: 草稿,
    evidence: 效率原则被推到极致时，程序本身取代了原本的服务目标。,
    explain: "效率原则被推到极致时，程序本身取代了原本的服务目标。",
-   source: "Ritzer 1993, The McDonaldization of Society【页码待核】"}
+   source: "Ritzer 1993, The McDonaldization of Society"}
 
 # ==== 跨群桥接：社会不平等 ↔ 社会秩序与越轨 ====
 # 每对概念群的桥接上限由 schema.constraints.bridge_per_cluster_pair_max 控制
@@ -276,61 +276,61 @@
    evidence: 默顿的紧张理论直接继承了失范概念，把它从规范缺失改写为文化目标与制度手段之间的脱节。,
    explain: "默顿直接继承失范概念，并把它从「规范缺失」改写为「文化目标与制度手段之间的脱节」。",
    boundary: "继承不等于照搬：默顿保留了问题意识，换掉了机制的表述，这是本项目把它标为「继承」而非「等同」的理由。",
-   source: "Merton 1938, Social Structure and Anomie【页码待核】"}
+   source: "Merton 1938, Social Structure and Anomie"}
 - {rel_id: REL-0056, from_term: TERM-0036, to_term: TERM-0018, type: 机制, status: 草稿,
    evidence: 污名通过分类与贬低，使持有者被排除在主流社会关系与制度之外。,
    explain: "污名通过分类与贬低，把持有者排除在主流社会关系与制度之外。",
    boundary: "这条边依赖他人的反应，不依赖持有者自身的特征是否真的构成障碍。",
-   source: "Goffman 1963, Stigma【页码待核】"}
+   source: "Goffman 1963, Stigma"}
 - {rel_id: REL-0057, from_term: TERM-0035, to_term: TERM-0018, type: 机制, status: 草稿,
    evidence: 被标签者进入越轨生涯后，逐渐被排除在常规就业与社交之外。,
    explain: "进入越轨生涯之后，被标签者逐渐被排除在常规就业与社交之外，排斥因此自我实现。",
    boundary: "排斥是次级越轨的结果而非原因：顺序错了，整条论证就反了。",
-   source: "Lemert 1951, Social Pathology【页码待核】"}
+   source: "Lemert 1951, Social Pathology"}
 - {rel_id: REL-0058, from_term: TERM-0033, to_term: TERM-0001, type: 对立, status: 草稿,
    evidence: 社会解组描述的正是社区层面社会资本缺失、非正式控制失效的状态，两者互为反面。,
    explain: "社会解组描述的正是社区层面社会资本缺失、非正式控制失效的状态，两者互为反面。",
    boundary: "这是跨概念群的桥接：「互为反面」不是说两个概念等价，而是说它们描述同一种状态的两个方向。",
-   source: "Shaw & McKay 1942, Juvenile Delinquency and Urban Areas【页码待核】"}
+   source: "Shaw & McKay 1942, Juvenile Delinquency and Urban Areas"}
 - {rel_id: REL-0059, from_term: TERM-0024, to_term: TERM-0032, type: 机制, status: 草稿,
    evidence: 规训是现代社会控制不再依赖公开强制、转而生产自我约束主体的机制。,
    explain: "规训让现代社会的控制不再依赖公开强制，转而生产自我约束的主体。",
    boundary: "与强制相比，规训的效力来自被支配者的自我审查，因此更省成本也更难察觉。",
-   source: 福柯《规训与惩罚》1975【页码待核】}
+   source: 福柯《规训与惩罚》1975}
 
 # ==== 跨群桥接：社会不平等 ↔ 社会行动与理性化 ====
 - {rel_id: REL-0060, from_term: TERM-0024, to_term: TERM-0040, type: 借用, status: 草稿,
    evidence: 福柯的规训分析借用了科层组织中的纪律与层级监视，把它扩展为普遍的身体技术。,
    explain: "福柯借科层组织中的纪律与层级监视，把它扩展为普遍的身体技术。",
    boundary: "借用扩展了适用范围：科层制里的纪律限于组织内部，规训则被推到学校、医院、军营等一切场所。",
-   source: 福柯《规训与惩罚》1975【页码待核】}
+   source: 福柯《规训与惩罚》1975}
 - {rel_id: REL-0061, from_term: TERM-0040, to_term: TERM-0001, type: 对立, status: 草稿,
    evidence: 科层制以非人格化的规则取代人格化的关系网络，两者在协调机制上相互替代。,
    explain: "非人格化的规则与人格化的关系网络，在协调机制上相互替代。",
    boundary: "这是跨群桥接，只在协调方式上对立；现实中科层组织内部同样存在关系网络（见 REL-0051）。",
-   source: 韦伯《经济与社会》1922【页码待核】}
+   source: 韦伯《经济与社会》1922}
 - {rel_id: REL-0062, from_term: TERM-0042, to_term: TERM-0017, type: 机制, status: 草稿,
    evidence: 教育原本是获得职业地位的手段，在文凭竞争中逐渐变成被追求的目的本身。,
    explain: "教育原本是取得职业地位的手段，在文凭竞争中被当成了被追求的目的本身。",
    boundary: "这条边连接两个群：目标替代提供机制，文凭通胀提供现象——两端不可互换。",
-   source: "Merton 1940；Collins 1979【页码待核】"}
+   source: "Merton 1940；Collins 1979"}
 - {rel_id: REL-0063, from_term: TERM-0006, to_term: TERM-0037, type: 继承, status: 草稿,
    evidence: 科尔曼的理性选择理论以韦伯的目的理性行动为源头之一，把效用最大化确立为基本假设。,
    explain: "科尔曼以韦伯的目的理性行动为源头，把效用最大化确立为分析前提。",
    boundary: "继承的是行动的分类框架；韦伯的四类行动在科尔曼那里被压缩成了一种。",
-   source: "Coleman 1990, Foundations of Social Theory【页码待核】"}
+   source: "Coleman 1990, Foundations of Social Theory"}
 - {rel_id: REL-0064, from_term: TERM-0040, to_term: TERM-0027, type: 机制, status: 草稿,
    evidence: 科层制的分工体系把劳动拆解为可替换的环节，为技艺向管理层的转移提供组织条件。,
    explain: "科层制的分工把劳动拆成可替换的环节，为技艺向管理层转移提供了组织条件。",
    boundary: "组织条件不等于原因：去技能化还依赖资本与劳动之间的权力关系。",
-   source: "Braverman 1974, Labor and Monopoly Capital【页码待核】"}
+   source: "Braverman 1974, Labor and Monopoly Capital"}
 
 # 跨概念群桥接：社会秩序与越轨 ↔ 社会行动与理性化（v6 补齐此前为 0 的一对）
 - {rel_id: REL-0065, from_term: TERM-0040, to_term: TERM-0032, type: 机制, status: 草稿,
    evidence: 科层制以成文规则与层级监督确保成员服从，是现代社会中最典型的正式控制形式。,
    explain: "越轨与秩序这一群把「社会如何使成员服从」交给社会控制来解释，理性化这一群则把同一件事交给成文规则与层级监督——这条边把两套解释接在同一个问题上。",
    boundary: "说的是正式控制这一条路径，不是说一切社会控制都由科层制承担；舆论、习俗、家庭等非正式控制不在科层制的范围内。",
-   source: 韦伯《经济与社会》1922【页码待核】}
+   source: 韦伯《经济与社会》1922}
 
 # ============================================================
 # v7 新增：三个新概念群的群内关系 + 跨群桥接
@@ -340,174 +340,174 @@
    evidence: "沃斯以规模、密度与异质性解释初级关系的衰退，其框架承接了滕尼斯关于共同体与社会之间的对立。",
    explain: "城市性借的是滕尼斯的对照框架：把「社会」那一侧推到极端，用来描述大城市的生活方式。",
    boundary: "这是借用而非等同：滕尼斯的对照是分析类型，沃斯把它落定成一种具体的空间与人口状态。",
-   source: "Wirth 1938, Urbanism as a Way of Life【页码待核】"}
+   source: "Wirth 1938, Urbanism as a Way of Life"}
 - {rel_id: REL-0067, from_term: TERM-0049, to_term: TERM-0046, type: 批判, status: 草稿,
    evidence: "列斐伏尔反对把城市空间当作自然生长出的地域，主张社会空间是社会关系的产物，而非生态扩张的自发结果。",
    explain: "批判的落点是「空间从哪来」：生态学模型把空间分布当作自然增长，列斐伏尔把它当作政治经济过程的产物。",
    boundary: "批评针对的是「空间是中性容器」这一前提，并不否认同心圆所描述的空间分异现象确实存在。",
-   source: "Lefebvre 1974, La production de l'espace【页码待核】"}
+   source: "Lefebvre 1974, La production de l'espace"}
 - {rel_id: REL-0068, from_term: TERM-0049, to_term: TERM-0048, type: 机制, status: 草稿,
    evidence: "当空间进入商品生产，中心地带的再开发成为资本积累的通道，士绅化是这一过程的可见形态。",
    explain: "这条边把士绅化接到一个更大的过程上：不是中产忽然偏爱老城区，而是空间被纳入资本积累的循环。",
    boundary: "机制不排除其他成因（人口结构、政策补贴等），只指出资本逻辑在其中承担的那一环。",
-   source: "Lefebvre 1974, La production de l'espace【页码待核】"}
+   source: "Lefebvre 1974, La production de l'espace"}
 - {rel_id: REL-0069, from_term: TERM-0048, to_term: TERM-0051, type: 对立, status: 草稿,
    evidence: "由资本增值驱动的空间改造，与居民对空间使用与改造的集体主张，在同一维度上相互冲突。",
    explain: "两者争的是同一件事：城市空间归谁支配。一个由交换价值裁决，一个主张使用者的集体权利。",
    boundary: "现实中二者并非处处对立，部分再开发也可能兑现居民的部分诉求；这条边说的是逻辑上的紧张关系。",
-   source: "Harvey 2008, The Right to the City【页码待核】"}
+   source: "Harvey 2008, The Right to the City"}
 - {rel_id: REL-0070, from_term: TERM-0050, to_term: TERM-0045, type: 对立, status: 草稿,
    evidence: "门禁社区以围墙与私属安保把异质性挡在门外，与城市性所描述的高密度异质共处正好相反。",
    explain: "同一维度上的两种答案：面对陌生人与异质性，城市性是共存并发展出次级交往，门禁社区是退出并加设边界。",
    boundary: "对立说的是应对方式，不是说门禁社区位于城市之外——它恰恰是城市内部的一种居住形态。",
-   source: "Blakely & Snyder 1997, Fortress America【页码待核】"}
+   source: "Blakely & Snyder 1997, Fortress America"}
 - {rel_id: REL-0071, from_term: TERM-0051, to_term: TERM-0049, type: 继承, status: 草稿,
    evidence: "城市权利的主张建立在空间是社会产物这一前提上，即空间的使用不应由产权与资本增值单方面决定。",
    explain: "同一作者的理论延伸：既然空间是被生产出来的，谁参与生产、谁被排除，就成了可以主张的权利问题。",
    boundary: "继承的是前提而不是结论：从「空间是社会产物」推不出任何一种具体的城市政策。",
-   source: "Lefebvre 1968, Le droit a la ville【页码待核】"}
+   source: "Lefebvre 1968, Le droit a la ville"}
 - {rel_id: REL-0072, from_term: TERM-0052, to_term: TERM-0046, type: 继承, status: 草稿,
    evidence: "肖与麦凯把过渡带描述为解组与越轨高度集中的区域，这一空间关联是后来邻里效应研究的出发点。",
    explain: "继承的是问题意识：把居住区位与居民处境联系起来；替换掉的是论证方法，由生态学描述改为因果识别。",
    boundary: "方法上并不连续：邻里效应研究反复警惕「邻里相关不等于邻里造成」，而这正是早期生态学描述未处理的问题。",
-   source: "Wilson 1987, The Truly Disadvantaged【页码待核】"}
+   source: "Wilson 1987, The Truly Disadvantaged"}
 - {rel_id: REL-0073, from_term: TERM-0053, to_term: TERM-0057, type: 机制, status: 草稿,
    evidence: "奥克利指出，正是性别范畴的社会建构使家务与育儿被当作女性的自然职责，从而不必再行分配。",
    explain: "这条边说明性别范畴本身就在做分配工作：先有「女人天然适合照料」这一分类，任务划分才显得不需要理由。",
    boundary: "顺序不能颠倒：分工是性别建构的一个后果，而不是性别范畴的来源。",
-   source: "Oakley 1972, Sex, Gender and Society【页码待核】"}
+   source: "Oakley 1972, Sex, Gender and Society"}
 - {rel_id: REL-0074, from_term: TERM-0057, to_term: TERM-0059, type: 机制, status: 草稿,
    evidence: "任务按性别分配之后，照料他人的劳动被固定给女性，并因不被计入工作而无偿化。",
    explain: "分工先决定谁来做，再决定这件事算不算工作——无偿化的关键不在劳动内容，而在它落在谁身上。",
    boundary: "机制不等于普遍规律：双职工家庭与男性承担照料的情形确实存在，这条边描述的是支配性的分配模式。",
-   source: "Finch & Groves 1983, A Labour of Love【页码待核】"}
+   source: "Finch & Groves 1983, A Labour of Love"}
 - {rel_id: REL-0075, from_term: TERM-0054, to_term: TERM-0057, type: 包含, status: 草稿,
    evidence: "沃尔比把家庭生产与家务劳动列为父权制六个结构领域之一，性别分工是该领域的具体运作形式。",
    explain: "把性别分工放进父权制的结构清单里，使它可以被单独观察，也解释了为何某一领域改变而其他领域不变。",
    boundary: "包含指的是分析位置：分工领域的变动不必然带来其他领域的变动，这正是沃尔比强调的「领域相对独立」。",
-   source: "Walby 1990, Theorizing Patriarchy【页码待核】"}
+   source: "Walby 1990, Theorizing Patriarchy"}
 - {rel_id: REL-0076, from_term: TERM-0055, to_term: TERM-0056, type: 包含, status: 草稿,
    evidence: "康奈尔把性别秩序分为劳动、权力与情感投注三个维度，霸权男性气质是权力维度上的主导配置。",
    explain: "这条边标出霸权男性气质在理论中的位置：它不是独立的角色类型，而是性别秩序某一维度上的主导形态。",
    boundary: "包含不表示它是多数男人的性格：它只是被推崇的配置，多数男性并不完全符合。",
-   source: "Connell 1987, Gender and Power【页码待核】"}
+   source: "Connell 1987, Gender and Power"}
 - {rel_id: REL-0077, from_term: TERM-0056, to_term: TERM-0054, type: 机制, status: 草稿,
    evidence: "康奈尔指出，霸权男性气质通过把支配关系正当化，使男性对女性的支配与男性之间的等级都显得理所当然。",
    explain: "这是父权制在文化层面的运转方式：不需要每个人都施压，只需要一套被推崇的男性形象在起作用。",
    boundary: "机制不等于充分条件：父权制还依赖经济与制度安排，正当化只是其中一环。",
-   source: "Connell 1995, Masculinities【页码待核】"}
+   source: "Connell 1995, Masculinities"}
 - {rel_id: REL-0078, from_term: TERM-0060, to_term: TERM-0057, type: 机制, status: 草稿,
    evidence: "帕森斯认为核心家庭的稳定依赖工具性角色与表达性角色的分工，男性承担外部职业，女性承担内部照料。",
    explain: "这条边说明性别分工在帕森斯那里不是文化残留，而是核心家庭完成其功能所必需的结构安排。",
    boundary: "这是理论设定而非经验发现：分工与家庭稳定之间的必然关系后来遭到大量经验研究质疑。",
-   source: "Parsons & Bales 1955, Family, Socialization and Interaction Process【页码待核】"}
+   source: "Parsons & Bales 1955, Family, Socialization and Interaction Process"}
 - {rel_id: REL-0079, from_term: TERM-0058, to_term: TERM-0060, type: 对立, status: 草稿,
    evidence: "纯粹关系以情感满足与平等协商为前提，其延续取决于关系本身是否令人满意，而非角色义务。",
    explain: "同一维度上的两种安排方式：家庭靠角色义务维持，亲密关系靠协商维持，后者越充分，前者的必然性越弱。",
    boundary: "对立说的是组织原则，不是说二者不能并存——现实中大量关系混合了义务与协商两种成分。",
-   source: "Giddens 1992, The Transformation of Intimacy【页码待核】"}
+   source: "Giddens 1992, The Transformation of Intimacy"}
 - {rel_id: REL-0080, from_term: TERM-0057, to_term: TERM-0058, type: 对立, status: 草稿,
    evidence: "吉登斯指出，关系的民主化要求打破既有分工，而照护责任的分配正是这一转型中最难改变的部分。",
    explain: "与家庭那条边方向相反的压力：关系民主化推着分工改变，分工的惯性又限定了关系能民主到什么程度。",
    boundary: "这条边与「亲密关系的转型 --对立--> 核心家庭」不是同一条：那条说的是组织原则，这条说的是分工与协商的具体冲突。",
-   source: "Giddens 1992, The Transformation of Intimacy【页码待核】"}
+   source: "Giddens 1992, The Transformation of Intimacy"}
 - {rel_id: REL-0081, from_term: TERM-0068, to_term: TERM-0062, type: 包含, status: 草稿,
    evidence: "伯格与卢克曼把日常生活中的情境定义与类型化，视为现实被建构的基本环节。",
    explain: "框架是建构过程的一个具体环节：情境先被定义，行动才获得确定的意义。",
    boundary: "包含是层次上的：不是说每个框架都会带来制度化的现实，多数框架就地成立、随即消散。",
-   source: "Berger & Luckmann 1966, The Social Construction of Reality【页码待核】"}
+   source: "Berger & Luckmann 1966, The Social Construction of Reality"}
 - {rel_id: REL-0082, from_term: TERM-0062, to_term: TERM-0061, type: 机制, status: 草稿,
    evidence: "群体按照当下可用的解释图式重新组织关于过去的叙述，被记住的内容因此随框架而变。",
    explain: "记忆不是存档而是重建：框架决定了过去的哪些片段进入当下的叙述。",
    boundary: "这条边解释记忆的选择性，不解释记忆的真伪——框架可以围绕真实发生的事件运作。",
-   source: "Halbwachs 1925, Les cadres sociaux de la memoire【页码待核】"}
+   source: "Halbwachs 1925, Les cadres sociaux de la memoire"}
 - {rel_id: REL-0083, from_term: TERM-0064, to_term: TERM-0065, type: 机制, status: 草稿,
    evidence: "把历史性的意义呈现为自然事实，是支配性世界观得以日常化、从而不必再被论证的机制。",
    explain: "霸权最难被挑战的时刻，是它不再需要被论证的时刻；神话负责把这一刻制造出来。",
    boundary: "机制不是唯一路径：霸权也经由教育、媒体机构与物质利益来维持。",
-   source: "Barthes 1957, Mythologies【页码待核】"}
+   source: "Barthes 1957, Mythologies"}
 - {rel_id: REL-0084, from_term: TERM-0065, to_term: TERM-0064, type: 包含, status: 草稿,
    evidence: "神话是文化霸权在符号层面的一种运作形式，二者都以「显得自然」为效果。",
    explain: "把神话放进霸权的框架里，说明它不是孤立的修辞现象，而是支配得以被接受的一环。",
    boundary: "包含不表示同义：霸权还包括制度与组织层面的领导权，神话只覆盖符号层面。",
-   source: "葛兰西《狱中札记》【页码待核】"}
+   source: "葛兰西《狱中札记》"}
 - {rel_id: REL-0085, from_term: TERM-0063, to_term: TERM-0068, type: 借用, status: 草稿,
    evidence: "斯维德勒反对把文化当作塑造行动的价值系统，主张文化是行动者可策略性取用的符号与仪式的剧目。",
    explain: "借的是「现实由社会维持」这一前提，用来反驳把文化当作内在价值系统的旧读法。",
    boundary: "借用之后关注点不同：社会建构追问现实如何被生产，文化工具箱追问文化如何被使用。",
-   source: "Swidler 1986, Culture in Action【页码待核】"}
+   source: "Swidler 1986, Culture in Action"}
 - {rel_id: REL-0086, from_term: TERM-0067, to_term: TERM-0065, type: 机制, status: 草稿,
    evidence: "编码与解码之间的不对称，使支配性意义在传播中被自然化，从而在无强制的情况下维持领导权。",
    explain: "这条边把霸权接到传播环节上：领导权不是被灌输的，而是在编码与解码的落差中被日常维持。",
    boundary: "霍尔同时指出解码可采取对抗立场，因此这条机制并不保证霸权必然成功。",
-   source: "Hall 1973, Encoding and Decoding in the Television Discourse【页码待核】"}
+   source: "Hall 1973, Encoding and Decoding in the Television Discourse"}
 - {rel_id: REL-0087, from_term: TERM-0066, to_term: TERM-0065, type: 对立, status: 草稿,
    evidence: "亚文化以风格与仪式表达对支配文化的抵抗，而支配文化则通过把风格收编为时尚来消解这种抵抗。",
    explain: "争的是意义的归属：同一套风格，亚文化用它表示拒绝，主流用它表示新潮。",
    boundary: "抵抗多以风格与仪式进行，不等同于政治对抗；这正是伯明翰学派被批评「抵抗被高估」之处。",
-   source: "Hebdige 1979, Subculture - The Meaning of Style【页码待核】"}
+   source: "Hebdige 1979, Subculture - The Meaning of Style"}
 - {rel_id: REL-0088, from_term: TERM-0061, to_term: TERM-0065, type: 机制, status: 草稿,
    evidence: "通过塑造关于过去的共同叙述，既有秩序显得理所当然，领导权因而获得时间上的支撑。",
    explain: "这条边给霸权加上时间维度：被反复讲述的过去，是最省力的正当性来源。",
    boundary: "记忆同样可以被用来挑战支配（如对抗性记忆），这条边只指出它被用于维持秩序的那一面。",
-   source: "Halbwachs 1925, Les cadres sociaux de la memoire【页码待核】"}
+   source: "Halbwachs 1925, Les cadres sociaux de la memoire"}
 - {rel_id: REL-0089, from_term: TERM-0050, to_term: TERM-0012, type: 机制, status: 草稿,
    evidence: "门禁社区以产权与准入把空间排他制度化，居民资格由购房与业主身份决定。",
    explain: "社会封闭讲的是资格排他，门禁社区是它在居住空间里的一个具体实现形态。",
    boundary: "机制说的是空间排他如何实现封闭，不等于封闭只能通过居住来实现——职业准入同样可以。",
-   source: "Blakely & Snyder 1997, Fortress America【页码待核】"}
+   source: "Blakely & Snyder 1997, Fortress America"}
 - {rel_id: REL-0090, from_term: TERM-0048, to_term: TERM-0018, type: 机制, status: 草稿,
    evidence: "空间改造带来的租金与生活成本上升，使原住低收入居民被迫迁出原有的社会关系与资源网络。",
    explain: "这条边把两个群接上：空间改造在这里不是审美问题，而是把人排除出既有关系与资源的过程。",
    boundary: "排斥是迁出压力造成的后果之一，不涵盖所有士绅化情形——部分居民可能选择留下或因改造获益。",
-   source: "Glass 1964, London - Aspects of Change【页码待核】"}
+   source: "Glass 1964, London - Aspects of Change"}
 - {rel_id: REL-0091, from_term: TERM-0045, to_term: TERM-0001, type: 对立, status: 草稿,
    evidence: "沃斯指出城市中初级关系衰退、交往趋于片段化，而社会资本正以持久的关系网络为依托。",
    explain: "两个群在同一件事上给出相反判断：社会资本要求关系稳定可动员，城市性描述的正是这种关系的稀薄化。",
    boundary: "对立只在关系网络的密度上成立：城市同样会产出新型的社会资本（弱关系、社团、线上网络）。",
-   source: "Wirth 1938, Urbanism as a Way of Life【页码待核】"}
+   source: "Wirth 1938, Urbanism as a Way of Life"}
 - {rel_id: REL-0092, from_term: TERM-0051, to_term: TERM-0012, type: 对立, status: 草稿,
    evidence: "城市权利主张空间的使用与改造对所有居民开放，而封闭以限制准入来维护既有优势。",
    explain: "一端要求开放，一端靠排他维持优势，二者在「谁能使用空间」这一问题上正面冲突。",
    boundary: "对立说的是原则层面；现实中主张城市权利的运动也常提出具体的优先照顾对象，并不等于无条件开放。",
-   source: "Harvey 2008, The Right to the City【页码待核】"}
+   source: "Harvey 2008, The Right to the City"}
 - {rel_id: REL-0093, from_term: TERM-0026, to_term: TERM-0059, type: 借用, status: 草稿,
    evidence: "霍克希尔德沿用照护劳动的界定，把下班之后的家务与情感劳动称为「第二次班」。",
    explain: "第二班借的是照护劳动这个概念，用来强调它发生在有偿工作之后、因而最不容易被看见。",
    boundary: "借用改变了范围：照护劳动不限于已婚女性，第二班特指有薪工作之后的那一段。",
-   source: "Hochschild 1989, The Second Shift【页码待核】"}
+   source: "Hochschild 1989, The Second Shift"}
 - {rel_id: REL-0094, from_term: TERM-0055, to_term: TERM-0007, type: 借用, status: 草稿,
    evidence: "康奈尔把性别关系按劳动、权力与情感投注分为三个结构维度，其分析方式与多重标准的分层结构相通。",
    explain: "借用的是分层的分析方式：性别关系被当作一种可以分维度考察的层级结构，而不是一堆态度差异。",
    boundary: "借用的是框架，不是说性别秩序是分层的一个子类——两者相互交叠，而非包含。",
-   source: "Connell 1987, Gender and Power【页码待核】"}
+   source: "Connell 1987, Gender and Power"}
 - {rel_id: REL-0095, from_term: TERM-0054, to_term: TERM-0012, type: 机制, status: 草稿,
    evidence: "沃尔比指出，父权制通过把女性排除在有偿劳动与公共职位之外来维持支配，这一排除以资格与准入限制为手段。",
    explain: "父权制的维持要借封闭的手段（把谁挡在门外），封闭因此可以服务于性别支配。",
    boundary: "机制方向不能反推：封闭的存在不表示每一次封闭都由父权制驱动。",
-   source: "Walby 1990, Theorizing Patriarchy【页码待核】"}
+   source: "Walby 1990, Theorizing Patriarchy"}
 - {rel_id: REL-0096, from_term: TERM-0065, to_term: TERM-0007, type: 机制, status: 草稿,
    evidence: "葛兰西指出，统治阶级通过把自身世界观扩展为全社会的常识而获得领导权，支配因此不必依赖强制。",
    explain: "分层要稳定，需要一套让位置差异显得自然的常识，霸权提供了这套常识的生成方式。",
    boundary: "机制只解释分层秩序的稳定性，不解释分层本身如何形成——那需要经济与制度层面的分析。",
-   source: "葛兰西《狱中札记》【页码待核】"}
+   source: "葛兰西《狱中札记》"}
 - {rel_id: REL-0097, from_term: TERM-0062, to_term: TERM-0034, type: 机制, status: 草稿,
    evidence: "戈夫曼的框架分析指出情境定义支配着人们对行为性质的判断，这为标签如何被贴上提供了互动层面的说明。",
    explain: "标签理论回答「被贴上标签的是谁」，框架说明「贴标签所依据的判断从哪来」。",
    boundary: "机制方向是补充而非替代：标签理论的重心仍在标签造成的后果，不在判断图式本身。",
-   source: "Goffman 1974, Frame Analysis【页码待核】"}
+   source: "Goffman 1974, Frame Analysis"}
 - {rel_id: REL-0098, from_term: TERM-0061, to_term: TERM-0031, type: 借用, status: 草稿,
    evidence: "哈布瓦赫沿用涂尔干的集体概念，但把关注点从当下的共同情感转向群体对过去的共同记忆。",
    explain: "集体记忆借的是集体意识这个概念位，把涂尔干学派对社会整合的关注移到时间维度上。",
    boundary: "借用扩展了对象：集体意识指共有的信念与情感，集体记忆指对过去的共同表征。",
-   source: "Halbwachs 1925, Les cadres sociaux de la memoire【页码待核】"}
+   source: "Halbwachs 1925, Les cadres sociaux de la memoire"}
 - {rel_id: REL-0099, from_term: TERM-0065, to_term: TERM-0040, type: 对立, status: 草稿,
    evidence: "科层制的服从建立在成文规则与层级监督之上；文化霸权则指出，稳定的支配更多依赖被支配者对世界观的接受。",
    explain: "同一维度（如何获得服从）上的两种机制——规则强制与意义认同，一个靠可计算性，一个靠正当性。",
    boundary: "二者在现实中常常并用（正式规则之外仍需正当性信念），这条边说的是机制上的区分，不是现实的二选一。",
-   source: "葛兰西《狱中札记》【页码待核】"}
+   source: "葛兰西《狱中札记》"}
 - {rel_id: REL-0100, from_term: TERM-0062, to_term: TERM-0037, type: 借用, status: 草稿,
    evidence: "框架分析借韦伯「行动者赋予主观意义」的立场，把情境定义作为分析行动的起点。",
    explain: "框架借的是「行动有意义」这一前提，并把它具体化为可观察的情境定义。",
    boundary: "借用之后重心不同：韦伯关注行动的意义取向类型，框架分析关注意义在互动中如何被建立。",
-   source: "Goffman 1974, Frame Analysis【页码待核】"}
+   source: "Goffman 1974, Frame Analysis"}

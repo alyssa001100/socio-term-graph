@@ -220,7 +220,7 @@ function render(){
   document.getElementById('list').innerHTML = list.length
     ? list.map(card).join('') : '<div class="empty">没有符合条件的术语</div>';
   document.getElementById('foot').textContent =
-    `显示 ${list.length} / ${DATA.terms.length} 条术语　·　数据状态：全部待核对原文页码`;
+    `显示 ${list.length} / ${DATA.terms.length} 条术语　·　数据状态：出处已登记作者与书目，${DATA.meta.drafts} 条尚未逐条复核`;
   document.querySelectorAll('a.t').forEach(a => a.onclick = () => {
     const el = document.getElementById('t-' + a.dataset.j);
     if (el){ el.scrollIntoView({behavior:'smooth',block:'center'});
@@ -579,7 +579,8 @@ def main():
     payload = {
         "meta": {"terms": len(terms), "relations": len(rels), "cases": len(cases),
                  "hotspots": len(hots),
-                 "polysemy": sum(1 for t in terms if t.get("polysemy"))},
+                 "polysemy": sum(1 for t in terms if t.get("polysemy")),
+                 "drafts": sum(1 for t in terms if t.get("status") == "草稿")},
         "enums": schema["enums"], "terms": terms,
         "clusters": schema.get("clusters", {}),
         "clusterOrder": cluster_names,
