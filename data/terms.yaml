@@ -91,30 +91,6 @@
   confidence: 明确实例
   reviewer: ''
   last_reviewed: ''
-- term_id: TERM-0005
-  cluster: 社会不平等
-  name_zh: 内卷化
-  name_en: involution
-  aliases: [过密化]
-  proponent: 克利福德·格尔茨; 黄宗智
-  first_year: 1963
-  first_source: Agricultural Involution
-  school: [历史社会学, 经济社会学]
-  application: [教育, 劳动与职业]
-  definition: 在既定技术与制度条件下持续投入更多劳动，但边际产出不增、形态不向更高阶段转化的过程。
-  definition_source: Geertz 1963, Agricultural Involution
-  polysemy:
-    - author: 黄宗智
-      school: [历史社会学]
-      definition: 用于描述小农经济在人口压力下出现的、没有发展的增长。
-      differs_from: 格尔茨
-      note: 从农业生态转向中国经济史的经验研究，强化了「无发展的增长」这一含义
-      source: 黄宗智《华北的小农经济与社会变迁》1985
-  entry_type: 概念
-  status: 草稿
-  confidence: 明确实例
-  reviewer: ''
-  last_reviewed: ''
 - term_id: TERM-0006
   cluster: 社会不平等
   name_zh: 理性选择理论

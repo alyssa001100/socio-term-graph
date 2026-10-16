@@ -9,7 +9,6 @@ labels:
   term_ids:
   - TERM-0001
   - TERM-0003
-  - TERM-0005
 - item_id: ITEM-003
   term_ids:
   - TERM-0001
@@ -21,7 +20,6 @@ labels:
 - item_id: ITEM-005
   term_ids:
   - TERM-0001
-  - TERM-0005
 - item_id: ITEM-006
   term_ids:
   - TERM-0001
@@ -30,7 +28,6 @@ labels:
   term_ids:
   - TERM-0001
   - TERM-0004
-  - TERM-0005
 - item_id: ITEM-008
   term_ids:
   - TERM-0002
@@ -40,7 +37,6 @@ labels:
   term_ids:
   - TERM-0001
   - TERM-0003
-  - TERM-0005
 - item_id: ITEM-010
   term_ids:
   - TERM-0001
@@ -49,4 +45,3 @@ labels:
   - TERM-0003
 - item_id: ITEM-012
   term_ids:
-  - TERM-0005

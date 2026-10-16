@@ -129,30 +129,6 @@
       confidence: 部分符合
       dissent: ''
   status: 草稿
-- case_id: CASE-0008
-  title: 爪哇水稻农业的劳动力持续投入
-  description: 人口压力下农业以更多劳动力投入维持产出，人均收益不增，形态未向更高阶段转化。
-  origin: 格尔茨对印尼爪哇农业的田野研究
-  source: Geertz 1963, Agricultural Involution
-  attributions:
-    - term_id: TERM-0005
-      match: 劳动力持续投入而人均收益不增、形态不向更高阶段转化，对上「边际产出不增、形态停滞」这一要件；本案也是该概念的原始出处。
-      mismatch: 案例限于殖民时期爪哇的农业生态条件；把它外推到教育、职场等领域是后来的用法，超出本案提供的证据。
-      confidence: 明确实例
-      dissent: 有研究认为该概念被过度外推至教育、职场等非农业领域
-  status: 草稿
-- case_id: CASE-0009
-  title: 华北小农经济的无发展增长
-  description: 人口压力下家庭农场以增加劳动投入维持产量，单位劳动报酬下降，经营形态未发生质变。
-  origin: 黄宗智对华北农村的经验研究
-  source: 黄宗智《华北的小农经济与社会变迁》1985
-  attributions:
-    - term_id: TERM-0005
-      match: 劳动投入持续增加而单位劳动报酬下降，对上「边际产出不增」这一要件；它命中的是本条目记录的第二条线索（黄宗智）。
-      mismatch: 缺的是「在既定技术与制度条件下」这一前提的独立证据：格尔茨的原始界定以生态系统的形态停滞为机制，黄宗智以单位劳动报酬下降为机制，两者机制不完全重合。
-      confidence: 部分符合
-      dissent: ''
-  status: 草稿
 - case_id: CASE-0010
   title: 天主教学校与公立学校的辍学率差异
   description: 在家庭结构等条件相似的情况下，天主教学校学生的辍学率更低，被归因于社群内部的代际闭合与规范支持。
