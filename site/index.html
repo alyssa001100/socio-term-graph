@@ -155,8 +155,14 @@ function wireDetails(){
       const h = box.offsetHeight;
       if (!d.open){
         d.open = true;
-        box.animate([{height:'0px',opacity:0},{height:h+'px',opacity:1}],
-                    {duration:240, easing:'cubic-bezier(.2,.7,.2,1)'});
+        const h2 = box.offsetHeight;      // 打开后才量得到自然高度
+        box.animate([{height:'0px'},{height:h2+'px'}],
+                    {duration:200, easing:'cubic-bezier(.2,.7,.2,1)'});
+        // 逐条渐显：按阅读顺序，每条晚 38ms 上浮，最多叠 5 层
+        [...box.children].forEach((el, i) => el.animate(
+          [{opacity:0, transform:'translateY(6px)'}, {opacity:1, transform:'none'}],
+          {duration:180, delay:Math.min(i, 5) * 38, fill:'backwards',
+           easing:'cubic-bezier(.2,.7,.2,1)'}));
       } else {
         box.animate([{height:h+'px',opacity:1},{height:'0px',opacity:0}],
                     {duration:170, easing:'cubic-bezier(.4,0,.6,1)'})
@@ -175,7 +181,7 @@ function chips(el, values, field, key){
     const v = b.dataset.v;
     S[key].has(v) ? S[key].delete(v) : S[key].add(v);
     b.classList.toggle('on');
-    render();
+    render(true);
   });
 }
 
@@ -248,7 +254,12 @@ function card(t){
   </div>`;
 }
 
-function render(){
+// 筛选后的位置补间（FLIP）：卡片不是重新排一遍，而是从原来的位置滑过去。
+// 只在 chip 切换时用——搜索是逐键触发，每敲一个字都补间会显得抖
+function render(flip){
+  const prev = new Map();
+  document.querySelectorAll('#list .card').forEach(c =>
+    prev.set(c.id, c.getBoundingClientRect().top + window.scrollY));
   const list = DATA.terms.filter(matched).sort((a,b)=>a.first_year-b.first_year);
   document.getElementById('list').innerHTML = list.length
     ? list.map(card).join('') : '<div class="empty">没有符合条件的术语</div>';
@@ -260,6 +271,14 @@ function render(){
              el.classList.add('hl'); setTimeout(()=>el.classList.remove('hl'),1600); }
   });
   wireDetails();
+  if (flip && !RM) document.querySelectorAll('#list .card').forEach(c => {
+    const was = prev.get(c.id);
+    if (was == null) return;                       // 新出现的卡片没有起点，直接落下
+    const dy = Math.round(was - (c.getBoundingClientRect().top + window.scrollY));
+    if (Math.abs(dy) < 2) return;
+    c.animate([{transform:`translateY(${dy}px)`}, {transform:'none'}],
+              {duration:220, easing:'cubic-bezier(.2,.7,.2,1)'});
+  });
 }
 
 document.getElementById('sub').textContent =
@@ -281,7 +300,7 @@ function clusterChips(el){
     const v = b.dataset.v;
     S.cluster.has(v) ? S.cluster.delete(v) : S.cluster.add(v);
     b.classList.toggle('on');
-    draw();
+    draw(true);                      // 三组筛选行为一致：都走位置补间
   });
 }
 
@@ -354,11 +373,13 @@ function renderGraph(){
     `网络视图：${list.length} 个节点　·　实线＝群内关系（按概念群着色），橙色虚线＝跨概念群桥接　·　点节点可跳到词条`;
 }
 
-function draw(){
+// flip 只在「筛选条件变了、而列表本身还留着」时传 true；
+// 换视图、搜索、跳词条都传默认值，避免每次重排都补间
+function draw(flip){
   const isGraph = S.view === 'graph';
   document.getElementById('list').style.display = isGraph ? 'none' : '';
   document.getElementById('graph').style.display = isGraph ? 'block' : 'none';
-  isGraph ? renderGraph() : render();
+  isGraph ? renderGraph() : render(flip);
 }
 
 document.getElementById('vList').onclick = () => { S.view = 'list';
