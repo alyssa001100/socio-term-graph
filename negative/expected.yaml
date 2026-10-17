@@ -90,3 +90,13 @@
 # 同一条规则在三个不同字段上各验一次，防止实现被写死成只认 source_url
 - {id: N61, file: relations.yaml, where: REL-9502.source, level: 警告, contains: 占位符, desc: 关系出处留了待填标记}
 - {id: N62, file: terms.yaml, where: TERM-9013.definition_source, level: 警告, contains: 占位符, desc: 术语定义出处留了待填标记}
+
+# v9 新增：谱系（第三层）。这七条里，前四条是谱系特有的结构约束，
+# 后三条是既有规则在新表上的复验 —— 换一张表再验一次，防止实现被写死。
+- {id: N63, file: genealogy.yaml, where: GE-9103, level: 错误, contains: 谱系边跨了术语, desc: 谱系边跨越了两个术语}
+- {id: N64, file: genealogy.yaml, where: GE-9104, level: 错误, contains: 时间倒流, desc: 谱系边指向更早的版本}
+- {id: N65, file: genealogy.yaml, where: GN-9105, level: 错误, contains: 谱系成环, desc: 两个版本互相指向形成环}
+- {id: N66, file: genealogy.yaml, where: GN-9103.work, level: 警告, contains: 占位符, desc: 版本书名留了待填标记}
+- {id: N67, file: genealogy.yaml, where: GN-9107.lineage_id, level: 错误, contains: 引用了不存在的谱系, desc: 版本挂在悬空谱系上}
+- {id: N68, file: genealogy.yaml, where: LIN-9104, level: 错误, contains: 没有任何版本, desc: 谱系下没有任何版本}
+- {id: N69, file: genealogy.yaml, where: GE-9101.type, level: 错误, contains: 非法取值, desc: 谱系边类型枚举非法}

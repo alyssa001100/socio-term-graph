@@ -2,7 +2,7 @@
 # 规范即配置：改标注规范只需要改这个文件
 # validate.py 按这里定义的枚举和必填规则校验数据
 # ============================================================
-version: v8
+version: v9
 updated: 2026-10-16
 
 # 概念群 —— 每个群围绕一个核心问题，群内关系密集，群间只允许少量桥接
@@ -72,6 +72,13 @@ enums:
     - 包含
     - 转化                     # v2 新增：同一理论体系内可相互兑换的形式
     - 机制                     # v2 新增：前者是后者得以实现的作用机制
+  genealogy_edge_type:         # 谱系边的类型（v9 新增）：后一版如何对待前一版
+    - 继承                     # 核心定义不变，只补充或细化
+    - 改写                     # 核心定义的某个要件被替换
+    - 批判                     # 以对方定义为批评对象而另立
+    - 收窄                     # 保留定义但限定适用条件或范围
+    - 扩张                     # 保留定义但推广到更大范围或新对象
+    - 移植                     # 定义基本保留，但分析单位或领域改变
 
 # 必填字段 —— 空值或缺失都会被校验拦下
 required:
@@ -81,6 +88,9 @@ required:
   cases:      [case_id, title, description, origin, source, attributions, status]
   hotspots:   [hot_id, title, description, date, review_after,
                analysis, attributions, status]
+  genealogy_lineages: [lineage_id, term_id, name, question, thesis, blind_spot, status]
+  genealogy_nodes:    [node_id, lineage_id, author, year, work, claim]
+  genealogy_edges:    [edge_id, from, to, type, what_changed, evidence]
   # v8 起 source_url 改为选填：出处登记到「作者 + 书目」为止，页码与链接都不再要求。
   # 手上有可核验链接时写进 fields 白名单里的 source_url 即可，没写不算缺项。
   # 归属块是防牵强的核心：相符与不符都必须写，只写「像」就是牵强
@@ -98,6 +108,9 @@ fields:
   hotspots:  [hot_id, title, description, date, source_url, review_after,
               analysis, attributions, status]
   attribution: [term_id, match, mismatch, confidence, dissent]
+  genealogy_lineage: [lineage_id, term_id, name, question, thesis, blind_spot, status]
+  genealogy_node:    [node_id, lineage_id, author, year, work, claim]
+  genealogy_edge:    [edge_id, from, to, type, what_changed, evidence, source]
 
 # 数量约束
 constraints:
@@ -110,3 +123,7 @@ constraints:
   match_min_chars: 20          # 归属块的 match（相符之处）
   analysis_min_chars: 60       # 热点的 analysis（逐层解析）
   bridge_per_cluster_pair_max: 5   # 每对概念群之间的桥接关系上限，防止跨群滥连
+  # 谱系（v9）：版本与谱系边同样是「写了等于没写」的重灾区
+  claim_min_chars: 20            # 版本的 claim（这一版把词定义成什么）
+  change_min_chars: 20           # 谱系边的 what_changed（相对上一版改掉了什么）
+  genealogy_evidence_min_chars: 10  # 谱系边的 evidence（原句或紧贴原文的转述）

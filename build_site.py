@@ -89,6 +89,41 @@ footer{color:var(--mut);font-size:12px;padding:0 28px 40px}
 .vbtn:hover{border-color:var(--acc)}
 .vbtn.on{background:var(--acc);border-color:var(--acc);color:#fff}
 #graph{padding:10px 28px 40px;display:none;max-width:1240px}
+#gen{padding:18px 28px 48px;display:none;max-width:1240px}
+#gen svg{width:100%;height:auto;display:block}
+.genbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+.genbar select{padding:7px 10px;border:1px solid var(--line);border-radius:8px;
+  background:#fff;font:inherit;font-size:13px;color:var(--fg)}
+.genbar .hint{color:var(--mut);font-size:12.5px}
+.genlane{fill:none;stroke:#e9e3d8;stroke-width:1}
+.genlane-lbl{font-size:12px;fill:#57514a;font-weight:600}
+.genyear{font-size:10.5px;fill:var(--mut)}
+.genauthor{font-size:12px;fill:var(--fg)}
+.gendot{fill:#fff;stroke:#8c5a2b;stroke-width:1.6;cursor:pointer}
+.gendot.fork{stroke-width:2.6}
+.gendot.pick{fill:var(--acc)}
+.genring{fill:none;stroke:#8c5a2b;stroke-width:1;opacity:.45}
+.gene{fill:none;stroke:#b9b1a4;stroke-width:1.2}
+.gene.cross{stroke:#bf7a26;stroke-dasharray:4 3}
+.genetype{font-size:10px;fill:var(--mut)}
+.genetype.cross{fill:#a5681f}
+.gendet{margin-top:6px;padding:12px 15px;border:1px solid var(--line);border-radius:9px;
+  background:#fff;font-size:13.5px;line-height:1.75}
+.gendet b{color:var(--acc);font-weight:600}
+.gendet .src{display:block;color:var(--mut);font-size:12.5px;margin-top:4px}
+.genwrap .lin{border-left:2px solid var(--line);padding:2px 0 2px 14px;margin:14px 0 4px}
+.genwrap .linh{font-weight:600;font-size:14px;color:var(--fg)}
+.genwrap .linq{color:var(--mut);font-size:12.5px;margin:3px 0 6px}
+.genwrap .thesis{margin:0 0 4px;font-size:13.5px}
+.genwrap .blind{margin:0 0 8px;font-size:12.5px;color:#6b6660}
+.genwrap ol.stages{list-style:none;padding-left:0;margin:0}
+.genwrap li.stage{padding:5px 0 5px 0;font-size:13px;border-top:1px dotted var(--line)}
+.genwrap li.stage b{color:var(--acc);font-weight:600;margin-right:6px}
+.genwrap li.stage .claim{display:block;color:#57514a;font-size:12.5px;margin-top:2px}
+.genwrap li.chg{font-size:12.5px;color:#8a6740;padding:4px 0 4px 12px;border-left:2px solid #e6d3b8;margin:2px 0}
+.genwrap .linbtn{margin-top:12px;border:1px solid var(--acc);background:#fff;color:var(--acc);
+  border-radius:8px;padding:6px 13px;font:inherit;font-size:13px;cursor:pointer}
+.genwrap .linbtn:hover{background:var(--acc);color:#fff}
 #graph svg{width:100%;height:auto;display:block}
 /* 窄屏上整张图会被缩到看不清标签，改为保持可读宽度、允许横向平移 */
 @media (max-width:820px){
@@ -137,15 +172,17 @@ footer{color:var(--mut);font-size:12px;padding:0 28px 40px}
   <div class="views">
     <button class="vbtn on" id="vList">列表</button>
     <button class="vbtn" id="vGraph">网络</button>
+    <button class="vbtn" id="vGen">谱系</button>
   </div>
 </div>
 <div class="legend" id="legend"></div>
 <main id="list"></main>
 <div id="graph"></div>
+<div id="gen"></div>
 <footer id="foot"></footer>
 <script>
 const DATA = __DATA__;
-const S = {cluster:new Set(), school:new Set(), app:new Set(), q:'', view:'list'};
+const S = {cluster:new Set(), school:new Set(), app:new Set(), q:'', view:'list', anchor:null};
 const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // 邻接表：悬停聚焦用。关系已经在数据里，不另外存一份
@@ -231,6 +268,31 @@ function relRow(t){
   return out.length ? out.join('') : '<li class="case">暂无</li>';
 }
 
+function genBlock(t){
+  const g = t.gen;
+  if (!g) return '';
+  const n = g.lineages.reduce((s,l) => s + l.stages.length, 0);
+  const body = g.lineages.map(l => {
+    const stages = l.stages.map(s => {
+      // 入边画在「后一版」前面：它描述的不是这一版是什么，而是这一版改掉了什么
+      const ins = s.ins.map(e =>
+        `<li class="chg">${e.cross ? '<span class="reltype br">跨脉</span>' : ''}` +
+        `<span class="reltype">${esc(e.type)}</span>${esc(e.changed)}</li>`).join('');
+      return ins + `<li class="stage"><b>${s.year}</b>${esc(s.author)}` +
+        `<span class="wk">　${esc(s.work)}</span>` +
+        `<span class="claim">${esc(s.claim)}</span></li>`;
+    }).join('');
+    return `<div class="lin"><div class="linh">${esc(l.name)}</div>` +
+      `<p class="linq">这一脉问的是：${esc(l.question)}</p>` +
+      `<p class="thesis">${esc(l.thesis)}</p>` +
+      `<p class="blind"><span class="tagline">看不见</span>${esc(l.blind)}</p>` +
+      `<ol class="stages">${stages}</ol></div>`;
+  }).join('');
+  return `<details class="genwrap"><summary>谱系（${g.lineages.length} 脉 · ${n} 个版本）</summary>` +
+    `<div class="genbody">${body}` +
+    `<button class="linbtn" data-j="${t.term_id}">◎ 以本术语为中心看谱系图</button></div></details>`;
+}
+
 function card(t){
   const poly = (t.polysemy||[]).length ? t.polysemy.map(p => `
     <li><span class="who">${esc(p.author)}</span>：${esc(p.definition)}
@@ -259,6 +321,7 @@ function card(t){
     <div class="tags">${t.school.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}
       ${t.application.map(s=>`<span class="tag">${esc(s)}</span>`).join('')}</div>
     ${(t.polysemy||[]).length ? `<details><summary>多义性（${t.polysemy.length}）</summary><ul class="poly">${poly}</ul></details>` : ''}
+    ${t.gen ? genBlock(t) : ''}
     ${t.rel_out.length + t.rel_in.length ? `<details><summary>概念关系（${t.rel_out.length + t.rel_in.length}）</summary><ul>${relRow(t)}</ul></details>` : ''}
     ${t.cases.length ? `<details><summary>经典案例（${t.cases.length}）</summary><ul>${cases}</ul></details>` : ''}
     ${t.hotspots.length ? `<details><summary>社会热点（${t.hotspots.length}）</summary><ul>${hots}</ul></details>` : ''}
@@ -281,6 +344,9 @@ function render(flip){
     if (el){ el.scrollIntoView({behavior:'smooth',block:'center'});
              el.classList.add('hl'); setTimeout(()=>el.classList.remove('hl'),1600); }
   });
+  document.querySelectorAll('.linbtn').forEach(b => b.onclick = e => {
+    e.preventDefault(); openGen(b.dataset.j);
+  });
   wireDetails();
   if (flip && !RM) document.querySelectorAll('#list .card').forEach(c => {
     const was = prev.get(c.id);
@@ -294,12 +360,14 @@ function render(flip){
 
 document.getElementById('sub').textContent =
   `${DATA.clusterOrder.length} 个概念群　·　术语之间以「关系」相连成网，` +
-  `跨概念群处是桥接：网络视图里是橙色虚线，词条的关系条目上带「跨群桥接」标签　·　点节点可跳到词条`;
+  `跨概念群处是桥接：网络视图里是橙色虚线，词条的关系条目上带「跨群桥接」标签　·　点节点可跳到词条　·　` +
+  `谱系视图把同一个词的历代定义按年份与血脉排开`;
 
 document.getElementById('stats').innerHTML = [
   ['术语', DATA.meta.terms], ['概念关系', DATA.meta.relations],
   ['经典案例', DATA.meta.cases], ['社会热点', DATA.meta.hotspots],
-  ['多义性条目', DATA.meta.polysemy]
+  ['多义性条目', DATA.meta.polysemy],
+  ['谱系版本', DATA.meta.versions]
 ].map(([k,v]) => `<div><b>${v}</b>${k}</div>`).join('');
 
 function clusterChips(el){
@@ -323,8 +391,7 @@ function legend(){
 
 function gotoCard(id){
   S.view = 'list';
-  document.getElementById('vList').classList.add('on');
-  document.getElementById('vGraph').classList.remove('on');
+  setViewBtns('list');
   draw();
   const el = document.getElementById('t-' + id);
   if (el){ el.scrollIntoView({behavior:'smooth', block:'center'});
@@ -384,27 +451,144 @@ function renderGraph(){
     `网络视图：${list.length} 个节点　·　实线＝群内关系（按概念群着色），橙色虚线＝跨概念群桥接　·　点节点可跳到词条`;
 }
 
+function openGen(id){
+  S.anchor = id; S.view = 'gen';
+  setViewBtns('gen');
+  draw();
+  const f = document.querySelector('.filters');
+  if (f) window.scrollTo({top: f.offsetTop, behavior: RM ? 'auto' : 'smooth'});
+}
+
+function renderGen(){
+  const list = DATA.terms.filter(t => t.gen);
+  const host = document.getElementById('gen');
+  if (!list.length){ host.innerHTML = '<div class="empty">还没有任何术语登记谱系</div>'; return; }
+  const cur = list.find(t => t.term_id === S.anchor) || list[0];
+  S.anchor = cur.term_id;
+  const g = cur.gen;
+
+  // 所有谱系共用一个年份刻度：若每条脉各自拉伸，两条脉的先后关系会被压掉，
+  // 看上去像同时发生——而先后正是谱系唯一要说的事
+  const years = g.lineages.flatMap(l => l.stages.map(s => +s.year));
+  let lo = Math.min(...years), hi = Math.max(...years);
+  if (hi === lo){ lo -= 4; hi += 4; }
+  const W = 1000, X0 = 158, X1 = W - 52;
+  const x = y => X0 + (y - lo) / (hi - lo) * (X1 - X0);
+  const TOP = 74, LANE = 112;
+  const H = TOP + g.lineages.length * LANE + 26;
+  const laneY = i => TOP + i * LANE + 30;
+
+  // 相邻版本年份太近时（如涂尔干 1893 与 1897），标签必然叠在一起：
+  // 错开成上下两行，而不是把时间轴拉开——拉开就等于说谎
+  const rowOf = {};
+  g.lineages.forEach(l => {
+    let lastX = -1e9, flip = false;
+    l.stages.forEach(s => {
+      const px = x(+s.year);
+      if (px - lastX < 96) flip = !flip;
+      rowOf[s.id] = flip ? 1 : 0;
+      lastX = px;
+    });
+  });
+  const off = id => rowOf[id] ? {yr: -34, au: 40} : {yr: -16, au: 22};
+
+  const pos = {};
+  g.lineages.forEach((l, i) => l.stages.forEach(s => {
+    pos[s.id] = {x: x(+s.year), y: laneY(i), lane: i, s, l};
+  }));
+
+  const P = [];
+  g.lineages.forEach((l, i) => {
+    const y = laneY(i);
+    P.push(`<line class="genlane" x1="${X0}" y1="${y}" x2="${X1}" y2="${y}"/>`);
+    P.push(`<text class="genlane-lbl" x="12" y="${y - 10}">${esc(l.name)}</text>`);
+    P.push(`<text class="genyear" x="12" y="${y + 7}">${l.stages.length} 个版本</text>`);
+  });
+
+  g.lineages.forEach(l => l.stages.forEach(s => s.ins.forEach(e => {
+    const a = pos[e.from], b = pos[s.id];
+    if (!a || !b) return;
+    const cross = a.lane !== b.lane, mx = (a.x + b.x) / 2, span = Math.abs(b.x - a.x);
+    // 同一泳道内，边与泳道线必然重合：拱起来才看得出这是一条边而不是参考线。
+    // 拱高随跨度收缩，短边不会顶到上一行的年份标签
+    // 拱高必须留出泳道上方的那点空间：超过它，弧顶会被 viewBox 裁掉，
+    // 看上去像「这条边断成两截」
+    const h = Math.min(56, Math.max(22, span * 0.20));
+    const d = cross
+      ? `M${a.x},${a.y} C${mx},${a.y} ${mx},${b.y} ${b.x},${b.y}`
+      : `M${a.x},${a.y} Q${mx},${a.y - h * 2} ${b.x},${b.y}`;
+    P.push(`<path class="gene${cross ? ' cross' : ''}" data-a="${e.from}" data-b="${s.id}" d="${d}"/>`);
+    // 跨度太小的时候标在弧顶只会压住年份；这类边交给词条里的谱系列表去读
+    if (cross || span >= 70)
+      P.push(`<text class="genetype${cross ? ' cross' : ''}" x="${mx}"` +
+        ` y="${cross ? (a.y + b.y) / 2 - 5 : a.y - h - 8}"` +
+        ` style="text-anchor:middle;paint-order:stroke;stroke:#fbfaf7;stroke-width:3px">${esc(e.type)}</text>`);
+  })));
+
+  g.lineages.forEach(l => l.stages.forEach(s => {
+    const p = pos[s.id];
+    const o = off(s.id);
+    if (s.fork) P.push(`<circle class="genring" cx="${p.x}" cy="${p.y}" r="12"/>`);
+    P.push(`<text class="genyear" x="${p.x}" y="${p.y + o.yr}" style="text-anchor:middle">${s.year}</text>`);
+    P.push(`<g class="gnode2" data-j="${s.id}">` +
+      `<circle class="gendot${s.fork ? ' fork' : ''}" cx="${p.x}" cy="${p.y}" r="6"/>` +
+      `<text class="genauthor" x="${p.x}" y="${p.y + o.au}" style="text-anchor:middle">${esc(s.author)}</text></g>`);
+  }));
+
+  const nVer = g.lineages.reduce((s,l) => s + l.stages.length, 0);
+  host.innerHTML =
+    `<div class="genbar"><select id="genSel">` +
+    list.map(t => `<option value="${t.term_id}"${t.term_id === cur.term_id ? ' selected' : ''}>` +
+      `${esc(t.name_zh)}（${t.gen.lineages.length} 脉 / ` +
+      `${t.gen.lineages.reduce((s,l)=>s+l.stages.length,0)} 版）</option>`).join('') +
+    `</select><span class="hint">横轴＝年份，每条泳道＝一条血脉，橙色虚线＝跨脉改写，带圈的点＝分叉点</span></div>` +
+    `<svg viewBox="0 0 ${W} ${H}">${P.join('')}</svg>` +
+    `<div class="gendet" id="genDet">点任一个版本，看它改掉了什么。</div>`;
+
+  document.getElementById('genSel').onchange = e => { S.anchor = e.target.value; renderGen(); };
+  const det = document.getElementById('genDet');
+  host.querySelectorAll('.gnode2').forEach(n => n.onclick = () => {
+    const s = pos[n.dataset.j].s;
+    det.innerHTML = `<b>${s.year} · ${esc(s.author)}</b>　${esc(s.work)}<br>${esc(s.claim)}` +
+      (s.ins.length
+        ? s.ins.map(e => `<span class="src">${esc(e.type)}${e.cross ? '（跨脉）' : ''}：` +
+            `${esc(e.changed)}${e.evidence ? '｜证据：' + esc(e.evidence) : ''}</span>`).join('')
+        : `<span class="src">这条谱系的起点，没有前一个版本。</span>`);
+    host.querySelectorAll('.gendot').forEach(c => c.classList.remove('pick'));
+    n.querySelector('.gendot').classList.add('pick');
+  });
+  document.getElementById('foot').textContent =
+    `谱系视图：${cur.name_zh}　·　${g.lineages.length} 条血脉、${nVer} 个版本　·　` +
+    `分叉点由「一个版本有几条出边」推出，不单独存字段`;
+}
+
 // flip 只在「筛选条件变了、而列表本身还留着」时传 true；
 // 换视图、搜索、跳词条都传默认值，避免每次重排都补间
 function draw(flip){
-  const isGraph = S.view === 'graph';
-  document.getElementById('list').style.display = isGraph ? 'none' : '';
-  document.getElementById('graph').style.display = isGraph ? 'block' : 'none';
-  isGraph ? renderGraph() : render(flip);
+  const v = S.view;
+  document.getElementById('list').style.display  = v === 'list'  ? '' : 'none';
+  document.getElementById('graph').style.display = v === 'graph' ? 'block' : 'none';
+  document.getElementById('gen').style.display   = v === 'gen'   ? 'block' : 'none';
+  if (v === 'graph') renderGraph();
+  else if (v === 'gen') renderGen();
+  else render(flip);
 }
 
-document.getElementById('vList').onclick = () => { S.view = 'list';
-  document.getElementById('vList').classList.add('on');
-  document.getElementById('vGraph').classList.remove('on'); draw(); };
-document.getElementById('vGraph').onclick = () => { S.view = 'graph';
-  document.getElementById('vGraph').classList.add('on');
-  document.getElementById('vList').classList.remove('on'); draw(); };
+function setViewBtns(v){
+  ['vList','vGraph','vGen'].forEach(k =>
+    document.getElementById(k).classList.toggle('on', k === 'v' + v[0].toUpperCase() + v.slice(1)));
+}
+
+document.getElementById('vList').onclick  = () => { S.view = 'list';  setViewBtns('list');  draw(); };
+document.getElementById('vGraph').onclick = () => { S.view = 'graph'; setViewBtns('graph'); draw(); };
+document.getElementById('vGen').onclick   = () => { S.view = 'gen';   setViewBtns('gen');   draw(); };
 
 clusterChips(document.getElementById('fCluster'));
 chips(document.getElementById('fSchool'), DATA.enums.school, 'school', 'school');
 chips(document.getElementById('fApp'), DATA.enums.application, 'application', 'app');
 document.getElementById('q').oninput = e => { S.q = e.target.value.trim(); draw(); };
 legend();
+setViewBtns(S.view);
 draw();
 </script>
 </body>
@@ -651,6 +835,41 @@ def main():
                      "mismatch": a["mismatch"], "analysis": h.get("analysis"),
                      "dissent": a.get("dissent")})
 
+    # 谱系：按术语分组，每个版本按年份排；入边挂在「后一版」上，因为它描述的是这次改动
+    gen_raw = load("genealogy.yaml") or {}
+    if not isinstance(gen_raw, dict):
+        gen_raw = {}
+    node_by_id = {n["node_id"]: n for n in gen_raw.get("nodes", [])}
+    in_edges, out_deg = {}, Counter()
+    for e in gen_raw.get("edges", []):
+        in_edges.setdefault(e["to"], []).append(e)
+        out_deg[e["from"]] += 1
+
+    gen = {}
+    for l in gen_raw.get("lineages", []):
+        stages = []
+        for n in sorted([n for n in gen_raw.get("nodes", [])
+                         if n["lineage_id"] == l["lineage_id"]],
+                        key=lambda n: (n["year"], n["node_id"])):
+            stages.append({
+                "id": n["node_id"], "author": n["author"], "year": n["year"],
+                "work": n["work"], "claim": n["claim"],
+                # 分叉从拓扑推出：一个版本若有多条出边，它就是两条血脉的分岔点
+                "fork": out_deg[n["node_id"]] >= 2,
+                "ins": [{"type": e["type"], "changed": e["what_changed"],
+                         "evidence": e.get("evidence"), "source": e.get("source"),
+                         "from": e["from"],
+                         "from_lineage": node_by_id[e["from"]]["lineage_id"],
+                         "cross": node_by_id[e["from"]]["lineage_id"] != l["lineage_id"]}
+                        for e in in_edges.get(n["node_id"], [])],
+            })
+        gen.setdefault(l["term_id"], {"lineages": []})["lineages"].append({
+            "id": l["lineage_id"], "name": l["name"], "question": l["question"],
+            "thesis": l["thesis"], "blind": l["blind_spot"], "stages": stages})
+    for t in terms:
+        if t["term_id"] in gen:
+            t["gen"] = gen[t["term_id"]]
+
     cluster_names = list(schema.get("clusters", {}))
     lay = layout(terms, rels, cluster_names)
     rad = node_radii(terms, rels)
@@ -660,6 +879,9 @@ def main():
         "meta": {"terms": len(terms), "relations": len(rels), "cases": len(cases),
                  "hotspots": len(hots),
                  "polysemy": sum(1 for t in terms if t.get("polysemy")),
+                 "gen_terms": len(gen),
+                 "lineages": len(gen_raw.get("lineages", [])),
+                 "versions": len(gen_raw.get("nodes", [])),
                  "drafts": sum(1 for t in terms if t.get("status") == "草稿")},
         "enums": schema["enums"], "terms": terms,
         "clusters": schema.get("clusters", {}),
