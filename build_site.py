@@ -398,6 +398,12 @@ footer{color:var(--mut);font-size:9px;padding:0 28px 40px;font-family:var(--mono
 .playsaur .eye{fill:var(--amber);stroke:none}
 .playsaur .leg{transform-box:fill-box;transform-origin:50% 0}
 .playsaur .tail{transform-box:fill-box;transform-origin:100% 50%}
+.playsaur.swap svg{animation:saurSwap .38s cubic-bezier(.2,.8,.2,1);transform-origin:50% 100%}
+@keyframes saurSwap{
+  0%{transform:scale(.86) rotate(-3deg);opacity:.35}
+  60%{transform:scale(1) rotate(1.5deg);opacity:1}
+  100%{transform:none}
+}
 .timeline.playing .playsaur .leg.a{animation:saurLegA .22s ease-in-out infinite alternate}
 .timeline.playing .playsaur .leg.b{animation:saurLegB .22s ease-in-out infinite alternate}
 .timeline.playing .playsaur .tail{animation:saurTail .34s ease-in-out infinite alternate}
@@ -1488,6 +1494,23 @@ function renderLineages(){
     const note = document.getElementById('linPlayNote');
     const range = document.getElementById('linPlayRange');
     const track = document.getElementById('linPlayTrack');
+    const saur = document.getElementById('linPlaySaur');
+    let poseIdx = 2, poseTimer = 0;
+    const cyclePose = () => {
+      poseIdx = (poseIdx + 1) % DINO_SVG.length;
+      saur.innerHTML = DINO_SVG[poseIdx];
+      saur.classList.remove('swap');
+      void saur.offsetWidth;
+      saur.classList.add('swap');
+      clearTimeout(poseTimer);
+      poseTimer = setTimeout(() => saur.classList.remove('swap'), 420);
+    };
+    const resetPose = () => {
+      clearTimeout(poseTimer);
+      poseIdx = 2;
+      saur.innerHTML = DINO_SVG[poseIdx];
+      saur.classList.remove('swap');
+    };
     const stageEls = [...document.querySelectorAll('#linPlayStages [data-stage]')];
     const cursor = document.getElementById('timeCursor');
     const cursorDot = document.getElementById('timeCursorDot');
@@ -1551,6 +1574,7 @@ function renderLineages(){
       flash(new Set(evNow.flatMap(e => e.lines)));
       if (evNow.length && dwell && dwellYear !== yr){
         dwellYear = yr;
+        cyclePose();
         dwellUntil = performance.now() + 650 + Math.min(2, evNow.length) * 120;
       }
       let prevYear = null;
@@ -1614,6 +1638,7 @@ function renderLineages(){
         lastInt = -1;
         dwellUntil = 0;
         dwellYear = -1;
+        resetPose();
         applyYear(lo, true);
       }
       playing = true;
