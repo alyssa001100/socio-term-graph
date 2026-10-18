@@ -398,16 +398,9 @@ footer{color:var(--mut);font-size:9px;padding:0 28px 40px;font-family:var(--mono
 .playsaur .eye{fill:var(--amber);stroke:none}
 .playsaur .leg{transform-box:fill-box;transform-origin:50% 0}
 .playsaur .tail{transform-box:fill-box;transform-origin:100% 50%}
-.playsaur.swap svg{animation:saurSwap .42s ease-out;transform-origin:50% 100%}
-@keyframes saurSwap{
-  0%{transform:scale(.94);opacity:.2}
-  100%{transform:none;opacity:1}
-}
 .timeline.playing .playsaur .leg.a{animation:saurLegA .22s ease-in-out infinite alternate}
 .timeline.playing .playsaur .leg.b{animation:saurLegB .22s ease-in-out infinite alternate}
 .timeline.playing .playsaur .tail{animation:saurTail .34s ease-in-out infinite alternate}
-.timeline.playing .playsaur[data-pose="run"] .leg.a,
-.timeline.playing .playsaur[data-pose="run"] .leg.b{animation-duration:.14s}
 @keyframes saurLegA{to{transform:translateY(-2px)}}
 @keyframes saurLegB{to{transform:translateY(2px)}}
 @keyframes saurTail{to{transform:rotate(3deg)}}
@@ -1027,47 +1020,6 @@ const DINO_SVG = [
   </svg>`
 ];
 
-// 播放条里的同一只蜥脚龙，用四种骨架姿态表现走、跑、抬头、低头。
-const PLAY_POSES = [
-  {
-    key: 'walk', tail: '', body: '', neck: '',
-    legA: 'M102 98 L120 98 L116 122 L104 122 Z',
-    legB: 'M140 98 L158 98 L154 122 L142 122 Z'
-  },
-  {
-    key: 'run', tail: 'rotate(-9 80 80)', body: 'rotate(4 118 82)', neck: 'rotate(6 150 82)',
-    legA: 'M98 98 L118 98 L108 124 L96 122 Z',
-    legB: 'M142 98 L160 98 L166 120 L154 124 Z'
-  },
-  {
-    key: 'look', tail: 'rotate(8 80 80)', body: 'rotate(-5 118 86)', neck: 'rotate(-18 150 82)',
-    legA: 'M102 98 L120 98 L116 122 L104 122 Z',
-    legB: 'M142 94 L158 98 L154 116 L144 114 Z'
-  },
-  {
-    key: 'graze', tail: 'rotate(10 80 80)', body: 'rotate(5 118 78)', neck: 'rotate(20 150 82)',
-    legA: 'M100 98 L118 98 L114 122 L102 122 Z',
-    legB: 'M142 98 L160 98 L158 122 L144 122 Z'
-  }
-];
-const PLAY_POSES_SVG = PLAY_POSES.map(p => `<svg viewBox="0 0 260 140" aria-hidden="true">
-  <g transform="${p.tail}"><g class="tail dino-fill"><path d="M80 74 C58 80 32 68 6 46 C24 74 52 94 80 94 Z"/></g></g>
-  <g transform="${p.body}">
-    <g class="body dino-fill">
-      <ellipse cx="118" cy="82" rx="45" ry="29"/>
-      <g transform="${p.neck}">
-        <path d="M146 66 C154 52 170 44 188 44 L208 46 C218 48 222 55 218 62 C214 69 204 70 196 68 L184 66 L180 82 L164 82 L160 68 Z"/>
-        <circle class="eye" cx="204" cy="52" r="2.2"/>
-      </g>
-    </g>
-  </g>
-  <g class="legs">
-    <path class="leg a dino-fill" d="${p.legA}"/>
-    <path class="leg b dino-fill" d="${p.legB}"/>
-  </g>
-  <path class="arm dino-fill" d="M164 78 L180 86 L176 92 L160 84 Z"/>
-</svg>`);
-
 const BRANCH_ORDER = {
   P1: ['古典三大家', '历史主义'],
   P2: ['整合与中层', '微观互动', '冲突与批判', '其他现代分支'],
@@ -1478,7 +1430,7 @@ function renderLineages(){
           `<span class="playnote" id="linPlayNote">点击播放，按术语首现年份展开</span></div>` +
         `<div class="playtrack" id="linPlayTrack">` +
           `<input class="linrange" id="linPlayRange" type="range" min="${lo}" max="${hi}" value="${lo}" step="1" aria-label="谱系年份">` +
-          `<div class="playsaur" id="linPlaySaur" data-pose="walk" aria-hidden="true">${PLAY_POSES_SVG[0]}</div>` +
+          `<div class="playsaur" id="linPlaySaur" aria-hidden="true">${DINO_SVG[2]}</div>` +
         `</div>` +
         `<div class="playticks" aria-hidden="true">` +
           [lo, 1900, 1950, hi].map(year => `<span style="left:${((year - lo) / (hi - lo) * 100).toFixed(2)}%">${year}</span>`).join('') +
@@ -1536,25 +1488,6 @@ function renderLineages(){
     const note = document.getElementById('linPlayNote');
     const range = document.getElementById('linPlayRange');
     const track = document.getElementById('linPlayTrack');
-    const saur = document.getElementById('linPlaySaur');
-    let poseIdx = 0, poseTimer = 0;
-    const cyclePose = () => {
-      poseIdx = (poseIdx + 1) % PLAY_POSES_SVG.length;
-      saur.innerHTML = PLAY_POSES_SVG[poseIdx];
-      saur.dataset.pose = PLAY_POSES[poseIdx].key;
-      saur.classList.remove('swap');
-      void saur.offsetWidth;
-      saur.classList.add('swap');
-      clearTimeout(poseTimer);
-      poseTimer = setTimeout(() => saur.classList.remove('swap'), 420);
-    };
-    const resetPose = () => {
-      clearTimeout(poseTimer);
-      poseIdx = 0;
-      saur.innerHTML = PLAY_POSES_SVG[poseIdx];
-      saur.dataset.pose = PLAY_POSES[poseIdx].key;
-      saur.classList.remove('swap');
-    };
     const stageEls = [...document.querySelectorAll('#linPlayStages [data-stage]')];
     const cursor = document.getElementById('timeCursor');
     const cursorDot = document.getElementById('timeCursorDot');
@@ -1574,8 +1507,8 @@ function renderLineages(){
     const eventYears = [...yearEvents.keys()].sort((a, b) => a - b);
 
     let playYear = lo, playing = false, lastTs = 0, lastInt = -1, liveSeq = 0;
-    let lastPoseYear = -1, lastPoseAt = 0;
-    const DUR = 60000;
+    let dwellUntil = 0, dwellYear = -1;
+    const DUR = 22000;
     const setButton = (icon, label, active) => {
       ico.textContent = icon;
       txt.textContent = label;
@@ -1592,7 +1525,7 @@ function renderLineages(){
           axes.forEach(a => a.el.classList.remove('live'));
       }, 460);
     };
-    const applyYear = (v, force) => {
+    const applyYear = (v, force, dwell) => {
       const yr = Math.floor(v);
       const yy = y(v);
       const pct = `${((v - lo) / (hi - lo) * 100).toFixed(2)}%`;
@@ -1609,22 +1542,19 @@ function renderLineages(){
       range.value = yr;
       const si = stageOf(yr);
       stageEls.forEach(el => el.classList.toggle('on', +el.dataset.stage === si));
-      let prevYear = null;
-      for (const ey of eventYears){ if (ey > yr) break; prevYear = ey; }
       dots.forEach(d => {
         d.el.classList.toggle('shown', d.year <= yr);
-        d.el.classList.toggle('new', d.year === prevYear);
+        d.el.classList.toggle('new', d.year === yr);
       });
       axes.forEach(a => a.el.classList.toggle('future', a.from > yr));
       const evNow = yearEvents.get(yr) || [];
       flash(new Set(evNow.flatMap(e => e.lines)));
-      if (playing && evNow.length && yr !== lastPoseYear){
-        lastPoseYear = yr;
-        if (performance.now() - lastPoseAt >= 1200){
-          lastPoseAt = performance.now();
-          cyclePose();
-        }
+      if (evNow.length && dwell && dwellYear !== yr){
+        dwellYear = yr;
+        dwellUntil = performance.now() + 650 + Math.min(2, evNow.length) * 120;
       }
+      let prevYear = null;
+      for (const ey of eventYears){ if (ey > yr) break; prevYear = ey; }
       const ev = prevYear == null ? [] : yearEvents.get(prevYear);
       note.textContent = ev.length
         ? `${prevYear} · ${ev.slice(0, 3).map(e => e.name).join('、')}` +
@@ -1634,6 +1564,7 @@ function renderLineages(){
     const pause = () => {
       if (!playing) return;
       playing = false;
+      dwellUntil = 0;
       cancelAnimationFrame(LIN_PLAY_RAF);
       LIN_PLAY_RAF = 0;
       host.classList.remove('playing');
@@ -1641,6 +1572,7 @@ function renderLineages(){
     };
     const finish = () => {
       playing = false;
+      dwellUntil = 0;
       cancelAnimationFrame(LIN_PLAY_RAF);
       LIN_PLAY_RAF = 0;
       host.classList.remove('playing');
@@ -1652,10 +1584,15 @@ function renderLineages(){
     const step = ts => {
       if (!playing) return;
       if (!lastTs) lastTs = ts;
+      if (ts < dwellUntil){
+        lastTs = ts;
+        LIN_PLAY_RAF = requestAnimationFrame(step);
+        return;
+      }
       const dt = Math.min(80, ts - lastTs);
       lastTs = ts;
       playYear = Math.min(hi, playYear + dt * (hi - lo) / DUR);
-      applyYear(playYear, false);
+      applyYear(playYear, false, true);
       if (playYear >= hi){ finish(); return; }
       LIN_PLAY_RAF = requestAnimationFrame(step);
     };
@@ -1675,9 +1612,8 @@ function renderLineages(){
       if (playYear >= hi - .01){
         playYear = lo;
         lastInt = -1;
-        lastPoseYear = -1;
-        lastPoseAt = 0;
-        resetPose();
+        dwellUntil = 0;
+        dwellYear = -1;
         applyYear(lo, true);
       }
       playing = true;
@@ -1692,8 +1628,8 @@ function renderLineages(){
       host.classList.add('timeline');
       playYear = +range.value;
       lastInt = -1;
-      lastPoseYear = -1;
-      lastPoseAt = 0;
+      dwellUntil = 0;
+      dwellYear = -1;
       applyYear(playYear, true);
       setButton(playYear >= hi ? '↺' : '▶', playYear >= hi ? '重播' : '继续播放', false);
       if (playYear >= hi)
