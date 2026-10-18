@@ -379,8 +379,10 @@ footer{color:var(--mut);font-size:9px;padding:0 28px 40px;font-family:var(--mono
 .playnote:not(:empty)::before{content:"●";color:var(--amber);font-size:7px;vertical-align:2px;margin-right:7px}
 .playtrack{--p:0%;position:relative;padding-top:27px}
 .playsaur{position:absolute;top:0;left:clamp(22px,var(--p),calc(100% - 22px));
-  width:42px;height:23px;transform:translateX(-50%);pointer-events:none;color:#000}
-.playsaur svg{width:100%;height:100%;min-width:0;display:block;overflow:visible}
+  width:42px;height:23px;transform:translateX(-50%);pointer-events:none;color:#000;
+  overflow:hidden;contain:layout paint}
+#lins .playtrack .playsaur svg{width:42px;height:23px;min-width:0;max-width:42px;max-height:23px;
+  display:block;overflow:hidden}
 .playsaur .dino-fill{fill:#000}
 .playsaur .eye{fill:var(--amber);stroke:none}
 .playsaur .leg{transform-box:fill-box;transform-origin:50% 0}
@@ -505,7 +507,7 @@ footer{color:var(--mut);font-size:9px;padding:0 28px 40px;font-family:var(--mono
   #graph{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:10px 14px 30px}
   #graph svg{width:760px;height:auto}
   #lins{overflow-x:auto;-webkit-overflow-scrolling:touch;padding:10px 14px 30px}
-  #lins svg{width:900px;height:auto}
+  #lins>svg{width:900px;height:auto}
 }
 @media (max-width:900px){
   header{padding:0 16px}
