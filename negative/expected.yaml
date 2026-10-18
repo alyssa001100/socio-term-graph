@@ -91,12 +91,15 @@
 - {id: N61, file: relations.yaml, where: REL-9502.source, level: 警告, contains: 占位符, desc: 关系出处留了待填标记}
 - {id: N62, file: terms.yaml, where: TERM-9013.definition_source, level: 警告, contains: 占位符, desc: 术语定义出处留了待填标记}
 
-# v9 新增：谱系（第三层）。这七条里，前四条是谱系特有的结构约束，
-# 后三条是既有规则在新表上的复验 —— 换一张表再验一次，防止实现被写死。
-- {id: N63, file: genealogy.yaml, where: GE-9103, level: 错误, contains: 谱系边跨了术语, desc: 谱系边跨越了两个术语}
-- {id: N64, file: genealogy.yaml, where: GE-9104, level: 错误, contains: 时间倒流, desc: 谱系边指向更早的版本}
-- {id: N65, file: genealogy.yaml, where: GN-9105, level: 错误, contains: 谱系成环, desc: 两个版本互相指向形成环}
-- {id: N66, file: genealogy.yaml, where: GN-9103.work, level: 警告, contains: 占位符, desc: 版本书名留了待填标记}
-- {id: N67, file: genealogy.yaml, where: GN-9107.lineage_id, level: 错误, contains: 引用了不存在的谱系, desc: 版本挂在悬空谱系上}
-- {id: N68, file: genealogy.yaml, where: LIN-9104, level: 错误, contains: 没有任何版本, desc: 谱系下没有任何版本}
-- {id: N69, file: genealogy.yaml, where: GE-9101.type, level: 错误, contains: 非法取值, desc: 谱系边类型枚举非法}
+# v12：学科史大谱系。前四条是结构性覆盖约束，后六条是既有规则
+# 在新表上的复验 —— 换一张表再验一次，防止实现被写死在旧表的字段名上。
+- {id: N70, file: lineages.yaml, where: "TERM-9099@LIN-9103.term_id", level: 错误, contains: 不存在的术语, desc: 归属挂在不存在的术语上}
+- {id: N71, file: lineages.yaml, where: "TERM-9005@LIN-9999.lineage_id", level: 错误, contains: 不存在的谱系, desc: 归属挂在不存在的谱系上}
+- {id: N72, file: lineages.yaml, where: "TERM-9001@LIN-9101", level: 错误, contains: 登记了 2 次, desc: 同一术语在同一谱系下重复归属}
+- {id: N73, file: lineages.yaml, where: LIN-9104, level: 错误, contains: 没有任何术语归属, desc: 谱系下没有任何术语}
+- {id: N74, file: lineages.yaml, where: TERM-9013, level: 错误, contains: 没有进入任何大谱系, desc: 术语未进入任何谱系}
+- {id: N75, file: lineages.yaml, where: LIN-9102.periods, level: 错误, contains: 不存在的时期, desc: 谱系引用了不存在的时期}
+- {id: N76, file: lineages.yaml, where: "TERM-9002@LIN-9101.problem", level: 错误, contains: 少于下限, desc: 谱系归属的问题过短}
+- {id: N77, file: lineages.yaml, where: LIN-9103, level: 错误, contains: 起止年份倒置, desc: 谱系起止年份倒置}
+- {id: N78, file: lineages.yaml, where: "TERM-9006@LIN-9103.problem", level: 警告, contains: 占位符, desc: 谱系归属的问题留了待填标记}
+- {id: N79, file: lineages.yaml, where: LIN-9105.periods, level: 错误, contains: 与起止年份不一致, desc: 谱系登记的时期没有覆盖它实际跨过的年份}

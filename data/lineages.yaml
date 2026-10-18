@@ -1,0 +1,752 @@
+# 大谱系：学科史骨架。阶段（periods）是背景带，谱系（lineages）是横跨阶段的传统，
+# 归属（placements）把术语挂到谱系上，并说明「它在这条谱系里回答什么问题」。
+# 这里只回答术语的学科位置，不再记录同一术语的历代定义链。
+# v9：大框架压缩为古典 → 现代 → 当代；stage 决定界面归组，branch 决定阶段内分支，
+# tier 区分主脉与扩展传统，figures 记录代表人物（不代表已有独立术语）。
+
+periods:
+- period_id: P1
+  name: 古典
+  span: 1830–1935
+  question: 现代性带来了什么问题，社会学如何回应？
+  note: 1838 年孔德提出「社会学」，但学科真正的奠基在马克思、涂尔干与韦伯：资本主义、社会团结与理性化构成三条不同的问题路线。古典不是一套统一纲领，而是三种诊断现代性的方式。
+- period_id: P2
+  name: 现代
+  span: 1935–1980
+  question: 社会如何被整合，行动又如何被解释？
+  note: 1937 年帕森斯《社会行动的结构》完成第一次大综合，默顿以中层理论把宏大框架拉回经验研究；符号互动论、交换理论与冲突理论则从微观互动、交换与权力分化挑战整合视角。
+- period_id: P3
+  name: 当代
+  span: 1980–
+  question: 分化之后，社会学如何综合，又如何面对全球与后现代？
+  note: 1980s 以后不再有一条统一主线：布迪厄、吉登斯、哈贝马斯推进综合；福柯、布希亚、利奥塔转向后结构/后现代；沃勒斯坦与南方理论把欧洲中心问题化；网络社会、风险社会与行动者网络理论则回应技术与全球化的新现实。
+lineages:
+- lineage_id: L01
+  name: 涂尔干：社会事实与实证主义
+  from: 1830
+  to: 1930
+  periods:
+  - P1
+  schools:
+  - 古典社会学
+  question: 社会能否像自然一样被研究？
+  thesis: 社会事实外在于个体、对个体有约束力，只能用其他社会事实来解释。
+  blind_spot: 把社会读成可测量的事实集合，对意义、冲突与历史断裂着墨少。
+  stage: P1
+  branch: 古典三大家
+  tier: core
+  figures:
+  - 涂尔干
+- lineage_id: L02
+  name: 历史主义与共同体
+  from: 1880
+  to: 1935
+  periods:
+  - P1
+  schools:
+  - 古典社会学
+  question: 现代性取代了什么，又失去了什么？
+  thesis: 共同体与社会是两种意志形式，现代化是一场不可逆的关系重组。
+  blind_spot: 二元对立容易把前现代理想化，也难解释两者的长期共存。
+  stage: P1
+  branch: 历史主义
+  tier: extended
+  figures:
+  - 滕尼斯
+- lineage_id: L03
+  name: 马克思：资本主义批判
+  from: 1845
+  to: 2026
+  ongoing: true
+  periods:
+  - P1
+  - P2
+  - P3
+  schools:
+  - 古典社会学
+  - 新马克思主义
+  - 冲突论
+  question: 现代社会的分裂由什么决定？
+  thesis: 生产关系决定阶级位置，剩余劳动的占有构成剥削，冲突内在于生产方式。
+  blind_spot: 对文化、性别与消费的自主性估计不足，阶级以外的不平等常被放到从属位置。
+  stage: P1
+  branch: 古典三大家
+  tier: core
+  figures:
+  - 马克思
+- lineage_id: L04
+  name: 韦伯：解释社会学与理性化
+  from: 1900
+  to: 1930
+  periods:
+  - P1
+  schools:
+  - 古典社会学
+  - 历史社会学
+  question: 行动的意义如何被理解？
+  thesis: 社会行动由行动者赋予的意义构成，理解意义才能解释社会。
+  blind_spot: 意义解释难以处理结构性约束，也难以做大规模比较。
+  stage: P1
+  branch: 古典三大家
+  tier: core
+  figures:
+  - 韦伯
+- lineage_id: L05
+  name: 帕森斯：结构功能论
+  from: 1935
+  to: 1975
+  periods:
+  - P2
+  schools:
+  - 结构功能主义
+  question: 什么维持了社会系统的稳定？
+  thesis: 社会是各部分相互调适的系统，制度因满足功能需求而存续。
+  blind_spot: 倾向把冲突读成失调、把现状读成必要，难解释变迁由谁推动。
+  stage: P2
+  branch: 整合与中层
+  tier: core
+  figures:
+  - 帕森斯
+- lineage_id: L06
+  name: 芝加哥学派与城市生态
+  from: 1915
+  to: 2026
+  ongoing: true
+  periods:
+  - P1
+  - P2
+  - P3
+  schools:
+  - 芝加哥学派
+  question: 城市如何组织人群与空间？
+  thesis: 城市是竞争与演替形成的生态秩序，空间位置塑造人的交往与机会。
+  blind_spot: 生态隐喻容易把空间分化读成自然过程，低估制度与市场的主动制造。
+  stage: P2
+  branch: 其他现代分支
+  tier: extended
+  figures:
+  - 帕克
+  - 伯吉斯
+- lineage_id: L07
+  name: 符号互动论
+  from: 1920
+  to: 1990
+  periods:
+  - P1
+  - P2
+  - P3
+  schools:
+  - 符号互动论
+  question: 自我与意义如何在互动中生成？
+  thesis: 人依据事物对自己的意义行动，意义在互动中被解释和修改。
+  blind_spot: 对宏观权力与制度结构着墨少，容易把社会读成无数局部协商的总和。
+  stage: P2
+  branch: 微观互动
+  tier: core
+  figures:
+  - 米德
+  - 布鲁默
+  - 戈夫曼
+- lineage_id: L08
+  name: 现象学与常人方法学
+  from: 1935
+  to: 1995
+  periods:
+  - P2
+  - P3
+  schools:
+  - 现象学与常人方法学
+  question: 日常现实是如何被当作理所当然的？
+  thesis: 社会秩序不是既定的，而是成员在互动中持续完成的成就。
+  blind_spot: 专注微观秩序的生产，对谁有能力定义现实、定义如何被强制着墨少。
+  stage: P2
+  branch: 微观互动
+  tier: extended
+  figures:
+  - 舒茨
+  - 加芬克尔
+- lineage_id: L09
+  name: 冲突理论
+  from: 1955
+  to: 1985
+  periods:
+  - P2
+  - P3
+  schools:
+  - 冲突论
+  question: 秩序为谁服务，谁承担了整合的代价？
+  thesis: 社会由不同群体的利益对立构成，秩序是支配群体维持优势的结果。
+  blind_spot: 容易把一切制度都读成支配工具，对共识与整合的解释力弱。
+  stage: P2
+  branch: 冲突与批判
+  tier: core
+  figures:
+  - 达伦多夫
+  - 科塞
+- lineage_id: L10
+  name: 交换理论与理性选择
+  from: 1955
+  to: 2005
+  periods:
+  - P2
+  - P3
+  schools:
+  - 交换论
+  - 经济社会学
+  question: 社会现象能否还原为个体的理性选择？
+  thesis: 社会结构由个体在交换与选择中的相互依赖生成，可用成本收益解释。
+  blind_spot: 对偏好如何形成、规范如何约束选择着墨少，容易把社会读成市场。
+  stage: P2
+  branch: 微观互动
+  tier: core
+  figures:
+  - 霍曼斯
+  - 布劳
+  - 科尔曼
+- lineage_id: L11
+  name: 文化研究
+  from: 1955
+  to: 1995
+  periods:
+  - P2
+  - P3
+  schools:
+  - 文化研究
+  question: 意义的生产权在谁手里？
+  thesis: 文化是争夺意义的场域，支配与抵抗都在表征中展开。
+  blind_spot: 偏重文本与表征，对制度与物质的约束力估计不足。
+  stage: P3
+  branch: 批判与差异
+  tier: extended
+  figures:
+  - 霍尔
+  - 威廉斯
+- lineage_id: L12
+  name: 综合路径：实践、结构与沟通
+  from: 1965
+  to: 2005
+  periods:
+  - P2
+  - P3
+  schools:
+  - 文化社会学
+  - 现代性研究
+  question: 行动与结构、系统与生活世界如何相互构成？
+  thesis: 综合路径拒绝在结构决定论与行动自由之间二选一：实践、结构化与沟通理性分别解释结构如何被再生产、被跨越与被商谈。
+  blind_spot: 综合框架雄心大，经验操作困难；三套概念传统彼此并不完全兼容，容易被拼成一张没有统一机制的折中图。
+  stage: P3
+  branch: 综合路径
+  tier: core
+  figures:
+  - 布迪厄
+  - 吉登斯
+  - 哈贝马斯
+- lineage_id: L13
+  name: 后结构/后现代：权力、拟像与元叙事
+  from: 1960
+  to: 1995
+  periods:
+  - P2
+  - P3
+  schools:
+  - 后结构主义与后现代
+  question: 主体如何被权力、符号与元叙事生产出来？
+  thesis: 权力不只被占有，而通过知识、身体技术与符号秩序生产主体；后现代状况则瓦解宏大叙事所提供的统一意义。
+  blind_spot: 对制度设计与抵抗可能着墨少，经验研究难以操作；过度强调碎片化也容易放弃可比较的社会解释。
+  stage: P3
+  branch: 后结构/后现代
+  tier: core
+  figures:
+  - 福柯
+  - 布希亚
+  - 利奥塔
+- lineage_id: L14
+  name: 女性主义
+  from: 1965
+  to: 2026
+  ongoing: true
+  periods:
+  - P2
+  - P3
+  schools:
+  - 女性主义社会学
+  question: 性别如何组织社会，又如何被社会组织？
+  thesis: 性别不是自然差异的延伸，而是被制度、劳动与互动持续生产的社会关系。
+  blind_spot: 早期以中产白人女性为默认，对阶级、族群与殖民差异的交叉性补得较晚。
+  stage: P3
+  branch: 批判与差异
+  tier: extended
+  figures:
+  - 多萝西·史密斯
+  - 南希·乔多罗
+- lineage_id: L15
+  name: 新马克思主义与空间
+  from: 1965
+  to: 2026
+  ongoing: true
+  periods:
+  - P2
+  - P3
+  schools:
+  - 新马克思主义
+  question: 空间如何被资本生产，又如何反过来组织社会？
+  thesis: 空间不是容器，而是资本积累与国家治理的产物，城市化本身是阶级过程。
+  blind_spot: 对非经济维度的空间实践（情感、记忆、日常使用）着墨少。
+  stage: P3
+  branch: 批判与差异
+  tier: extended
+  figures:
+  - 列斐伏尔
+  - 哈维
+- lineage_id: L16
+  name: 全球/后殖民：世界体系与南方理论
+  from: 1985
+  to: 2026
+  ongoing: true
+  periods:
+  - P3
+  schools:
+  - 现代性研究
+  - 历史社会学
+  question: 世界体系如何制造中心与边缘，非西方经验如何改写社会学？
+  thesis: 资本主义世界体系以中心、半边缘与边缘的不平等分工组织全球；南方理论则要求从殖民经验与本地知识出发重写社会学的概念前提。
+  blind_spot: 宏观体系视角容易压低地方行动者的能动性；南方理论内部差异大，经验研究常难以落到可检验机制。
+  stage: P3
+  branch: 全球/后殖民
+  tier: core
+  figures:
+  - 沃勒斯坦
+  - 康奈尔
+- lineage_id: L17
+  name: 晚近：网络、风险与行动者网络
+  from: 1970
+  to: 2026
+  ongoing: true
+  periods:
+  - P2
+  - P3
+  schools:
+  - 经济社会学
+  - 现代性研究
+  question: 网络、风险与技术行动者如何改写社会关系？
+  thesis: 当代社会越来越由网络连接、风险分配与人与非人的行动者网络组织，社会学的分析单位随之从个体与制度扩展到关系与技术。
+  blind_spot: 新概念多而边界松，容易把一切社会现象都描述成网络或风险；对权力与不平等的中介机制有时交代不足。
+  stage: P3
+  branch: 晚近
+  tier: core
+  figures:
+  - 格兰诺维特
+  - 卡斯特
+  - 贝克
+  - 拉图尔
+- lineage_id: L18
+  name: 组织与科层制研究
+  from: 1925
+  to: 1995
+  periods:
+  - P1
+  - P2
+  - P3
+  schools:
+  - 经济社会学
+  - 结构功能主义
+  - 冲突论
+  question: 大规模组织为什么总产生意料之外的后果？
+  thesis: 正式结构之外总有非正式秩序，规则在执行中被扭曲，手段容易替代目的。
+  blind_spot: 多以工厂与科层为样本，解释平台化与网络化组织时需要重建。
+  stage: P2
+  branch: 其他现代分支
+  tier: extended
+  figures:
+  - 韦伯
+  - 默顿
+  - 塞尔兹尼克
+- lineage_id: L19
+  name: 知识社会学
+  from: 1925
+  to: 2026
+  ongoing: true
+  periods:
+  - P1
+  - P2
+  - P3
+  schools:
+  - 现象学与常人方法学
+  - 文化社会学
+  - 历史社会学
+  question: 什么被当作知识，谁的知识才算数？
+  thesis: 知识不是对现实的被动反映，而在群体互动与制度中被生产、分配并获得可信性。
+  blind_spot: 容易停在「知识是社会建构的」这一步，对谁有能力强制推行某种知识着墨少。
+  stage: P2
+  branch: 其他现代分支
+  tier: extended
+  figures:
+  - 曼海姆
+  - 伯格
+  - 卢克曼
+- lineage_id: L20
+  name: 政治社会学与国家
+  from: 1900
+  to: 2026
+  ongoing: true
+  periods:
+  - P1
+  - P2
+  - P3
+  schools:
+  - 古典社会学
+  - 历史社会学
+  - 新马克思主义
+  - 冲突论
+  question: 统治如何被正当化，国家如何组织社会？
+  thesis: 支配不只靠暴力，还靠权威、法律与行政把服从变成理所当然。
+  blind_spot: 以国家为中心，容易低估跨国组织、平台与地方自治对统治形式的改写。
+  stage: P2
+  branch: 其他现代分支
+  tier: extended
+  figures:
+  - 韦伯
+  - 蒂利
+  - 斯考切波
+- lineage_id: L21
+  name: 默顿：中层理论与紧张理论
+  from: 1938
+  to: 1982
+  periods:
+  - P2
+  - P3
+  schools:
+  - 结构功能主义
+  question: 宏大理论如何落到可检验的中层命题？
+  thesis: 中层理论从经验问题出发，在宏大框架与具体研究之间建立可检验的命题；紧张理论说明目标与手段脱节如何产生越轨。
+  blind_spot: 中层命题容易碎片化，彼此之间缺少整合；对宏观结构变迁的解释力有限。
+  stage: P2
+  branch: 整合与中层
+  tier: core
+  figures:
+  - 默顿
+placements:
+- term_id: TERM-0001
+  lineage_id: L12
+  problem: 资本不止是钱：关系网络如何变成可继承、可兑换的优势？
+  status: 草稿
+- term_id: TERM-0001
+  lineage_id: L17
+  problem: 网络中的资源如何被动员，并转化为个人的机会？
+  status: 草稿
+- term_id: TERM-0002
+  lineage_id: L12
+  problem: 社会由哪些相对自主、各自有规则的斗争空间构成？
+  status: 草稿
+- term_id: TERM-0003
+  lineage_id: L12
+  problem: 过去的经验如何沉淀为当下的行动倾向？
+  status: 草稿
+- term_id: TERM-0004
+  lineage_id: L17
+  problem: 有用的信息为什么常来自不太熟的人？
+  status: 草稿
+- term_id: TERM-0006
+  lineage_id: L10
+  problem: 社会现象能否还原为个体的理性选择？
+  status: 草稿
+- term_id: TERM-0007
+  lineage_id: L01
+  problem: 社会的不平等能否被测量为可比较的层级结构？
+  status: 草稿
+- term_id: TERM-0008
+  lineage_id: L03
+  problem: 现代社会的分裂究竟由什么决定，阶级为何是主轴？
+  status: 草稿
+- term_id: TERM-0009
+  lineage_id: L04
+  problem: 除了阶级，还有哪些维度把人分层？
+  status: 草稿
+- term_id: TERM-0010
+  lineage_id: L04
+  problem: 行动者在社会中占据什么位置，它又与角色如何区分？
+  status: 草稿
+- term_id: TERM-0010
+  lineage_id: L07
+  problem: 位置与角色如何在互动中被扮演和确认？
+  status: 草稿
+- term_id: TERM-0011
+  lineage_id: L01
+  problem: 人能否改变自己所处的层级，流动的通道有多宽？
+  status: 草稿
+- term_id: TERM-0012
+  lineage_id: L04
+  problem: 共同体如何通过垄断机会把自己人关在里面？
+  status: 草稿
+- term_id: TERM-0012
+  lineage_id: L09
+  problem: 群体如何用封闭策略把别人挡在资源之外？
+  status: 草稿
+- term_id: TERM-0013
+  lineage_id: L12
+  problem: 品味、学历与修养如何变成可兑换的优势？
+  status: 草稿
+- term_id: TERM-0014
+  lineage_id: L12
+  problem: 其他资本形式由什么兑换而来，兑换率由谁定？
+  status: 草稿
+- term_id: TERM-0015
+  lineage_id: L12
+  problem: 被承认的优势如何掩盖它本身的任意性？
+  status: 草稿
+- term_id: TERM-0016
+  lineage_id: L12
+  problem: 不平等为什么能跨代延续而不被察觉？
+  status: 草稿
+- term_id: TERM-0017
+  lineage_id: L09
+  problem: 教育不断扩张，为什么机会平等没有随之到来？
+  status: 草稿
+- term_id: TERM-0018
+  lineage_id: L09
+  problem: 贫困之外，人被排除在哪些社会关系与权利之外？
+  status: 草稿
+- term_id: TERM-0019
+  lineage_id: L12
+  problem: 趣味与生活方式如何成为阶级位置的标记？
+  status: 草稿
+- term_id: TERM-0020
+  lineage_id: L12
+  problem: 被支配者为什么把支配当成理所当然？
+  status: 草稿
+- term_id: TERM-0021
+  lineage_id: L03
+  problem: 剩余劳动如何被占有，占有为何不被视为掠夺？
+  status: 草稿
+- term_id: TERM-0022
+  lineage_id: L21
+  problem: 目标与手段脱节时，人为什么会转向越轨？
+  status: 草稿
+- term_id: TERM-0023
+  lineage_id: L08
+  problem: 性别如何在日常互动中被持续完成而非天生？
+  status: 草稿
+- term_id: TERM-0023
+  lineage_id: L14
+  problem: 性别差异如何在互动层面被再生产出来？
+  status: 草稿
+- term_id: TERM-0024
+  lineage_id: L13
+  problem: 权力如何通过训练身体来生产顺从的主体？
+  status: 草稿
+- term_id: TERM-0025
+  lineage_id: L06
+  problem: 空间上的分隔如何被制度与市场主动制造？
+  status: 草稿
+- term_id: TERM-0026
+  lineage_id: L14
+  problem: 家务与育儿的第二份工由谁承担，为何算作隐形？
+  status: 草稿
+- term_id: TERM-0027
+  lineage_id: L03
+  problem: 技术如何被用来剥夺工人的技能与议价能力？
+  status: 草稿
+- term_id: TERM-0027
+  lineage_id: L18
+  problem: 管理的每一次改良为什么同时削弱了工人的位置？
+  status: 草稿
+- term_id: TERM-0028
+  lineage_id: L12
+  problem: 群体如何用符号划出「我们」与「他们」的界线？
+  status: 草稿
+- term_id: TERM-0029
+  lineage_id: L01
+  problem: 规范失效时，社会整合会发生什么？
+  status: 草稿
+- term_id: TERM-0030
+  lineage_id: L01
+  problem: 个体凭什么连在一起，团结的基础是什么？
+  status: 草稿
+- term_id: TERM-0031
+  lineage_id: L01
+  problem: 共享的观念如何约束个体并构成社会？
+  status: 草稿
+- term_id: TERM-0032
+  lineage_id: L01
+  problem: 社会如何让人服从规范，而不只靠暴力？
+  status: 草稿
+- term_id: TERM-0033
+  lineage_id: L06
+  problem: 城市社区的秩序为什么会瓦解，解组与空间变化有何关系？
+  status: 草稿
+- term_id: TERM-0034
+  lineage_id: L07
+  problem: 越轨是行为本身的属性，还是被贴上去的标签？
+  status: 草稿
+- term_id: TERM-0035
+  lineage_id: L07
+  problem: 被标定之后，人如何变成标签所说的那种人？
+  status: 草稿
+- term_id: TERM-0036
+  lineage_id: L07
+  problem: 一种被贬低的属性如何组织起整个互动？
+  status: 草稿
+- term_id: TERM-0037
+  lineage_id: L04
+  problem: 行动的意义如何被理解，理解如何成为解释？
+  status: 草稿
+- term_id: TERM-0038
+  lineage_id: L04
+  problem: 现代世界为什么被计算与规则逐步接管？
+  status: 草稿
+- term_id: TERM-0039
+  lineage_id: L04
+  problem: 理性化的终点为什么是束缚而不是自由？
+  status: 草稿
+- term_id: TERM-0040
+  lineage_id: L04
+  problem: 大规模组织靠什么运转，它的代价是什么？
+  status: 草稿
+- term_id: TERM-0041
+  lineage_id: L04
+  problem: 人为什么会服从，服从的正当性从哪里来？
+  status: 草稿
+- term_id: TERM-0042
+  lineage_id: L21
+  problem: 组织为什么把手段当成目的，规则为何反噬目标？
+  status: 草稿
+- term_id: TERM-0042
+  lineage_id: L18
+  problem: 正式规则在执行中为什么会被扭曲？
+  status: 草稿
+- term_id: TERM-0043
+  lineage_id: L18
+  problem: 正式结构之外，人如何形成自己的规范与秩序？
+  status: 草稿
+- term_id: TERM-0044
+  lineage_id: L16
+  problem: 理性化在当代变成了什么样子，它是否已经超出韦伯的框架？
+  status: 草稿
+- term_id: TERM-0045
+  lineage_id: L06
+  problem: 城市生活如何改变人的交往方式与心理？
+  status: 草稿
+- term_id: TERM-0046
+  lineage_id: L06
+  problem: 城市如何按功能分化成不同的地带？
+  status: 草稿
+- term_id: TERM-0047
+  lineage_id: L02
+  problem: 现代性取代了什么样的社会关系？
+  status: 草稿
+- term_id: TERM-0048
+  lineage_id: L15
+  problem: 资本如何重新占领已被放弃的城市中心？
+  status: 草稿
+- term_id: TERM-0049
+  lineage_id: L15
+  problem: 空间如何被资本与国家生产出来，而非天然存在？
+  status: 草稿
+- term_id: TERM-0050
+  lineage_id: L06
+  problem: 城市空间如何被围墙与门禁私有化？
+  status: 草稿
+- term_id: TERM-0051
+  lineage_id: L15
+  problem: 谁有权改变城市，这个权利属于谁？
+  status: 草稿
+- term_id: TERM-0052
+  lineage_id: L06
+  problem: 邻里本身如何影响居民的机会与行为？
+  status: 草稿
+- term_id: TERM-0053
+  lineage_id: L14
+  problem: 生理差异如何被转换成社会等级？
+  status: 草稿
+- term_id: TERM-0054
+  lineage_id: L14
+  problem: 男性支配如何被组织成一套制度？
+  status: 草稿
+- term_id: TERM-0055
+  lineage_id: L14
+  problem: 性别关系如何在制度层面被排列与维持？
+  status: 草稿
+- term_id: TERM-0056
+  lineage_id: L14
+  problem: 男性内部的等级如何维持，谁被排在下面？
+  status: 草稿
+- term_id: TERM-0057
+  lineage_id: L14
+  problem: 劳动为什么按性别被分开，分开的后果是什么？
+  status: 草稿
+- term_id: TERM-0058
+  lineage_id: L12
+  problem: 亲密关系如何被现代性改造，爱情为何变成一项协商？
+  status: 草稿
+- term_id: TERM-0059
+  lineage_id: L14
+  problem: 照料为什么被视为「不算劳动」？
+  status: 草稿
+- term_id: TERM-0060
+  lineage_id: L05
+  problem: 家庭为什么被压缩成夫妻加子女的形式？
+  status: 草稿
+- term_id: TERM-0061
+  lineage_id: L01
+  problem: 群体如何记住自己没有亲身经历的事？
+  status: 草稿
+- term_id: TERM-0062
+  lineage_id: L07
+  problem: 人如何判断此刻正在发生什么，框架从哪里被调取？
+  status: 草稿
+- term_id: TERM-0062
+  lineage_id: L11
+  problem: 媒介文本如何通过选择与凸显塑造公共理解？
+  status: 草稿
+- term_id: TERM-0063
+  lineage_id: L12
+  problem: 文化是内化的倾向，还是随取随用的工具箱？
+  status: 草稿
+- term_id: TERM-0064
+  lineage_id: L11
+  problem: 日常事物如何被讲成自然而然的故事？
+  status: 草稿
+- term_id: TERM-0065
+  lineage_id: L03
+  problem: 支配如何以「同意」而非强制的方式维持？
+  status: 草稿
+- term_id: TERM-0065
+  lineage_id: L11
+  problem: 霸权如何在文化层面被争夺与重新赢得？
+  status: 草稿
+- term_id: TERM-0066
+  lineage_id: L11
+  problem: 青年如何用风格与符号表达抵抗？
+  status: 草稿
+- term_id: TERM-0067
+  lineage_id: L11
+  problem: 意义的控制权在生产者手里，还是在受众手里？
+  status: 草稿
+- term_id: TERM-0068
+  lineage_id: L08
+  problem: 现实如何被互动与知识持续制造出来？
+  status: 草稿
+- term_id: TERM-0061
+  lineage_id: L19
+  problem: 群体如何把过去保存成共享的知识，并让它约束当下？
+  status: 草稿
+- term_id: TERM-0068
+  lineage_id: L19
+  problem: 日常知识如何被制度化，制度又如何反过来塑造人？
+  status: 草稿
+- term_id: TERM-0063
+  lineage_id: L19
+  problem: 行动者从怎样的知识库存中取用策略，而不是只按规范行动？
+  status: 草稿
+- term_id: TERM-0041
+  lineage_id: L20
+  problem: 人为什么会服从，支配的正当性又从哪里来？
+  status: 草稿
+- term_id: TERM-0040
+  lineage_id: L20
+  problem: 法理型支配如何靠职位、文书与规则把统治日常化？
+  status: 草稿
+- term_id: TERM-0032
+  lineage_id: L20
+  problem: 国家如何用规范、惩罚与行政把社会秩序维持下去？
+  status: 草稿

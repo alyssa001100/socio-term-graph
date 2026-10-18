@@ -15,7 +15,7 @@ DATE = re.compile(r"^\d{4}-(0[1-9]|1[0-2])$")
 
 FILES = {"terms": "terms.yaml", "relations": "relations.yaml",
          "cases": "cases.yaml", "hotspots": "hotspots.yaml",
-         "genealogy": "genealogy.yaml"}
+         "lineages": "lineages.yaml"}
 
 
 def load(path):
@@ -149,136 +149,179 @@ def check_schema(schema):
 
 
 
-def check_genealogy(issues, gen, term_ids, schema, fname="genealogy.yaml"):
-    """谱系校验：三张子表（谱系 / 版本 / 边）之间的关系约束。
+def check_lineages(issues, doc, term_ids, schema, fname="lineages.yaml"):
+    """学科史大谱系校验：时期 / 谱系 / 归属三张子表。
 
-    这里有一条别处没有的硬规则：**谱系边两端必须属于同一个术语**。
-    跨术语的谱系（例如「理性化 → 麦当劳化」）已经由 relations.yaml 承担，
-    在这里再记一遍就是同一事实存两份，两处一旦不同步就会互相矛盾。
+    三条覆盖约束是这一层的价值所在：术语全量入谱、每条谱系都有术语、每个时期
+    都有谱系。少任何一条，界面都能画出图，但图上会出现无法解释的空带。
     """
     enums, req, cons, fld = schema["enums"], schema["required"], schema["constraints"], schema["fields"]
-    if not isinstance(gen, dict):
-        issues.append(("错误", fname, "根", "genealogy.yaml 应为 {lineages, nodes, edges} 三段"))
+    if not isinstance(doc, dict):
+        issues.append(("错误", fname, "根", "lineages.yaml 应为 {periods, lineages, placements} 三段"))
         return 0, 0, 0
 
-    lins = gen.get("lineages") or []
-    nodes = gen.get("nodes") or []
-    edges = gen.get("edges") or []
+    periods = doc.get("periods") or []
+    lins = doc.get("lineages") or []
+    places = doc.get("placements") or []
 
-    lin_term, lin_ids = {}, set()
+    period_ids = set()
+    period_spans = {}
+    for p in periods:
+        where = p.get("period_id", "?")
+        check_required(issues, fname, where, p, req["periods"])
+        check_fields(issues, fname, where, p, fld["period"], "时期字段")
+        if where in period_ids:
+            issues.append(("错误", fname, where, "period_id 重复"))
+        period_ids.add(where)
+        span = str(p.get("span", ""))
+        m = re.match(r"^(\d{4})[–-](\d{4})?$", span)
+        if not m:
+            issues.append(("错误", fname, f"{where}.span",
+                           "时期跨度应写成 YYYY–YYYY，仍在延续的时期可写成 YYYY–"))
+        else:
+            period_spans[where] = (int(m.group(1)),
+                                   int(m.group(2)) if m.group(2) else 9999)
+        check_min_len(issues, fname, where, p, "note",
+                      cons["period_note_min_chars"], "时期说明")
+        check_placeholder(issues, fname, where, p)
+
+    lineage_ids = set()
     for l in lins:
         where = l.get("lineage_id", "?")
-        check_required(issues, fname, where, l, req["genealogy_lineages"])
-        check_fields(issues, fname, where, l, fld["genealogy_lineage"], "谱系字段")
-        if where in lin_ids:
+        check_required(issues, fname, where, l, req["lineages"])
+        check_fields(issues, fname, where, l, fld["lineage"], "谱系字段")
+        if where in lineage_ids:
             issues.append(("错误", fname, where, "lineage_id 重复"))
-        lin_ids.add(where)
-        if l.get("term_id") not in term_ids:
-            issues.append(("错误", fname, f"{where}.term_id",
-                           f"谱系挂在不存在的术语 {l.get('term_id')} 上"))
-        lin_term[where] = l.get("term_id")
-        check_enum(issues, fname, where, "status", l.get("status"), enums["status"])
+        lineage_ids.add(where)
+
+        y0, y1 = str(l.get("from", "")), str(l.get("to", ""))
+        for field, val in (("from", y0), ("to", y1)):
+            if not re.match(r"^\d{4}$", val):
+                issues.append(("错误", fname, f"{where}.{field}", "年份格式应为 YYYY"))
+        if re.match(r"^\d{4}$", y0) and re.match(r"^\d{4}$", y1) and int(y0) > int(y1):
+            issues.append(("错误", fname, where,
+                           f"起止年份倒置：from {y0} 晚于 to {y1}"))
+
+        if "ongoing" in l and not isinstance(l.get("ongoing"), bool):
+            issues.append(("错误", fname, f"{where}.ongoing",
+                           "ongoing 只能是 true / false —— 它表示这条谱系是否仍在延续"))
+
+        ps = l.get("periods")
+        if not isinstance(ps, list):
+            issues.append(("错误", fname, f"{where}.periods", "periods 必须是时期 id 列表"))
+            ps = []
+        if len(ps) != len(set(ps)):
+            issues.append(("错误", fname, f"{where}.periods", "同一时期被重复列出"))
+        for pid in ps:
+            if pid not in period_ids:
+                issues.append(("错误", fname, f"{where}.periods",
+                               f"引用了不存在的时期 {pid}"))
+        if (re.match(r"^\d{4}$", y0) and re.match(r"^\d{4}$", y1)
+                and int(y0) <= int(y1) and period_spans):
+            need = [pid for pid, (a, b) in period_spans.items()
+                    if int(y0) < b and int(y1) > a]
+            missing = [pid for pid in need if pid not in ps]
+            extra = [pid for pid in ps if pid in period_spans and pid not in need]
+            if missing or extra:
+                bits = []
+                if missing:
+                    bits.append(f"缺少 {'/'.join(missing)}")
+                if extra:
+                    bits.append(f"多出 {'/'.join(extra)}")
+                issues.append(("错误", fname, f"{where}.periods",
+                               f"与起止年份不一致：{'；'.join(bits)} —— "
+                               f"periods 必须覆盖该谱系实际跨过的全部时期"))
+
+        # v13：界面归组字段。stage 必须落在该谱系实际跨过的时期内；
+        # branch / tier / figures 只影响展示，但拼错会让图上的分支标签悄悄消失。
+        stage = l.get("stage")
+        if stage is not None:
+            if not isinstance(stage, str) or stage not in period_ids:
+                issues.append(("错误", fname, f"{where}.stage",
+                               f"引用了不存在的时期 {stage!r}"))
+            elif ps and stage not in ps:
+                issues.append(("错误", fname, f"{where}.stage",
+                               "stage 必须是该谱系 periods 中的时期"))
+        if "branch" in l and (not isinstance(l.get("branch"), str) or not l.get("branch").strip()):
+            issues.append(("错误", fname, f"{where}.branch", "branch 必须是非空字符串"))
+        if "tier" in l:
+            check_enum(issues, fname, where, "tier", l.get("tier"), enums.get("tier", []))
+        figs = l.get("figures")
+        if figs is not None:
+            if not isinstance(figs, list):
+                issues.append(("错误", fname, f"{where}.figures", "figures 必须是代表人物列表"))
+            else:
+                for name in figs:
+                    if not isinstance(name, str) or not name.strip():
+                        issues.append(("错误", fname, f"{where}.figures",
+                                       "figures 中的代表人物必须是非空字符串"))
+
+        ss = l.get("schools")
+        if not isinstance(ss, list):
+            issues.append(("错误", fname, f"{where}.schools", "schools 必须是流派列表"))
+            ss = []
+        check_enum(issues, fname, where, "schools", ss, enums["school"])
+        check_min_len(issues, fname, where, l, "question",
+                      cons["lineage_question_min_chars"], "谱系问题")
+        check_min_len(issues, fname, where, l, "thesis",
+                      cons["lineage_thesis_min_chars"], "谱系主张")
+        check_min_len(issues, fname, where, l, "blind_spot",
+                      cons["lineage_blind_min_chars"], "谱系盲点")
         check_placeholder(issues, fname, where, l)
 
-    node_lin, node_ids = {}, set()
-    for n in nodes:
-        where = n.get("node_id", "?")
-        check_required(issues, fname, where, n, req["genealogy_nodes"])
-        check_fields(issues, fname, where, n, fld["genealogy_node"], "版本字段")
-        if where in node_ids:
-            issues.append(("错误", fname, where, "node_id 重复"))
-        node_ids.add(where)
-        if n.get("lineage_id") not in lin_ids:
+    pairs = Counter()
+    used_lineages = Counter()
+    placed_terms = set()
+    for p in places:
+        tid, lid = p.get("term_id"), p.get("lineage_id")
+        where = f"{tid}@{lid}"
+        check_required(issues, fname, where, p, req["placements"])
+        check_fields(issues, fname, where, p, fld["placement"], "归属字段")
+        check_enum(issues, fname, where, "status", p.get("status"), enums["status"])
+        if tid not in term_ids:
+            issues.append(("错误", fname, f"{where}.term_id",
+                           f"归属挂在不存在的术语 {tid} 上"))
+        else:
+            placed_terms.add(tid)
+        if lid not in lineage_ids:
             issues.append(("错误", fname, f"{where}.lineage_id",
-                           f"引用了不存在的谱系 {n.get('lineage_id')}"))
-        node_lin[where] = n.get("lineage_id")
-        if not re.match(r"^\d{4}$", str(n.get("year", ""))):
-            issues.append(("错误", fname, f"{where}.year", "年份格式应为 YYYY"))
-        check_min_len(issues, fname, where, n, "claim", cons["claim_min_chars"], "定义要点")
-        # 版本的出处由 作者+书名+年份 唯一确定，所以 book 就是它的 source，
-        # 占位符检查必须覆盖 work，否则「待补书名」会一路混进正式数据
-        check_placeholder(issues, fname, where, n, SOURCE_FIELDS + ("work",))
+                           f"引用了不存在的谱系 {lid}"))
+        else:
+            used_lineages[lid] += 1
+        pairs[(tid, lid)] += 1
+        check_min_len(issues, fname, where, p, "problem",
+                      cons["problem_min_chars"], "谱系中的问题")
+        check_placeholder(issues, fname, where, p, ("problem",))
 
-    used_lineages = Counter(node_lin.values())
-    for lid in lin_ids:
+    for (tid, lid), n in pairs.items():
+        if n > 1:
+            issues.append(("错误", fname, f"{tid}@{lid}",
+                           f"同一术语在同一谱系下登记了 {n} 次 —— 一条归属只写一次"))
+
+    for lid in sorted(lineage_ids):
         if not used_lineages.get(lid):
-            issues.append(("错误", fname, lid, "这条谱系没有任何版本 —— 要么补版本，要么删除谱系"))
+            issues.append(("错误", fname, lid,
+                           "这条谱系没有任何术语归属 —— 要么补归属，要么删除谱系"))
+    for tid in sorted(term_ids - placed_terms):
+        issues.append(("错误", fname, tid,
+                       "这个术语没有进入任何大谱系 —— 每个术语至少要有一条归属"))
+    for pid in sorted(period_ids):
+        if not any(pid in (l.get("periods") or []) for l in lins):
+            issues.append(("错误", fname, pid,
+                           "这个时期没有任何谱系 —— 时期不是装饰带，必须由谱系撑起来"))
 
-    parents = {nid: [] for nid in node_ids}
-    edge_ids = set()
-    for e in edges:
-        where = e.get("edge_id", "?")
-        check_required(issues, fname, where, e, req["genealogy_edges"])
-        check_fields(issues, fname, where, e, fld["genealogy_edge"], "谱系边字段")
-        if where in edge_ids:
-            issues.append(("错误", fname, where, "edge_id 重复"))
-        edge_ids.add(where)
-        check_enum(issues, fname, where, "type", e.get("type"), enums["genealogy_edge_type"])
-        a, b = e.get("from"), e.get("to")
-        if a not in node_ids:
-            issues.append(("错误", fname, f"{where}.from", f"引用了不存在的版本 {a}"))
-            continue
-        if b not in node_ids:
-            issues.append(("错误", fname, f"{where}.to", f"引用了不存在的版本 {b}"))
-            continue
-        ta = lin_term.get(node_lin.get(a))
-        tb = lin_term.get(node_lin.get(b))
-        if ta != tb:
-            issues.append(("错误", fname, where,
-                           f"谱系边跨了术语（{ta} → {tb}）—— 跨术语关系归 relations.yaml，"
-                           f"不在此重复；若确实是同一个词的两个版本，应归入同一条谱系"))
-            continue
-        ya = next((n.get("year") for n in nodes if n.get("node_id") == a), None)
-        yb = next((n.get("year") for n in nodes if n.get("node_id") == b), None)
-        if ya and yb and int(ya) > int(yb):
-            issues.append(("错误", fname, where,
-                           f"时间倒流：{a}({ya}) → {b}({yb})，后一版必须不早于前一版"))
-        parents[b].append(a)
-        check_min_len(issues, fname, where, e, "what_changed", cons["change_min_chars"], "改掉了什么")
-        check_min_len(issues, fname, where, e, "evidence", cons["genealogy_evidence_min_chars"], "证据")
-        check_placeholder(issues, fname, where, e)
-
-    # 环检测：谱系是有向无环图，成环说明有人把「后者影响前者」也记了一条边
-    state = {}
-    cycles = []
-
-    def dfs(u, stack):
-        state[u] = 1
-        for v in parents.get(u, []):
-            if state.get(v) == 1:
-                # 报在环上编号最小的节点：遍历起点由 sorted() 决定，但
-                # set 的迭代顺序受字符串哈希随机化影响，不能拿起点当定位
-                path = stack[stack.index(v):] + [u, v] if v in stack else [u, v]
-                cycles.append(path)
-                continue
-            if state.get(v) is None:
-                dfs(v, stack + [u])
-        state[u] = 2
-
-    for nid in sorted(node_ids):
-        if state.get(nid) is None:
-            dfs(nid, [])
-
-    seen_cycles = set()
-    for path in cycles:
-        key = frozenset(path)
-        if key in seen_cycles:
-            continue
-        seen_cycles.add(key)
-        issues.append(("错误", fname, min(path),
-                       f"谱系成环：{' → '.join(path)}"))
-
-    return len(lins), len(nodes), len(edges)
+    return len(periods), len(lins), len(places)
 
 
 
 def check_all(d, schema):
-    """校验目录 d 下的四张表，返回 (issues, counts)。供命令行与 selftest.py 共用。"""
+    """校验目录 d 下的数据表，返回 (issues, counts)。供命令行与 selftest.py 共用。"""
     enums, req, cons = schema["enums"], schema["required"], schema["constraints"]
     fld = schema["fields"]
 
-    data = {k: load(os.path.join(d, v)) for k, v in FILES.items() if k != "genealogy"}
-    data["genealogy"] = load(os.path.join(d, "genealogy.yaml")) or {}
+    data = {k: load(os.path.join(d, v)) for k, v in FILES.items()
+            if k != "lineages"}
+    data["lineages"] = load(os.path.join(d, "lineages.yaml")) or {}
     issues, counts = check_schema(schema), {}
 
     # ---------- 术语 ----------
@@ -313,6 +356,10 @@ def check_all(d, schema):
                 issues.append(("错误", "terms.yaml", w, f"同一作者 {p.get('author')} 重复列出"))
             seen_authors.add(p.get("author"))
     counts["terms"] = len(data["terms"])
+
+    # ---------- 学科史大谱系 ----------
+    np_, nl_, npl_ = check_lineages(issues, data["lineages"], term_ids, schema)
+    counts["periods"], counts["lineages"], counts["placements"] = np_, nl_, npl_
 
     # ---------- 关系 ----------
     rel_ids = set()
@@ -364,29 +411,6 @@ def check_all(d, schema):
                            f"桥接 {n} 条，超过每对概念群上限 "
                            f"{cons['bridge_per_cluster_pair_max']}，检查是否有为了连通而连的边"))
     counts["bridges"] = bridges
-
-    # ---------- 谱系 ----------
-    gl, gn, ge = check_genealogy(issues, data["genealogy"], term_ids, schema)
-    counts["genealogy"], counts["g_nodes"], counts["g_edges"] = gl, gn, ge
-
-    # 谱系与多义性的一致性：同一个作者不能在两处给出互相矛盾的身份
-    # （多义性记「还有谁这么定义」，谱系记「这些定义怎么一步步变来」——同一个作者
-    #  若在多义性里，却不在谱系里，说明有一条改动链断在中间，值得人工看一眼）
-    by_term = {}
-    for n in (data["genealogy"].get("nodes") or []):
-        lid = n.get("lineage_id")
-        tid = next((l.get("term_id") for l in (data["genealogy"].get("lineages") or [])
-                    if l.get("lineage_id") == lid), None)
-        by_term.setdefault(tid, set()).add(n.get("author"))
-    for t in data["terms"]:
-        if t.get("term_id") not in by_term:
-            continue
-        authors = {p.get("author") for p in (t.get("polysemy") or [])}
-        missing = authors - by_term[t["term_id"]]
-        if missing:
-            issues.append(("警告", "terms.yaml", t.get("term_id"),
-                           f"多义性里的 {'、'.join(sorted(missing))} 不在谱系中 —— "
-                           f"若他确实改写过该词，应补成版本；若只是另一种用法，可在 note 里说明"))
 
     # 分析范畴是划分维度，不应被具体现象归属
     categories = {t["term_id"] for t in data["terms"] if t.get("entry_type") == "分析范畴"}
@@ -459,12 +483,12 @@ def main():
     # ---------- 输出 ----------
     print(f"校验目录：{os.path.relpath(d, root)}")
     for k, v in counts.items():
-        if k in ("bridges", "genealogy", "g_nodes", "g_edges"):
+        if k in ("bridges", "periods", "lineages", "placements"):
             continue
         print(f"  {FILES.get(k, k):<16} {v} 条")
     print(f"  {'跨群桥接':<16} {counts['bridges']} 条")
-    print(f"  {'谱系':<16} {counts['genealogy']} 条（版本 {counts['g_nodes']} 个，"
-          f"边 {counts['g_edges']} 条）")
+    print(f"  {'学科谱系':<16} {counts['lineages']} 条（阶段 {counts['periods']} 个，"
+          f"归属 {counts['placements']} 条）")
     print()
     if not issues:
         print("全部通过，未发现问题。")
